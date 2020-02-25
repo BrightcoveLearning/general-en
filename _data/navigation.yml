@@ -1,0 +1,21 @@
+- section: 
+  name: 'Home'
+  url: '/'
+- section: 
+  name: 'Getting Started'
+  url: '/getting-started/'
+  icon: '<i class="far fa-location-arrow"></i>'
+  docs:
+    - name: 'Overview'
+      url: '/getting-started/overview-zencoder.html'
+    - name: 'Quick Start'
+      url: '/getting-started/quick-start-zencoder.html'
+- section: 
+  name: 'Support'
+  url: '/support/'
+  icon: '<i class="far fa-question-circle"></i>'
+  docs:
+    - name: 'Opening a Support Case'
+      url: '/support/opening-case-with-brightcove-support.html'
+    - name: 'Viewing the Brightcove System Status Page'
+      url: '/support/viewing-brightcove-system-status-page.html'
