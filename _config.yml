@@ -38,7 +38,7 @@ port: 8600
 product: Brightcove
 color: rgb(51, 51, 51)
 product_color: rgb(239, 108, 42)
-product_icon: "bc-logo.png"
+product_icon: "brightcove.png"
 search_id: "017969773216783359937:gqomuefz6aq"
 feedbackify_id: "15079"
 defaults:
