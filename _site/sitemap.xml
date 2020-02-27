@@ -13,7 +13,7 @@
     </url>
     
     <url>
-        <loc>https://general.support.brightcove.com/content/brightcove-player-sample-newest-videos-playlist.html</loc>
+        <loc>https://general.support.brightcove.com/shared-content/code-samples/brightcove-player-sample-newest-videos-playlist.html</loc>
         <lastmod>2020-02-27</lastmod>
         <changefreq>daily</changefreq>
         <priority>0.5</priority>
@@ -49,13 +49,6 @@
     
     <url>
         <loc>https://general.support.brightcove.com/assets/css/local.css</loc>
-        <lastmod>2020-02-27</lastmod>
-        <changefreq>daily</changefreq>
-        <priority>0.5</priority>
-    </url>
-    
-    <url>
-        <loc>https://general.support.brightcove.com/content/overview-dynamic-delivery.html</loc>
         <lastmod>2020-02-27</lastmod>
         <changefreq>daily</changefreq>
         <priority>0.5</priority>
