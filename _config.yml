@@ -24,19 +24,21 @@ description: |- # this means to ignore newlines until "baseurl:"
   With Video Cloud you can deliver fast, innovative, TV-like experiences out-of-the-box, dynamically insert server-side ads to maximize revenue, and reach your audiences wherever they are.
 
   Video Cloud Studio allows you to manage your video publishing workflow across desktop, tablet and mobile devices.
+
+  This site contains general information docs that are referenced from our other documentation sites.
 # baseurl: "" # the subpath of your site, e.g. /blog
-site_url: "https://studio.support.brightcove.com"
+site_url: "https://general.support.brightcove.com"
 
 # Build settings
 # theme: minima
 
 # local server (for "jekyll serve") will be localhost:{PORT number below}
-port: 8100
+port: 8600
 
-product: Video Cloud Studio
+product: Brightcove
 color: rgb(51, 51, 51)
 product_color: rgb(239, 108, 42)
-product_icon: "logo-bc-video-cloud.svg"
+product_icon: "bc-logo.png"
 search_id: "017969773216783359937:gqomuefz6aq"
 feedbackify_id: "15079"
 defaults:
