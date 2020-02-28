@@ -18,7 +18,7 @@
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
 
-title: Video Cloud Studio Documentation
+title: Video Cloud Shared Documentation
 email: training@brightcove.com
 description: |- # this means to ignore newlines until "baseurl:"
   With Video Cloud you can deliver fast, innovative, TV-like experiences out-of-the-box, dynamically insert server-side ads to maximize revenue, and reach your audiences wherever they are.
@@ -33,7 +33,7 @@ site_url: "https://general.support.brightcove.com"
 # theme: minima
 
 # local server (for "jekyll serve") will be localhost:{PORT number below}
-port: 8600
+port: 4100
 
 product: Brightcove
 color: rgb(51, 51, 51)
