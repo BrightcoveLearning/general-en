@@ -55,6 +55,13 @@
     </url>
     
     <url>
+        <loc>https://general.support.brightcove.com/shared-content/support/opening-case-with-brightcove-support.html</loc>
+        <lastmod>2020-02-28</lastmod>
+        <changefreq>daily</changefreq>
+        <priority>0.5</priority>
+    </url>
+    
+    <url>
         <loc>https://general.support.brightcove.com/shared-content/general/overview-dynamic-delivery.html</loc>
         <lastmod>2020-02-28</lastmod>
         <changefreq>daily</changefreq>
@@ -70,6 +77,13 @@
     
     <url>
         <loc>https://general.support.brightcove.com/sitemap.xml</loc>
+        <lastmod>2020-02-28</lastmod>
+        <changefreq>daily</changefreq>
+        <priority>0.5</priority>
+    </url>
+    
+    <url>
+        <loc>https://general.support.brightcove.com/shared-content/support/viewing-brightcove-system-status-page.html</loc>
         <lastmod>2020-02-28</lastmod>
         <changefreq>daily</changefreq>
         <priority>0.5</priority>
