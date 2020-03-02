@@ -1,0 +1,445 @@
+<!doctype html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <!-- remember to remove the following line when the site is ready to go live -->
+  <!-- <meta name="robots" content="noindex" /> -->
+  <title>Brightcove Open Source Projects</title>
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+  <link rel="manifest" href="/site.webmanifest">  
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <!-- <link rel="stylesheet" href="/assets/css/site/bc-icons.css"> -->
+  <link rel="stylesheet" href="https://learning-services-media.brightcove.com/doc-assets/site-assets/css/site/prism.css">
+  <link rel="stylesheet" href="https://learning-services-media.brightcove.com/doc-assets/site-assets/css/site/styles.css">
+  <link rel="stylesheet" href="https://learning-services-media.brightcove.com/doc-assets/site-assets/css/site/landing-page.css">
+  <link rel="stylesheet" href="https://learning-services-media.brightcove.com/doc-assets/site-assets/css/site/tabs.css">
+  <link rel="stylesheet" href="/assets/css/local.css">
+  <link href="https://fonts.googleapis.com/css?family=Lato&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Source+Code+Pro&display=swap" rel="stylesheet">
+  <script src="https://kit.fontawesome.com/381443caa8.js" crossorigin="anonymous"></script>
+  <script src="https://learning-services-media.brightcove.com/doc-assets/site-assets/js/site/google-analytics.js"></script>
+</head>
+
+<body class="body">
+
+<header>
+  <div class="div-header">
+    <a href="/"><img class="product-logo" src="https://learning-services-media.brightcove.com/doc-assets/site-assets/images/site/product-logos/brightcove.png" alt="product logo" style="max-height: 100px;max-width: 232px;"></a>
+<!-- GTranslate: https://gtranslate.io/ -->
+<select onchange="doGTranslate(this);" style="margin-right: 1rem;">
+  <option value="">Select a language</option>
+  <option value="en|en">English</option>
+  <option value="en|fr">Français</option>
+  <option value="en|de">Deutsch</option>
+  <option value="en|ja">日本語</option>
+  <option value="en|ko">한국어</option>
+  <option value="en|es">Español</option>
+</select>
+
+<script type="text/javascript">
+/* <![CDATA[ */
+function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;if(lang_pair=='')return;var lang=lang_pair.split('|')[1];var plang=location.hostname.split('.')[0];if(plang.length !=2 && plang.toLowerCase() != 'zh-cn' && plang.toLowerCase() != 'zh-tw')plang='en';location.href=location.protocol+'//'+(lang == 'en' ? '' : lang+'.')+location.hostname.replace('www.', '').replace(RegExp('^' + plang + '\\.'), '')+location.pathname+location.search;}
+/* ]]> */
+</script>
+
+<select id="site_select" style="margin-right: 1rem;">
+  <option value="">Other Brightcove Documentation</option>
+  
+    
+      <option value="https://support.brightcove.com">Documentation Home</option>
+    
+  
+    
+      <option value="https://audience.support.brightcove.com">Brightcove Audience</option>
+    
+  
+    
+      <option value="https://beacon.support.brightcove.com">Brightcove Beacon</option>
+    
+  
+    
+      <option value="https://campaign.support.brightcove.com">Brightcove Campaign</option>
+    
+  
+    
+      <option value="https://gallery.support.brightcove.com">Gallery</option>
+    
+  
+    
+      <option value="https://zencoder.support.brightcove.com">Zencoder</option>
+    
+  
+</select>
+
+
+    <span class="secondary-nav"><a href="https://supportportal.brightcove.com/s/login/?language=en_US"><img src="https://learning-services-media.brightcove.com/doc-assets/site-assets/images/site/support.png" alt="support"> Contact Support</a> <span style="vertical-align: top;margin-left:1em;margin-right:1em;">|</span> <a href="https://status.brightcove.com/"><img src="https://learning-services-media.brightcove.com/doc-assets/site-assets/images/site/status.png" alt="system status"> System Status</a></span>
+  </div>
+  <nav aria-label="breadcrumb">
+    <ol class="breadcrumb arr-right">
+      
+      <li class="breadcrumb-item"><a href="/">Home</a></li>
+      
+      
+      
+      <li class="breadcrumb-item"><a href="/general/">General Information</a></li>
+      
+      <li class="breadcrumb-item active" aria-current="page">Brightcove Open Source Projects</li>
+    </ol>
+  </nav>
+</header>
+<div class="container">
+    <div class="row">
+      <div class="col-sm-3 left-side-bar">
+        <nav class="sidenav">
+          
+            
+            <h5><a href="/">Home</a></h5>
+            
+          
+            
+              <h5 class="submenu-header"><a href="/getting-started/">Getting Started <strong>+</strong></a></h5>            
+              <ul class="sidenav-submenu" style="display:none;">
+                
+                  
+                    <li><a href="/getting-started/overview-zencoder.html">Overview</a></li>
+                  
+                
+                  
+                    <li><a href="/getting-started/quick-start-zencoder.html">Quick Start</a></li>
+                  
+                
+              </ul>
+            
+          
+            
+              <h5 class="submenu-header"><a href="/support/">Support <strong>+</strong></a></h5>            
+              <ul class="sidenav-submenu" style="display:none;">
+                
+                  
+                    <li><a href="/support/opening-case-with-brightcove-support.html">Opening a Support Case</a></li>
+                  
+                
+                  
+                    <li><a href="/support/viewing-brightcove-system-status-page.html">Viewing the Brightcove System Status Page</a></li>
+                  
+                
+              </ul>
+            
+          
+      </nav>
+    </div>
+    <div class="col-lg-7" style="background-color: white;color: #333333;margin-top: -1em;margin-bottom: -1em;padding-bottom:1em;">
+  <!-- bootstrap layout -->
+
+<!-- search bar -->
+<div id="search_bar" class="search-bar">
+  <!-- TODO - cx value below must be changed for each site and new GCS instance set up-->
+  <!-- <script async src="https://cse.google.com/cse.js?cx=017969773216783359937:6sd3di5mwuw"></script> -->
+  <div id="search_box" class="gcse-search"></div>
+</div>
+
+<article class="bcls-article">
+  <h1>Brightcove Open Source Projects</h1>
+  <summary>Below is a listing of all current Open Source projects for Brightcove technologies, grouped by category.</summary>
+  <aside class="bcls-aside bcls-aside--information">Open Source projects are not officially supported by Brightcove.</aside>
+  <p>Welcome to Brightcove Open Source. You will find a number projects here built by Brightcove employees or members of the Brightcove community to help speed up your Brightcove development.</p>
+  <p>If you are interested in contributing to projects, go to the individual project sites on Github. If you have a project that you would like listed here, <a href="mailto:training@brightcove.com">contact us</a>.</p>
+  <section class="bcls-section">
+    <h2 id="currentApis">Current APIs</h2>
+    <ol id="current_apis">
+      <li>
+        <p>API Request Troubleshooting Script</p>
+        <p>Troubleshoot HTTP requests and responses to/from Brightcove APIs.</p>
+        <p><a href="https://github.com/BrightcoveOS/api-request-troubleshooting-script">https://github.com/BrightcoveOS/api-request-troubleshooting-script</a></p>
+      </li>
+      <li>
+        <p>Brightcove Uploader</p>
+        <p>Frontend module for direct multipart upload to s3 with secret sauce for Brightcove ingest.</p>
+        <p><a href="https://github.com/BrightcoveOS/evaporate-brightcove">https://github.com/BrightcoveOS/evaporate-brightcove</a></p>
+      </li>
+      <li>
+        <p>Brightcove Playback API Wrapper</p>
+        <p>This is a PHP wrapper for the <a href="/node/17906">Brightcove Playback API</a> written by Theresa Newman.</p>
+        <p><a href="https://github.com/BrightcoveOS/Brightcove-Playback-API-Wrapper">https://github.com/BrightcoveOS/Brightcove-Playback-API-Wrapper</a></p>
+      </li>
+      <li>
+        <p>PHP Wrapper for Brightcove Dynamic Ingest</p>
+        <p>This project provides a starting point for integrating the Brightcove Dynamic Ingest API into your application. It provides simple ways to add and update videos and associated media using either pull-based ingest or source file upload.</p>
+        <p><a href="https://github.com/BrightcoveOS/php-wrapper-dynamic-ingest">https://github.com/BrightcoveOS/php-wrapper-dynamic-ingest</a></p>
+      </li>
+      <!-- <li>
+		<p>PHP Wrapper for Brightcove Dynamic Ingest</p>
+	
+		<p>This Python script uses Media API to find all videos that have old style captions (ttml, dfxp) downloads the caption files and uses pycaption to convert them to WebVTT captions. It then uses the Source File Upload API for Dynamic Ingest to get an S3 bucket, push the webvtt files to the S3 bucket, and then makes Dynamic Ingestion calls to add the WebVTT captions to the correct video.</p>
+	
+		<aside class="bcls-aside bcls-aside--information">Note that if your account is configured for Dynamic Delivey, it is not necessary to convert DFXP captions to WebVTT yourself - if you ingest the DFXP captions using the Dynamic Ingest API, we will convert them to WebVTT automatically. See <a href="/node/17938#adding_srt_dfxp">Ingesting WebVTT Files (Text Tracks/Captions)</a> for more details.</aside>
+	
+		<p><a href="https://github.com/BrightcoveOS/dfxp2webvtt-converter">https://github.com/BrightcoveOS/dfxp2webvtt-converter</a></p>
+		</li> -->
+      <li>
+        <p>API Facade</p>
+        <p>This humble library aims to be a simple facade over Brightcove's server APIs. As the mob demands additional functionality, it will be added here.</p>
+        <p><a href="https://github.com/nwbb/node-brightcove">https://github.com/nwbb/node-brightcove</a></p>
+      </li>
+      <li>
+        <p>Player Management API Client</p>
+        <p>This module can be used to access the Brightcove Player Management API. Documentation for the underlying API can be found <a href="/node/18269">here</a>.</p>
+        <p><a href="https://github.com/BrightcoveLearning/Player-Management-Client">https://github.com/BrightcoveLearning/Player-Management-Client</a></p>
+      </li>
+      <li>
+        <p>Brightcove APIs Examples using CSharp</p>
+        <p>This project shows how the new Brightcove APIs can be used with C#.</p>
+        <p>Please note that this will work from desktop environments (tested), but will probably not work if used in ASP.NET pages due to CORS. If you run into this problem I believe the only way to solve this is to use the PHP proxy provided by Brightcove in all their CMS API example pages.</p>
+        <p>All code is provided as-is and purely as example. Use it at your own risk. No support is provided for it in any way, form or shape.</p>
+        <p><a href="https://github.com/houseofmarkus/BrightcoveAPI">https://github.com/houseofmarkus/BrightcoveAPI</a></p>
+      </li>
+      <li>
+        <p>Player Management API Client</p>
+        <p>This module can be used to access the Brightcove Player Management API. Documentation for the underlying API can be found <a href="/node/18269">here</a>.</p>
+        <p><a href="https://github.com/BrightcoveLearning/Player-Management-Client">https://github.com/BrightcoveLearning/Player-Management-Client</a></p>
+      </li>
+    </ol>
+  </section>
+  <section id="brightcovePlayer" class="bcls-section">
+    <h2>Player and SDKs</h2>
+    <ol id="brightcove_player">
+      <li>
+        <p>Video.js Plugin Framework Generator</p>
+        <p>This is an opinionated Yeoman generator for video.js plugins. It is based on the recommendations of the video.js core team as well as tools and conventions for developing plugins at Brightcove.</p>
+        <p><a href="https://github.com/videojs/generator-videojs-plugin">https://github.com/videojs/generator-videojs-plugin</a></p>
+      </li>
+    </ol>
+  </section>
+  <section class="bcls-section">
+    <h2 id="integration">System integrations</h2>
+    <ol id="cms_integrations">
+      <li>
+        <p>Brightcove Video Connect for SharePoint 2013</p>
+        <p>The Brightcove Video Connect for SharePoint 2013 allows publishers to add, browse and manage videos and video playlists directly from SharePoint. Its player component allows for easy integration of Brightcove Video Cloud assets directly into SharePoint pages.</p>
+        <p><a href="http://go.brightcove.com/bc-video-connect-sharepoint2013">http://go.brightcove.com/bc-video-connect-sharepoint2013</a></p>
+      </li>
+      <li>
+        <p>Brightcove Video Connect for Drupal</p>
+        <p>Brightcove Video Cloud is a video hosting and publishing solution for delivering professional quality video to digital audiences on any device. It offers highly customizable players, HD streaming, syncing with 3rd party CDNs and with YouTube. With Brightcove Video Connect for Drupal you can efficiently add and manage video content on your Drupal-powered websites.</p>
+        <p><a href="https://www.drupal.org/project/brightcove">https://www.drupal.org/project/brightcove</a></p>
+      </li>
+      <li>
+        <p>Brightcove Video Connect for WordPress</p>
+        <p>Are you looking to handle your Brightcove Video and Playlist library natively from within WordPress? With this plugin, developed by 10up.com, you have the power to handle multiple accounts and video libraries, upload videos and add them to playlists, render shortcodes with your videos and all from within the WordPress admin interface.</p>
+        <p><a href="https://wordpress.org/plugins/brightcove-video-connect/">https://wordpress.org/plugins/brightcove-video-connect/</a></p>
+      </li>
+      <li>
+        <p>SharePoint 2013 Connector</p>
+        <p>Provides integration between SharePoint 2013 and multiple Video Cloud accounts.</p>
+        <p><a href="https://github.com/brightcove/sharepoint-connector">https://github.com/brightcove/sharepoint-connector</a></p>
+      </li>
+      <li>
+        <p>Brightcove Video Connect for Adobe Experience Manager</p>
+        <p>Brightcove Video Connect for Adobe Experience Manager (AEM) is the easiest way to integrate workflow between Brightcove Video Cloud and AEM. Using Brightcove Video Connect, AEM users can add, browse, and manage videos directly from within the AEM user interface.</p>
+        <p><a href="http://go.brightcove.com/bc-video-connect-aem">http://go.brightcove.com/bc-video-connect-aem</a></p>
+      </li>
+      <li>
+        <p>CQ5 Component</p>
+        <p>The CQ5 component integrates Brightcove</p>
+        <p><strong>Technologies:</strong> CQ5</p>
+        <p><a href="https://www.github.com/coresecure/Adobe-CQ5-Brightcove-Connector">https://www.github.com/coresecure/Adobe-CQ5-Brightcove-Connector</a></p>
+      </li>
+      <li>
+        <p>salesforklift</p>
+        <p>Salesforce provides Bulk API to ease massive data synchronization from a data store to salesforce. This project provides a gem to use Salesforce Bulk API in a ruby app.</p>
+        <p><strong>Technologies:</strong> Salesforce, Ruby</p>
+        <p><a href="https://www.github.com/brightcove/salesforklift">https://www.github.com/brightcove/salesforklift</a></p>
+      </li>
+    </ol>
+  </section>
+  <section class="bcls-section">
+    <h2 id="3rdPartyAnalytics">Analytics</h2>
+    <ol id="analytics">
+      <li>
+        <p>Adobe Analytics</p>
+        <p>The Adobe Analytics plugin can easily be configured using the Players module. For information, see <a href="/node/18852">Configuring Adobe Analytics Event Tracking</a>.</p>
+      </li>
+      <li>
+        <p>Google Analytics</p>
+        <p>The Google Analytics plugin can easily be configured using the Players module. For information, see <a href="/node/18804">Configuring Google Analytics Event Tracking</a>.</p>
+      </li>
+    </ol>
+  </section>
+  <section class="bcls-section">
+    <h2 id="tveapps">TVE</h2>
+    <ol id="tve">
+      <li>
+        <p>TVE Reference App for the Web</p>
+        <p>A sample TVE implementation using Adobe Pass in a web app</p>
+        <p class="BCL-aside">Note: this reference app is open source, but the Adobe Pass technology is <strong>not</strong>.</p>
+        <p><a href="https://github.com/BrightcoveLearning/tve-reference-app-web">https://github.com/BrightcoveLearning/tve-reference-app-web</a></p>
+      </li>
+      <li>
+        <p>TVE Reference App for iOS</p>
+        <p>A sample TVE implementation using Adobe Pass in an iOS app</p>
+        <p class="BCL-aside">Note: this reference app is open source, but the Adobe Pass technology is <strong>not</strong>.</p>
+        <p><a href="https://github.com/BrightcoveLearning/tve-reference-app-ios">https://github.com/BrightcoveLearning/tve-reference-app-ios</a></p>
+      </li>
+      <li>
+        <p>TVE Reference App for Android</p>
+        <p>A sample TVE implementation using Adobe Pass in an Android app</p>
+        <p class="BCL-aside">Note: this reference app is open source, but the Adobe Pass technology is <strong>not</strong>.</p>
+        <p><a href="https://github.com/BrightcoveLearning/tve-reference-app-android">https://github.com/BrightcoveLearning/tve-reference-app-android</a></p>
+      </li>
+    </ol>
+  </section>
+  <section class="bcls-section">
+    <h2 id="miscellaneous">Miscellaneous</h2>
+    <p>These projects don't fit in any other category.</p>
+    <ol id="misc">
+      <li>
+        <p>Perl Commons</p>
+        <p>This project provides common classes and utilities for use in other Perl projects. This may include 3rd party libraries as well as Brightcove Open Source libraries.</p>
+        <p><strong>Technologies:</strong> Perl</p>
+        <p><a href="https://www.github.com/BrightcoveOS/Perl-Commons">https://www.github.com/BrightcoveOS/Perl-Commons</a></p>
+      </li>
+      <li>
+        <p>Metrics Graphite Pickle</p>
+        <p>An extension to Coda Hale</p>
+        <p><strong>Technologies:</strong> Graphite, Java</p>
+        <p><a href="https://www.github.com/BrightcoveOS/metrics-graphite-pickle">https://www.github.com/BrightcoveOS/metrics-graphite-pickle</a></p>
+      </li>
+      <li>
+        <p>LG Sample App</p>
+        <p>This is an LG video application that displays several playlists from a Brightcove account. The application has been designed so minimal configuration is necessary, and allows customers to make customizations to change the UI or add/remove features according to the functionality they desire.</p>
+        <p><strong>Technologies:</strong> LG, TV</p>
+        <p><a href="https://www.github.com/BrightcoveOS/LG-Sample-App">https://www.github.com/BrightcoveOS/LG-Sample-App</a></p>
+      </li>
+      <li>
+        <p>Roku Sample App</p>
+        <p>This template provides a jump-start to getting your Brightcove content published on Roku. To begin publishing with this application, you need the following:</p>
+        <p><strong>Technologies:</strong> Roku, TV</p>
+        <p><a href="https://www.github.com/BrightcoveOS/Roku-Sample-App">https://www.github.com/BrightcoveOS/Roku-Sample-App</a></p>
+      </li>
+      <li>
+        <p>Java Commons</p>
+        <p>This project provides common classes and utilities for use in other Java projects. This may include 3rd party libraries as well as Brightcove Open Source libraries.</p>
+        <p><strong>Technologies:</strong> Java</p>
+        <p><a href="https://www.github.com/BrightcoveOS/Java-Commons">https://www.github.com/BrightcoveOS/Java-Commons</a></p>
+      </li>
+      <li>
+        <p>Diamond</p>
+        <p>Diamond is a python daemon that collects system metrics and publishes them to Graphite. It is capable of collecting cpu, memory, network, i/o, load and disk metrics. Additionally, it features an API for implementing custom collectors for gathering metrics from almost any source.</p>
+        <p><strong>Technologies:</strong> Graphite, Python</p>
+        <p><a href="https://github.com/python-diamond/Diamond">https://github.com/python-diamond/Diamond</a></p>
+      </li>
+    </ol>
+  </section>
+</article>
+
+<!-- complete bootstrap layout -->
+    </div>
+    <div class="col-sm-2 right-side-bar">
+      
+      <nav class="right-side-nav">
+        <h6 class="toc">Page Contents</h6>
+        <ul id="in_page_nav" class="list-none"></ul>
+      </nav>
+      
+    </div>
+  </div>
+</div>
+
+<hr>
+<div class="last-updated">
+  Page last updated on 02 Mar 2020
+</div>
+
+<footer class="bcls-footer" role="contentinfo">
+  <div class="row">
+    <div class="region region-footer-top-center col-md-12">
+      <nav role="navigation" aria-labelledby="block-brightcovesupport-menu" id="block-brightcovesupport" class="footer-menu">
+
+        <h2>Brightcove Support</h2>
+
+        <ul class="menu">
+          <li>
+            <a href="https://status.brightcove.com">System Status</a>
+          </li>
+          <li>
+            <a href="https://supportportal.brightcove.com/s/login/?language=en_US">Contact Support</a>
+          </li>
+          <li>
+            <a href="https://support.brightcove.com/">Documentation</a>
+          </li>
+        </ul>
+
+      </nav>
+      <nav role="navigation" aria-labelledby="block-training-menu" id="block-training" class="footer-menu">
+
+        <h2>Training</h2>
+
+        <ul class="menu">
+          <li>
+            <a href="https://support.brightcove.com/online-training-courses">Online Courses</a>
+          </li>
+          <li>
+            <a href="https://support.brightcove.com/register-training">Register for a course</a>
+          </li>
+        </ul>
+
+      </nav>
+      <nav role="navigation" aria-labelledby="block-brightcove-menu" class="footer-menu">
+
+        <h2>Brightcove</h2>
+
+        <ul class="menu">
+          <li>
+            <a href="https://www.brightcove.com">Brightcove.com</a>
+          </li>
+          <li>
+            <a href="https://supportportal.brightcove.com/s/login/?language=en_US" data-drupal-link-system-path="node/18330">Contact Us</a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+  </div>
+  <div class="row">
+    <div class="region region-footer-bottom-center col-md-12">
+      <div class="bcls-copyright footer-menu">
+        <table>
+          <tr>
+            <td>
+              <div id="bc_copyright" class="field field--name-field-copyright-year field--type-string field--label-hidden field--item" style="float: left;"> Brightcove Inc. All rights reserved.</div>
+            </td>
+            <td><a href="https://www.brightcove.com/en/legal/privacy">Privacy</a> | <a href="https://www.brightcove.com/en/terms-and-conditions">Terms &amp; Conditions</a></td>
+            <td>
+              <div class="gf-links-cols footer-menu">
+                <div class="gf-social"><a href="https://www.linkedin.com/company/16439" title="LinkedIn" newtab="newtab" class="gf-social-linkedin"><i class="fab fa-linkedin-in" style="font-size: 1.5rem;"></i></a><a href="https://twitter.com/brightcove" title="Twitter" newtab="newtab" class="gf-social-twitter"><i class="fab fa-twitter" style="font-size: 1.5rem;"></i></a><a href="https://www.facebook.com/Brightcove" title="Facebook" newtab="newtab" class="gf-social-facebook"><i class="fab fa-facebook-f" style="font-size: 1.5rem;"></i></a>
+                </div>
+              </div>
+            </td>
+          </tr>
+        </table>
+      </div>
+    </div>
+  </div>
+</footer>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+  <script src="https://learning-services-media.brightcove.com/doc-assets/site-assets/js/site/https-fix.js"></script>
+  <script src="https://learning-services-media.brightcove.com/doc-assets/site-assets/js/site/setDate.js"></script>
+  <script src="https://learning-services-media.brightcove.com/doc-assets/site-assets/js/site/prism.js"></script>
+  <script src="https://learning-services-media.brightcove.com/doc-assets/site-assets/js/site/site.js"></script>
+  <script src="https://learning-services-media.brightcove.com/doc-assets/site-assets/js/site/tabs.js"></script>
+  
+  <script src="https://learning-services-media.brightcove.com/doc-assets/site-assets/js/site/toc.js"></script>
+  
+  <script src="/assets/js/sites_nav.js"></script>
+  <script src="https://learning-services-media.brightcove.com/doc-assets/site-assets/js/site/bcls-utils.js"></script>
+  <script src="/assets/js/feedback.js"></script>
+  <script src="/assets/js/search.js"></script>
+  <script async src="https://cse.google.com/cse.js?cx=017969773216783359937:gqomuefz6aq"></script>
+</body>
+
+</html>

@@ -1,0 +1,428 @@
+<!doctype html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <!-- remember to remove the following line when the site is ready to go live -->
+  <!-- <meta name="robots" content="noindex" /> -->
+  <title>Concepts: JavaScript Debugging Basics</title>
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+  <link rel="manifest" href="/site.webmanifest">  
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <!-- <link rel="stylesheet" href="/assets/css/site/bc-icons.css"> -->
+  <link rel="stylesheet" href="https://learning-services-media.brightcove.com/doc-assets/site-assets/css/site/prism.css">
+  <link rel="stylesheet" href="https://learning-services-media.brightcove.com/doc-assets/site-assets/css/site/styles.css">
+  <link rel="stylesheet" href="https://learning-services-media.brightcove.com/doc-assets/site-assets/css/site/landing-page.css">
+  <link rel="stylesheet" href="https://learning-services-media.brightcove.com/doc-assets/site-assets/css/site/tabs.css">
+  <link rel="stylesheet" href="/assets/css/local.css">
+  <link href="https://fonts.googleapis.com/css?family=Lato&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Source+Code+Pro&display=swap" rel="stylesheet">
+  <script src="https://kit.fontawesome.com/381443caa8.js" crossorigin="anonymous"></script>
+  <script src="https://learning-services-media.brightcove.com/doc-assets/site-assets/js/site/google-analytics.js"></script>
+</head>
+
+<body class="body">
+
+<header>
+  <div class="div-header">
+    <a href="/"><img class="product-logo" src="https://learning-services-media.brightcove.com/doc-assets/site-assets/images/site/product-logos/brightcove.png" alt="product logo" style="max-height: 100px;max-width: 232px;"></a>
+<!-- GTranslate: https://gtranslate.io/ -->
+<select onchange="doGTranslate(this);" style="margin-right: 1rem;">
+  <option value="">Select a language</option>
+  <option value="en|en">English</option>
+  <option value="en|fr">Français</option>
+  <option value="en|de">Deutsch</option>
+  <option value="en|ja">日本語</option>
+  <option value="en|ko">한국어</option>
+  <option value="en|es">Español</option>
+</select>
+
+<script type="text/javascript">
+/* <![CDATA[ */
+function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;if(lang_pair=='')return;var lang=lang_pair.split('|')[1];var plang=location.hostname.split('.')[0];if(plang.length !=2 && plang.toLowerCase() != 'zh-cn' && plang.toLowerCase() != 'zh-tw')plang='en';location.href=location.protocol+'//'+(lang == 'en' ? '' : lang+'.')+location.hostname.replace('www.', '').replace(RegExp('^' + plang + '\\.'), '')+location.pathname+location.search;}
+/* ]]> */
+</script>
+
+<select id="site_select" style="margin-right: 1rem;">
+  <option value="">Other Brightcove Documentation</option>
+  
+    
+      <option value="https://support.brightcove.com">Documentation Home</option>
+    
+  
+    
+      <option value="https://audience.support.brightcove.com">Brightcove Audience</option>
+    
+  
+    
+      <option value="https://beacon.support.brightcove.com">Brightcove Beacon</option>
+    
+  
+    
+      <option value="https://campaign.support.brightcove.com">Brightcove Campaign</option>
+    
+  
+    
+      <option value="https://gallery.support.brightcove.com">Gallery</option>
+    
+  
+    
+      <option value="https://zencoder.support.brightcove.com">Zencoder</option>
+    
+  
+</select>
+
+
+    <span class="secondary-nav"><a href="https://supportportal.brightcove.com/s/login/?language=en_US"><img src="https://learning-services-media.brightcove.com/doc-assets/site-assets/images/site/support.png" alt="support"> Contact Support</a> <span style="vertical-align: top;margin-left:1em;margin-right:1em;">|</span> <a href="https://status.brightcove.com/"><img src="https://learning-services-media.brightcove.com/doc-assets/site-assets/images/site/status.png" alt="system status"> System Status</a></span>
+  </div>
+  <nav aria-label="breadcrumb">
+    <ol class="breadcrumb arr-right">
+      
+      <li class="breadcrumb-item"><a href="/">Home</a></li>
+      
+      
+      
+      <li class="breadcrumb-item"><a href="/general/">General Information</a></li>
+      
+      <li class="breadcrumb-item active" aria-current="page">Concepts: JavaScript Debugging Basics</li>
+    </ol>
+  </nav>
+</header>
+<div class="container">
+    <div class="row">
+      <div class="col-sm-3 left-side-bar">
+        <nav class="sidenav">
+          
+            
+            <h5><a href="/">Home</a></h5>
+            
+          
+            
+              <h5 class="submenu-header"><a href="/getting-started/">Getting Started <strong>+</strong></a></h5>            
+              <ul class="sidenav-submenu" style="display:none;">
+                
+                  
+                    <li><a href="/getting-started/overview-zencoder.html">Overview</a></li>
+                  
+                
+                  
+                    <li><a href="/getting-started/quick-start-zencoder.html">Quick Start</a></li>
+                  
+                
+              </ul>
+            
+          
+            
+              <h5 class="submenu-header"><a href="/support/">Support <strong>+</strong></a></h5>            
+              <ul class="sidenav-submenu" style="display:none;">
+                
+                  
+                    <li><a href="/support/opening-case-with-brightcove-support.html">Opening a Support Case</a></li>
+                  
+                
+                  
+                    <li><a href="/support/viewing-brightcove-system-status-page.html">Viewing the Brightcove System Status Page</a></li>
+                  
+                
+              </ul>
+            
+          
+      </nav>
+    </div>
+    <div class="col-lg-7" style="background-color: white;color: #333333;margin-top: -1em;margin-bottom: -1em;padding-bottom:1em;">
+  <!-- bootstrap layout -->
+
+<!-- search bar -->
+<div id="search_bar" class="search-bar">
+  <!-- TODO - cx value below must be changed for each site and new GCS instance set up-->
+  <!-- <script async src="https://cse.google.com/cse.js?cx=017969773216783359937:6sd3di5mwuw"></script> -->
+  <div id="search_box" class="gcse-search"></div>
+</div>
+
+<article class="bcls-article">
+  <h1>Concepts: JavaScript Debugging Basics</h1>
+  <summary>
+    <p>In this topic, you will learn some basic concepts to help you debug your custom JavaScript code when you add it to Brightcove Player, and covers the following solutions:</p>
+    <ul>
+      <li>Get started with the basic video player code</li>
+      <li>Display messages in the browser console</li>
+    </ul>
+  </summary>
+  <section class="bcls-section">
+    <h2 id="playercode">Player code</h2>
+    <p>When testing and debugging your code it is most helpful to use the in-page embed player implementation (called the <strong>Advanced</strong> code in Studio). This provides the clearest way to interact with the player.</p>
+    <p>Using JavaScript is almost assuredly part of your testing and debugging, so you will want to setup your code to use JavaScript. This is done in a standard way using the <code>ready</code> event. Both the in-page embed implementation code and the <code>ready</code> event are shown here.</p>
+    <ul>
+      <li>Lines 11-18: Standard in-page embed player code</li>
+      <li>Lines 20-24: Standard script block in which to use JavaScript</li>
+      <li>Lines 11, 21: Player <code>id</code> added and used. This is an addition to the standard in-page embed implementation code.</li>
+    </ul>
+    <pre class="line-numbers">
+<code class="language-html">&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+
+&lt;head&gt;
+    &lt;meta http-equiv="Content-Type" content="text/html; charset=utf-8" /&gt;
+    &lt;title&gt;&lt;/title&gt;
+&lt;/head&gt;
+
+&lt;body&gt;
+    &lt;h1&gt;Sample Player&lt;/h1&gt;
+    <span class="bcls-highlight">&lt;video-js id="myPlayerID"</span>
+    style="width: 640px; height: 360px;"
+    data-video-id="4845798282001"
+    data-account="1752604059001"
+    data-player="default"
+    data-embed="default"
+    class="video-js" controls&gt;&lt;/video-js&gt;
+    &lt;script src="//players.brightcove.net/1752604059001/default_default/index.min.js"&gt;&lt;/script&gt;&lt;script&gt;
+        <span class="bcls-highlight">videojs.getPlayer('myPlayerID').ready(function() {</span>
+            var myPlayer = this;
+            console.log('EVENT: Player ready');
+            myPlayer.on('loadedmetadata', function(evt) {
+                console.log('EVENT: Metadata loaded');
+            });
+        });
+    &lt;/script&gt;
+&lt;/body&gt;
+
+&lt;/html&gt;</code></pre>
+    <!-- <p><code data-gist-id="7046263" data-gist-hide-footer="true" data-gist-line="1-28" data-gist-highlight-line="11,21"></code>
+        </p> --></section>
+  <section class="bcls-section">
+    <h2 id="displayingMessages">Displaying Messages</h2>
+    <p>When testing and debugging your code, it is helpful to print out text strings and object values. You can do this using the <code>console</code> object. Although this object is not part of the JavaScript language, it is part of the runtime environment and is available in most current browsers. In Firefox, it comes with the Firebug extension. In WebKit browsers (Safari and Chrome), it is part of the Web Inspector/DevTools. In Internet Explorer, starting with IE8, it is part of the Developer Tools.</p>
+    <p>The <code>console</code> object has several methods, including:</p>
+    <ul>
+      <li>The <code>log()</code> method for general output of logging information. This allows string substitution and additional arguments.
+        <pre class="line-numbers">
+<code class="language-javascript">console.log("test",1,{},[1,2,3]);</code></pre>
+      </li>
+      <li>The <code>dir()</code> method for displaying an interactive list of object properties.
+        <pre class="line-numbers">
+<code class="language-javascript">console.dir({one:1, two: {three:3}});</code></pre>
+      </li>
+    </ul>
+    <p>Here is example code and a screenshot of the console displaying the <code>console.log()</code> of messages.</p>
+    <pre class="line-numbers">
+<code class="language-javascript">&lt;video-js id="myPlayerID"
+style="width: 640px; height: 360px;"
+data-video-id="4845798282001"
+data-account="1752604059001"
+data-player="default"
+data-embed="default"
+class="video-js" controls&gt;&lt;/video-js&gt;
+&lt;script src="//players.brightcove.net/1752604059001/default_default/index.min.js"&gt;&lt;/script&gt;&lt;script&gt;
+    videojs.getPlayer('myPlayerID').ready(function() {
+        var myPlayer = this;
+        <span class="bcls-highlight">console.log('EVENT: Player ready');</span>
+        myPlayer.on('loadedmetadata', function(evt) {
+            <span class="bcls-highlight">console.log('EVENT: Metadata loaded');</span>
+        });
+    });
+&lt;/script&gt;</code></pre>
+    <!-- <p><code data-gist-id="7046263" data-gist-hide-footer="true" data-gist-line="33-45" data-gist-highlight-line="43"></code></p> -->
+    
+    <figure class="bcls-figure"><img class="bcls-image" alt="console.log" src="//learning-services-media.brightcove.com/doc-assets/video-cloud-apis/general-information/debugging-basics/console-log-demo.png" />
+      <figcaption class="bcls-caption--image">console.log</figcaption>
+    </figure>
+    <p>Below are details on using the console object in each browser.</p>
+  </section>
+  <section class="bcls-section">
+    <h2 id="chrome">Chrome</h2>
+    <h3>Viewing your messages in the Chrome browser</h3>
+    <p>Run the sample code in the Chrome browser. To view your messages, open the DevTools panel:</p>
+    <ol class="bcls-tasklist">
+      <li>In the Chrome browser, select the <b>Customize and control Google Chrome</b> icon.</li>
+      <li>Select <strong>Tools</strong> &gt;<strong> JavaScript Console</strong>.
+        <figure class="bcls-figure"><img class="bcls-image" alt="Chrome Developer tools" src="//learning-services-media.brightcove.com/doc-assets/video-cloud-apis/general-information/debugging-basics/Chrome1.png" />
+          <figcaption class="bcls-caption--image">Chrome Developer tools</figcaption>
+        </figure>
+      </li>
+      <li>In the DevTools panel, with the <strong>Console</strong> menu item selected, you should see your console messages displayed here.
+        <figure class="bcls-figure"><img class="bcls-image" alt="Chrome Console" src="//learning-services-media.brightcove.com/doc-assets/video-cloud-apis/general-information/debugging-basics/Chrome2.png" />
+          <figcaption class="bcls-caption--image">Chrome Console</figcaption>
+        </figure>
+      </li>
+    </ol>
+    <p>View details about using <a href="https://developers.google.com/chrome-developer-tools/">Chrome DevTools</a>.</p>
+  </section>
+  <section class="bcls-section">
+    <h2 id="safari">Safari</h2>
+    <h3>Viewing your messages in the Safari browser</h3>
+    <p>Run the sample code in the Safari browser. To view your messages, open the Developer Tools panel:</p>
+    <ol class="bcls-tasklist__restart">
+      <li>If you don't see the <strong>Develop</strong> menu item in the Safari menu bar, follow these steps:
+        <ol type="a">
+          <li>Select <strong>Safari</strong> &gt; <strong>Preferences</strong> &gt; <strong>Advanced</strong>.</li>
+          <li>Select the <strong>Show Develop menu in menu bar</strong> option.</li>
+        </ol>
+        <figure class="bcls-figure"><img class="bcls-image" alt="Safari Develop Menu" src="//learning-services-media.brightcove.com/doc-assets/video-cloud-apis/general-information/debugging-basics/Safari1.png" />
+          <figcaption class="bcls-caption--image">Safari Develop Menu</figcaption>
+        </figure>
+      </li>
+      <li>In the Safari menu bar, select <b>Develop</b> &gt; <b>Show Error Console</b>.
+        <figure class="bcls-figure"><img class="bcls-image" alt="Safari Error Console" src="//learning-services-media.brightcove.com/doc-assets/video-cloud-apis/general-information/debugging-basics/Safari2.png" />
+          <figcaption class="bcls-caption--image">Safari Error Console</figcaption>
+        </figure>
+      </li>
+      <li>In the Error Console panel, you should see your console messages displayed.
+        <figure class="bcls-figure"><img class="bcls-image" alt="Safari Console Messages" src="//learning-services-media.brightcove.com/doc-assets/video-cloud-apis/general-information/debugging-basics/Safari3.png" />
+          <figcaption class="bcls-caption--image">Safari Console Messages</figcaption>
+        </figure>
+      </li>
+    </ol>
+    <p>View details about using the <a href="https://developer.apple.com/technologies/safari/developer-tools.html">Safari Web Inspector</a>.</p>
+  </section>
+  <section class="bcls-section">
+    <h2 id="firefox">Firefox</h2>
+    <h3>Viewing your messages in the Firefox browser</h3>
+    <p>Run the sample code in the Firefox browser. To view your messages, open the Web Console panel:</p>
+    <ol class="bcls-tasklist__restart">
+      <li>In the Firefox menu bar, select <strong>Tools</strong> &gt; <strong>Web Developer</strong> &gt; <strong>Web Console</strong>.
+        <figure class="bcls-figure"><img class="bcls-image" alt="Firefox Web Console" src="//learning-services-media.brightcove.com/doc-assets/video-cloud-apis/general-information/debugging-basics/firefox1.png" />
+          <figcaption class="bcls-caption--image">Firefox Web Console</figcaption>
+        </figure>
+      </li>
+      <li>In the Web Console panel, you should see your console messages displayed.
+        <figure class="bcls-figure"><img class="bcls-image" alt="Firefox Console Messages" src="//learning-services-media.brightcove.com/doc-assets/video-cloud-apis/general-information/debugging-basics/firefox2.png" />
+          <figcaption class="bcls-caption--image">Firefox Console Messages</figcaption>
+        </figure>
+      </li>
+    </ol>
+  </section>
+  <section class="bcls-section">
+    <h2 id="ie">Internet Explorer</h2>
+    <h3>Viewing your messages in the Internet Explorer (IE8) browser</h3>
+    <p>Run the sample code in the IE8 browser. To view your messages, open the Developer Tools:</p>
+    <ol class="bcls-tasklist__restart">
+      <li>In the Internet Explorer menu bar, select <b>Tools</b> &gt; <b>Developer Tools</b>, or press F12.
+        <figure class="bcls-figure"><img class="bcls-image" alt="IE Developer Tools" src="//learning-services-media.brightcove.com/doc-assets/video-cloud-apis/general-information/debugging-basics/IE1.png" />
+          <figcaption class="bcls-caption--image">IE Developer Tools</figcaption>
+        </figure>
+      </li>
+      <li>In the Developer Tools window, select the Script menu item. When you refresh your sample code in the browser, you should see your console messages displayed.
+        <figure class="bcls-figure"><img class="bcls-image" alt="IE Console Messages" src="//learning-services-media.brightcove.com/doc-assets/video-cloud-apis/general-information/debugging-basics/IE2.png" />
+          <figcaption class="bcls-caption--image">IE Console Messages</figcaption>
+        </figure>
+        <div>&nbsp;</div>
+      </li>
+    </ol>
+    <p>For some older IE browsers, you may see an error message or the browser may crash if you try to use the <code>console</code> object in your code when the developer tools panel is not open. This is because the <code>console</code> object is not defined. To avoid this problem, add the following code snippet to the top of your JavaScript code:</p>
+    <pre class="line-numbers">
+<code class="language-javascript">if(!window.console){ window.console = {log: function(){} }; }</code></pre>
+    <p>This code checks to see if the <code>console</code> object exists. If not, it defines the <code>console</code> object with a blank function named <code>log</code>.</p>
+    <p>View details about using the <a href="http://msdn.microsoft.com/en-us/library/ie/gg589507%28v=vs.85%29.aspx">Internet Explorer Developer Tools</a>.</p>
+  </section>
+</article>
+
+<!-- complete bootstrap layout -->
+    </div>
+    <div class="col-sm-2 right-side-bar">
+      
+      <nav class="right-side-nav">
+        <h6 class="toc">Page Contents</h6>
+        <ul id="in_page_nav" class="list-none"></ul>
+      </nav>
+      
+    </div>
+  </div>
+</div>
+
+<hr>
+<div class="last-updated">
+  Page last updated on 02 Mar 2020
+</div>
+
+<footer class="bcls-footer" role="contentinfo">
+  <div class="row">
+    <div class="region region-footer-top-center col-md-12">
+      <nav role="navigation" aria-labelledby="block-brightcovesupport-menu" id="block-brightcovesupport" class="footer-menu">
+
+        <h2>Brightcove Support</h2>
+
+        <ul class="menu">
+          <li>
+            <a href="https://status.brightcove.com">System Status</a>
+          </li>
+          <li>
+            <a href="https://supportportal.brightcove.com/s/login/?language=en_US">Contact Support</a>
+          </li>
+          <li>
+            <a href="https://support.brightcove.com/">Documentation</a>
+          </li>
+        </ul>
+
+      </nav>
+      <nav role="navigation" aria-labelledby="block-training-menu" id="block-training" class="footer-menu">
+
+        <h2>Training</h2>
+
+        <ul class="menu">
+          <li>
+            <a href="https://support.brightcove.com/online-training-courses">Online Courses</a>
+          </li>
+          <li>
+            <a href="https://support.brightcove.com/register-training">Register for a course</a>
+          </li>
+        </ul>
+
+      </nav>
+      <nav role="navigation" aria-labelledby="block-brightcove-menu" class="footer-menu">
+
+        <h2>Brightcove</h2>
+
+        <ul class="menu">
+          <li>
+            <a href="https://www.brightcove.com">Brightcove.com</a>
+          </li>
+          <li>
+            <a href="https://supportportal.brightcove.com/s/login/?language=en_US" data-drupal-link-system-path="node/18330">Contact Us</a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+  </div>
+  <div class="row">
+    <div class="region region-footer-bottom-center col-md-12">
+      <div class="bcls-copyright footer-menu">
+        <table>
+          <tr>
+            <td>
+              <div id="bc_copyright" class="field field--name-field-copyright-year field--type-string field--label-hidden field--item" style="float: left;"> Brightcove Inc. All rights reserved.</div>
+            </td>
+            <td><a href="https://www.brightcove.com/en/legal/privacy">Privacy</a> | <a href="https://www.brightcove.com/en/terms-and-conditions">Terms &amp; Conditions</a></td>
+            <td>
+              <div class="gf-links-cols footer-menu">
+                <div class="gf-social"><a href="https://www.linkedin.com/company/16439" title="LinkedIn" newtab="newtab" class="gf-social-linkedin"><i class="fab fa-linkedin-in" style="font-size: 1.5rem;"></i></a><a href="https://twitter.com/brightcove" title="Twitter" newtab="newtab" class="gf-social-twitter"><i class="fab fa-twitter" style="font-size: 1.5rem;"></i></a><a href="https://www.facebook.com/Brightcove" title="Facebook" newtab="newtab" class="gf-social-facebook"><i class="fab fa-facebook-f" style="font-size: 1.5rem;"></i></a>
+                </div>
+              </div>
+            </td>
+          </tr>
+        </table>
+      </div>
+    </div>
+  </div>
+</footer>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+  <script src="https://learning-services-media.brightcove.com/doc-assets/site-assets/js/site/https-fix.js"></script>
+  <script src="https://learning-services-media.brightcove.com/doc-assets/site-assets/js/site/setDate.js"></script>
+  <script src="https://learning-services-media.brightcove.com/doc-assets/site-assets/js/site/prism.js"></script>
+  <script src="https://learning-services-media.brightcove.com/doc-assets/site-assets/js/site/site.js"></script>
+  <script src="https://learning-services-media.brightcove.com/doc-assets/site-assets/js/site/tabs.js"></script>
+  
+  <script src="https://learning-services-media.brightcove.com/doc-assets/site-assets/js/site/toc.js"></script>
+  
+  <script src="/assets/js/sites_nav.js"></script>
+  <script src="https://learning-services-media.brightcove.com/doc-assets/site-assets/js/site/bcls-utils.js"></script>
+  <script src="/assets/js/feedback.js"></script>
+  <script src="/assets/js/search.js"></script>
+  <script async src="https://cse.google.com/cse.js?cx=017969773216783359937:gqomuefz6aq"></script>
+</body>
+
+</html>
