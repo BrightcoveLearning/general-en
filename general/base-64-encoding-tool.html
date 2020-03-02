@@ -1,0 +1,40 @@
+---
+title: Base 64 Encoding Tool
+parent: General Information
+---
+<article class="bcls-article">
+  <h1>Base 64 Encoding Tool</h1>
+  <summary>This is a simple utility to Base64 encode strings. Its primary purpose is to help you test <a href="/node/17925">getting access tokens</a> from the Brightcove OAuth API.</summary>
+  <section class="bcls-section">
+    <h2 id="encoding_tool">Encoding tool</h2>
+    <p>Paste strings into the fields below, then click the button to get the equivalent Base64-encoded strings.</p>
+    <p>Client ID to encode:
+      <input id="str1" type="text" style="width:70%" />
+    </p>
+    <p>Client Secret to encode:
+      <input id="str2" type="text" style="width:70%" />
+    </p>
+    <p>
+      <button id="encode" class="bcls-button">Encode Them</button>
+    </p>
+    <p>Encoded authentication string:<br />
+      <textarea id="str1encoded" rows="2" style="width:80%"></textarea>
+    </p>
+  </section>
+</article>
+<script>
+var BCLS = ( function (window, document) {
+  var str1 = document.getElementById('str1'),
+    str2 = document.getElementById('str2'),
+    str1encoded = document.getElementById('str1encoded'),
+    encode = document.getElementById('encode');
+
+    encode.addEventListener('click', function() {
+      str1encoded.value = btoa(str1.value + ':' + str2.value);
+    });
+
+    str1encoded.addEventListener('click', function() {
+      this.select();
+    })
+})(window, document);
+</script>

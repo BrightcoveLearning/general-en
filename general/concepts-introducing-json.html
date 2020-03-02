@@ -1,0 +1,115 @@
+---
+title: 'Concepts: Introducing JSON'
+parent: General Information
+---
+<article class="bcls-article">
+  <h1>Concepts: Introducing JSON</h1>
+  <summary>In this topic, you learn about JSON files and methods used for manipulating this data.</summary>
+  <section class="bcls-section">
+    <h2 id="whatsCovered">JSON topics</h2>
+    <p>What's covered in this guide:</p>
+    <ul>
+      <li>Get started with JSON files</li>
+      <li>Use methods to manipulate JSON data</li>
+      <li>Use tools for creating JSON text</li>
+      <li>Validate JSON data</li>
+    </ul>
+  </section>
+  <section class="bcls-section">
+    <h2 id="startingWithJSON">Starting with JSON</h2>
+    <p>The JavaScript Object Notation (JSON) file format is a text-based, open standard format which is used to serialize and transmit structured data between a server and web application. The JSON format is easy for humans to read and write. It is also easy for machines to parse and generate. Although it is based on a subset of the JavaScript programming language, it is completely language independent. The JSON format is smaller, faster and easier to parse than XML. Because of these properties, the JSON format is the ideal data-interchange language.</p>
+    <p>Data types in the JSON format include:</p>
+    <ul>
+      <li><strong>Number</strong> - Double precision floating point in JavaScript</li>
+      <li><strong>String</strong> - Double quoted Unicode with backslash escaping</li>
+      <li><strong>Boolean</strong> - true or false</li>
+      <li><strong>Array</strong> - An ordered sequence of comma-separated values enclosed in square brackets</li>
+      <li><strong>Object</strong> - An unordered collection of key:value pairs, with the colon ":" separating the key and value. It is a comma-separated list enclosed in curly braces.</li>
+      <li><strong>null</strong> - null value</li>
+    </ul>
+    <p>The following example describes a person's contact information in JSON format:</p>
+    <pre class="line-numbers">
+<code class="language-json">{
+    "firstName": "John",
+    "lastName": "Smith",
+    "age": 25,
+    "address": {
+        "streetAddress": "21 2nd Street",
+        "city": "New York",
+        "state": "NY",
+        "postalCode": 10021
+    },
+    "phoneNumbers": [
+        {
+            "type": "home",
+            "number": "212 555-1234"
+        },
+        {
+            "type": "fax",
+            "number": "646 555-4567"
+        }
+    ]
+}</code></pre>
+    <p>To learn more about the JSON format, refer to the <a href="//www.json.org/">Introducing JSON</a> and the <a href="http://javascript.crockford.com/">JSON in JavaScript</a> documents.</p>
+  </section>
+  <section class="bcls-section">
+    <h2 id="usingJSONMethods">Using JSON methods</h2>
+    <p>Since the JSON format is very closely related to the JavaScript language (the characters U+2028 and U+2029 are handled differently in the two languages), it can be used in the language with little effort. The JSON text format uses the same syntax as the code used to create a JavaScript object. The JSON object contains methods for converting values to JSON format and for converting JSON format to values.</p>
+    <p>The JSON object has several methods which include:</p>
+    <ul>
+      <li>The <code>parse()</code> method for converting a JSON string to a JavaScript object or array.
+        <pre class="line-numbers">
+<code class="language-javascript">var jsonstring = '{"firstName":"John","lastName":"Smith","phone":["555-0100","555-0120"]}';
+var contact = JSON.parse(jsonstring);
+console.log(contact.lastName + ", " + contact.firstName);
+//Output: Smith, John</code></pre>
+        <p>For details, refer to the <a href="//msdn.microsoft.com/en-us/library/ie/cc836466%28v=vs.94%29.aspx">JSON.parse Function (JavaScript)</a> document.</p>
+      </li>
+      <li>The <code>stringify()</code> method for converting a JavaScript value, usually an object or array, to a JSON string.
+        <p>Example 1:</p>
+        <pre class="line-numbers">
+<code class="language-javascript">var contact = new Object();
+contact.firstName = "John";
+contact.lastName = "Smith";
+contact.phone = ["555-0100","555-0120"];
+var jsonstring = JSON.stringify(contact);
+console.log(jsonstring);
+//Output: { "firstName":"John","lastName":"Smith","phone":["555-0100","555-0120"] }</code></pre>
+        <p>Example 2: (Notice that escape characters are used for internal strings)</p>
+        <pre class="line-numbers">
+<code class="language-javascript">var foo = new Object();
+foo.template = '&lt;p class="bar"&gt;Hello&lt;/p&gt;';
+var jsonstring = JSON.stringify(foo);
+console.log(jsonstring);
+//Output: {"template":"&lt;p class=\"bar\"&gt;Hello&lt;/p&gt;"}</code></pre>
+        <p>For details, refer to the <a href="//msdn.microsoft.com/en-us/library/ie/cc836459%28v=vs.94%29.aspx">JSON.stringify Function (JavaScript)</a> document.</p>
+      </li>
+    </ul>
+  </section>
+  <section class="bcls-section">
+    <h2 id="createJSONText">Create JSON text</h2>
+    <p>If you are using and creating a lot of JSON formatted text files, you can use a JSON editor to help view, edit and format them.</p>
+    <p>Here are some downloadable JSON editors:</p>
+    <ul>
+      <li><a href="//tickplant.com/">Power JSON Editor</a></li>
+      <li><a href="//sourceforge.net/projects/eclipsejsonedit/">Eclipse JSON Editor Plugin</a></li>
+      <li><a href="//chrome.google.com/webstore/detail/json-handle/iahnhfdhidomcpggpaimmmahffihkfnj?hl=en-US">Chrome Web Store JSON Editor</a></li>
+    </ul>
+    <p>There are also online JSON editors:</p>
+    <ul>
+      <li><a href="//www.jsoneditoronline.org/">JSON Editor Online</a></li>
+      <li><a href="//jsonmate.com/">JSONmate</a></li>
+      <li><a href="//json.parser.online.fr/">JSON Parser Online</a></li>
+    </ul>
+    <p>There are plenty of free tools to help you work with JSON formatted files. Use your browser to search for other applications.</p>
+  </section>
+  <section class="bcls-section">
+    <h2 id="validateJSONData">Validate JSON data</h2>
+    <p>The <a href="//json-schema.org/">JSON schema</a> defines the structure of JSON data and is used to validate your JSON data to ensure that is conforms to the standards defined by <a href="//json.org/">json.org</a>. There are online tools to validate your JSON files.</p>
+    <p>Here are some JSON validators:</p>
+    <ul>
+      <li><a href="//jsonlint.com">JSONLint</a></li>
+      <li><a href="//jsonformatter.curiousconcept.com/">JSON Formatter &amp; Validator</a></li>
+    </ul>
+  </section>
+</article>
