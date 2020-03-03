@@ -1,0 +1,401 @@
+<!doctype html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <!-- remember to remove the following line when the site is ready to go live -->
+  <!-- <meta name="robots" content="noindex" /> -->
+  <title>Using the Ooyala Players to Deliver Video Cloud Content</title>
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+  <link rel="manifest" href="/site.webmanifest">  
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <!-- <link rel="stylesheet" href="/assets/css/site/bc-icons.css"> -->
+  <link rel="stylesheet" href="https://learning-services-media.brightcove.com/doc-assets/site-assets/css/site/prism.css">
+  <link rel="stylesheet" href="https://learning-services-media.brightcove.com/doc-assets/site-assets/css/site/styles.css">
+  <link rel="stylesheet" href="https://learning-services-media.brightcove.com/doc-assets/site-assets/css/site/landing-page.css">
+  <link rel="stylesheet" href="https://learning-services-media.brightcove.com/doc-assets/site-assets/css/site/tabs.css">
+  <link rel="stylesheet" href="/assets/css/local.css">
+  <link href="https://fonts.googleapis.com/css?family=Lato&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Source+Code+Pro&display=swap" rel="stylesheet">
+  <script src="https://kit.fontawesome.com/381443caa8.js" crossorigin="anonymous"></script>
+  <script src="https://learning-services-media.brightcove.com/doc-assets/site-assets/js/site/google-analytics.js"></script>
+</head>
+
+<body class="body">
+
+<header>
+  <div class="div-header">
+    <a href="/"><img class="product-logo" src="https://learning-services-media.brightcove.com/doc-assets/site-assets/images/site/product-logos/brightcove.png" alt="product logo" style="max-height: 100px;max-width: 232px;"></a>
+<!-- GTranslate: https://gtranslate.io/ -->
+<select onchange="doGTranslate(this);" style="margin-right: 1rem;">
+  <option value="">Select a language</option>
+  <option value="en|en">English</option>
+  <option value="en|fr">Français</option>
+  <option value="en|de">Deutsch</option>
+  <option value="en|ja">日本語</option>
+  <option value="en|ko">한국어</option>
+  <option value="en|es">Español</option>
+</select>
+
+<script type="text/javascript">
+/* <![CDATA[ */
+function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;if(lang_pair=='')return;var lang=lang_pair.split('|')[1];var plang=location.hostname.split('.')[0];if(plang.length !=2 && plang.toLowerCase() != 'zh-cn' && plang.toLowerCase() != 'zh-tw')plang='en';location.href=location.protocol+'//'+(lang == 'en' ? '' : lang+'.')+location.hostname.replace('www.', '').replace(RegExp('^' + plang + '\\.'), '')+location.pathname+location.search;}
+/* ]]> */
+</script>
+
+<select id="site_select" style="margin-right: 1rem;">
+  <option value="">Other Brightcove Documentation</option>
+  
+    
+      <option value="https://support.brightcove.com">Documentation Home</option>
+    
+  
+    
+      <option value="https://audience.support.brightcove.com">Brightcove Audience</option>
+    
+  
+    
+      <option value="https://beacon.support.brightcove.com">Brightcove Beacon</option>
+    
+  
+    
+      <option value="https://campaign.support.brightcove.com">Brightcove Campaign</option>
+    
+  
+    
+      <option value="https://gallery.support.brightcove.com">Gallery</option>
+    
+  
+    
+      <option value="https://zencoder.support.brightcove.com">Zencoder</option>
+    
+  
+</select>
+
+
+    <span class="secondary-nav"><a href="https://supportportal.brightcove.com/s/login/?language=en_US"><img src="https://learning-services-media.brightcove.com/doc-assets/site-assets/images/site/support.png" alt="support"> Contact Support</a> <span style="vertical-align: top;margin-left:1em;margin-right:1em;">|</span> <a href="https://status.brightcove.com/"><img src="https://learning-services-media.brightcove.com/doc-assets/site-assets/images/site/status.png" alt="system status"> System Status</a></span>
+  </div>
+  <nav aria-label="breadcrumb">
+    <ol class="breadcrumb arr-right">
+      
+      <li class="breadcrumb-item"><a href="/">Home</a></li>
+      
+      
+      
+      <li class="breadcrumb-item"><a href="/ooyala/">Ooyala</a></li>
+      
+      <li class="breadcrumb-item active" aria-current="page">Using the Ooyala Players to Deliver Video Cloud Content</li>
+    </ol>
+  </nav>
+</header>
+<div class="container">
+    <div class="row">
+      <div class="col-sm-3 left-side-bar">
+        <nav class="sidenav">
+          
+            
+            <h5><a href="/">Home</a></h5>
+            
+          
+            
+              <h5 class="submenu-header"><a href="/getting-started/">Getting Started <strong>+</strong></a></h5>            
+              <ul class="sidenav-submenu" style="display:none;">
+                
+                  
+                    <li><a href="/getting-started/overview-zencoder.html">Overview</a></li>
+                  
+                
+                  
+                    <li><a href="/getting-started/quick-start-zencoder.html">Quick Start</a></li>
+                  
+                
+              </ul>
+            
+          
+            
+              <h5 class="submenu-header"><a href="/support/">Support <strong>+</strong></a></h5>            
+              <ul class="sidenav-submenu" style="display:none;">
+                
+                  
+                    <li><a href="/support/opening-case-with-brightcove-support.html">Opening a Support Case</a></li>
+                  
+                
+                  
+                    <li><a href="/support/viewing-brightcove-system-status-page.html">Viewing the Brightcove System Status Page</a></li>
+                  
+                
+              </ul>
+            
+          
+      </nav>
+    </div>
+    <div class="col-lg-7" style="background-color: white;color: #333333;margin-top: -1em;margin-bottom: -1em;padding-bottom:1em;">
+  <!-- bootstrap layout -->
+
+<!-- search bar -->
+<div id="search_bar" class="search-bar">
+  <!-- TODO - cx value below must be changed for each site and new GCS instance set up-->
+  <!-- <script async src="https://cse.google.com/cse.js?cx=017969773216783359937:6sd3di5mwuw"></script> -->
+  <div id="search_box" class="gcse-search"></div>
+</div>
+
+<article class="bcls-article">
+  <h1>Using the Ooyala Players to Deliver Video Cloud Content</h1>
+  <summary>
+    <p>This topic describes how Ooyala web and SDK players will continue to work after your videos are migrated to Video Cloud, keeping your online videos working while you complete the migration to the Brightcove players.</p>
+    <aside class="bcls-aside bcls-aside--information language-editable">Note: this topic applies <strong>only</strong> to Ooyala customers migrated to Video Cloud.</aside>
+  </summary>
+  <p><a href="/node/18904">See other Ooyala to Brightcove Migration Guides</a>.</p>
+  <section class="bcls-section">
+    <h2 id="Introduction">Introduction</h2>
+    <p>Brightcove offers a <a href="/node/18283">highly customizable web player</a>, and also <a href="/node/18367">native players for Android, iOS, and tvOS</a>.</p>
+    <p>However, we know that replacing player embed codes and rebuilding device apps will take time, so Brightcove has built an adaptor that will allow your existing Ooyala players to continue working by retrieving the video data from Video Cloud instead of Backlot:</p>
+    <figure class="bcls-figure"><img class="bcls-image" alt="Ooyala Player to Video Cloud Connector" src="https://learning-services-media.brightcove.com/doc-assets/node/18905-using-ooyala-players-deliver-video-cloud-content/OoyalaPlayerwithVideoCloud.png" />
+      <figcaption class="bcls-caption--image">Ooyala Player to Video Cloud Connector</figcaption>
+    </figure>
+    <aside class="bcls-aside bcls-aside--information language-editable">Note that for testing the playback adapter, you will need to work with your CXM to make adjustments to the DNS settings on your computers and devices. See <a href="/node/18935">Adding the Brightcove DNS Server</a> for details.</aside>
+  </section>
+  <section class="bcls-section">
+    <h2 id="how_it_works">How it works</h2>
+    <p>All the Brightcove players retrieve video and playlist data via the <a href="/node/18380">Playback API</a>. You don't have to set up the API requests, manually, though. The web player has a <a href="/node/18108">Catalog</a> library that handles the requests, and the device SDKs have built-in methods for that.</p>
+    <p>To keep your Ooyala players functioning, Brightcove has built an adapter that points player requests for video and playlist data to the Player API and the same videos in Video Cloud.</p>
+    <aside class="bcls-aside bcls-aside--information language-editable">Please note: you will not longer be able to modify the look and feel of your Ooyala web player. The current look and feel will be retained.</aside>
+  </section>
+  <section class="bcls-section">
+    <h2 id="analytics">Analytics</h2>
+    <p>Going forward, you will be using Video Cloud Analytics. The fixes to allow your existing Ooyala players with your Video Cloud videos includes sending analytics data to the Video Cloud analytics system. There is no modification you need to make to your pages or players.</p>
+    <p>You can access Video Cloud analytics data either using the standard and custom reports in the <a href="/node/1350">Analytics module</a> or the <a href="/node/18370">Analytics API</a>. See <a href="/node/18930">Migrating from the Analytics REST API to Brightcove Analytics API</a> if you will getting analytics data via the API.</p>
+    <h3>Mapping of Analytics Data</h3>
+    <p>The table below shows how Ooyala analytics data fields are mapped to Video Cloud analytics data.</p>
+    <table class="bcls-table">
+      <caption class="bcls-caption--table">
+      Analytics Data Mapping
+      </caption>
+      <thead class="bcls-table__head">
+        <tr>
+          <th>Ooyala Analytics</th>
+          <th>Video Cloud Analytics</th>
+        </tr>
+      </thead>
+      <tbody class="bcls-table__body">
+        <tr>
+          <td>Batch - Metric - Displays</td>
+          <td><code>video_impression</code> (Video Impression)</td>
+        </tr>
+        <tr>
+          <td>Batch - Metric - VideoStarts</td>
+          <td><code>vide0_view</code> (Video View)</td>
+        </tr>
+        <tr>
+          <td>Batch - Metric - playRequested/play</td>
+          <td><code>play_request</code> (Play Request)</td>
+        </tr>
+        <tr>
+          <td>Batch - Metric - TimeWatched</td>
+          <td><code>video_seconds_viewed</code> (Video Seconds Viewed)</td>
+        </tr>
+        <tr>
+          <td>Batch - Metric - PlayThrough25</td>
+          <td><code>video_engagement_25</code> (Video Engagement 25)</td>
+        </tr>
+        <tr>
+          <td>Batch - Metric - PlayThrough50</td>
+          <td><code>video_engagement_50</code> (Video Engagement 50)</td>
+        </tr>
+        <tr>
+          <td>Batch - Metric - PlayThrough75</td>
+          <td><code>video_engagement_75</code> (Video Engagement 75)</td>
+        </tr>
+        <tr>
+          <td>Batch - Metric - PlayThrough100</td>
+          <td><code>video_engagement_100</code> (Video Engagement 100)</td>
+        </tr>
+        <tr>
+          <td>Batch - Metric - PercentageWatched</td>
+          <td><code>video_percent_viewed</code> (Video Percent Viewed)</td>
+        </tr>
+        <tr>
+          <td>Batch - Metric - PlayerLoads</td>
+          <td><code>player_load</code> (Player Load)</td>
+        </tr>
+        <tr>
+          <td>Batch - Metric - UniquePlays</td>
+          <td><code>daily_unique_viewers</code> (Unique Users/Unique Viewers)</td>
+        </tr>
+        <tr>
+          <td>Batch - Dimension - Pcode</td>
+          <td><code>account</code> (Account)</td>
+        </tr>
+        <tr>
+          <td>Batch - Dimension - Asset</td>
+          <td><code>video</code> (Video)</td>
+        </tr>
+        <tr>
+          <td>Batch - Dimension - CountryCode</td>
+          <td><code>country</code> (Country)</td>
+        </tr>
+        <tr>
+          <td>Batch - Dimension - Region</td>
+          <td><code>region</code> (Region)</td>
+        </tr>
+        <tr>
+          <td>Batch - Dimension - City</td>
+          <td><code>city</code> (City)</td>
+        </tr>
+        <tr>
+          <td>Batch - Dimension - DeviceType</td>
+          <td><code>device_type</code> (Device Type)</td>
+        </tr>
+        <tr>
+          <td>Batch - Dimension - os</td>
+          <td><code>device_os</code> (Device OS)</td>
+        </tr>
+        <tr>
+          <td>Batch - Dimension - Browser</td>
+          <td><code>browser_type</code> (Browser Type)</td>
+        </tr>
+        <tr>
+          <td>Batch - Dimension - PlayerId</td>
+          <td><code>player</code> (Player)</td>
+        </tr>
+        <tr>
+          <td>Batch - Dimension - Domain</td>
+          <td><code>destination_domain</code> (Destination Domain)</td>
+        </tr>
+        <tr>
+          <td>Batch - Dimension - URL</td>
+          <td><code>destination_path</code> (Destination Path)</td>
+        </tr>
+        <tr>
+          <td>Real time Concurrent Users - Live</td>
+          <td><code>ccu</code> (Concurrent Users)</td>
+        </tr>
+        <tr>
+          <td>Real time Top Assets - Live</td>
+          <td>(Top asset)</td>
+        </tr>
+      </tbody>
+    </table>
+  </section>
+  <section class="bcls-section">
+    <h2 id="what_may_not_work">What may not work</h2>
+    <p>If you have add-ons integrated with the Ooyala player, they will continue to be functional. However, if these add-ons depend on video data that is not available, they will not function properly. See the <a href="/node/18934">mapping of Ooyala video and playlist fields to Video Cloud fields</a> for more information.</p>
+    <p>In addition, if you have add-on that make requests to Ooyala APIs, these will not work in many cases, though <a href="/node/18907">some Backlot API endpoints will still be operational</a>. The Discovery API will not be operational.</p>
+    <p>Analytics data <strong>will</strong> be collected and sent to the Brightcove Analytics system.</p>
+  </section>
+  <section class="bcls-section">
+    <h2 id="next_steps">Next steps</h2>
+    <p>While Brightcove is committed to keeping the videos and playlists in your Ooyala players working as you transition to Video Cloud, you should be working on a plan to move to the Brightcove players in order to take full advantage of their features and customizability.</p>
+  </section>
+</article>
+
+<!-- complete bootstrap layout -->
+    </div>
+    <div class="col-sm-2 right-side-bar">
+      
+      <nav class="right-side-nav">
+        <h6 class="toc">Page Contents</h6>
+        <ul id="in_page_nav" class="list-none"></ul>
+      </nav>
+      
+    </div>
+  </div>
+</div>
+
+<hr>
+<div class="last-updated">
+  Page last updated on 03 Mar 2020
+</div>
+
+<footer class="bcls-footer" role="contentinfo">
+  <div class="row">
+    <div class="region region-footer-top-center col-md-12">
+      <nav role="navigation" aria-labelledby="block-brightcovesupport-menu" id="block-brightcovesupport" class="footer-menu">
+
+        <h2>Brightcove Support</h2>
+
+        <ul class="menu">
+          <li>
+            <a href="https://status.brightcove.com">System Status</a>
+          </li>
+          <li>
+            <a href="https://supportportal.brightcove.com/s/login/?language=en_US">Contact Support</a>
+          </li>
+          <li>
+            <a href="https://support.brightcove.com/">Documentation</a>
+          </li>
+        </ul>
+
+      </nav>
+      <nav role="navigation" aria-labelledby="block-training-menu" id="block-training" class="footer-menu">
+
+        <h2>Training</h2>
+
+        <ul class="menu">
+          <li>
+            <a href="https://support.brightcove.com/online-training-courses">Online Courses</a>
+          </li>
+          <li>
+            <a href="https://support.brightcove.com/register-training">Register for a course</a>
+          </li>
+        </ul>
+
+      </nav>
+      <nav role="navigation" aria-labelledby="block-brightcove-menu" class="footer-menu">
+
+        <h2>Brightcove</h2>
+
+        <ul class="menu">
+          <li>
+            <a href="https://www.brightcove.com">Brightcove.com</a>
+          </li>
+          <li>
+            <a href="https://supportportal.brightcove.com/s/login/?language=en_US" data-drupal-link-system-path="node/18330">Contact Us</a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+  </div>
+  <div class="row">
+    <div class="region region-footer-bottom-center col-md-12">
+      <div class="bcls-copyright footer-menu">
+        <table>
+          <tr>
+            <td>
+              <div id="bc_copyright" class="field field--name-field-copyright-year field--type-string field--label-hidden field--item" style="float: left;"> Brightcove Inc. All rights reserved.</div>
+            </td>
+            <td><a href="https://www.brightcove.com/en/legal/privacy">Privacy</a> | <a href="https://www.brightcove.com/en/terms-and-conditions">Terms &amp; Conditions</a></td>
+            <td>
+              <div class="gf-links-cols footer-menu">
+                <div class="gf-social"><a href="https://www.linkedin.com/company/16439" title="LinkedIn" newtab="newtab" class="gf-social-linkedin"><i class="fab fa-linkedin-in" style="font-size: 1.5rem;"></i></a><a href="https://twitter.com/brightcove" title="Twitter" newtab="newtab" class="gf-social-twitter"><i class="fab fa-twitter" style="font-size: 1.5rem;"></i></a><a href="https://www.facebook.com/Brightcove" title="Facebook" newtab="newtab" class="gf-social-facebook"><i class="fab fa-facebook-f" style="font-size: 1.5rem;"></i></a>
+                </div>
+              </div>
+            </td>
+          </tr>
+        </table>
+      </div>
+    </div>
+  </div>
+</footer>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+  <script src="https://learning-services-media.brightcove.com/doc-assets/site-assets/js/site/https-fix.js"></script>
+  <script src="https://learning-services-media.brightcove.com/doc-assets/site-assets/js/site/setDate.js"></script>
+  <script src="https://learning-services-media.brightcove.com/doc-assets/site-assets/js/site/prism.js"></script>
+  <script src="https://learning-services-media.brightcove.com/doc-assets/site-assets/js/site/site.js"></script>
+  <script src="https://learning-services-media.brightcove.com/doc-assets/site-assets/js/site/tabs.js"></script>
+  
+  <script src="https://learning-services-media.brightcove.com/doc-assets/site-assets/js/site/toc.js"></script>
+  
+  <script src="/assets/js/sites_nav.js"></script>
+  <script src="https://learning-services-media.brightcove.com/doc-assets/site-assets/js/site/bcls-utils.js"></script>
+  <script src="/assets/js/feedback.js"></script>
+  <script src="/assets/js/search.js"></script>
+  <script async src="https://cse.google.com/cse.js?cx=017969773216783359937:gqomuefz6aq"></script>
+</body>
+
+</html>

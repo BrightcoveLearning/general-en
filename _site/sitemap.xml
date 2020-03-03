@@ -181,6 +181,83 @@
     </url>
     
     <url>
+        <loc>https://general.support.brightcove.com/ooyala/ooyala-video-cloud-ingestion-adapter-csv-manifest-files.html</loc>
+        <lastmod>2020-03-03</lastmod>
+        <changefreq>daily</changefreq>
+        <priority>0.5</priority>
+    </url>
+    
+    <url>
+        <loc>https://general.support.brightcove.com/ooyala/ooyala-video-cloud-ingestion-adapter-ingesting-aspera.html</loc>
+        <lastmod>2020-03-03</lastmod>
+        <changefreq>daily</changefreq>
+        <priority>0.5</priority>
+    </url>
+    
+    <url>
+        <loc>https://general.support.brightcove.com/ooyala/ooyala-video-cloud-ingestion-adapter-ingesting-ftps.html</loc>
+        <lastmod>2020-03-03</lastmod>
+        <changefreq>daily</changefreq>
+        <priority>0.5</priority>
+    </url>
+    
+    <url>
+        <loc>https://general.support.brightcove.com/ooyala/ooyala-video-cloud-ingestion-adapter-ingesting-ois-25.html</loc>
+        <lastmod>2020-03-03</lastmod>
+        <changefreq>daily</changefreq>
+        <priority>0.5</priority>
+    </url>
+    
+    <url>
+        <loc>https://general.support.brightcove.com/ooyala/ooyala-video-cloud-ingestion-adapter-ingesting-remote-assets-mrss.html</loc>
+        <lastmod>2020-03-03</lastmod>
+        <changefreq>daily</changefreq>
+        <priority>0.5</priority>
+    </url>
+    
+    <url>
+        <loc>https://general.support.brightcove.com/ooyala/ooyala-video-cloud-ingestion-adapter-ingesting-remotely-hosted-mrss-feed.html</loc>
+        <lastmod>2020-03-03</lastmod>
+        <changefreq>daily</changefreq>
+        <priority>0.5</priority>
+    </url>
+    
+    <url>
+        <loc>https://general.support.brightcove.com/ooyala/ooyala-video-cloud-ingestion-adapter-manifest-file-formats.html</loc>
+        <lastmod>2020-03-03</lastmod>
+        <changefreq>daily</changefreq>
+        <priority>0.5</priority>
+    </url>
+    
+    <url>
+        <loc>https://general.support.brightcove.com/ooyala/ooyala-video-cloud-ingestion-adapter-xml-manifest-files.html</loc>
+        <lastmod>2020-03-03</lastmod>
+        <changefreq>daily</changefreq>
+        <priority>0.5</priority>
+    </url>
+    
+    <url>
+        <loc>https://general.support.brightcove.com/ooyala/ooyala-video-cloud-ingestion-supported-ingest-formats.html</loc>
+        <lastmod>2020-03-03</lastmod>
+        <changefreq>daily</changefreq>
+        <priority>0.5</priority>
+    </url>
+    
+    <url>
+        <loc>https://general.support.brightcove.com/ooyala/ooyala-video-cloud-migration-adding-brightcove-dns-server-testing.html</loc>
+        <lastmod>2020-03-03</lastmod>
+        <changefreq>daily</changefreq>
+        <priority>0.5</priority>
+    </url>
+    
+    <url>
+        <loc>https://general.support.brightcove.com/ooyala/ooyala-video-cloud-migration-authentication-brightcove-api-requests.html</loc>
+        <lastmod>2020-03-03</lastmod>
+        <changefreq>daily</changefreq>
+        <priority>0.5</priority>
+    </url>
+    
+    <url>
         <loc>https://general.support.brightcove.com/shared-content/support/opening-case-with-brightcove-support.html</loc>
         <lastmod>2020-03-03</lastmod>
         <changefreq>daily</changefreq>
@@ -238,6 +315,13 @@
     
     <url>
         <loc>https://general.support.brightcove.com/general/use-postman-api-requests.html</loc>
+        <lastmod>2020-03-03</lastmod>
+        <changefreq>daily</changefreq>
+        <priority>0.5</priority>
+    </url>
+    
+    <url>
+        <loc>https://general.support.brightcove.com/ooyala/using-ooyala-players-deliver-video-cloud-content.html</loc>
         <lastmod>2020-03-03</lastmod>
         <changefreq>daily</changefreq>
         <priority>0.5</priority>
