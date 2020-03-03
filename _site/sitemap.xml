@@ -167,6 +167,20 @@
     </url>
     
     <url>
+        <loc>https://general.support.brightcove.com/ooyala/migrating-video-cloud-ingestion-adapter.html</loc>
+        <lastmod>2020-03-03</lastmod>
+        <changefreq>daily</changefreq>
+        <priority>0.5</priority>
+    </url>
+    
+    <url>
+        <loc>https://general.support.brightcove.com/ooyala/migration-docs-ooyala-customers.html</loc>
+        <lastmod>2020-03-03</lastmod>
+        <changefreq>daily</changefreq>
+        <priority>0.5</priority>
+    </url>
+    
+    <url>
         <loc>https://general.support.brightcove.com/general/mpeg-dash-video.html</loc>
         <lastmod>2020-03-03</lastmod>
         <changefreq>daily</changefreq>
@@ -175,6 +189,13 @@
     
     <url>
         <loc>https://general.support.brightcove.com/shared-content/online-training-courses.html</loc>
+        <lastmod>2020-03-03</lastmod>
+        <changefreq>daily</changefreq>
+        <priority>0.5</priority>
+    </url>
+    
+    <url>
+        <loc>https://general.support.brightcove.com/ooyala/ooyala-training-videos.html</loc>
         <lastmod>2020-03-03</lastmod>
         <changefreq>daily</changefreq>
         <priority>0.5</priority>
@@ -252,6 +273,13 @@
     
     <url>
         <loc>https://general.support.brightcove.com/ooyala/ooyala-video-cloud-migration-authentication-brightcove-api-requests.html</loc>
+        <lastmod>2020-03-03</lastmod>
+        <changefreq>daily</changefreq>
+        <priority>0.5</priority>
+    </url>
+    
+    <url>
+        <loc>https://general.support.brightcove.com/ooyala/ooyala-video-platform-release-notes.html</loc>
         <lastmod>2020-03-03</lastmod>
         <changefreq>daily</changefreq>
         <priority>0.5</priority>
