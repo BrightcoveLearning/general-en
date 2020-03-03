@@ -1,0 +1,597 @@
+<!doctype html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <!-- remember to remove the following line when the site is ready to go live -->
+  <!-- <meta name="robots" content="noindex" /> -->
+  <title>MPEG-DASH Video</title>
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+  <link rel="manifest" href="/site.webmanifest">  
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <!-- <link rel="stylesheet" href="/assets/css/site/bc-icons.css"> -->
+  <link rel="stylesheet" href="https://learning-services-media.brightcove.com/doc-assets/site-assets/css/site/prism.css">
+  <link rel="stylesheet" href="https://learning-services-media.brightcove.com/doc-assets/site-assets/css/site/styles.css">
+  <link rel="stylesheet" href="https://learning-services-media.brightcove.com/doc-assets/site-assets/css/site/landing-page.css">
+  <link rel="stylesheet" href="https://learning-services-media.brightcove.com/doc-assets/site-assets/css/site/tabs.css">
+  <link rel="stylesheet" href="/assets/css/local.css">
+  <link href="https://fonts.googleapis.com/css?family=Lato&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Source+Code+Pro&display=swap" rel="stylesheet">
+  <script src="https://kit.fontawesome.com/381443caa8.js" crossorigin="anonymous"></script>
+  <script src="https://learning-services-media.brightcove.com/doc-assets/site-assets/js/site/google-analytics.js"></script>
+</head>
+
+<body class="body">
+
+<header>
+  <div class="div-header">
+    <a href="/"><img class="product-logo" src="https://learning-services-media.brightcove.com/doc-assets/site-assets/images/site/product-logos/brightcove.png" alt="product logo" style="max-height: 100px;max-width: 232px;"></a>
+<!-- GTranslate: https://gtranslate.io/ -->
+<select onchange="doGTranslate(this);" style="margin-right: 1rem;">
+  <option value="">Select a language</option>
+  <option value="en|en">English</option>
+  <option value="en|fr">Français</option>
+  <option value="en|de">Deutsch</option>
+  <option value="en|ja">日本語</option>
+  <option value="en|ko">한국어</option>
+  <option value="en|es">Español</option>
+</select>
+
+<script type="text/javascript">
+/* <![CDATA[ */
+function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;if(lang_pair=='')return;var lang=lang_pair.split('|')[1];var plang=location.hostname.split('.')[0];if(plang.length !=2 && plang.toLowerCase() != 'zh-cn' && plang.toLowerCase() != 'zh-tw')plang='en';location.href=location.protocol+'//'+(lang == 'en' ? '' : lang+'.')+location.hostname.replace('www.', '').replace(RegExp('^' + plang + '\\.'), '')+location.pathname+location.search;}
+/* ]]> */
+</script>
+
+<select id="site_select" style="margin-right: 1rem;">
+  <option value="">Other Brightcove Documentation</option>
+  
+    
+      <option value="https://support.brightcove.com">Documentation Home</option>
+    
+  
+    
+      <option value="https://audience.support.brightcove.com">Brightcove Audience</option>
+    
+  
+    
+      <option value="https://beacon.support.brightcove.com">Brightcove Beacon</option>
+    
+  
+    
+      <option value="https://campaign.support.brightcove.com">Brightcove Campaign</option>
+    
+  
+    
+      <option value="https://gallery.support.brightcove.com">Gallery</option>
+    
+  
+    
+      <option value="https://zencoder.support.brightcove.com">Zencoder</option>
+    
+  
+</select>
+
+
+    <span class="secondary-nav"><a href="https://supportportal.brightcove.com/s/login/?language=en_US"><img src="https://learning-services-media.brightcove.com/doc-assets/site-assets/images/site/support.png" alt="support"> Contact Support</a> <span style="vertical-align: top;margin-left:1em;margin-right:1em;">|</span> <a href="https://status.brightcove.com/"><img src="https://learning-services-media.brightcove.com/doc-assets/site-assets/images/site/status.png" alt="system status"> System Status</a></span>
+  </div>
+  <nav aria-label="breadcrumb">
+    <ol class="breadcrumb arr-right">
+      
+      <li class="breadcrumb-item"><a href="/">Home</a></li>
+      
+      
+      
+      <li class="breadcrumb-item"><a href="/general/">General Information</a></li>
+      
+      <li class="breadcrumb-item active" aria-current="page">MPEG-DASH Video</li>
+    </ol>
+  </nav>
+</header>
+<div class="container">
+    <div class="row">
+      <div class="col-sm-3 left-side-bar">
+        <nav class="sidenav">
+          
+            
+            <h5><a href="/">Home</a></h5>
+            
+          
+            
+              <h5 class="submenu-header"><a href="/getting-started/">Getting Started <strong>+</strong></a></h5>            
+              <ul class="sidenav-submenu" style="display:none;">
+                
+                  
+                    <li><a href="/getting-started/overview-zencoder.html">Overview</a></li>
+                  
+                
+                  
+                    <li><a href="/getting-started/quick-start-zencoder.html">Quick Start</a></li>
+                  
+                
+              </ul>
+            
+          
+            
+              <h5 class="submenu-header"><a href="/support/">Support <strong>+</strong></a></h5>            
+              <ul class="sidenav-submenu" style="display:none;">
+                
+                  
+                    <li><a href="/support/opening-case-with-brightcove-support.html">Opening a Support Case</a></li>
+                  
+                
+                  
+                    <li><a href="/support/viewing-brightcove-system-status-page.html">Viewing the Brightcove System Status Page</a></li>
+                  
+                
+              </ul>
+            
+          
+      </nav>
+    </div>
+    <div class="col-lg-7" style="background-color: white;color: #333333;margin-top: -1em;margin-bottom: -1em;padding-bottom:1em;">
+  <!-- bootstrap layout -->
+
+<!-- search bar -->
+<div id="search_bar" class="search-bar">
+  <!-- TODO - cx value below must be changed for each site and new GCS instance set up-->
+  <!-- <script async src="https://cse.google.com/cse.js?cx=017969773216783359937:6sd3di5mwuw"></script> -->
+  <div id="search_box" class="gcse-search"></div>
+</div>
+
+<article class="bcls-article">
+  <h1>MPEG-DASH Video</h1>
+  <summary>In this topic, you will learn about creating MPEG-DASH renditions for your videos.</summary>
+  <section class="bcls-section">
+    <h2 id="Overview">Overview</h2>
+    <p>MPEG-DASH is a segmented video format. It is particularly useful if you require DRM security for your content, because DASH can be used with Playready, Marlin, or Widevine Modular DRM. Since the syntax for specifying MPEG-DASH renditions is slightly different than that for other video formats, we include here a couple of sample profiles, one without DRM packaging and the other including DRM packaging.</p>
+    <p>For details on how Brightcove Player determines which rendition to actually play, please see the <a href="/node/15613#HLS_DASH_Rendition_Selection">Determining Which Rendition Will Play</a> document.</p>
+  </section>
+  <section class="bcls-section">
+    <h2 id="nodrm">Sample Profile (no DRM)</h2>
+    <p>This sample shows the packaging of MPEG-DASH renditions without DRM packaging.</p>
+    <aside class="bcls-aside bcls-aside--information">For DASH renditions, set the <code>decoder_bitrate_cap</code> <code>decoder_buffer_size</code> to optimize playback on your target viewing environments.
+      <p>Our general recommendation is to set <code>decoder_bitrate_cap</code> to the maximum bitrate available for the video stream. Remember you need to take into account the audio, as well as overhead for the file format. The <code>decoder_buffer_size</code> is technically supposed to match the available video buffer memory on the decoding device, but is often better used to control how much content may be pre-buffered. It works as a multiple of the <code>decoder_bitrate_cap</code>, so that for example, if <code>decoder_bitrate_cap</code> was 500 kbps, and <code>decoder_buffer_size</code> was 1000 kbps, then the buffer could store 2 seconds worth of video. We also recommend setting the <code>video_bitrate</code> a little lower than the <code>decoder_bitrate_cap</code>, which allows the encoder to use more data to encode complex scenes and less data on simpler scenes. A decent starting point would be to assume up to 10% of overhead for the file format, setting the <code>video_bitrate</code> 10% lower than the <code>decoder_bitrate_cap</code>, and allowing about 1.5 seconds of video to be buffered.</p>
+      <p>Assuming a 1000 Kbps connection is available to the viewer:</p>
+      <ul>
+        <li>1000 * 0.90 = 900 Kbps available after subtracting 10% for format overhead.</li>
+        <li>900 - 128 = 772 Kbps video decoder_bitrate_cap after subtracting 128 Kbps for the audio.</li>
+        <li>772 * 1.5 = 1158 Kb decoder_buffer_size (for 1.5 seconds worth of video).</li>
+        <li>772 * 0.90 = 695 Kbps target video bitrate (10% lower than the decoder_bitrate_cap).</li>
+      </ul>
+    </aside>
+    <aside class="bcls-aside bcls-aside--warning">
+      <ol>
+        <li>The Brightcove player currently supports DASH playback only with special plugins.</li>
+        <li>The <code>force_aac_profile</code> property has to be present in each DASH rendition.
+          <ul>
+            <li><code>force_aac_profile</code> must one of these three values:
+              <ul>
+                <li><code>aac-lc</code></li>
+                <li><code>he-aac</code></li>
+                <li><code>he-aac-v2</code></li>
+              </ul>
+            </li>
+            <li>The value for <code>force_aac_profile</code> must be the same for all renditions in a profile</li>
+          </ul>
+        </li>
+      </ol>
+    </aside>
+    <pre class="line-numbers">
+<code class="language-json">{
+  "id": "56e077ace4b0a7b3c178e6e7",
+  "name": "DASH-no-drm",
+  "description": "DASH renditions",
+  "account_id": "1752604059001",
+  "renditions": [
+    {
+      "media_type": "video",
+      "id": "56e077ace4b0a7b3c178e6e5",
+      "reference_id": "r1",
+      "format": "m4f",
+      "type": "segmented",
+      "audio_codec": "aac",
+      "audio_bitrate": 36,
+      "video_codec": "h264",
+      "video_bitrate": 300,
+      "decoder_bitrate_cap": 400,
+      "decoder_buffer_size": 800,
+      "force_aac_profile": "aac-lc",
+      "frame_rate": 30,
+      "keyframe_rate": 0.5,
+      "fixed_keyframe_interval": true,
+      "width": 800,
+      "height": 600,
+      "h264_profile": "baseline",
+      "streaming_delivery_profile": "live"
+    },
+    {
+      "media_type": "video",
+      "id": "56e077ace4b0a7b3c178e6e6",
+      "reference_id": "r2",
+      "format": "m4f",
+      "type": "segmented",
+      "audio_codec": "aac",
+      "audio_bitrate": 36,
+      "video_codec": "h264",
+      "video_bitrate": 600,
+      "decoder_bitrate_cap": 800,
+      "decoder_buffer_size": 1600,
+      "frame_rate": 30,
+      "keyframe_rate": 0.5,
+      "fixed_keyframe_interval": true,
+      "force_aac_profile": "aac-lc",
+      "width": 1024,
+      "height": 768,
+      "h264_profile": "baseline",
+      "streaming_delivery_profile": "live"
+    },
+    {
+      "media_type": "image",
+      "id": "559697ece4b072e9641b840f",
+      "format": "jpg",
+      "label": "poster",
+      "width": 640,
+      "height": 360
+    },
+    {
+      "media_type": "image",
+      "id": "559697ece4b072e9641b8410",
+      "format": "jpg",
+      "label": "thumbnail",
+      "width": 160,
+      "height": 90
+    }
+  ],
+  "packages": [
+    {
+      "package_type": "dash",
+      "renditions": [
+        "r1"
+      ]
+    },
+    {
+      "package_type": "dash",
+      "renditions": [
+        "r2"
+      ]
+    }
+  ]
+}</code></pre>
+  </section>
+  <section class="bcls-section">
+    <h2 id="drm">Sample Profile (with DRM)</h2>
+    <p>Here is the same sample profile with Common Encryption (CENC) and DRM packaging (Widevine and Playready) included.</p>
+    <pre class="line-numbers">
+<code class="language-json">{
+    "account_id": 2728142649001,
+    "digital_master": {
+        "distribute": true,
+        "rendition": "passthrough"
+    },
+    "name": "dash-cenc-live",
+    "description": "This will produce 6 dash live renditions with cenc",
+    "renditions": [
+        {
+            "media_type": "video",
+            "reference_id": "av0",
+            "format": "m4f",
+            "audio_codec": "aac",
+            "audio_bitrate": 40,
+            "video_bitrate": 110,
+            "decoder_bitrate_cap": 200,
+            "decoder_buffer_size": 400,
+            "width": "400",
+            "height": "300",
+            "fixed_keyframe_interval": true,
+            "frame_rate": 30,
+            "force_aac_profile": "aac-lc",
+            "video_codec": "h264",
+            "h264_profile": "baseline",
+            "keyframe_rate": 0.5,
+            "streaming_delivery_profile": "live",
+            "type": "segmented"
+        },
+        {
+            "media_type": "video",
+            "reference_id": "av1",
+            "format": "m4f",
+            "audio_codec": "aac",
+            "audio_bitrate": 40,
+            "video_bitrate": 260,
+            "decoder_bitrate_cap": 400,
+            "decoder_buffer_size": 800,
+            "width": "400",
+            "height": "300",
+            "fixed_keyframe_interval": true,
+            "frame_rate": 30,
+            "force_aac_profile": "aac-lc",
+            "video_codec": "h264",
+            "h264_profile": "baseline",
+            "keyframe_rate": 0.5,
+            "streaming_delivery_profile": "live",
+            "type": "segmented"
+        },
+        {
+            "media_type": "video",
+            "reference_id": "av2",
+            "format": "m4f",
+            "audio_codec": "aac",
+            "audio_bitrate": 64,
+            "video_bitrate": 436,
+            "decoder_bitrate_cap": 600,
+            "decoder_buffer_size": 1200,
+            "width": "480",
+            "height": "360",
+            "fixed_keyframe_interval": true,
+            "frame_rate": 30,
+            "force_aac_profile": "aac-lc",
+            "video_codec": "h264",
+            "h264_profile": "baseline",
+            "keyframe_rate": 0.5,
+            "streaming_delivery_profile": "live",
+            "type": "segmented"
+        },
+        {
+            "media_type": "video",
+            "reference_id": "av3",
+            "format": "m4f",
+            "audio_codec": "aac",
+            "audio_bitrate": 96,
+            "video_bitrate": 704,
+            "decoder_bitrate_cap": 800,
+            "decoder_buffer_size": 1600,
+            "width": "640",
+            "height": "480",
+            "fixed_keyframe_interval": true,
+            "frame_rate": 30,
+            "force_aac_profile": "aac-lc",
+            "video_codec": "h264",
+            "h264_profile": "baseline",
+            "keyframe_rate": 0.5,
+            "streaming_delivery_profile": "live",
+            "type": "segmented"
+        },
+        {
+            "media_type": "video",
+            "reference_id": "av4",
+            "format": "m4f",
+            "audio_codec": "aac",
+            "audio_bitrate": 128,
+            "video_bitrate": 1072,
+            "decoder_bitrate_cap": 1200,
+            "decoder_buffer_size": 2400,
+            "width": "720",
+            "height": "540",
+            "fixed_keyframe_interval": true,
+            "frame_rate": 30,
+            "force_aac_profile": "aac-lc",
+            "video_codec": "h264",
+            "h264_profile": "baseline",
+            "keyframe_rate": 0.5,
+            "streaming_delivery_profile": "live",
+            "type": "segmented"
+        },
+        {
+            "media_type": "video",
+            "reference_id": "av5",
+            "format": "m4f",
+            "audio_codec": "aac",
+            "audio_bitrate": 128,
+            "video_bitrate": 1672,
+            "decoder_bitrate_cap": 2000,
+            "decoder_buffer_size": 4000,
+            "width": "1280",
+            "height": "960",
+            "fixed_keyframe_interval": true,
+            "frame_rate": 30,
+            "force_aac_profile": "aac-lc",
+            "video_codec": "h264",
+            "h264_profile": "baseline",
+            "keyframe_rate": 0.5,
+            "streaming_delivery_profile": "live",
+            "type": "segmented"
+        },
+        {
+            "media_type": "image",
+            "format": "png",
+            "label": "poster",
+            "width": 640,
+            "height": 480
+        },
+        {
+            "media_type": "image",
+            "format": "png",
+            "label": "thumbnail",
+            "width": 160,
+            "height": 90
+        }
+    ],
+    "packages": [
+        {
+"drm": [
+    "playready",
+    "widevine"
+],
+"package_type": "dash",
+"renditions": [
+    "av0"
+]
+        },
+        {
+"drm": [
+    "playready",
+    "widevine"
+],
+"package_type": "dash",
+"renditions": [
+    "av1"
+]
+        },
+        {
+"drm": [
+    "playready",
+    "widevine"
+],
+"package_type": "dash",
+"renditions": [
+    "av2"
+]
+        },
+        {
+"drm": [
+    "playready",
+    "widevine"
+],
+"package_type": "dash",
+"renditions": [
+    "av3"
+]
+        },
+        {
+"drm": [
+    "playready",
+    "widevine"
+],
+"package_type": "dash",
+"renditions": [
+    "av4"
+]
+        },
+        {
+"drm": [
+    "playready",
+    "widevine"
+],
+"package_type": "dash",
+"renditions": [
+    "av5"
+]
+        }
+    ]
+}</code></pre>
+  </section>
+  <section class="bcls-section">
+    <h2 id="silverlight">Silverlight security</h2>
+    <p>On certain platforms, the Brightcove Player uses a Silverlight fallback to play MPEG-DASH renditions. For security reasons, Silverlight requires that a <strong>clientaccesspolicy.xml</strong> file be present in the document root of the server from which DASH content is served. See <a href="https://msdn.microsoft.com/en-us/library/cc645032(VS.95).aspx">this Microsoft article</a> for more details.</p>
+    <p>Here is a sample <strong>clientaccesspolicy.xml</strong> file:</p>
+    <p><script src="https://gist.github.com/fde89cf617c9ec86f7b5.js"></script></p>
+  </section>
+  <section class="bcls-section">
+    <h2 id="Known_issues">Known issues</h2>
+    <ul>
+      <li>The <strong>Default (Auto Display)</strong> caption setting in the&nbsp;<strong>Media</strong> module's <strong>TEXT TRACK</strong> section is not supported when used in conjunction with DASH and in-manifest captions. In-manifest captions are used with the Brightcove products Dynamic Delivery and SSAI, for example. A workaround for this issue is to use the <code>&lt;track&gt;</code> tag with the Advanced Brightcove Player implementation. This is detailed in the <a href="/node/18076">Adding Captions to Videos Programmatically</a> document. Note you must use the <code>default</code> attribute with the <code>&lt;track&gt;</code> tag.</li>
+    </ul>
+  </section>
+</article>
+
+<!-- complete bootstrap layout -->
+    </div>
+    <div class="col-sm-2 right-side-bar">
+      
+      <nav class="right-side-nav">
+        <h6 class="toc">Page Contents</h6>
+        <ul id="in_page_nav" class="list-none"></ul>
+      </nav>
+      
+    </div>
+  </div>
+</div>
+
+<hr>
+<div class="last-updated">
+  Page last updated on 03 Mar 2020
+</div>
+
+<footer class="bcls-footer" role="contentinfo">
+  <div class="row">
+    <div class="region region-footer-top-center col-md-12">
+      <nav role="navigation" aria-labelledby="block-brightcovesupport-menu" id="block-brightcovesupport" class="footer-menu">
+
+        <h2>Brightcove Support</h2>
+
+        <ul class="menu">
+          <li>
+            <a href="https://status.brightcove.com">System Status</a>
+          </li>
+          <li>
+            <a href="https://supportportal.brightcove.com/s/login/?language=en_US">Contact Support</a>
+          </li>
+          <li>
+            <a href="https://support.brightcove.com/">Documentation</a>
+          </li>
+        </ul>
+
+      </nav>
+      <nav role="navigation" aria-labelledby="block-training-menu" id="block-training" class="footer-menu">
+
+        <h2>Training</h2>
+
+        <ul class="menu">
+          <li>
+            <a href="https://support.brightcove.com/online-training-courses">Online Courses</a>
+          </li>
+          <li>
+            <a href="https://support.brightcove.com/register-training">Register for a course</a>
+          </li>
+        </ul>
+
+      </nav>
+      <nav role="navigation" aria-labelledby="block-brightcove-menu" class="footer-menu">
+
+        <h2>Brightcove</h2>
+
+        <ul class="menu">
+          <li>
+            <a href="https://www.brightcove.com">Brightcove.com</a>
+          </li>
+          <li>
+            <a href="https://supportportal.brightcove.com/s/login/?language=en_US" data-drupal-link-system-path="node/18330">Contact Us</a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+  </div>
+  <div class="row">
+    <div class="region region-footer-bottom-center col-md-12">
+      <div class="bcls-copyright footer-menu">
+        <table>
+          <tr>
+            <td>
+              <div id="bc_copyright" class="field field--name-field-copyright-year field--type-string field--label-hidden field--item" style="float: left;"> Brightcove Inc. All rights reserved.</div>
+            </td>
+            <td><a href="https://www.brightcove.com/en/legal/privacy">Privacy</a> | <a href="https://www.brightcove.com/en/terms-and-conditions">Terms &amp; Conditions</a></td>
+            <td>
+              <div class="gf-links-cols footer-menu">
+                <div class="gf-social"><a href="https://www.linkedin.com/company/16439" title="LinkedIn" newtab="newtab" class="gf-social-linkedin"><i class="fab fa-linkedin-in" style="font-size: 1.5rem;"></i></a><a href="https://twitter.com/brightcove" title="Twitter" newtab="newtab" class="gf-social-twitter"><i class="fab fa-twitter" style="font-size: 1.5rem;"></i></a><a href="https://www.facebook.com/Brightcove" title="Facebook" newtab="newtab" class="gf-social-facebook"><i class="fab fa-facebook-f" style="font-size: 1.5rem;"></i></a>
+                </div>
+              </div>
+            </td>
+          </tr>
+        </table>
+      </div>
+    </div>
+  </div>
+</footer>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+  <script src="https://learning-services-media.brightcove.com/doc-assets/site-assets/js/site/https-fix.js"></script>
+  <script src="https://learning-services-media.brightcove.com/doc-assets/site-assets/js/site/setDate.js"></script>
+  <script src="https://learning-services-media.brightcove.com/doc-assets/site-assets/js/site/prism.js"></script>
+  <script src="https://learning-services-media.brightcove.com/doc-assets/site-assets/js/site/site.js"></script>
+  <script src="https://learning-services-media.brightcove.com/doc-assets/site-assets/js/site/tabs.js"></script>
+  
+  <script src="https://learning-services-media.brightcove.com/doc-assets/site-assets/js/site/toc.js"></script>
+  
+  <script src="/assets/js/sites_nav.js"></script>
+  <script src="https://learning-services-media.brightcove.com/doc-assets/site-assets/js/site/bcls-utils.js"></script>
+  <script src="/assets/js/feedback.js"></script>
+  <script src="/assets/js/search.js"></script>
+  <script async src="https://cse.google.com/cse.js?cx=017969773216783359937:gqomuefz6aq"></script>
+</body>
+
+</html>
