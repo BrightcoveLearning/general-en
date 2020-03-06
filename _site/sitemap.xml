@@ -370,6 +370,27 @@
     </url>
     
     <url>
+        <loc>https://general.support.brightcove.com/shared-content/ingest-profiles/standard-ingest-profiles-dynamic-delivery-and-context-aware-encoding.html</loc>
+        <lastmod>2020-03-06</lastmod>
+        <changefreq>daily</changefreq>
+        <priority>0.5</priority>
+    </url>
+    
+    <url>
+        <loc>https://general.support.brightcove.com/shared-content/ingest-profiles/standard-ingest-profiles-legacy-transcoding.html</loc>
+        <lastmod>2020-03-06</lastmod>
+        <changefreq>daily</changefreq>
+        <priority>0.5</priority>
+    </url>
+    
+    <url>
+        <loc>https://general.support.brightcove.com/shared-content/ingest-profiles/standard-live-ingest-profiles.html</loc>
+        <lastmod>2020-03-06</lastmod>
+        <changefreq>daily</changefreq>
+        <priority>0.5</priority>
+    </url>
+    
+    <url>
         <loc>https://general.support.brightcove.com/general/string-encoder.html</loc>
         <lastmod>2020-03-06</lastmod>
         <changefreq>daily</changefreq>
