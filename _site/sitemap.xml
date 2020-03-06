@@ -48,6 +48,13 @@
     </url>
     
     <url>
+        <loc>https://general.support.brightcove.com/shared-content/player/bulk-updating-brightcove-default-player.html</loc>
+        <lastmod>2020-03-06</lastmod>
+        <changefreq>daily</changefreq>
+        <priority>0.5</priority>
+    </url>
+    
+    <url>
         <loc>https://general.support.brightcove.com/general/concepts-api-tester.html</loc>
         <lastmod>2020-03-06</lastmod>
         <changefreq>daily</changefreq>
