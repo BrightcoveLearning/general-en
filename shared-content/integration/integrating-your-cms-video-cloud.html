@@ -1,4 +1,8 @@
-  <section class="bcls-section">
+---
+layout: share
+---
+
+<section class="bcls-section">
   <h2 id="userFunctions">User functions</h2>
   
   <p>Below are functions related to <span class="”notranslate”">Video Cloud</span> that you might want to provide users of your CMS:</p>
@@ -33,13 +37,13 @@
   
   <h3>Creating client credentials</h3>
   
-  <p>Creating client credentials is a one-time operation that can be performed through <a href="/node/14056"> <span class="”notranslate”">Video Cloud</span> Studio</a> or the <a href="/node/17928#getCredentials"> <span class="”notranslate”">OAuth API</span> </a>. However you do it, a <code>client_id</code> and <code>client_secret</code> are returned, which you must save to request access tokens.</p>
+  <p>Creating client credentials is a one-time operation that can be performed through <a href="/general/managing-api-authentication-credentials.html"> <span class="”notranslate”">Video Cloud</span> Studio</a> or the <a href="/oauth/getting-started/overview-oauth-api-v4.html#getCredentials"> <span class="”notranslate”">OAuth API</span> </a>. However you do it, a <code>client_id</code> and <code>client_secret</code> are returned, which you must save to request access tokens.</p>
   
   <aside class="bcls-aside bcls-aside--warning">The <code>client_secret</code> is shown only when the client credential is created - it can never be retrieved again. If you lose a client secret, you must create a new client credential.</aside>
   
   <h3>Creating an access token</h3>
   
-  <p>Temporary access tokens are created using the <a href="/node/17925"> <span class="”notranslate”">OAuth API</span> </a>. The <code>client_id</code> and <code>client_secret</code> must be BASE64-encoded and passed as a <code>Basic</code> Authorization string.</p>
+  <p>Temporary access tokens are created using the <a href="/oauth/guides/getting-access-tokens.html"> <span class="”notranslate”">OAuth API</span> </a>. The <code>client_id</code> and <code>client_secret</code> must be BASE64-encoded and passed as a <code>Basic</code> Authorization string.</p>
   
   <p>The <code>access_token</code> returned is in turned passed in an Authorization header with the API call:</p>
   
@@ -54,7 +58,7 @@
   <section class="bcls-section">
   <h2 id="addingVideos">Adding Videos</h2>
   
-  <p>If you wish to let users add videos to <span class="”notranslate”">Video Cloud</span> from your CMS, you can do that using the <a href="/node/17948"> <span class="”notranslate”">Dynamic Ingest API</span> </a>. We recommend that you have users upload videos to your repository, which could be an S3 bucket or just a public-facing server. The Dynamic Ingest system can pull in the videos and add them to the <span class="”notranslate”">Video Cloud</span> system through a two-step process outlined below.</p>
+  <p>If you wish to let users add videos to <span class="”notranslate”">Video Cloud</span> from your CMS, you can do that using the <a href="/dynamic-ingest/getting-started/overview-dynamic-ingest-api-dynamic-delivery.html"> <span class="”notranslate”">Dynamic Ingest API</span> </a>. We recommend that you have users upload videos to your repository, which could be an S3 bucket or just a public-facing server. The Dynamic Ingest system can pull in the videos and add them to the <span class="”notranslate”">Video Cloud</span> system through a two-step process outlined below.</p>
   
   <h3>Adding a video object to <span class="”notranslate”">Video Cloud</span></h3>
   
@@ -122,9 +126,9 @@
     <li><code>high-resolution</code></li>
   </ul>
   
-  <p>However, you can create additional custom ingest profiles, if needed, using the <a href="/node/18045"> <span class="”notranslate”">Ingest Profiles API</span> </a> or using <a href="/node/15628"> <span class="”notranslate”">Video Cloud</span> Studio</a>.</p>
+  <p>However, you can create additional custom ingest profiles, if needed, using the <a href="/ingest-profiles/getting-started/overview-ingest-profiles-api-dynamic-delivery-context-aware-encoding.html"> <span class="”notranslate”">Ingest Profiles API</span> </a> or using <a href="https://studio.support.brightcove.com/admin/managing-ingest-profiles.html"> <span class="”notranslate”">Video Cloud</span> Studio</a>.</p>
   
-  <aside class="bcls-aside bcls-aside--warning">If you retrieve profiles using the <a href="/node/18374"> <span class="”notranslate”">Ingest Profiles API</span> </a> the results for <strong>legacy ingest accounts</strong> will include Dynamic Delivery profiles, but using these will result in errors. You will need to filter these profiles out on the client side. You can recognize Dynamic Delivery profiles by the existence of a <code>dynamic_origin</code> property:
+  <aside class="bcls-aside bcls-aside--warning">If you retrieve profiles using the <a href="/ingest-profiles/"> <span class="”notranslate”">Ingest Profiles API</span> </a> the results for <strong>legacy ingest accounts</strong> will include Dynamic Delivery profiles, but using these will result in errors. You will need to filter these profiles out on the client side. You can recognize Dynamic Delivery profiles by the existence of a <code>dynamic_origin</code> property:
   
   <pre class="line-numbers">
   <code class="language-json">{
@@ -201,11 +205,11 @@
   </code>
   </pre>
   
-  <p>See <a href="/node/17940">Images and the <span class="”notranslate”">Dynamic Ingest API</span> </a> for more details.</p>
+  <p>See <a href="/dynamic-ingest/ingest-guides/images-and-dynamic-ingest-api.html">Images and the <span class="”notranslate”">Dynamic Ingest API</span> </a> for more details.</p>
   
   <h4>Adding text tracks for captions or chapters</h4>
   
-  <p>You can also use the <span class="”notranslate”">Dynamic Ingest API</span> to add text tracks in <a href="https://developer.mozilla.org/en-US/docs/Web/API/Web_Video_Text_Tracks_Format">WebVTT</a> files to videos, either at the time of ingestion or later. Text tracks are used to add <a href="/node/18076">captions</a> or <a href="/node/18078">chapters</a> to a video.</p>
+  <p>You can also use the <span class="”notranslate”">Dynamic Ingest API</span> to add text tracks in <a href="https://developer.mozilla.org/en-US/docs/Web/API/Web_Video_Text_Tracks_Format">WebVTT</a> files to videos, either at the time of ingestion or later. Text tracks are used to add <a href="https://player.support.brightcove.com/general/adding-captions-videos-programmatically.html">captions</a> or <a href="https://studio.support.brightcove.com/media/adding-chapters-video.html">chapters</a> to a video.</p>
   
   <pre class="line-numbers">
   <code class="language-json">{
@@ -237,7 +241,7 @@
   </code>
   </pre>
   
-  <p>See <a href="/node/17938">Ingesting WebVTT Files</a> for more details.</p>
+  <p>See <a href="/dynamic-ingest/ingest-guides/ingesting-webvtt-files-text-trackscaptions.html">Ingesting WebVTT Files</a> for more details.</p>
   </section>
   
   <section class="bcls-section" id="manangingVideos">
@@ -263,7 +267,7 @@
     <dd>this determines the video metadata field to sort the result by - by default, results are sorted by <code>updated_at</code> (descending, to show the most recently updated videos first)</dd>
   </dl>
   
-  <p>See <a href="/node/18034#parameters"> <span class="”notranslate”">CMS API</span> Overview - Parameters</a> for detailed information on these parameters.</p>
+  <p>See <a href="/cms/getting-started/overview-cms-api.html#parameters"> <span class="”notranslate”">CMS API</span> Overview - Parameters</a> for detailed information on these parameters.</p>
   
   <h3>Searching for videos</h3>
   
@@ -274,7 +278,7 @@
   </code>
   </pre>
   
-  <p>For details and all the options for searching, see <a href="/node/18005">Search for Videos</a>.</p>
+  <p>For details and all the options for searching, see <a href="/cms/searching/cms-and-playback-apis-video-search-v2.html">Search for Videos</a>.</p>
   
   <h3>Getting and updating a specific video</h3>
   
@@ -352,7 +356,7 @@
   <section class="bcls-section" id="creatingPlayers">
   <h2>Creating Players</h2>
   
-  <p>Brightcove players can be created via the <a href="/node/18269"> <span class="”notranslate”">Player Management API</span> </a>. The API allows you to create players, update their properties, and get the embed code in the form of a URL, an <code>iframe</code> tag, or a block of HTML to embed in the page.</p>
+  <p>Brightcove players can be created via the <a href="/player-management/getting-started/overview-player-management-api.html"> <span class="”notranslate”">Player Management API</span> </a>. The API allows you to create players, update their properties, and get the embed code in the form of a URL, an <code>iframe</code> tag, or a block of HTML to embed in the page.</p>
   
   <p class="BCL-aside">You can up to 200 players per account, but it is generally less confusing to users to have as few players as you absolutely need. You should have separate players for playing single videos or playlists, but otherwise you only need different players when they will be styled differently or have different functionality added through plugins.</p>
   
@@ -363,7 +367,7 @@
   </code>
   </pre>
   
-  <p>In the body of the request, include the <a href="/node/18262">player configuration</a> - the only thing required is a <code>name</code>:</p>
+  <p>In the body of the request, include the <a href="/player-management/guides/player-configuration-guide.html">player configuration</a> - the only thing required is a <code>name</code>:</p>
   
   <pre class="line-numbers">
   <code class="language-json">{
@@ -406,9 +410,9 @@
   <section class="bcls-section" id="customizingPlayers">
   <h2>Customizing Players</h2>
   
-  <p>The <a href="/node/18204">Brightcove player</a> is built with standard web technologies: HTML, CSS, and <span class="”notranslate”">JavaScript</span>. You can customize the player using those same technologies. This can be done in the page where the player is published, but best practice is to add your customizations to the player itself through the player <a href="/node/18262">configuration</a>, updating the player via a <span class="”notranslate”">PATCH</span> request to the <span class="”notranslate”">Player Management API</span> as explained in the previous section.</p>
+  <p>The <a href="https://player.support.brightcove.com/getting-started/overview-brightcove-player.html">Brightcove player</a> is built with standard web technologies: HTML, CSS, and <span class="”notranslate”">JavaScript</span>. You can customize the player using those same technologies. This can be done in the page where the player is published, but best practice is to add your customizations to the player itself through the player <a href="/player-management/guides/player-configuration-guide.html">configuration</a>, updating the player via a <span class="”notranslate”">PATCH</span> request to the <span class="”notranslate”">Player Management API</span> as explained in the previous section.</p>
   
-  <p>You can also add additional features and functionality to the player through <span class="”notranslate”">JavaScript</span> <a href="/node/18128">plugins</a>, and there is an extensive <a href="https://docs.brightcove.com/brightcove-player/current-release/index.html">Player API</a> to help you integrate your code with the player. Brightcove offers a number of ready-made plugins for such things as enabling advertising, customizing the endscreen, and adding overlays.</p>
+  <p>You can also add additional features and functionality to the player through <span class="”notranslate”">JavaScript</span> <a href="https://player.support.brightcove.com/plugins/brightcove-player-plugins.html">plugins</a>, and there is an extensive <a href="https://docs.brightcove.com/brightcove-player/current-release/index.html">Player API</a> to help you integrate your code with the player. Brightcove offers a number of ready-made plugins for such things as enabling advertising, customizing the endscreen, and adding overlays.</p>
   </section>
   
   <section class="bcls-section" id="publishingVideos">
@@ -416,7 +420,7 @@
   
   <p>In the <a href="#creatingPlayers">Creating Players section</a> above we saw that when you get the player configuration object using the <span class="”notranslate”">Player Management API</span>, the returned data includes an iframe tag for embedding the player in an HTML page, and also a URL for the full HTML if you want to embed the player directly in a page.</p>
   
-  <aside class="bcls-aside bcls-aside--tip">We recommend that you use the iframe embed whenever possible, as this will prevent conflicts between the player's CSS and <span class="”notranslate”">JavaScript</span> and other stylesheets and scripts used in the page. See <a href="/node/15622">this document</a> for details of the differences and more specific recommendations on which embed to use in different situations.</aside>
+  <aside class="bcls-aside bcls-aside--tip">We recommend that you use the iframe embed whenever possible, as this will prevent conflicts between the player's CSS and <span class="”notranslate”">JavaScript</span> and other stylesheets and scripts used in the page. See <a href="https://player.support.brightcove.com/publish/choosing-correct-embed-code.html">this document</a> for details of the differences and more specific recommendations on which embed to use in different situations.</aside>
   
   <p>For whichever embed you choose, you will need to add a <span class="”notranslate”">Video Cloud</span> video id or playlist id to the embed code to add content to the player. The iframe embed code looks like this:</p>
   
@@ -452,29 +456,11 @@
   <section class="bcls-section" id="analytics">
   <h2>Getting Analytics Reports</h2>
   
-  <p>The <a href="/node/17997"> <span class="”notranslate”">Analytics API</span> </a> allows you to generate realtime analytics reports by:</p>
-  
-  <ul>
-    <li><a href="/node/17968"><code>account</code> </a></li>
-    <li><a href="/node/17961"><code>video</code> </a></li>
-    <li><a href="/node/17967"><code>player</code> </a></li>
-    <li><a href="/node/17971"><code>date</code> </a></li>
-    <li><a href="/node/17966"><code>date_hour</code> </a></li>
-    <li><a href="/node/17976"><code>destination_domain</code> </a></li>
-    <li><a href="/node/17970"><code>destination_path</code> </a></li>
-    <li><a href="/node/17959"><code>country</code> </a></li>
-    <li><a href="/node/17972"><code>city</code> </a></li>
-    <li><a href="/node/17974"><code>region</code> </a></li>
-    <li><a href="/node/17969"><code>referrer_domain</code> </a></li>
-    <li><a href="/node/17958"><code>source_type</code> </a></li>
-    <li><a href="/node/17983"><code>search_terms</code> </a></li>
-    <li><a href="/node/17957"><code>device_type</code> </a></li>
-    <li><a href="/node/17979"><code>device_os</code> </a></li>
-  </ul>
-  
+  <p>The <a href="/analytics/getting-started/overview-analytics-api-v1.html"> <span class="”notranslate”">Analytics API</span> </a> allows you to generate  analytics reports by many different <code>dimensions</code>. See the <a href="/analytics/dimension-guides/index.html">Dimension Guides</a> for more information.</p>
+    
   <p>You can specify the date range for the report, the metrics to return, and you can get the data in <span class="”notranslate”">JSON</span>, <span class="”notranslate”">csv</span>, or <span class="”notranslate”">xlxs</span> format</p>
   
-  <p>For periods within the last month, you can also generate detailed <a href="/node/17997#engagement">Engagement Reports</a> that show views for every one hundredth part of the video.</p>
+  <p>For periods within the last month, you can also generate detailed <a href="/analytics/getting-started/overview-analytics-api-v1.html#engagement">Engagement Reports</a> that show views for every one hundredth part of the video.</p>
   </section>
   
   <section class="bcls-section" id="summary">
@@ -483,30 +469,29 @@
   <p>Here is a summary of the APIs useful for integrating with <span class="”notranslate”">Video Cloud</span>.</p>
   
   <dl>
-    <dt><a href="/node/17928"><span class="”notranslate”">OAuth API</span> </a></dt>
+    <dt><a href="/oauth/getting-started/overview-oauth-api-v4.html"><span class="”notranslate”">OAuth API</span> </a></dt>
     <dd>Used to create client credentials and access tokens to access the other APIs.</dd>
     <dt>Media Management</dt>
     <dd>
     <dl>
-      <dt><a href="/node/18045"><span class="”notranslate”">Ingest Profiles API</span> </a></dt>
+      <dt><a href="/ingest-profiles/getting-started/overview-ingest-profiles-api-dynamic-delivery-context-aware-encoding.html"><span class="”notranslate”">Ingest Profiles API</span> </a></dt>
       <dd>Used to create custom ingest profiles specifying the renditions to be created for videos added to <span class="”notranslate”">Video Cloud</span></dd>
-      <dt><a href="/node/17948"><span class="”notranslate”">Dynamic Ingest API</span> </a></dt>
+      <dt><a href="/dynamic-ingest/getting-started/overview-dynamic-ingest-api-dynamic-delivery.html"><span class="”notranslate”">Dynamic Ingest API</span> </a></dt>
       <dd>Used to add videos and related media assets to <span class="”notranslate”">Video Cloud</span></dd>
-      <dt><a href="/node/18034"><span class="”notranslate”">CMS API</span> </a></dt>
+      <dt><a href="/cms/getting-started/overview-cms-api.html"><span class="”notranslate”">CMS API</span> </a></dt>
       <dd>Used to create video objects for ingestion, and to manage videos and playlists</dd>
     </dl>
     </dd>
     <dt>Brightcove Players</dt>
     <dd>
     <dl>
-      <dt><a href="/node/18204">The Brightcove Player</a></dt>
+      <dt><a href="https://player.support.brightcove.com/getting-started/overview-brightcove-player.html">The Brightcove Player</a></dt>
       <dd>The player includes a <span class="”notranslate”">JavaScript</span> API to interact with the player at runtime</dd>
-      <dt><a href="/node/18269"><span class="”notranslate”">Player Management API</span> </a></dt>
+      <dt><a href="/player-management/getting-started/overview-player-management-api.html"><span class="”notranslate”">Player Management API</span> </a></dt>
       <dd>Used to create and configure players, and to get the player embed code</dd>
     </dl>
     </dd>
-    <dt><a href="/node/17997"><span class="”notranslate”">Analytics API</span> </a></dt>
+    <dt><a href="/analytics/getting-started/overview-analytics-api-v1.html"><span class="”notranslate”">Analytics API</span> </a></dt>
     <dd>Used to obtain analytics reports on video performance</dd>
   </dl>
   </section>
-  
