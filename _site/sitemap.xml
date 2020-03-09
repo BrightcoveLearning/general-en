@@ -335,6 +335,13 @@
     </url>
     
     <url>
+        <loc>https://general.support.brightcove.com/shared-content/general/overview-context-aware-encoding.html</loc>
+        <lastmod>2020-03-09</lastmod>
+        <changefreq>daily</changefreq>
+        <priority>0.5</priority>
+    </url>
+    
+    <url>
         <loc>https://general.support.brightcove.com/shared-content/general/overview-dynamic-delivery.html</loc>
         <lastmod>2020-03-09</lastmod>
         <changefreq>daily</changefreq>
