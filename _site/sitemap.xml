@@ -153,6 +153,13 @@
     </url>
     
     <url>
+        <loc>https://general.support.brightcove.com/developer/</loc>
+        <lastmod>2020-03-12</lastmod>
+        <changefreq>daily</changefreq>
+        <priority>0.5</priority>
+    </url>
+    
+    <url>
         <loc>https://general.support.brightcove.com/general/</loc>
         <lastmod>2020-03-12</lastmod>
         <changefreq>daily</changefreq>
@@ -168,13 +175,6 @@
     
     <url>
         <loc>https://general.support.brightcove.com/ooyala/</loc>
-        <lastmod>2020-03-12</lastmod>
-        <changefreq>daily</changefreq>
-        <priority>0.5</priority>
-    </url>
-    
-    <url>
-        <loc>https://general.support.brightcove.com/developer/</loc>
         <lastmod>2020-03-12</lastmod>
         <changefreq>daily</changefreq>
         <priority>0.5</priority>
@@ -455,13 +455,6 @@
     
     <url>
         <loc>https://general.support.brightcove.com/utilities/string-encoder.html</loc>
-        <lastmod>2020-03-12</lastmod>
-        <changefreq>daily</changefreq>
-        <priority>0.5</priority>
-    </url>
-    
-    <url>
-        <loc>https://general.support.brightcove.com/general/supported-video-and-audio-formats-codecs-and-containers.html</loc>
         <lastmod>2020-03-12</lastmod>
         <changefreq>daily</changefreq>
         <priority>0.5</priority>
