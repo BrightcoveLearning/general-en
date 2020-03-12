@@ -6,7 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <!-- remember to remove the following line when the site is ready to go live -->
   <!-- <meta name="robots" content="noindex" /> -->
-  <title>Concepts: Set up cURL</title>
+  <title>String Encoder</title>
   <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
   <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
   <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
@@ -28,7 +28,7 @@
 
 <header>
   <div class="div-header">
-    <a href="/"><img class="product-logo" src="https://learning-services-media.brightcove.com/doc-assets/site-assets/images/site/product-logos/brightcove.png" alt="product logo" style="max-height: 100px;max-width: 232px;"></a>
+    <a href="/"><img class="product-logo" src="https://learning-services-media.brightcove.com/doc-assets/site-assets/images/site/product-logos/logo-bc-video-cloud.svg" alt="product logo" style="max-height: 100px;max-width: 232px;"></a>
 <!-- GTranslate: https://gtranslate.io/ -->
 <select onchange="doGTranslate(this);" style="margin-right: 1rem;">
   <option value="">Select a language</option>
@@ -85,9 +85,9 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
       
       
       
-      <li class="breadcrumb-item"><a href="/general/">General Information</a></li>
+      <li class="breadcrumb-item"><a href="/utilities/">Utilities</a></li>
       
-      <li class="breadcrumb-item active" aria-current="page">Concepts: Set up cURL</li>
+      <li class="breadcrumb-item active" aria-current="page">String Encoder</li>
     </ol>
   </nav>
 </header>
@@ -101,15 +101,152 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
             
           
             
-              <h5 class="submenu-header"><a href="/getting-started/">Getting Started <strong>+</strong></a></h5>            
+              <h5 class="submenu-header"><a href="/general/">General Information <strong>+</strong></a></h5>            
               <ul class="sidenav-submenu" style="display:none;">
                 
                   
-                    <li><a href="/getting-started/overview-zencoder.html">Overview</a></li>
+                    <li><a href="/general/brightcove-product-overview.html">Brightcove Product Overview</a></li>
                   
                 
                   
-                    <li><a href="/getting-started/quick-start-zencoder.html">Quick Start</a></li>
+                    <li><a href="/general/brightcove-open-source-projects.html">Open Source Projects</a></li>
+                  
+                
+                  
+                    <li><a href="/general/known-issues-studio-brightcove-player-and-apis.html">Known Issues</a></li>
+                  
+                
+                  
+                    <li><a href="/general/mpeg-dash-video.html">MPEG-DASH Video</a></li>
+                  
+                
+                  
+                    <li><a href="/general/brightcove-forum-groups-and-email-lists.html">Brightcove Forum Groups and Email Lists</a></li>
+                  
+                
+              </ul>
+            
+          
+            
+              <h5 class="submenu-header"><a href="/developers/">Developers <strong>+</strong></a></h5>            
+              <ul class="sidenav-submenu" style="display:none;">
+                
+                  
+                    <li><a href="/developer/concepts-cors.html">Concepts: CORS</a></li>
+                  
+                
+                  
+                    <li><a href="/developer/concepts-introducing-json.html">Concepts: Introducing JSON</a></li>
+                  
+                
+                  
+                    <li><a href="/developer/concepts-javascript-debugging-basics.html">Concepts: JavaScript Debugging Basics</a></li>
+                  
+                
+                  
+                    <li><a href="/developer/concepts-javascript-module-design-pattern.html">Concepts: The JavaScript Module Design Pattern</a></li>
+                  
+                
+                  
+                    <li><a href="/developer/concepts-set-curl.html">Concepts: Set up cURL</a></li>
+                  
+                
+                  
+                    <li><a href="/developer/concepts-using-javascript-promises.html">Concepts: Using JavaScript Promises</a></li>
+                  
+                
+                  
+                    <li><a href="/developer/debugging-mobile-devices.html">Debugging on Mobile Devices</a></li>
+                  
+                
+                  
+                    <li><a href="/developer/using-wireshark-track-network-traffic-debugging.html">Using Wireshark to Track Network Traffic for Debugging</a></li>
+                  
+                
+              </ul>
+            
+          
+            
+              <h5 class="submenu-header"><a href="/ooyala/">Migration from Ooyala <strong>+</strong></a></h5>            
+              <ul class="sidenav-submenu" style="display:none;">
+                
+                  
+                    <li><a href="/ooyala/migration-docs-ooyala-customers.html">Migration Docs for Ooyala Customers</a></li>
+                  
+                
+                  
+                    <li><a href="/ooyala/migrating-analytics-rest-api-brightcove-analytics-api.html">Migrating from the Analytics REST API to Brightcove Analytics API</a></li>
+                  
+                
+                  
+                    <li><a href="/ooyala/migrating-video-cloud-ingestion-adapter.html">Migrating to Video Cloud: Ingestion Adapter</a></li>
+                  
+                
+                  
+                    <li><a href="/ooyala/ooyala-video-cloud-ingestion-adapter-csv-manifest-files.html">Ooyala-Video Cloud Ingestion Adapter: CSV Manifest Files</a></li>
+                  
+                
+                  
+                    <li><a href="/ooyala/ooyala-video-cloud-ingestion-adapter-ingesting-aspera.html">Ooyala-Video Cloud Ingestion Adapter: Ingesting with Aspera</a></li>
+                  
+                
+                  
+                    <li><a href="/ooyala/ooyala-video-cloud-ingestion-adapter-ingesting-ftps.html">Ooyala-Video Cloud Ingestion Adapter: Ingesting with FTPS</a></li>
+                  
+                
+                  
+                    <li><a href="/ooyala/ooyala-video-cloud-ingestion-adapter-ingesting-ois-25.html">Ooyala-Video Cloud Ingestion Adapter: Ingesting with OIS 2.5</a></li>
+                  
+                
+                  
+                    <li><a href="/ooyala/ooyala-video-cloud-ingestion-adapter-ingesting-remote-assets-mrss.html">Ooyala-Video Cloud Ingestion Adapter: Ingesting Remote Assets via MRSS</a></li>
+                  
+                
+                  
+                    <li><a href="/ooyala/ooyala-video-cloud-ingestion-adapter-ingesting-remotely-hosted-mrss-feed.html">Ooyala-Video Cloud Ingestion Adapter: Ingesting from a Remotely Hosted MRSS Feed</a></li>
+                  
+                
+                  
+                    <li><a href="/ooyala/ooyala-video-cloud-ingestion-adapter-manifest-file-formats.html">Ooyala-Video Cloud Ingestion Adapter: Manifest File Formats</a></li>
+                  
+                
+                  
+                    <li><a href="/ooyala/ooyala-video-cloud-ingestion-adapter-xml-manifest-files.html">Ooyala-Video Cloud Ingestion Adapter: XML Manifest Files</a></li>
+                  
+                
+                  
+                    <li><a href="/ooyala/ooyala-video-cloud-ingestion-supported-ingest-formats.html">Ooyala-Video Cloud Ingestion Adapter: Supported Ingest Formats</a></li>
+                  
+                
+                  
+                    <li><a href="/ooyala/ooyala-video-cloud-migration-adding-brightcove-dns-server-testing.html">Ooyala to Video Cloud Migration: Adding the Brightcove DNS Server for Testing</a></li>
+                  
+                
+                  
+                    <li><a href="/ooyala/ooyala-video-cloud-migration-authentication-brightcove-api-requests.html">Ooyala to Video Cloud Migration: Authentication for Brightcove API Requests</a></li>
+                  
+                
+                  
+                    <li><a href="/ooyala/using-ooyala-players-deliver-video-cloud-content.html">Using the Ooyala Players to Deliver Video Cloud Content</a></li>
+                  
+                
+              </ul>
+            
+          
+            
+              <h5 class="submenu-header"><a href="/utilities/">Utilities <strong>+</strong></a></h5>            
+              <ul class="sidenav-submenu" style="display:none;">
+                
+                  
+                    <li><a href="/utilities/base-64-encoding-tool.html">Base 64 Encoding Tool</a></li>
+                  
+                
+                  
+                    <li><a href="/utilities/date-converter.html">Date Converter</a></li>
+                  
+                
+                  
+                    <li><a href="/utilities/string-encoder.html">String Encoder</a></li>
                   
                 
               </ul>
@@ -143,40 +280,48 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
 </div>
 
 <article class="bcls-article">
-  <h1>Concepts: Set up cURL</h1>
-  <summary>In this topic, you will learn about cURL, a tool useful for testing and making API requests. cURL is a command line tool for making HTTP requests. We use cURL in a <a href="/node/17925#bc-ipnav-2">shell script for testing Brightcove API calls</a>. If you are on Mac MacOS or any Unix/Linux system, you already have cURL. If you are on Windows, see instructions below for getting cURL.</summary>
+  <h1>String Encoder</h1>
+  <summary></summary>
   <section class="bcls-section">
-    <h2 id="windows" class="notranslate">Windows</h2>
-    <p>If you have <span class="notranslate">Windows</span>, you can download and install cURL as follows.</p>
-    <h3>Installing cURL</h3>
-    <ol>
-      <li>
-        <p>In <span class="notranslate">Windows</span>, create a new folder called <strong>curl</strong> in your C: drive.</p>
-        <p><code>C:curl</code></p>
-      </li>
-      <li>
-        <p>Go to <a href="//cygwin.com/install.html">https://cygwin.com/install.html</a> follow the instructions there, choosing the 32-bit or 64-bit installer according to the system you have. During the install you will be prompted for packages to install. Open the Net package, then check the <strong>curl</strong> option and then finish the installation.</p>
-      </li>
-    </ol>
-    <!-- <aside class="bcls-aside bcls-aside--information">If you need more guidance on setting up curl on <span class="notranslate">Windows</span>, see <a href="https://support.zendesk.com/hc/en-us/articles/203691436-Installing-and-using-cURL#install">this</a> document.</aside> --></section>
-  <section class="bcls-section">
-    <h2 id="testSetup">Test your setup</h2>
-    <p class="language-editable">To run <code>cURL</code> commands, you just type curl (with appropriate flags for the request you want to make) at the Terminal or DOS prompt, and then pressing Return. To make sure cURL is correctly installed, open a Terminal or DOS window, type <code>curl</code> at the prompt, and press Return. You should see a message like this:</p>
-    <pre class="line-numbers">
-<span class="notranslate">
-  <code class="language-bash">curl: try 'curl --help' or 'curl --manual' for more information</code></span></pre>
-  </section>
-  <section class="bcls-section">
-    <h2 id="sendData">Sending Data</h2>
-    <p>If you need to send data with the API request (as in a POST or PATCH request, for example), there are several ways to do it. You can include the data inline or in a separate file. Here is a Player Management API example submitting the data as a separate JSON file:</p>
-    <pre class="line-numbers">
-<span class="notranslate">
-  <code class="language-bash">curl --request POST
-    --url https://players.api.brightcove.com/v2/accounts/57838016001/players
-    --header 'authorization: Bearer <span class="bcls-input">YOUR_ACCESS_TOKEN_HERE</span>'
-    --header 'content-type: application/json'
-    <span class="bcls-highlight">--data <strong>&lt;</strong>player_data/player_config.json</span> </code></span></pre>
-    <aside class="bcls-aside bcls-aside--info">Note the "&lt;" symbol, which sends the file contents. Use this rather than the "@" symbol, which attaches the file as an upload.</aside>
+    <p>Utilty to URI-encode strings 3 ways.</p>
+    <p>Add the method names suggest, these are generally useful when you need to include some string in a URL. Which one is appropriate depends on the situation. Below are some examples of how we find them useful.</p>
+    <ul>
+      <li><code>escape</code> is the oldest method, and does the least; we have not had occasion to use it in our apps</li>
+      <li><code>encodeURI</code> is generally adequate for strings that will be passed as the values for URL parameters</li>
+      <li><code>encodeURIComponent</code> is most thorough encoder, but generally you only need it for strings that will be used as part of a URL domain/path, or if you need to pass a URL as a parameter (we do this frequently in passing API requests to proxies via AJAX)</li>
+    </ul>
+    </header>
+    <p>String to encode:</p>
+    <p>
+      <textarea id="str" cols="100" rows="5" class="bcls-code"></textarea>
+    </p>
+    <p><span id="btn" class="bcls-button">Encode it!</span></p>
+    <hr />
+    <h2>Results</h2>
+    <p>encodeURI</p>
+    <pre id="results_encodeURI" class="bcls-code">&nbsp;
+
+</pre>
+    <p>encodeURIComponent</p>
+    <pre id="results_encodeURIComponent" class="bcls-code">&nbsp;
+
+</pre>
+    <p>escape</p>
+    <pre id="results_escape" class="bcls-code">&nbsp;
+
+</pre>
+    <script>
+    var BCLS = ( function () {
+        var str,
+        btn = document.getElementById('btn');
+        btn.addEventListener("click", function (evt) {
+            str = document.getElementById("str").value;
+            document.getElementById("results_encodeURI").textContent = encodeURI(str);
+            document.getElementById("results_encodeURIComponent").textContent = encodeURIComponent(str);
+            document.getElementById("results_escape").textContent = escape(str);
+        })
+    })();
+    </script> 
   </section>
 </article>
 
@@ -195,7 +340,7 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
 
 <hr>
 <div class="last-updated">
-  Page last updated on 02 Mar 2020
+  Page last updated on 12 Mar 2020
 </div>
 
 <footer class="bcls-footer" role="contentinfo">

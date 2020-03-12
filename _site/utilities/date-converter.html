@@ -6,7 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <!-- remember to remove the following line when the site is ready to go live -->
   <!-- <meta name="robots" content="noindex" /> -->
-  <title>Ooyala Training Videos</title>
+  <title>Date Converter</title>
   <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
   <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
   <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
@@ -85,9 +85,9 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
       
       
       
-      <li class="breadcrumb-item"><a href="/ooyala/">Ooyala</a></li>
+      <li class="breadcrumb-item"><a href="/utilities/">Utilities</a></li>
       
-      <li class="breadcrumb-item active" aria-current="page">Ooyala Training Videos</li>
+      <li class="breadcrumb-item active" aria-current="page">Date Converter</li>
     </ol>
   </nav>
 </header>
@@ -280,22 +280,48 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
 </div>
 
 <article class="bcls-article">
-  <h1>Ooyala Training Videos</h1>
-  <summary></summary>
+  <h1>Date Converter</h1>
+  <summary>Utiility for getting dates in different formats.</summary>
   <section class="bcls-section">
-    <p><a href="https://help-ooyala.brightcove.com/"><img alt="" src="https://learning-services-media.brightcove.com/doc-assets/node/18777-ooyala-training-videos/arrow.png" /> Back to Ooyala Documentation</a></p>
-    <h2 id="Ooyala Backlot">Ooyala Backlot</h2>
-    <div data-experience="59934f41e7588f000f8a6b5d" data-playlist-id="6034175035001">&nbsp;</div>
-    <script src="https://players.brightcove.net/20318290001/experience_59934f41e7588f000f8a6b5d/live.js"></script>
-    <h2 id="Ooyala Player">Ooyala Player</h2>
-    <div data-experience="59934f41e7588f000f8a6b5d" data-playlist-id="6034020316001">&nbsp;</div>
-    <script src="https://players.brightcove.net/20318290001/experience_59934f41e7588f000f8a6b5d/live.js"></script>
-    <h2 id="Ooyala Live">Ooyala Live</h2>
-    <div data-experience="59934f41e7588f000f8a6b5d" data-playlist-id="6033831140001">&nbsp;</div>
-    <script src="https://players.brightcove.net/20318290001/experience_59934f41e7588f000f8a6b5d/live.js"></script>
-    <h2 id="Ooyala Analytics">Ooyala Analytics</h2>
-    <div data-experience="59934f41e7588f000f8a6b5d" data-playlist-id="6034175037001">&nbsp;</div>
-    <script src="https://players.brightcove.net/20318290001/experience_59934f41e7588f000f8a6b5d/live.js"></script> 
+    <p class="language-editable">Uses the <a class="notranslate" href="http://bevacqua.github.io/rome/">Rome Date-Time Picker</a></p>
+    <p style="float: left; min-height: 150px;margin-right: 40px;">Date picker:
+      <input type="text" class="input" size="17" id="dateInput" />
+    </p>
+    <p>ISO 8601 date:</p>
+    <p>UTC date:</p>
+    <p><span class="notranslate">Epoch date</span> (milliseconds):</p>
+    <script src="//docs.brightcove.com/en/scripts/rome/rome.min.js"></script><script>
+      var BCLS = ( function (rome, document) {
+        var moment = rome.moment,
+          now = new Date(),
+          selectedDate = now,
+          nowUTC,
+          nowISO,
+          nowEpoch,
+          dateInput = document.getElementById("dateInput"),
+          isoDate = document.getElementById("isoDate"),
+          utcDate = document.getElementById("utcDate"),
+          epochDate = document.getElementById("epochDate"),
+          setDates = function () {
+            utcDate.innerHTML = selectedDate.toUTCString();
+            isoDate.innerHTML = selectedDate.toISOString();
+            epochDate.innerHTML = selectedDate.valueOf();
+          };
+
+      rome(dateInput, {initialValue: now.toISOString()});
+
+      rome(dateInput).on("data", function () {
+        selectedDate = rome(dateInput).getDate();
+        setDates();
+      });
+
+      setDates();
+
+        return {
+
+        }
+      })(rome, document);
+      </script> 
   </section>
 </article>
 
@@ -314,7 +340,7 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
 
 <hr>
 <div class="last-updated">
-  Page last updated on 03 Mar 2020
+  Page last updated on 12 Mar 2020
 </div>
 
 <footer class="bcls-footer" role="contentinfo">
