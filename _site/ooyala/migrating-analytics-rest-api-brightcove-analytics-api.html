@@ -289,7 +289,7 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
     
     <p>The Video Cloud Analytics API is quite similar to to the Ooyala Analytics REST API.</p>
     
-    <p>Note also that the Analytics Module in Video Cloud Studio includes a robust <a href="/node/14608">Custom Report Builder</a> that in many cases may make it unnecessary to use the API at all.</p>
+    <p>Note also that the Analytics Module in Video Cloud Studio includes a robust <a href="https://studio.support.brightcove.com/analytics/creating-custom-analytics-reports.html">Custom Report Builder</a> that in many cases may make it unnecessary to use the API at all.</p>
     
     <p>The sections below correspond to the different aspects of the two APIs:</p>
     
@@ -306,7 +306,7 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
     <section class="bcls-section">
     <h2 id="Authentication">Authentication</h2>
     
-    <p>Authentication of Brightcove API requests is handled slightly differently than that for the Ooyala REST APIs. See <a href="/node/18932">Authentication for Brightcove API Requests</a> for details.</p>
+    <p>Authentication of Brightcove API requests is handled slightly differently than that for the Ooyala REST APIs. See <a href="/ooyala/ooyala-video-cloud-migration-authentication-brightcove-api-requests.html">Authentication for Brightcove API Requests</a> for details.</p>
     </section>
     
     <section class="bcls-section">
@@ -333,72 +333,72 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
         <tr>
           <td>none</td>
           <td><code>accounts</code> - included as a parameter to all reports on multiple accounts</td>
-          <td><a href="/node/18756#params">Overview of Dimensions, Fields, and Parameters</a></td>
+          <td><a href="https://apis.support.brightcove.com/analytics/getting-started/analytics-api-overview-dimensions-fields-and-parameters.html#params">Overview of Dimensions, Fields, and Parameters</a></td>
         </tr>
         <tr>
           <td><code>report_type</code></td>
           <td>None, but the Brightcove API offers some additional endpoints for engagement and live analytics reports</td>
-          <td><a href="/node/17997">Overview: Analytics API</a></td>
+          <td><a href="https://apis.support.brightcove.com/analytics/getting-started/overview-analytics-api-v1.html">Overview: Analytics API</a></td>
         </tr>
         <tr>
           <td><code>start_date</code></td>
           <td><code>from</code> the two params are similar and both accept values in the form <samp>YYYY-MM-DD</samp>; the Brightcove param also accepts epoch dates in milliseconds and relative dates such as <samp>-3d</samp></td>
-          <td><a href="/node/18756#params">Overview of Dimensions, Fields, and Parameters</a></td>
+          <td><a href="https://apis.support.brightcove.com/analytics/getting-started/analytics-api-overview-dimensions-fields-and-parameters.html#params">Overview of Dimensions, Fields, and Parameters</a></td>
         </tr>
         <tr>
           <td><code>end_date</code></td>
           <td><code>to</code> the two params are similar and both accept values in the form <samp>YYYY-MM-DD</samp>; the Brightcove param also accepts epoch dates in milliseconds and relative dates such as <samp>-3d</samp></td>
-          <td><a href="/node/18756#params">Overview of Dimensions, Fields, and Parameters</a></td>
+          <td><a href="https://apis.support.brightcove.com/analytics/getting-started/analytics-api-overview-dimensions-fields-and-parameters.html#params">Overview of Dimensions, Fields, and Parameters</a></td>
         </tr>
         <tr>
           <td><code>metrics</code></td>
           <td><code>fields</code> - the two params are essentially identical; the Brighcove API also uses <code>metrics</code> for Live Analytics requests; see <a href="#Metrics">Metrics</a> for information on what metrics are available</td>
-          <td><a href="/node/18756#params">Overview of Dimensions, Fields, and Parameters</a></td>
+          <td><a href="https://apis.support.brightcove.com/analytics/getting-started/analytics-api-overview-dimensions-fields-and-parameters.html#params">Overview of Dimensions, Fields, and Parameters</a></td>
         </tr>
         <tr>
           <td><code>dimensions</code></td>
           <td><code>dimensions</code> - the two params are essentially identical; the Brighcove API also uses <code>metrics</code> for Live Analytics requests; see <a href="#Dimensions">Dimensions</a> for information on what dimensions are available</td>
-          <td><a href="/node/18756#params">Overview of Dimensions, Fields, and Parameters</a></td>
+          <td><a href="https://apis.support.brightcove.com/analytics/getting-started/analytics-api-overview-dimensions-fields-and-parameters.html#params">Overview of Dimensions, Fields, and Parameters</a></td>
         </tr>
         <tr>
           <td><code>filters</code></td>
           <td><code>where</code> - apart from the name, the two params are essentially identical; see <a href="#Filters">Filters</a> below for more information</td>
-          <td><a href="/node/18756#params">Overview of Dimensions, Fields, and Parameters</a></td>
+          <td><a href="https://apis.support.brightcove.com/analytics/getting-started/analytics-api-overview-dimensions-fields-and-parameters.html#params">Overview of Dimensions, Fields, and Parameters</a></td>
         </tr>
         <tr>
           <td><code>time_segment</code></td>
           <td>none - the Brightcove API does have <code>date</code> and <code>date_hour</code> dimensions that provide some similar time-segmenting, and also engagement endpoints for periods within the previous 32 days, which provide views over each 100th part of the video</td>
-          <td><a href="/node/18756#params">Overview of Dimensions, Fields, and Parameters</a></td>
+          <td><a href="https://apis.support.brightcove.com/analytics/getting-started/analytics-api-overview-dimensions-fields-and-parameters.html#params">Overview of Dimensions, Fields, and Parameters</a></td>
         </tr>
         <tr>
           <td><code>sort</code></td>
           <td><code>sort</code> the params are identical except that the Ooyala API allows sorting on multiple metrics</td>
-          <td><a href="/node/18756#params">Overview of Dimensions, Fields, and Parameters</a></td>
+          <td><a href="https://apis.support.brightcove.com/analytics/getting-started/analytics-api-overview-dimensions-fields-and-parameters.html#params">Overview of Dimensions, Fields, and Parameters</a></td>
         </tr>
         <tr>
           <td><code>limit</code></td>
           <td><code>limit</code> - the params are identical except for the 1000 limit on the Ooyala API param</td>
-          <td><a href="/node/18756#params">Overview of Dimensions, Fields, and Parameters</a></td>
+          <td><a href="https://apis.support.brightcove.com/analytics/getting-started/analytics-api-overview-dimensions-fields-and-parameters.html#params">Overview of Dimensions, Fields, and Parameters</a></td>
         </tr>
         <tr>
           <td><code>page</code></td>
           <td><code>offset</code> - the params take different values but work similarly for paging of datasets</td>
-          <td><a href="/node/18756#params">Overview of Dimensions, Fields, and Parameters</a></td>
+          <td><a href="https://apis.support.brightcove.com/analytics/getting-started/analytics-api-overview-dimensions-fields-and-parameters.html#params">Overview of Dimensions, Fields, and Parameters</a></td>
         </tr>
         <tr>
           <td>none</td>
           <td><code>reconciled</code> - because analytics data comes from different sources on different schedules, the Brightcove API puts recent analytics data into an "unreconciled" bucket while it is still being updated, and transfers it to a "historical" bucket; the param allows you to choose between these buckets</td>
-          <td><a href="/node/18756#params">Overview of Dimensions, Fields, and Parameters</a></td>
+          <td><a href="https://apis.support.brightcove.com/analytics/getting-started/analytics-api-overview-dimensions-fields-and-parameters.html#params">Overview of Dimensions, Fields, and Parameters</a></td>
         </tr>
         <tr>
           <td>none</td>
           <td><code>bucket_limit</code> - applies only to Live Analytics requests; together with <code>bucket_duration</code>, these function in a way somewhat similar to the Ooyala API <code>time_segment</code> param</td>
-          <td><a href="/node/18756#params">Overview of Dimensions, Fields, and Parameters</a></td>
+          <td><a href="https://apis.support.brightcove.com/analytics/getting-started/analytics-api-overview-dimensions-fields-and-parameters.html#params">Overview of Dimensions, Fields, and Parameters</a></td>
         </tr>
         <tr>
           <td>none</td>
           <td><code>bucket_duration</code></td>
-          <td><a href="/node/18756#params">Overview of Dimensions, Fields, and Parameters</a></td>
+          <td><a href="https://apis.support.brightcove.com/analytics/getting-started/analytics-api-overview-dimensions-fields-and-parameters.html#params">Overview of Dimensions, Fields, and Parameters</a></td>
         </tr>
       </tbody>
     </table>
@@ -407,7 +407,7 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
     <section class="bcls-section">
     <h2 id="Dimensions">Dimensions</h2>
     
-    <p>The Ooyala and Brightcove Analytics APIs both group data into buckets called "dimensions". They are used in similar ways, but the APIs have somewhat different rules as to how multiple dimensions can be combined, and Brightcove has a broader set of dimensions. See <a href="/node/18756#supported_dimension_combinations">Supported dimension combinations</a> for details on the Brightcove API. The table below provides a detailed comparison.</p>
+    <p>The Ooyala and Brightcove Analytics APIs both group data into buckets called "dimensions". They are used in similar ways, but the APIs have somewhat different rules as to how multiple dimensions can be combined, and Brightcove has a broader set of dimensions. See <a href="https://apis.support.brightcove.com/analytics/getting-started/analytics-api-overview-dimensions-fields-and-parameters.html#supported_dimension_combinations">Supported dimension combinations</a> for details on the Brightcove API. The table below provides a detailed comparison.</p>
     
     <table class="bcls-table">
       <caption class="bcls-caption--table">Dimensions</caption>
@@ -422,17 +422,17 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
         <tr>
           <td><code>asset</code></td>
           <td><code>video</code> - the Brightcove <code>video</code> dimension covers only VOD assets; there is also a <code>live_stream</code> dimension</td>
-          <td><a href="/node/17961">Video Dimension</a></td>
+          <td><a href="https://apis.support.brightcove.com/analytics/dimension-guides/dimension-video.html">Video Dimension</a></td>
         </tr>
         <tr>
           <td><code>country</code></td>
           <td><code>country</code> - dimensions are essentially identical</td>
-          <td><a href="/node/17959">Country Dimension</a></td>
+          <td><a href="https://apis.support.brightcove.com/analytics/dimension-guides/dimension-country.html">Country Dimension</a></td>
         </tr>
         <tr>
           <td><code>region</code></td>
           <td><code>region</code> - dimensions are essentially identical, except that the Brightcove dimension includes US states</td>
-          <td><a href="/node/17974">Region Dimension</a></td>
+          <td><a href="https://apis.support.brightcove.com/analytics/dimension-guides/dimension-region.html">Region Dimension</a></td>
         </tr>
         <tr>
           <td><code>dma</code></td>
@@ -442,77 +442,77 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
         <tr>
           <td><code>state</code></td>
           <td><code>region</code> - the Brightcove API includes US states in the <code>region</code> dimension</td>
-          <td><a href="/node/17974">Region Dimension</a></td>
+          <td><a href="https://apis.support.brightcove.com/analytics/dimension-guides/dimension-region.html">Region Dimension</a></td>
         </tr>
         <tr>
           <td><code>device_type</code></td>
           <td><code>device_type</code> - dimensions are essentially identical</td>
-          <td><a href="/node/17968">Device Type Dimension</a></td>
+          <td><a href="https://apis.support.brightcove.com/analytics/dimension-guides/dimension-devicetype.html">Device Type Dimension</a></td>
         </tr>
         <tr>
           <td><code>domain</code></td>
           <td><code>destination_domain</code></td>
-          <td><a href="/node/17976">Destination Domain Dimension</a></td>
+          <td><a href="https://apis.support.brightcove.com/analytics/dimension-guides/dimension-destinationdomain.html">Destination Domain Dimension</a></td>
         </tr>
         <tr>
           <td><code>url</code></td>
           <td><code>device_os</code> - essentially the same</td>
-          <td><a href="/node/17979">Device OS Dimension</a></td>
+          <td><a href="https://apis.support.brightcove.com/analytics/dimension-guides/dimension-deviceos.html">Device OS Dimension</a></td>
         </tr>
         <tr>
           <td><code>os</code></td>
           <td><code>destination_domain</code> - not exactly the same, but the closest equivalent</td>
-          <td><a href="/node/17976">Destination Domain Dimension</a></td>
+          <td><a href="https://apis.support.brightcove.com/analytics/dimension-guides/dimension-destinationdomain.html">Destination Domain Dimension</a></td>
         </tr>
         <tr>
           <td><code>pcode</code></td>
           <td><code>account</code></td>
-          <td><a href="/node/17968">Account Dimension</a></td>
+          <td><a href="https://apis.support.brightcove.com/analytics/dimension-guides/dimension-devicetype.html">Account Dimension</a></td>
         </tr>
         <tr>
           <td><code>player_id</code></td>
           <td><code>player</code></td>
-          <td>Player Dimension</td>
+          <td><a href="https://apis.support.brightcove.com/analytics/dimension-guides/dimension-player.html">Player Dimension</a></td>
         </tr>
         <tr>
           <td>none</td>
           <td><code>browser_type</code></td>
-          <td><a href="/node/17975">Browser Type Dimension</a></td>
+          <td><a href="https://apis.support.brightcove.com/analytics/dimension-guides/dimension-browsertype.html">Browser Type Dimension</a></td>
         </tr>
         <tr>
           <td>none</td>
           <td><code>date</code></td>
-          <td><a href="/node/17971">Date Dimension</a></td>
+          <td><a href="https://apis.support.brightcove.com/analytics/dimension-guides/dimension-date.html">Date Dimension</a></td>
         </tr>
         <tr>
           <td>none</td>
           <td><code>date_hour</code></td>
-          <td><a href="/node/17966">Date-Hour Dimension</a></td>
+          <td><a href="https://apis.support.brightcove.com/analytics/dimension-guides/dimension-datehour.html">Date-Hour Dimension</a></td>
         </tr>
         <tr>
           <td>none</td>
           <td><code>device_manufacturer</code></td>
-          <td><a href="/node/17982">Device Manufacturer Dimension</a></td>
+          <td><a href="https://apis.support.brightcove.com/analytics/dimension-guides/dimension-devicemanufacturer.html">Device Manufacturer Dimension</a></td>
         </tr>
         <tr>
           <td>none</td>
           <td><code>referrer_domain</code></td>
-          <td><a href="/node/17969">Referrer Domain Dimension</a></td>
+          <td><a href="https://apis.support.brightcove.com/analytics/dimension-guides/dimension-referrerdomain.html">Referrer Domain Dimension</a></td>
         </tr>
         <tr>
           <td>none</td>
           <td><code>search_terms</code></td>
-          <td><a href="/node/17983">Search Terms Dimension</a></td>
+          <td><a href="https://apis.support.brightcove.com/analytics/dimension-guides/dimension-searchterms.html">Search Terms Dimension</a></td>
         </tr>
         <tr>
           <td>none</td>
           <td><code>social_platform</code></td>
-          <td><a href="/node/17965">Social Platform Dimension</a></td>
+          <td><a href="https://apis.support.brightcove.com/analytics/dimension-guides/dimension-socialplatform.html">Social Platform Dimension</a></td>
         </tr>
         <tr>
           <td>none</td>
           <td><code>source_type</code></td>
-          <td><a href="/node/17958">Source Type Dimension</a></td>
+          <td><a href="https://apis.support.brightcove.com/analytics/dimension-guides/dimension-sourcetype.html">Source Type Dimension</a></td>
         </tr>
       </tbody>
     </table>
@@ -536,7 +536,7 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
     <section class="bcls-section">
     <h2 id="Metrics">Metrics</h2>
     
-    <p>The <code>metrics</code> (for the Brightcove API: <code>fields</code>) returned in reports varies according to the dimension(s) requested for Brightcove Analytics API. you can use the tool embedded in <a href="/node/18756#metrics">Dimensions and Fields</a> to see which fields can be returned for a particular dimension or combination of dimensions.</p>
+    <p>The <code>metrics</code> (for the Brightcove API: <code>fields</code>) returned in reports varies according to the dimension(s) requested for Brightcove Analytics API. you can use the tool embedded in <a href="https://apis.support.brightcove.com/analytics/getting-started/analytics-api-overview-dimensions-fields-and-parameters.html#metrics">Dimensions and Fields</a> to see which fields can be returned for a particular dimension or combination of dimensions.</p>
     
     <p>Note that while the Ooyala API returns all metrics if none are specified, but the Brightcove API returns only a small set of default metrics which vary by the dimension (combination) unless you include the <code>fields</code> in the request.</p>
     
