@@ -18,7 +18,7 @@
       url: '/general/brightcove-forum-groups-and-email-lists.html'
 - section: 
   name: 'Developers'
-  url: '/developers/'
+  url: '/developer/'
   icon: '<i class="far fa-brackets-curly"></i>'
   docs:
     - name: 'Concepts: CORS'
@@ -38,7 +38,7 @@
     - name: 'Using Wireshark to Track Network Traffic for Debugging'
       url: '/developer/using-wireshark-track-network-traffic-debugging.html'
 - section: 
-  name: 'Migration from Ooyala'
+  name: 'Migrating from Ooyala'
   url: '/ooyala/'
   icon: '<i class="fal fa-person-dolly"></i>'
   docs:
@@ -60,6 +60,8 @@
       url: '/ooyala/ooyala-video-cloud-ingestion-adapter-ingesting-remote-assets-mrss.html'
     - name: 'Ooyala-Video Cloud Ingestion Adapter: Ingesting from a Remotely Hosted MRSS Feed'
       url: '/ooyala/ooyala-video-cloud-ingestion-adapter-ingesting-remotely-hosted-mrss-feed.html'
+    - name: 'Backlot / Video Cloud CMS Connector'
+      url: '/ooyala/backlot-video-cloud-cms-connector.html'
     - name: 'Ooyala-Video Cloud Ingestion Adapter: Manifest File Formats'
       url: '/ooyala/ooyala-video-cloud-ingestion-adapter-manifest-file-formats.html'
     - name: 'Ooyala-Video Cloud Ingestion Adapter: XML Manifest Files'

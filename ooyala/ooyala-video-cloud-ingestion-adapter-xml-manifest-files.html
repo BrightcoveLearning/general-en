@@ -56,7 +56,7 @@ parent: Migrating from Ooyala
           <td>Specifies a video to ingest. One of the following:
             <ul class="ul">
               <li class="language-editable">Filename of a video that you uploaded.</li>
-              <li class="language-editable">For ingestion via MRSS (see <a class="xref" title="You can use Media RSS (MRSS) to have Ooyala pull your content from your own system from an MRSS feed that you publish. Backlot pulls the metadata from the MRSS feed and either creates a remote asset or downloads (from where they are hosted) and processes the videos and any associated files (thumbnails, closed caption files, etc.)." href="/node/18926">Ingesting from a Remotely Hosted MRSS Feed</a>), the URL where the video is located. The URL can include <samp>http://</samp> or <samp>https://</samp>.</li>
+              <li class="language-editable">For ingestion via MRSS (see <a class="xref" title="You can use Media RSS (MRSS) to have Ooyala pull your content from your own system from an MRSS feed that you publish. Backlot pulls the metadata from the MRSS feed and either creates a remote asset or downloads (from where they are hosted) and processes the videos and any associated files (thumbnails, closed caption files, etc.)." href="/ooyala/ooyala-video-cloud-ingestion-adapter-ingesting-remotely-hosted-mrss-feed.html">Ingesting from a Remotely Hosted MRSS Feed</a>), the URL where the video is located. The URL can include <samp>http://</samp> or <samp>https://</samp>.</li>
             </ul>
             For a remote asset, use <samp>&lt;ooyala:remoteasset&gt;</samp> instead.</td>
           <td>required (except for remote assets)</td>
@@ -152,7 +152,7 @@ parent: Migrating from Ooyala
         </tr>
         <tr>
           <td><samp>&lt;ooyala:profileguid&gt;</samp></td>
-          <td>Specifies a Video Cloud ingest profile to use for processing the video. If you do not want to use the account default profile, you must specify the one you want to use instead. See <a href="/node/15628">Managing Ingest Profiles</a>.</td>
+          <td>Specifies a Video Cloud ingest profile to use for processing the video. If you do not want to use the account default profile, you must specify the one you want to use instead. See <a href="https://studio.support.brightcove.com/admin/managing-ingest-profiles.html">Managing Ingest Profiles</a>.</td>
           <td>optional</td>
         </tr>
       </tbody>
@@ -238,7 +238,7 @@ parent: Migrating from Ooyala
   &lt;/rss&gt;    </pre>
       </li>
       <li class="language-editable"><span>Save the file as XML. Be sure to specify a unique name. If you specify two files with the same name and upload one while the other is processing, the second one might be ignored.</span></li>
-      <li class="language-editable"><span>With your upload method of choice, upload the XML manifest file as you uploaded the video(s). See either <a class="xref" title="You can use FTPS (recommended) or FTP (deprecated) to upload videos, thumbnails, closed captions, and manifest files to Backlot." href="/node/18918">FTP</a> or <a class="xref" title="You can use Aspera file transfer software to upload videos, thumbnails, closed captions and manifest files to Backlot." href="/node/18916">Aspera</a>.</span></li>
+      <li class="language-editable"><span>With your upload method of choice, upload the XML manifest file as you uploaded the video(s). See either <a class="xref" title="You can use FTPS (recommended) or FTP (deprecated) to upload videos, thumbnails, closed captions, and manifest files to Backlot." href="/ooyala/ooyala-video-cloud-ingestion-adapter-ingesting-ftps.html">FTP</a> or <a class="xref" title="You can use Aspera file transfer software to upload videos, thumbnails, closed captions and manifest files to Backlot." href="/ooyala/ooyala-video-cloud-ingestion-adapter-ingesting-aspera.html">Aspera</a>.</span></li>
     </ol>
   </section>
 </article>

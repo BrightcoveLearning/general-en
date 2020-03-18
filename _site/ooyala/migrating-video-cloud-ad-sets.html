@@ -6,7 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <!-- remember to remove the following line when the site is ready to go live -->
   <!-- <meta name="robots" content="noindex" /> -->
-  <title>Brightcove Beacon Home</title>
+  <title>Migrating to Video Cloud: Ad Sets</title>
   <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
   <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
   <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
@@ -81,9 +81,13 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
   <nav aria-label="breadcrumb">
     <ol class="breadcrumb arr-right">
       
+      <li class="breadcrumb-item"><a href="/">Home</a></li>
       
       
-      <li class="breadcrumb-item active" aria-current="page">Brightcove Beacon Home</li>
+      
+      <li class="breadcrumb-item"><a href="/ooyala/">Migrating from Ooyala</a></li>
+      
+      <li class="breadcrumb-item active" aria-current="page">Migrating to Video Cloud: Ad Sets</li>
     </ol>
   </nav>
 </header>
@@ -279,136 +283,269 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
   <div id="search_box" class="gcse-search"></div>
 </div>
 
-<article class="landing-page-wrapper">
-  <h1>Brightcove Home</h1>
-  <section class="landing-page-header" id="landing_page_header">
-    <p>With Video Cloud you can deliver fast, innovative, TV-like experiences out-of-the-box, dynamically insert server-side ads to maximize revenue, and reach your audiences wherever they are.
-
-Video Cloud Studio allows you to manage your video publishing workflow across desktop, tablet and mobile devices.
-
-This site contains general information docs that are referenced from our other documentation sites.</p>
-  </section>
-  <br>
-  <section class="landing-page-body-wrapper" id="landing_page_wrapper">
+<article class="bcls-article">
+  <h1>Migrating to Video Cloud: Ad Sets</h1>
+  <summary><p>This topic covers how ad sets are migrated to Video Cloud.</p> <aside class="bcls-aside bcls-aside--information language-editable">Note: this topic applies <strong>only</strong> to Ooyala customers being migrated to Video Cloud.</aside></summary>
+  <section class="bcls-section">
+    <h2 id="How_Ad_Sets_are_migrated">How Ad Sets are migrated</h2>
     
-      
+    <p>Video Cloud does not have the concept of an ad set. Client-side ads are set up generally through video cuepoints and an advertising plugin for the player. See <a href="/node/18069">Step-by-Step: Implementing Advertising</a> for more details.</p>
     
-      
-      <section class="landing-page-section">
-        <h6 class="landing-page-item-header"></h6>
-        <ul class="landing-page-item list-none">
-          
-            <li><a href="/general/brightcove-product-overview.html">Brightcove Product Overview</a></li>
-          
-            <li><a href="/general/brightcove-open-source-projects.html">Open Source Projects</a></li>
-          
-            <li><a href="/general/known-issues-studio-brightcove-player-and-apis.html">Known Issues</a></li>
-          
-            <li><a href="/general/mpeg-dash-video.html">MPEG-DASH Video</a></li>
-          
-            <li><a href="/general/brightcove-forum-groups-and-email-lists.html">Brightcove Forum Groups and Email Lists</a></li>
-          
-            </ul>
-      </section>
-      
+    <p>In migrating videos to Video Cloud that are associated with an as set, we are doing two things:</p>
     
-      
-      <section class="landing-page-section">
-        <h6 class="landing-page-item-header"></h6>
-        <ul class="landing-page-item list-none">
-          
-            <li><a href="/developer/concepts-cors.html">Concepts: CORS</a></li>
-          
-            <li><a href="/developer/concepts-introducing-json.html">Concepts: Introducing JSON</a></li>
-          
-            <li><a href="/developer/concepts-javascript-debugging-basics.html">Concepts: JavaScript Debugging Basics</a></li>
-          
-            <li><a href="/developer/concepts-javascript-module-design-pattern.html">Concepts: The JavaScript Module Design Pattern</a></li>
-          
-            <li><a href="/developer/concepts-set-curl.html">Concepts: Set up cURL</a></li>
-          
-            <li><a href="/developer/concepts-using-javascript-promises.html">Concepts: Using JavaScript Promises</a></li>
-          
-            <li><a href="/developer/debugging-mobile-devices.html">Debugging on Mobile Devices</a></li>
-          
-            <li><a href="/developer/using-wireshark-track-network-traffic-debugging.html">Using Wireshark to Track Network Traffic for Debugging</a></li>
-          
-            </ul>
-      </section>
-      
+    <ul>
+      <li>Migrating some ad set data to cuepoints (what is migrated varies by the <code>ad_source</code>, and is detailed in sections below)</li>
+      <li>Storing the ad set id in a custom field called <code>ad_set_id</code>, so that the video can be updated later for changes to the ad set</li>
+    </ul>
     
-      
-      <section class="landing-page-section">
-        <h6 class="landing-page-item-header"></h6>
-        <ul class="landing-page-item list-none">
-          
-            <li><a href="/ooyala/migration-docs-ooyala-customers.html">Migration Docs for Ooyala Customers</a></li>
-          
-            <li><a href="/ooyala/migrating-analytics-rest-api-brightcove-analytics-api.html">Migrating from the Analytics REST API to Brightcove Analytics API</a></li>
-          
-            <li><a href="/ooyala/migrating-video-cloud-ingestion-adapter.html">Migrating to Video Cloud: Ingestion Adapter</a></li>
-          
-            <li><a href="/ooyala/ooyala-video-cloud-ingestion-adapter-csv-manifest-files.html">Ooyala-Video Cloud Ingestion Adapter: CSV Manifest Files</a></li>
-          
-            <li><a href="/ooyala/ooyala-video-cloud-ingestion-adapter-ingesting-aspera.html">Ooyala-Video Cloud Ingestion Adapter: Ingesting with Aspera</a></li>
-          
-            <li><a href="/ooyala/ooyala-video-cloud-ingestion-adapter-ingesting-ftps.html">Ooyala-Video Cloud Ingestion Adapter: Ingesting with FTPS</a></li>
-          
-            <li><a href="/ooyala/ooyala-video-cloud-ingestion-adapter-ingesting-ois-25.html">Ooyala-Video Cloud Ingestion Adapter: Ingesting with OIS 2.5</a></li>
-          
-            <li><a href="/ooyala/ooyala-video-cloud-ingestion-adapter-ingesting-remote-assets-mrss.html">Ooyala-Video Cloud Ingestion Adapter: Ingesting Remote Assets via MRSS</a></li>
-          
-            <li><a href="/ooyala/ooyala-video-cloud-ingestion-adapter-ingesting-remotely-hosted-mrss-feed.html">Ooyala-Video Cloud Ingestion Adapter: Ingesting from a Remotely Hosted MRSS Feed</a></li>
-          
-            <li><a href="/ooyala/backlot-video-cloud-cms-connector.html">Backlot / Video Cloud CMS Connector</a></li>
-          
-            <li><a href="/ooyala/ooyala-video-cloud-ingestion-adapter-manifest-file-formats.html">Ooyala-Video Cloud Ingestion Adapter: Manifest File Formats</a></li>
-          
-            <li><a href="/ooyala/ooyala-video-cloud-ingestion-adapter-xml-manifest-files.html">Ooyala-Video Cloud Ingestion Adapter: XML Manifest Files</a></li>
-          
-            <li><a href="/ooyala/ooyala-video-cloud-ingestion-supported-ingest-formats.html">Ooyala-Video Cloud Ingestion Adapter: Supported Ingest Formats</a></li>
-          
-            <li><a href="/ooyala/ooyala-video-cloud-migration-adding-brightcove-dns-server-testing.html">Ooyala to Video Cloud Migration: Adding the Brightcove DNS Server for Testing</a></li>
-          
-            <li><a href="/ooyala/ooyala-video-cloud-migration-authentication-brightcove-api-requests.html">Ooyala to Video Cloud Migration: Authentication for Brightcove API Requests</a></li>
-          
-            <li><a href="/ooyala/using-ooyala-players-deliver-video-cloud-content.html">Using the Ooyala Players to Deliver Video Cloud Content</a></li>
-          
-            </ul>
-      </section>
-      
+    <p>If the video is played in an existing <a href="/node/18905">Ooyala player</a> the ads should continue to play as before. For Brightcove players, you will need to add and configure the appropriate ad plugin to the player - see <a href="/node/15897">Configuring Player Advertising using the Players Module</a> and the other Advertising documentation for the <a href="/node/18362">Brightcove Player</a> for more details.</p>
+    </section>
     
-      
-      <section class="landing-page-section">
-        <h6 class="landing-page-item-header"></h6>
-        <ul class="landing-page-item list-none">
-          
-            <li><a href="/utilities/base-64-encoding-tool.html">Base 64 Encoding Tool</a></li>
-          
-            <li><a href="/utilities/date-converter.html">Date Converter</a></li>
-          
-            <li><a href="/utilities/string-encoder.html">String Encoder</a></li>
-          
-            </ul>
-      </section>
-      
+    <section class="bcls-section">
+    <h2 id="supported_ad_sources">Supported Ad Sources</h2>
     
-      
-      <section class="landing-page-section">
-        <h6 class="landing-page-item-header"></h6>
-        <ul class="landing-page-item list-none">
-          
-            <li><a href="/support/opening-case-with-brightcove-support.html">Opening a Support Case</a></li>
-          
-            <li><a href="/support/viewing-brightcove-system-status-page.html">Viewing the Brightcove System Status Page</a></li>
-          
-            </ul>
-      </section>
-      
+    <p>Only the following <code>ad_source</code> types are supported for migrating ad set data to Video Cloud:</p>
     
-  </section>
-</article>
-
+    <ul>
+      <li>Videoplaza</li>
+      <li>Google IMA v3</li>
+      <li>Freewheel</li>
+      <li>My Ads</li>
+      <li>VAST</li>
+      <li>VPAID</li>
+    </ul>
+    
+    <p>The following fields will be dropped for all sources in the above list that support it:</p>
+    
+    <ul>
+      <li><code>tracking_pixel_url</code></li>
+      <li><code>ad_frequency</code></li>
+    </ul>
+    
+    <p>Additional fields for these ad_sources will be stored as <code>cue_points[i].metadata</code> of type "CODE" as stringified JSON. See the sections below for exact mappings.</p>
+    </section>
+    
+    <section class="bcls-section">
+    <h2 id="Videoplaza">Videoplaza</h2>
+    
+    <table class="bcls-table">
+      <caption class="bcls-caption--table">Videoplaza Data Mappings</caption>
+      <thead class="bcls-table__head">
+        <tr>
+          <th>Ooyala ad set data</th>
+          <th>Video Cloud video data</th>
+        </tr>
+      </thead>
+      <tbody class="bcls-table__body">
+        <tr>
+          <td><code>ad_source [=videoplaze]</code></td>
+          <td><code>cue_points[i].name</code></td>
+        </tr>
+        <tr>
+          <td><code>ad_position</code></td>
+          <td><code>cue_points[i].time</code></td>
+        </tr>
+        <tr>
+          <td><code>vpDomain</code></td>
+          <td><code>cue_points[i].metadata.vpd</code></td>
+        </tr>
+        <tr>
+          <td><code>player_level_midroll_ad_breaks</code></td>
+          <td><code>cue_points[i].metadata.pmab</code></td>
+        </tr>
+        <tr>
+          <td><code>player_level_tags</code></td>
+          <td><code>cue_points[i].metadata.pt</code></td>
+        </tr>
+        <tr>
+          <td><code>player_level_videoplaza_flags</code></td>
+          <td><code>cue_points[i].metadata.pvp</code></td>
+        </tr>
+        <tr>
+          <td><code>player_level_shares</code></td>
+          <td><code>cue_points[i].metadata.ps</code></td>
+        </tr>
+        <tr>
+          <td><code>short_form_content_max_length</code></td>
+          <td><code>cue_points[i].metadata.scml</code></td>
+        </tr>
+        <tr>
+          <td><code>non_linear_ad_breaks</code></td>
+          <td><code>cue_points[i].metadata.nlab</code></td>
+        </tr>
+        <tr>
+          <td><code>account_id</code></td>
+          <td><code>cue_points[i].metadata.account_id</code></td>
+        </tr>
+      </tbody>
+    </table>
+    </section>
+    
+    <section class="bcls-section">
+    <h2 id="Google_IMA_v3">Google IMA v3 data mappings</h2>
+    
+    <table class="bcls-table">
+      <caption class="bcls-caption--table">Google IMA v3 Data Mappings</caption>
+      <thead class="bcls-table__head">
+        <tr>
+          <th>Ooyala ad set data</th>
+          <th>Video Cloud video data</th>
+        </tr>
+      </thead>
+      <tbody class="bcls-table__body">
+        <tr>
+          <td><code>ad_source [=googleimav3]</code></td>
+          <td><code>cue_points[i].name</code></td>
+        </tr>
+        <tr>
+          <td><code>ad_position</code></td>
+          <td><code>cue_points[i].time</code></td>
+        </tr>
+        <tr>
+          <td><code>ad_tag</code></td>
+          <td><code>cue_points[i].metadata.ad_tag</code></td>
+        </tr>
+      </tbody>
+    </table>
+    </section>
+    
+    <section class="bcls-section">
+    <h2 id="Freewheel">Freewheel data mappings</h2>
+    
+    <table class="bcls-table">
+      <caption class="bcls-caption--table">Freewheel Data Mappings</caption>
+      <thead class="bcls-table__head">
+        <tr>
+          <th>Ooyala ad set data</th>
+          <th>Video Cloud video data</th>
+        </tr>
+      </thead>
+      <tbody class="bcls-table__body">
+        <tr>
+          <td><code>ad_source [=freewheel]</code></td>
+          <td><code>cue_points[i].name</code></td>
+        </tr>
+        <tr>
+          <td><code>aab_vast_tag</code> (only for Freewheel -AAB)</td>
+          <td><code>cue_points[i].metadata.avt</code></td>
+        </tr>
+        <tr>
+          <td><code>mrm_network_id</code></td>
+          <td><code>cue_points[i].metadata.mni</code></td>
+        </tr>
+        <tr>
+          <td><code>player_profile</code></td>
+          <td><code>cue_points[i].metadata.pp</code></td>
+        </tr>
+        <tr>
+          <td><code>video_asset_network_id</code></td>
+          <td><code>cue_points[i].metadata.vani</code></td>
+        </tr>
+        <tr>
+          <td><code>site_section_id</code></td>
+          <td><code>cue_points[i].metadata.ssi</code></td>
+        </tr>
+        <tr>
+          <td><code>site_section_id_type</code></td>
+          <td><code>cue_points[i].metadata.ssit</code></td>
+        </tr>
+        <tr>
+          <td><code>site_section_network_id</code></td>
+          <td><code>cue_points[i].metadata.ssni</code></td>
+        </tr>
+      </tbody>
+    </table>
+    </section>
+    
+    <section class="bcls-section">
+    <h2 id="my_ads">My Ads data mappings</h2>
+    
+    <table class="bcls-table">
+      <caption class="bcls-caption--table">My Ads Data Mappings</caption>
+      <thead class="bcls-table__head">
+        <tr>
+          <th>Ooyala ad set data</th>
+          <th>Video Cloud video data</th>
+        </tr>
+      </thead>
+      <tbody class="bcls-table__body">
+        <tr>
+          <td><code>ad_source [=my_ads]</code></td>
+          <td><code>cue_points[i].name</code></td>
+        </tr>
+        <tr>
+          <td><code>ad_position</code></td>
+          <td><code>cue_points[i].time</code></td>
+        </tr>
+        <tr>
+          <td><code>click_url</code></td>
+          <td><code>cue_points[i].metadata.cu</code></td>
+        </tr>
+        <tr>
+          <td><code>ad_tag</code></td>
+          <td><code>cue_points[i].metadata.ad_tag</code></td>
+        </tr>
+      </tbody>
+    </table>
+    </section>
+    
+    <section class="bcls-section">
+    <h2 id="VAST">VAST data mappings</h2>
+    
+    <table class="bcls-table">
+      <caption class="bcls-caption--table">VAST Data Mappings</caption>
+      <thead class="bcls-table__head">
+        <tr>
+          <th>Ooyala ad set data</th>
+          <th>Video Cloud video data</th>
+        </tr>
+      </thead>
+      <tbody class="bcls-table__body">
+        <tr>
+          <td><code>ad_source [=vast_compliant_instream OR vast_compliant_overlay OR vast_live_opf]</code></td>
+          <td><code>cue_points[i].name</code></td>
+        </tr>
+        <tr>
+          <td><code>ad_position</code></td>
+          <td><code>cue_points[i].time</code></td>
+        </tr>
+        <tr>
+          <td><code>ad_tag</code></td>
+          <td><code>cue_points[i].metadata.ad_tag</code></td>
+        </tr>
+      </tbody>
+    </table>
+    </section>
+    
+    <section class="bcls-section">
+    <h2 id="VPAID">VPAID data mappings</h2>
+    
+    <table class="bcls-table">
+      <caption class="bcls-caption--table">VAST Data Mappings</caption>
+      <thead class="bcls-table__head">
+        <tr>
+          <th>Ooyala ad set data</th>
+          <th>Video Cloud video data</th>
+        </tr>
+      </thead>
+      <tbody class="bcls-table__body">
+        <tr>
+          <td><code>ad_source [=vpaid_opf OR vpaid_opf_overlay]</code></td>
+          <td><code>cue_points[i].name</code></td>
+        </tr>
+        <tr>
+          <td><code>ad_position</code></td>
+          <td><code>cue_points[i].time</code></td>
+        </tr>
+        <tr>
+          <td><code>ad_tag</code></td>
+          <td><code>cue_points[i].metadata.ad_tag</code></td>
+        </tr>
+      </tbody>
+    </table>
+    </section>
+    </article>
+    
 <!-- complete bootstrap layout -->
     </div>
     <div class="col-sm-2 right-side-bar">
@@ -424,7 +561,7 @@ This site contains general information docs that are referenced from our other d
 
 <hr>
 <div class="last-updated">
-  Page last updated on 25 Feb 2020
+  Page last updated on 18 Mar 2020
 </div>
 
 <footer class="bcls-footer" role="contentinfo">
