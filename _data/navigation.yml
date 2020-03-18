@@ -46,6 +46,8 @@
       url: '/ooyala/migration-docs-ooyala-customers.html'
     - name: 'Migrating from the Analytics REST API to Brightcove Analytics API'
       url: '/ooyala/migrating-analytics-rest-api-brightcove-analytics-api.html'
+    - name: 'Migrating to Video Cloud: Ad Sets'
+      url: '/ooyala/migrating-video-cloud-ad-sets.html'
     - name: 'Migrating to Video Cloud: Ingestion Adapter'
       url: '/ooyala/migrating-video-cloud-ingestion-adapter.html'
     - name: 'Ooyala-Video Cloud Ingestion Adapter: CSV Manifest Files'

@@ -20,6 +20,13 @@
     </url>
     
     <url>
+        <loc>https://general.support.brightcove.com/ooyala/backlot-and-video-cloud-video-and-playlist-fields.html</loc>
+        <lastmod>2020-03-18</lastmod>
+        <changefreq>daily</changefreq>
+        <priority>0.5</priority>
+    </url>
+    
+    <url>
         <loc>https://general.support.brightcove.com/ooyala/backlot-video-cloud-cms-connector.html</loc>
         <lastmod>2020-03-18</lastmod>
         <changefreq>daily</changefreq>
@@ -160,14 +167,14 @@
     </url>
     
     <url>
-        <loc>https://general.support.brightcove.com/general/</loc>
+        <loc>https://general.support.brightcove.com/</loc>
         <lastmod>2020-03-18</lastmod>
         <changefreq>daily</changefreq>
         <priority>0.5</priority>
     </url>
     
     <url>
-        <loc>https://general.support.brightcove.com/</loc>
+        <loc>https://general.support.brightcove.com/general/</loc>
         <lastmod>2020-03-18</lastmod>
         <changefreq>daily</changefreq>
         <priority>0.5</priority>
