@@ -301,10 +301,10 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
     <p>This topic describes how Ooyala web and SDK players will continue to work after your videos are migrated to Video Cloud, keeping your online videos working while you complete the migration to the Brightcove players.</p>
     <aside class="bcls-aside bcls-aside--information language-editable">Note: this topic applies <strong>only</strong> to Ooyala customers migrated to Video Cloud.</aside>
   </summary>
-  <p><a href="/node/18904">See other Ooyala to Brightcove Migration Guides</a>.</p>
+  
   <section class="bcls-section">
     <h2 id="Introduction">Introduction</h2>
-    <p>Brightcove offers a <a href="https://player.support.brightcove.com/index.html">highly customizable web player</a>, and also <a href="/node/18367">native players for Android, iOS, and tvOS</a>.</p>
+    <p>Brightcove offers a <a href="https://player.support.brightcove.com/index.html">highly customizable web player</a>, and also <a href="https://sdks.support.brightcove.com/">native players for Android, iOS, and tvOS</a>.</p>
     <p>However, we know that replacing player embed codes and rebuilding device apps will take time, so Brightcove has built an adaptor that will allow your existing Ooyala players to continue working by retrieving the video data from Video Cloud instead of Backlot:</p>
     <figure class="bcls-figure"><img class="bcls-image" alt="Ooyala Player to Video Cloud Connector" src="https://learning-services-media.brightcove.com/doc-assetsooyala/using-ooyala-players-deliver-video-cloud-content.html-using-ooyala-players-deliver-video-cloud-content/OoyalaPlayerwithVideoCloud.png" />
       <figcaption class="bcls-caption--image">Ooyala Player to Video Cloud Connector</figcaption>
@@ -313,14 +313,14 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
   </section>
   <section class="bcls-section">
     <h2 id="how_it_works">How it works</h2>
-    <p>All the Brightcove players retrieve video and playlist data via the <a href="/node/18380">Playback API</a>. You don't have to set up the API requests, manually, though. The web player has a <a href="/node/18108">Catalog</a> library that handles the requests, and the device SDKs have built-in methods for that.</p>
+    <p>All the Brightcove players retrieve video and playlist data via the <a href="https://apis.support.brightcove.com/playback/">Playback API</a>. You don't have to set up the API requests, manually, though. The web player has a <a href="https://player.support.brightcove.com/references/player-catalog.html">Catalog</a> library that handles the requests, and the device SDKs have built-in methods for that.</p>
     <p>To keep your Ooyala players functioning, Brightcove has built an adapter that points player requests for video and playlist data to the Player API and the same videos in Video Cloud.</p>
     <aside class="bcls-aside bcls-aside--information language-editable">Please note: you will not longer be able to modify the look and feel of your Ooyala web player. The current look and feel will be retained.</aside>
   </section>
   <section class="bcls-section">
     <h2 id="analytics">Analytics</h2>
     <p>Going forward, you will be using Video Cloud Analytics. The fixes to allow your existing Ooyala players with your Video Cloud videos includes sending analytics data to the Video Cloud analytics system. There is no modification you need to make to your pages or players.</p>
-    <p>You can access Video Cloud analytics data either using the standard and custom reports in the <a href="/node/1350">Analytics module</a> or the <a href="/node/18370">Analytics API</a>. See <a href="/ooyala/migrating-analytics-rest-api-brightcove-analytics-api.html">Migrating from the Analytics REST API to Brightcove Analytics API</a> if you will getting analytics data via the API.</p>
+    <p>You can access Video Cloud analytics data either using the standard and custom reports in the <a href="https://studio.support.brightcove.com/analytics/">Analytics module</a> or the <a href="https://apis.support.brightcove.com/analytics/">Analytics API</a>. See <a href="/ooyala/migrating-analytics-rest-api-brightcove-analytics-api.html">Migrating from the Analytics REST API to Brightcove Analytics API</a> if you will getting analytics data via the API.</p>
     <h3>Mapping of Analytics Data</h3>
     <p>The table below shows how Ooyala analytics data fields are mapped to Video Cloud analytics data.</p>
     <table class="bcls-table">
@@ -460,7 +460,7 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
 
 <hr>
 <div class="last-updated">
-  Page last updated on 18 Mar 2020
+  Page last updated on 19 Mar 2020
 </div>
 
 <footer class="bcls-footer" role="contentinfo">
