@@ -10,11 +10,11 @@ layout: share
       <li>Domain restrictions, if used</li>
       <li>Geo-restrictions, if used</li>
     </ul>
-    <p>For a more detailed information on policy keys see the <a href="/node/18003">Overview: Policy API</a> document.</p>
+    <p>For a more detailed information on policy keys see the <a href="https://apis.support.brightcove.com/policy/getting-started/overview-policy-api.html">Overview: Policy API</a> document.</p>
     <aside class="bcls-aside bcls-aside--information">Notes:
       <ul>
         <li>The policy key is only used to control videos that are stored in Video Cloud. If you are using the standalone Brightcove Player, there is no need to access or retrieve the policy key.</li>
-        <li>Policy keys generated for new Brightcove Players are not search-enabled by default. To search videos from the Playback API, you must use the Policy API to create a new policy key that is search-enabled. For details, see the <a href="/node/18003">Policy API Overview</a> document.</li>
+        <li>Policy keys generated for new Brightcove Players are not search-enabled by default. To search videos from the Playback API, you must use the Policy API to create a new policy key that is search-enabled. For details, see the <a href="https://apis.support.brightcove.com/policy/getting-started/overview-policy-api.html">Policy API Overview</a> document.</li>
       </ul>
     </aside>
   </section>
@@ -52,7 +52,7 @@ layout: share
       <li>Access your video/playlist data using the Playback API</li>
       <li>Read-only</li>
       <li>Your video/playlist data is cached on the server by the Playback API</li>
-      <li>Use the <a href="/node/18003">Policy API</a> to do the following:
+      <li>Use the <a href="https://apis.support.brightcove.com/policy/getting-started/overview-policy-api.html">Policy API</a> to do the following:
         <ul>
           <li>Create policy keys. You need to contact customer support to revoke a policy key.</li>
           <li>Set domain restrictions and set geographic restrictions at the policy level. Restrictions are enforced by players that use the policy key.</li>
@@ -63,7 +63,7 @@ layout: share
     <h3>API credentials</h3>
     <p>API authentication credentials (also called client credentials) allow server-side applications to manage your Video Cloud library assets. Here are the details:</p>
     <ul>
-      <li><a href="/node/18711">Access your data using the Video Cloud APIs</a>. You will need client credentials for the account and API(s) that you wish to use.</li>
+      <li><a href="https://apis.support.brightcove.com/getting-started/getting-started-brightcove-apis.html">Access your data using the Video Cloud APIs</a>. You will need client credentials for the account and API(s) that you wish to use.</li>
       <li>Read, insert, update, delete</li>
       <li>Your video/playlist data is not cached on the server by the CMS API</li>
       <li>Use <a href="https://studio.support.brightcove.com/admin/managing-api-authentication-credentials.html">Video Cloud's API Authentication UI</a> to create and manage API credentials</li>
@@ -73,7 +73,7 @@ layout: share
     <h2 id="Managing_policy_keys">Managing policy keys</h2>
     <p>You can manage your policy keys as follows:</p>
     <h3>Obtaining</h3>
-    <p>There is no way to update a policy key. You can either <a href="#Getting_the_policy_key">get the policy key</a> from an existing player in your Video Cloud account, or you can create a policy key by using the <a href="https://support.brightcove.com/node/18003">Policy API</a>.</p>
+    <p>There is no way to update a policy key. You can either <a href="#Getting_the_policy_key">get the policy key</a> from an existing player in your Video Cloud account, or you can create a policy key by using the <a href="https://support.brightcove.comhttps://apis.support.brightcove.com/policy/getting-started/overview-policy-api.html">Policy API</a>.</p>
     <h3>Revoking</h3>
     <p>To revoke a policy key, you need to contact <a href="https://help.brightcove.com/en/contact">customer support</a>.</p>
     <aside class="bcls-aside bcls-aside--information">Policy keys are NOT revoked when a player is deleted. This means that if you use a policy key from a player, and then delete the player, you can still keep using the policy key.</aside>
