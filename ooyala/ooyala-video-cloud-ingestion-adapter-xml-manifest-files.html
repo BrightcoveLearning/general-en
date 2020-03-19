@@ -77,14 +77,14 @@ parent: Migrating from Ooyala
         </tr>
         <tr>
           <td><samp>&lt;media:subTitle&gt;</samp></td>
-          <td>Specifies a closed caption file (supported for DFXP, WebVTT, and SRT files). See <a class="xref" title="You can ingest closed caption files via Backlot or the Ooyala Ingestion Service (OIS)." href="/node/18910">Ingesting Closed Caption Files</a>. Attributes:
+          <td>Specifies a closed caption file (supported for DFXP, WebVTT, and SRT files). See <a class="xref" title="You can ingest closed caption files via Backlot or the Ooyala Ingestion Service (OIS)." href="/ooyala/migrating-video-cloud-ingestion-adapter.html">Ingesting Closed Caption Files</a>. Attributes:
             <ul class="ul">
               <li class="language-editable"><samp>href</samp> (required) - One of the following:
                 <ul class="ul">
                   <li class="language-editable">Filename of the closed caption file you uploaded. Example: <samp>caption-1.dfxp</samp></li>
                   <li class="language-editable">URL where the closed caption file is located. The URL can include <samp>http://</samp> or <samp>https://</samp>.</li>
                 </ul>
-                <samp>lang</samp> (optional) - language of the closed caption file. Two-letter code. See <a class="xref" title="Before uploading closed caption files to Backlot, verify that you are using a supported language and file format." href="/node/18910">Supported Closed Captions</a>.</li>
+                <samp>lang</samp> (optional) - language of the closed caption file. Two-letter code. See <a class="xref" title="Before uploading closed caption files to Backlot, verify that you are using a supported language and file format." href="/ooyala/migrating-video-cloud-ingestion-adapter.html">Supported Closed Captions</a>.</li>
               <li class="language-editable"><samp>frameRate</samp> (optional) - Frame rate of the closed caption file. Units are in Frames Per Second (FPS). Default is 30. Older closed caption files might be 24.</li>
             </ul>
             <div class="note note"><span class="notetitle">Note:</span> If specified, it is your responsibility to provide valid values for <samp>lang</samp> and <samp>frameRate</samp>. Valid values are added to the DFXP file. Non-compliant values are ignored. Either way, the closed caption file is added into Backlot and linked to the asset.</div></td>
@@ -111,7 +111,7 @@ parent: Migrating from Ooyala
         </tr>
         <tr>
           <td><samp>&lt;ooyala:labels&gt;</samp></td>
-          <td>One or more labels, separated by commas. Example: <samp>/sports,/sports/jogging</samp>. For background, see <a class="xref" title="When added to external publishing targets, labels specify which videos, channels, and channel sets to publish externally." href="/node/18910">Labels</a>.</td>
+          <td>One or more labels, separated by commas. Example: <samp>/sports,/sports/jogging</samp>. For background, see <a class="xref" title="When added to external publishing targets, labels specify which videos, channels, and channel sets to publish externally." href="/ooyala/migrating-video-cloud-ingestion-adapter.html">Labels</a>.</td>
           <td>optional</td>
         </tr>
         <tr>
