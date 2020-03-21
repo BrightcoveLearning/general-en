@@ -8,7 +8,7 @@ layout: share
   <p>High Efficiency Video Coding (HEVC), also known as H.265, is a video compression standard, designed as a successor to the widely used Advanced Video Coding (AVC/H.264). In comparison to AVC, HEVC offers from 25% to 50% better data compression at the same level of video quality, or substantially improved video quality at the same bit rate.</p>
   <p>The benefits of this improved compression include bandwidth usage, enabling higher video quality at a lower bitrate, and reduced time to first frame (TTFF), all leading to increased end viewer satisfaction.</p>
   <h3>Disadvantages</h3>
-  <p>There is only one disadvantage: because it is a new technology, HEVC video is not supported on older devices, operating systems, and browsers. In addition, some devices are capable of switching between HEVC and AVC segments during playback, while some are not.</p>
+  <p>There is only one disadvantage: because it is a new technology, HEVC video is not yet widely supported by clients (meaning device + OS + browser/app). In addition, some clients are capable of switching between HEVC and AVC segments during playback, while others are not.</p>
   <h3>Availability</h3>
   <p>HEVC support is a <strong>paid add-on</strong> for Video Cloud. If you are interested in HEVC support, contact your Account Manager.</p>
 </section>
@@ -31,13 +31,73 @@ layout: share
       </ul>
     </li>
   </ul>
-  
+</section>
+<section class="bcls-section">
+  <h2 id="Supported_clients">Supported clients</h2>
+  <p>Currently, HEVC is supported end-to-end on the following clients using Brightcove web or native device players:</p>
+  <table class="bcls-table">
+    <caption class="bcls-caption--table">Supported Web Clients for HEVC</caption>
+    <thead class="bcls-table__head">
+        <tr>
+            <th colspan="3" style="text-align: center;">Brightcove Web Player</th>
+        </tr>
+        <tr>
+            <th>OS</th>
+            <th>Browser</th>
+        </tr>
+    </thead>
+    <tbody class="bcls-table__body">
+        <tr>
+            <td>MacOS 10.13+</td>
+            <td>Safari</td>
+        </tr>
+        <tr>
+            <td>iOS 11+</td>
+            <td>Safari</td>
+        </tr>
+        <tr>
+            <td>Apple TV</td>
+            <td>via Airplay</td>
+        </tr>
+        <tr>
+            <td>Windows 10</td>
+            <td>Edge (legacy version <strong>with plugin</strong>)</td>
+        </tr>
+    </tbody>
+</table>
+  <table class="bcls-table">
+    <caption class="bcls-caption--table">Supported Devices for HEVC</caption>
+    <thead class="bcls-table__head">
+        <tr>
+            <th colspan="3" style="text-align: center;">Desktop - Brightcove Native Device SDK Players</th>
+        </tr>
+        <tr>
+            <th>SDK</th>
+            <th>OS</th>
+        </tr>
+    </thead>
+    <tbody class="bcls-table__body">
+        <tr>
+            <td>iOS SDK</td>
+            <td>iOS 11+</td>
+        </tr>
+        <tr>
+            <td>tvOS SDK</td>
+            <td>tvOS</td>
+        </tr>
+        <tr>
+            <td>Windows 10</td>
+            <td>Edge (legacy version <strong>with plugin</strong>)</td>
+        </tr>
+    </tbody>
+</table>
+<aside class="bcls-aside bcls-aside--information language-editable"></aside>Note that support for the Android SDK will be added in a future release.
 </section>
 <section class="bcls-section">
   <h2 id="HEVC_ingest_profiles">HEVC ingest profiles</h2>
   <p>If HEVC is enabled for your account, to get HEVC renditions for playback, all you have to do is choose one of the HEVC ingest profiles (Context Aware Encoding or Dynamic Delivery) when you ingest your videos using the Upload module or the Dynamic Ingest API:
     <figure class="bcls-figure">
-      <img class="bcls-image" src="" alt="HEVC Ingest Profiles">
+      <img class="bcls-image" src="https://general.support.brightcove.com/assets/images/shared-content/general/hevc-profiles.png" alt="HEVC Ingest Profiles">
       <figcaption class="bcls-caption--image">HEVC Ingest Profiles</figcaption>
     </figure>
   </p>
