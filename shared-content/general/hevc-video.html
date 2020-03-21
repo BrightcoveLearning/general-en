@@ -1,0 +1,38 @@
+---
+layout: share
+---
+
+<section class="bcls-section">
+  <h2 id="Introduction">Introduction</h2>
+  <h3>Advantages of HEVC</h3>
+  <p>High Efficiency Video Coding (HEVC), also known as H.265, is a video compression standard, designed as a successor to the widely used Advanced Video Coding (AVC/H.264). In comparison to AVC, HEVC offers from 25% to 50% better data compression at the same level of video quality, or substantially improved video quality at the same bit rate.</p>
+  <p>The benefits of this improved compression include bandwidth usage, enabling higher video quality at a lower bitrate, and reduced time to first frame (TTFF), all leading to increased end viewer satisfaction.</p>
+  <h3>Disadvantages</h3>
+  <p>There is only one disadvantage: because it is a new technology, HEVC video is not supported on older devices, operating systems, and browsers. In addition, some devices are capable of switching between HEVC and AVC segments during playback, while some are not.</p>
+  <h3>Availability</h3>
+  <p>HEVC support is a <strong>paid add-on</strong> for Video Cloud. If you are interested in HEVC support, contact your Account Manager.</p>
+</section>
+<section class="bcls-section">
+  <h2 id="Brightcove_HEVC_solution">Brightcove's HEVC solution</h2>
+  <p>To provide you with benefits of HEVC while still allowing viewers using technology that does not support it, Brightcove has developed a hybrid solution that both supports older, non-HEVC clients, and also optimizes bandwidth use. There are multiple parts to this solution:</p>
+  <ul>
+    <li>Creation of both HEVC and AVC encoded segments during transcoding (with optional creation of MP4 for progressive download in addition)</li>
+    <li>Generation of manifests that contain both HEVC and AVC links for all renditions:
+      <ul>
+        <li>HLS: mixed variant streams (ordered by bitrate)</li>
+        <li>DASH: separate adaptation sets for HEVC and H.264, along with supplemental properties declaring them as switchable</li>
+      </ul>
+    </li>
+    <li>Filtering logic based on the viewer client type:
+      <ul>
+        <li>removes HEVC streams from manifests if requesting device is a legacy, non-HEVC capable device</li>
+        <li>removes H.264 streams from manifests heading to HEVC capable non-switchable devices</li>
+        <li>leaves both HEVC and H.264 streams if devices are capable of decoding both codecs and switching between them</li>
+      </ul>
+    </li>
+  </ul>
+</section>
+<section class="bcls-section">
+  <h2 id="HEVC_ingest_profiles">HEVC ingest profiles</h2>
+  <p></p>
+</section>
