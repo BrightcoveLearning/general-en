@@ -102,5 +102,492 @@ layout: share
     </figure>
   </p>
   <p>The full JSON details of these profiles is included <a href="#appendix_profiles">below</a>. We recommend that you use CAE (Context Aware Encoding) profiles to create the best rendition set for your source and optimize storage. Since CAE requires somewhat longer processing time to inspect the source, if getting a publishable rendition as quickly as possible is your priority, you can create a custom ingest profile with the <a href="https://apis.support.brightcove.com/ingest-profiles/guides/cae-fast-publish.html">Fast Publish</a> option.</p>
-  <p>Note that, if for the fast publish option or some other reason, you need to create a custom HEVC profile, you will have to use either the <a href="https://studio.support.brightcove.com/admin/creating-ingest-profiles-context-aware-encoding.html#using_the_advanced_editor">Advanced Editor</a> in the Studio Admin pages, or the <a href=""></a></p>
+  <p>Note that if, for the fast publish option or some other reason, you need to create a custom HEVC profile, you will have to use either the <a href="https://studio.support.brightcove.com/admin/creating-ingest-profiles-context-aware-encoding.html#using_the_advanced_editor">Advanced Editor</a> in the Studio Admin pages, or the <a href="https://apis.support.brightcove.com/ingest-profiles/">Ingest Profiles API</a>. HEVC renditions will not show up in the Simple Editor in Studio. You will find the available Dynamic Delivery renditions <a href="#appendix_renditions">below</a>.</p>
+</section>
+<section class="bcls-section">
+  <h2 id="appendix_profiles">Appendix 1: HEVC ingest profiles</h2>
+  <p>Below are the full properties of the HEVC profiles in JSON.</p>
+  <ul>
+    <li><a href="#multi-platform-extended-dynamic-hevc">Multiplatform Extended HEVC (CAE)</a></li>
+    <li><a href="#multi-platform-extended-dynamic-hevc-with-mp4">Multiplatform Extended HEVC (CAE) with MP4</a></li>
+    <li><a href="#multi-platform-extended-static-mixed-codec">Multiplatform Extended Static H.264 + HEVC</a></li>
+    <li><a href="#multi-platform-extended-static-mixed-codec-with-mp4">Multiplatform Extended Static H.264 + HEVC with MP4</a></li>
+    <li><a href="#multi-platform-extended-static-hevc-with-mp4">Multiplatform Extended HEVC with MP4</a></li>
+  </ul>
+  <h3>Context Aware Encoding (CAE) profiles</h3>
+  <h4 id="multi-platform-extended-dynamic-hevc">Multiplatform Extended HEVC (CAE)</h4>
+  <pre class="line-numbers"><code class="language-json">  {
+    "version": 1,
+    "name": "multi-platform-extended-dynamic-hevc",
+    "display_name": "Multiplatform Extended HEVC (CAE)",
+    "description": "Deliver high quality content for a wide range content types and screen sizes including mobile, desktop and large screens.",
+    "account_id": -1,
+    "brightcove_standard": true,
+    "date_created": 1581706195164,
+    "date_last_modified": 1581706195164,
+    "digital_master": {
+      "rendition": "passthrough",
+      "distribute": false
+    },
+    "renditions": [
+      
+    ],
+    "packages": [
+      
+    ],
+    "dynamic_origin": {
+      "renditions": [
+        "default/audio64",
+        "default/audio128",
+        "default/audio96",
+        "default/audio192"
+      ],
+      "images": [
+        {
+          "label": "thumbnail",
+          "height": 90,
+          "width": 160
+        },
+        {
+          "label": "poster",
+          "height": 720,
+          "width": 1280
+        }
+      ],
+      "dynamic_profile_options": {
+        "min_renditions": 2,
+        "max_renditions": 8,
+        "min_resolution": {
+          "width": 320,
+          "height": 180
+        },
+        "max_resolution": {
+          "width": 1920,
+          "height": 1080
+        },
+        "max_frame_rate": 30,
+        "max_bitrate": 4200,
+        "max_first_rendition_bitrate": 250,
+        "video_codec": "hevc",
+        "fixed_frame_rate": true,
+        "bitrate_cap_to_bitrate_ratio": 1.5,
+        "buffer_size_to_bitrate_ratio": 2,
+        "bitrate_cap_offset": 0,
+        "buffer_size_offset": 0,
+        "sample_aspect_ratio": "1:1"
+      },
+      "hevc": true
+    },
+    "id": "5e470e014b23617ad079c486"
+  }</code></pre>
+  <h4 id="multi-platform-extended-dynamic-hevc-with-mp4">Multiplatform Extended HEVC (CAE) with MP4</h4>
+  <pre class="line-numbers"><code class="language-json">{
+    "version": 1,
+    "name": "multi-platform-extended-dynamic-hevc-with-mp4",
+    "display_name": "Multiplatform Extended HEVC (CAE) with MP4",
+    "description": "Deliver high quality content for a wide range content types and screen sizes including mobile, desktop, large screens, and syndication.",
+    "account_id": -1,
+    "brightcove_standard": true,
+    "date_created": 1581706195164,
+    "date_last_modified": 1581706195164,
+    "digital_master": {
+      "rendition": "passthrough",
+      "distribute": false
+    },
+    "renditions": [
+      
+    ],
+    "packages": [
+      
+    ],
+    "dynamic_origin": {
+      "renditions": [
+        "default/audio64",
+        "default/audio128",
+        "default/progressive2000",
+        "default/audio96",
+        "default/audio192"
+      ],
+      "images": [
+        {
+          "label": "thumbnail",
+          "height": 90,
+          "width": 160
+        },
+        {
+          "label": "poster",
+          "height": 720,
+          "width": 1280
+        }
+      ],
+      "dynamic_profile_options": {
+        "min_renditions": 2,
+        "max_renditions": 8,
+        "min_resolution": {
+          "width": 320,
+          "height": 180
+        },
+        "max_resolution": {
+          "width": 1920,
+          "height": 1080
+        },
+        "max_frame_rate": 30,
+        "max_bitrate": 4200,
+        "max_first_rendition_bitrate": 250,
+        "video_codec": "hevc",
+        "fixed_frame_rate": true,
+        "bitrate_cap_to_bitrate_ratio": 1.5,
+        "buffer_size_to_bitrate_ratio": 2,
+        "bitrate_cap_offset": 0,
+        "buffer_size_offset": 0,
+        "sample_aspect_ratio": "1:1"
+      },
+      "hevc": true
+    },
+    "id": "5e470e0c4c881c16fffdb88d"
+  }</code></pre>
+  <h3>Dynamic Delivery Profiles</h3>
+  <h4 id="multi-platform-extended-static-mixed-codec">Multiplatform Extended Static H.264 + HEVC</h4>
+  <pre class="line-numbers"><code class="language-json">{
+    "version": 1,
+    "name": "multi-platform-extended-static-mixed-codec",
+    "display_name": "Multiplatform Extended Static H.264 + HEVC",
+    "description": "Deliver high quality content for a wide range content types and screen sizes including mobile, desktop and large screens.",
+    "account_id": -1,
+    "brightcove_standard": true,
+    "date_created": 1581706195164,
+    "date_last_modified": 1581706195164,
+    "digital_master": {
+      "rendition": "passthrough",
+      "distribute": false
+    },
+    "renditions": [
+      
+    ],
+    "packages": [
+      
+    ],
+    "dynamic_origin": {
+      "renditions": [
+        "default/video1600hevc",
+        "default/audio128",
+        "default/video550hevc",
+        "default/video1000hevc",
+        "default/video300hevc",
+        "default/video700",
+        "default/video3500",
+        "default/video2000",
+        "default/video2500",
+        "default/video2850hevc",
+        "default/video450",
+        "default/video900",
+        "default/audio64",
+        "default/video3800",
+        "default/audio96",
+        "default/video1200",
+        "default/video1300hevc",
+        "default/audio192"
+      ],
+      "images": [
+        {
+          "label": "thumbnail",
+          "height": 90,
+          "width": 160
+        },
+        {
+          "label": "poster",
+          "height": 720,
+          "width": 1280
+        }
+      ],
+      "hevc": true
+    },
+    "id": "5e46e57f305eb2517f27a543"
+  }</code></pre>
+  <h4 id="multi-platform-extended-static-mixed-codec-with-mp4">Multiplatform Extended Static H.264 + HEVC with MP4</h4>
+  <pre class="line-numbers"><code class="language-json">{
+    "version": 1,
+    "name": "multi-platform-extended-static-mixed-codec-with-mp4",
+    "display_name": "Multiplatform Extended Static H.264 + HEVC with MP4",
+    "description": "Deliver high quality content for a wide range content types and screen sizes including mobile, desktop and large screens, and syndication.",
+    "account_id": -1,
+    "brightcove_standard": true,
+    "date_created": 1581706195164,
+    "date_last_modified": 1581706195164,
+    "digital_master": {
+      "rendition": "passthrough",
+      "distribute": false
+    },
+    "renditions": [
+      
+    ],
+    "packages": [
+      
+    ],
+    "dynamic_origin": {
+      "renditions": [
+        "default/video1600hevc",
+        "default/audio128",
+        "default/video550hevc",
+        "default/video1000hevc",
+        "default/video300hevc",
+        "default/video700",
+        "default/progressive2000",
+        "default/video3500",
+        "default/video2000",
+        "default/video2500",
+        "default/video2850hevc",
+        "default/video450",
+        "default/video900",
+        "default/audio64",
+        "default/video3800",
+        "default/audio96",
+        "default/video1200",
+        "default/video1300hevc",
+        "default/audio192"
+      ],
+      "images": [
+        {
+          "label": "thumbnail",
+          "height": 90,
+          "width": 160
+        },
+        {
+          "label": "poster",
+          "height": 720,
+          "width": 1280
+        }
+      ],
+      "hevc": true
+    },
+    "id": "5e46e59b135b6662f386559d"
+  }</code></pre>
+  <h4 id="multi-platform-extended-static-hevc-with-mp4">Multiplatform Extended HEVC with MP4</h4>
+  <pre class="line-numbers"><code class="language-json">{
+    "version": 1,
+    "name": "multi-platform-extended-static-hevc-with-mp4",
+    "display_name": "Multiplatform Extended HEVC with MP4",
+    "description": "Deliver high quality content for a wide range content types and screen sizes including mobile, desktop, large screens, and syndication.",
+    "account_id": -1,
+    "brightcove_standard": true,
+    "date_created": 1581706195164,
+    "date_last_modified": 1581706195164,
+    "digital_master": {
+      "rendition": "passthrough",
+      "distribute": false
+    },
+    "renditions": [
+      
+    ],
+    "packages": [
+      
+    ],
+    "dynamic_origin": {
+      "renditions": [
+        "default/audio64",
+        "default/video1600hevc",
+        "default/audio128",
+        "default/video550hevc",
+        "default/video1000hevc",
+        "default/video300hevc",
+        "default/progressive2000",
+        "default/video2850hevc",
+        "default/audio96",
+        "default/video1300hevc",
+        "default/audio192"
+      ],
+      "images": [
+        {
+          "label": "thumbnail",
+          "height": 90,
+          "width": 160
+        },
+        {
+          "label": "poster",
+          "height": 720,
+          "width": 1280
+        }
+      ],
+      "hevc": true
+    },
+    "id": "5e46e57e708a441e00a7ba1a"
+  }</code></pre>
+
+</section>
+<section class="bcls-section">
+  <h2 id="appendix_renditions">Appendix 2: HEVC Dynamic Delivery Renditions</h2>
+  <p>Below are the full properties of the HEVC renditions in JSON.</p>
+  <ul>
+    <li><a href="#video300hevc">Default HEVC 300</a></li>
+    <li><a href="#video550hevc">Default HEVC 550</a></li>
+    <li><a href="#video1000hevc">Default HEVC 1000</a></li>
+    <li><a href="#video1300hevc">Default HEVC 1300</a></li>
+    <li><a href="#video1600hevc">Default HEVC 1600</a></li>
+    <li><a href="#video2850hevc">Default HEVC 2850</a></li>
+    <li><a href="#"></a></li>
+  </ul>
+  <h3 id="video300hevc">Default HEVC 300</h3>
+  <pre class="line-numbers"><code class="language-json">{
+    "id": "default/video300hevc",
+    "version": 0,
+    "name": "Default HEVC 300",
+    "kind": "video",
+    "account_id": "default",
+    "created_at": "2020-02-20T17:57:49.622898302Z",
+    "updated_at": "2020-02-20T17:57:49.622898302Z",
+    "encoding_settings": {
+      "aspect_mode": "preserve",
+      "decoder_bitrate_cap": 450,
+      "decoder_buffer_size": 600,
+      "fixed_keyframe_interval": true,
+      "fragment_duration": 2000,
+      "height": 270,
+      "keyframe_rate": 1,
+      "segment_seconds": 2,
+      "speed": 3,
+      "video_bframes": 3,
+      "video_bitrate": 300,
+      "video_codec": "hevc",
+      "video_codec_profile": "main",
+      "video_reference_frames": 6,
+      "width": 480
+    }
+  }</code></pre>
+  <h3 id="video550hevc">Default HEVC 550</h3>
+  <pre class="line-numbers"><code class="language-json">{
+    "id": "default/video550hevc",
+    "version": 0,
+    "name": "Default HEVC 550",
+    "kind": "video",
+    "account_id": "default",
+    "created_at": "2020-02-20T17:58:08.602132077Z",
+    "updated_at": "2020-02-20T17:58:08.602132077Z",
+    "encoding_settings": {
+      "aspect_mode": "preserve",
+      "decoder_bitrate_cap": 825,
+      "decoder_buffer_size": 1100,
+      "fixed_keyframe_interval": true,
+      "fragment_duration": 2000,
+      "height": 360,
+      "keyframe_rate": 1,
+      "segment_seconds": 2,
+      "speed": 3,
+      "video_bframes": 3,
+      "video_bitrate": 550,
+      "video_codec": "hevc",
+      "video_codec_profile": "main",
+      "video_reference_frames": 6,
+      "width": 640
+    }
+  }</code></pre>
+  <h3 id="video1000hevc">Default HEVC 1000</h3>
+  <pre class="line-numbers"><code class="language-json">{
+    "id": "default/video1000hevc",
+    "version": 0,
+    "name": "Default HEVC 1000",
+    "kind": "video",
+    "account_id": "default",
+    "created_at": "2020-02-20T17:58:24.768036423Z",
+    "updated_at": "2020-02-20T17:58:24.768036423Z",
+    "encoding_settings": {
+      "aspect_mode": "preserve",
+      "decoder_bitrate_cap": 1500,
+      "decoder_buffer_size": 2000,
+      "fixed_keyframe_interval": true,
+      "fragment_duration": 2000,
+      "height": 432,
+      "keyframe_rate": 1,
+      "segment_seconds": 2,
+      "speed": 3,
+      "video_bframes": 3,
+      "video_bitrate": 1000,
+      "video_codec": "hevc",
+      "video_codec_profile": "main",
+      "video_reference_frames": 6,
+      "width": 768
+    }
+  }</code></pre>
+  <h3 id="video1300hevc">Default HEVC 1300</h3>
+  <pre class="line-numbers"><code class="language-json">{
+    "id": "default/video1300hevc",
+    "version": 0,
+    "name": "Default HEVC 1300",
+    "kind": "video",
+    "account_id": "default",
+    "created_at": "2020-02-20T17:58:51.222403657Z",
+    "updated_at": "2020-02-20T17:58:51.222403657Z",
+    "encoding_settings": {
+      "aspect_mode": "preserve",
+      "decoder_bitrate_cap": 1950,
+      "decoder_buffer_size": 2600,
+      "fixed_keyframe_interval": true,
+      "fragment_duration": 2000,
+      "height": 576,
+      "keyframe_rate": 1,
+      "segment_seconds": 2,
+      "speed": 3,
+      "video_bframes": 3,
+      "video_bitrate": 1300,
+      "video_codec": "hevc",
+      "video_codec_profile": "main",
+      "video_reference_frames": 6,
+      "width": 1024
+    }
+  }</code></pre>
+  <h3 id="video1600hevc">Default HEVC 1600</h3>
+  <pre class="line-numbers"><code class="language-json">{
+    "id": "default/video1600hevc",
+    "version": 0,
+    "name": "Default HEVC 1600",
+    "kind": "video",
+    "account_id": "default",
+    "created_at": "2020-02-20T18:00:00.347383018Z",
+    "updated_at": "2020-02-20T18:00:00.347383018Z",
+    "encoding_settings": {
+      "aspect_mode": "preserve",
+      "decoder_bitrate_cap": 2400,
+      "decoder_buffer_size": 3200,
+      "fixed_keyframe_interval": true,
+      "fragment_duration": 2000,
+      "height": 720,
+      "keyframe_rate": 1,
+      "segment_seconds": 2,
+      "speed": 3,
+      "video_bframes": 3,
+      "video_bitrate": 1600,
+      "video_codec": "hevc",
+      "video_codec_profile": "main",
+      "video_reference_frames": 6,
+      "width": 1280
+    }
+  }</code></pre>
+  <h3 id="video2850hevc">Default HEVC 2850</h3>
+  <pre class="line-numbers"><code class="language-json">{
+    "id": "default/video2850hevc",
+    "version": 0,
+    "name": "Default HEVC 2850",
+    "kind": "video",
+    "account_id": "default",
+    "created_at": "2020-02-20T18:00:42.036123319Z",
+    "updated_at": "2020-02-20T18:00:42.036123319Z",
+    "encoding_settings": {
+      "aspect_mode": "preserve",
+      "decoder_bitrate_cap": 4275,
+      "decoder_buffer_size": 5700,
+      "fixed_keyframe_interval": true,
+      "fragment_duration": 2000,
+      "height": 1080,
+      "keyframe_rate": 1,
+      "segment_seconds": 2,
+      "speed": 3,
+      "video_bframes": 3,
+      "video_bitrate": 2850,
+      "video_codec": "hevc",
+      "video_codec_profile": "main",
+      "video_reference_frames": 6,
+      "width": 1920
+    }
+  }</code></pre>
+  <h3 id=""></h3>
+  <pre class="line-numbers"><code class="language-json"></code></pre>
 </section>
