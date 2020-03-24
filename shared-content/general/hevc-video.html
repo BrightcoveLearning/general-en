@@ -69,7 +69,7 @@ layout: share
     <caption class="bcls-caption--table">Supported Devices for HEVC</caption>
     <thead class="bcls-table__head">
         <tr>
-            <th colspan="2" style="text-align: center;">Desktop - Brightcove Native Device SDK Players</th>
+            <th colspan="2" style="text-align: center;">Brightcove Native Device SDK Players</th>
         </tr>
         <tr>
             <th>SDK</th>
@@ -84,10 +84,6 @@ layout: share
         <tr>
             <td>tvOS SDK</td>
             <td>tvOS</td>
-        </tr>
-        <tr>
-            <td>Windows 10</td>
-            <td>Edge (legacy version <strong>with plugin</strong>)</td>
         </tr>
     </tbody>
 </table>
@@ -104,6 +100,13 @@ layout: share
   <p>The full JSON details of these profiles is included <a href="#appendix_profiles">below</a>. We recommend that you use CAE (Context Aware Encoding) profiles to create the best rendition set for your source and optimize storage. Since CAE requires somewhat longer processing time to inspect the source, if getting a publishable rendition as quickly as possible is your priority, you can create a custom ingest profile with the <a href="https://apis.support.brightcove.com/ingest-profiles/guides/cae-fast-publish.html">Fast Publish</a> option.</p>
   <p>Note that if, for the fast publish option or some other reason, you need to create a custom HEVC profile, you will have to use either the <a href="https://studio.support.brightcove.com/admin/creating-ingest-profiles-context-aware-encoding.html#using_the_advanced_editor">Advanced Editor</a> in the Studio Admin pages, or the <a href="https://apis.support.brightcove.com/ingest-profiles/">Ingest Profiles API</a>. HEVC renditions will not show up in the Simple Editor in Studio. You will find the available Dynamic Delivery renditions <a href="#appendix_renditions">below</a>.</p>
 </section>
+<section class="bcls-section">
+    <h2 id="limitations">Limitations</h2>
+      <p>Below are current limitations on HEVC support - note that these will change as we make enhancements.</p>
+      <ul>
+        <li>CAE ingest profiles currently include HEVC renditions - these should only be used in cases where you know that you will be delivering videos only to HEVC-capable devices. Future releases will add profiles that include both HEVC and AVC renditions.</li>
+      </ul>
+      </section>
 <section class="bcls-section">
   <h2 id="appendix_profiles">Appendix 1: HEVC ingest profiles</h2>
   <p>Below are the full properties of the HEVC profiles in JSON.</p>
