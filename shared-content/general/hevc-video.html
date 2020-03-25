@@ -24,6 +24,7 @@ layout: share
       </ul>
     </li>
     <li>Filtering logic based on the viewer client type:
+      <aside class="bcls-aside bcls-aside--information language-editable">Note that filtering requires <a href="https://support.brightcove.com/overview-dynamic-delivery-rules">Dynamic Delivery Rules</a>. If you are interested in purchasing Dynamic Delivery Rules, contact your account manager.</aside>
       <ul>
         <li>removes HEVC streams from manifests if requesting device is a legacy, non-HEVC capable device</li>
         <li>removes H.264 streams from manifests heading to HEVC capable non-switchable devices</li>
@@ -105,6 +106,17 @@ layout: share
       <p>Below are current limitations on HEVC support - note that these will change as we make enhancements.</p>
       <ul>
         <li>CAE ingest profiles currently include HEVC renditions - these should only be used in cases where you know that you will be delivering videos only to HEVC-capable devices. Future releases will add profiles that include both HEVC and AVC renditions.</li>
+        <li>No support for apps built using the Android SDK in the initial release. This will be added in a future release.</li>
+        <li>
+          Only AAC audio is supported, no support for EAC3 or AC3 audio codec with HEVC.
+        </li>
+        <li>
+          HDR and 10-bit video is not supported.
+        </li>
+        <li>
+          Media UI currently displays all the renditions and does not display the codec info next to each rendition.
+        </li>
+        <li>Te billing UI in Studio will not show HEVC transcoding usage. However, the backend system is tracking HEVC GB separately and will be sending the invoice as part of the normal process. The billing UI will be updated in a later release.</li>
       </ul>
       </section>
 <section class="bcls-section">
