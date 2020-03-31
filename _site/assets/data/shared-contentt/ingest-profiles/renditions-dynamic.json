@@ -1,0 +1,77 @@
+[
+  {
+    "id": "default/video900",
+    "version": 5,
+    "name": "Default Video900",
+    "kind": "video",
+    "account_id": "default",
+    "created_at": "2016-06-06T23:39:55.150904095Z",
+    "updated_at": "2018-04-10T17:54:08.469543676Z",
+    "encoding_settings": {
+      "aspect_mode": "preserve",
+      "decoder_bitrate_cap": 1350,
+      "decoder_buffer_size": 1800,
+      "fixed_keyframe_interval": true,
+      "fragment_duration": 2000,
+      "h264_bframes": 2,
+      "h264_profile": "main",
+      "height": 360,
+      "keyframe_rate": 1,
+      "segment_seconds": 2,
+      "speed": 3,
+      "upscale": false,
+      "video_bitrate": 900,
+      "video_codec": "h264"
+    }
+  },
+  {
+    "id": "default/video700",
+    "version": 5,
+    "name": "Default Video700",
+    "kind": "video",
+    "account_id": "default",
+    "created_at": "2016-06-06T23:39:54.742007828Z",
+    "updated_at": "2018-04-10T17:54:07.905886133Z",
+    "encoding_settings": {
+      "aspect_mode": "preserve",
+      "decoder_bitrate_cap": 1050,
+      "decoder_buffer_size": 1400,
+      "fixed_keyframe_interval": true,
+      "fragment_duration": 2000,
+      "h264_profile": "baseline",
+      "height": 360,
+      "keyframe_rate": 1,
+      "segment_seconds": 2,
+      "speed": 3,
+      "upscale": false,
+      "video_bitrate": 700,
+      "video_codec": "h264"
+    }
+  },
+  {
+    "id": "default/video6000",
+    "version": 2,
+    "name": "Default Video6000",
+    "kind": "video",
+    "account_id": "default",
+    "created_at": "2016-10-12T00:28:00.605692603Z",
+    "updated_at": "2018-06-12T16:54:10.44674261Z",
+    "encoding_settings": {
+      "aspect_mode": "preserve",
+      "decoder_bitrate_cap": 9000,
+      "decoder_buffer_size": 12000,
+      "fixed_keyframe_interval": true,
+      "fragment_duration": 2000,
+      "h264_bframes": 2,
+      "h264_profile": "high",
+      "height": 2160,
+      "keyframe_rate": 1,
+      "segment_seconds": 2,
+      "speed": 3,
+      "upscale": false,
+      "video_bitrate": 6000,
+      "video_codec": "h264"
+    }
+  },
+
+]
