@@ -125,6 +125,13 @@
     </url>
     
     <url>
+        <loc>https://general.support.brightcove.com/shared-content/general/create-jwt.html</loc>
+        <lastmod>2020-03-31</lastmod>
+        <changefreq>daily</changefreq>
+        <priority>0.5</priority>
+    </url>
+    
+    <url>
         <loc>https://general.support.brightcove.com/utilities/date-converter.html</loc>
         <lastmod>2020-03-31</lastmod>
         <changefreq>daily</changefreq>
@@ -195,13 +202,6 @@
     </url>
     
     <url>
-        <loc>https://general.support.brightcove.com/</loc>
-        <lastmod>2020-03-31</lastmod>
-        <changefreq>daily</changefreq>
-        <priority>0.5</priority>
-    </url>
-    
-    <url>
         <loc>https://general.support.brightcove.com/utilities/</loc>
         <lastmod>2020-03-31</lastmod>
         <changefreq>daily</changefreq>
@@ -210,6 +210,13 @@
     
     <url>
         <loc>https://general.support.brightcove.com/general/</loc>
+        <lastmod>2020-03-31</lastmod>
+        <changefreq>daily</changefreq>
+        <priority>0.5</priority>
+    </url>
+    
+    <url>
+        <loc>https://general.support.brightcove.com/</loc>
         <lastmod>2020-03-31</lastmod>
         <changefreq>daily</changefreq>
         <priority>0.5</priority>
@@ -497,6 +504,13 @@
     
     <url>
         <loc>https://general.support.brightcove.com/shared-content/ingest-profiles/standard-live-ingest-profiles.html</loc>
+        <lastmod>2020-03-31</lastmod>
+        <changefreq>daily</changefreq>
+        <priority>0.5</priority>
+    </url>
+    
+    <url>
+        <loc>https://general.support.brightcove.com/shared-content/general/static-url-delivery.html</loc>
         <lastmod>2020-03-31</lastmod>
         <changefreq>daily</changefreq>
         <priority>0.5</priority>
