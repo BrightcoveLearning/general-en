@@ -132,7 +132,7 @@
     </url>
     
     <url>
-        <loc>https://general.support.brightcove.com/shared-content/general/create-jwt.html</loc>
+        <loc>https://general.support.brightcove.com/developer/create-jwt.html</loc>
         <lastmod>2020-04-01</lastmod>
         <changefreq>daily</changefreq>
         <priority>0.5</priority>
@@ -195,21 +195,14 @@
     </url>
     
     <url>
-        <loc>https://general.support.brightcove.com/developer/</loc>
-        <lastmod>2020-04-01</lastmod>
-        <changefreq>daily</changefreq>
-        <priority>0.5</priority>
-    </url>
-    
-    <url>
-        <loc>https://general.support.brightcove.com/ooyala/</loc>
-        <lastmod>2020-04-01</lastmod>
-        <changefreq>daily</changefreq>
-        <priority>0.5</priority>
-    </url>
-    
-    <url>
         <loc>https://general.support.brightcove.com/utilities/</loc>
+        <lastmod>2020-04-01</lastmod>
+        <changefreq>daily</changefreq>
+        <priority>0.5</priority>
+    </url>
+    
+    <url>
+        <loc>https://general.support.brightcove.com/developer/</loc>
         <lastmod>2020-04-01</lastmod>
         <changefreq>daily</changefreq>
         <priority>0.5</priority>
@@ -224,6 +217,13 @@
     
     <url>
         <loc>https://general.support.brightcove.com/</loc>
+        <lastmod>2020-04-01</lastmod>
+        <changefreq>daily</changefreq>
+        <priority>0.5</priority>
+    </url>
+    
+    <url>
+        <loc>https://general.support.brightcove.com/ooyala/</loc>
         <lastmod>2020-04-01</lastmod>
         <changefreq>daily</changefreq>
         <priority>0.5</priority>

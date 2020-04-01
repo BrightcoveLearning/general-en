@@ -33,6 +33,8 @@
       url: '/developer/concepts-set-curl.html'
     - name: 'Concepts: Using JavaScript Promises'
       url: '/developer/concepts-using-javascript-promises.html'
+    - name: 'Creating a JSON Web Token (JWT)'
+      url: '/developer/create-jwt.html'
     - name: 'Debugging on Mobile Devices'
       url: '/developer/debugging-mobile-devices.html'
     - name: 'Using Wireshark to Track Network Traffic for Debugging'
