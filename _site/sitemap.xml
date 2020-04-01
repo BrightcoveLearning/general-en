@@ -195,20 +195,6 @@
     </url>
     
     <url>
-        <loc>https://general.support.brightcove.com/utilities/</loc>
-        <lastmod>2020-04-01</lastmod>
-        <changefreq>daily</changefreq>
-        <priority>0.5</priority>
-    </url>
-    
-    <url>
-        <loc>https://general.support.brightcove.com/developer/</loc>
-        <lastmod>2020-04-01</lastmod>
-        <changefreq>daily</changefreq>
-        <priority>0.5</priority>
-    </url>
-    
-    <url>
         <loc>https://general.support.brightcove.com/general/</loc>
         <lastmod>2020-04-01</lastmod>
         <changefreq>daily</changefreq>
@@ -224,6 +210,20 @@
     
     <url>
         <loc>https://general.support.brightcove.com/ooyala/</loc>
+        <lastmod>2020-04-01</lastmod>
+        <changefreq>daily</changefreq>
+        <priority>0.5</priority>
+    </url>
+    
+    <url>
+        <loc>https://general.support.brightcove.com/developer/</loc>
+        <lastmod>2020-04-01</lastmod>
+        <changefreq>daily</changefreq>
+        <priority>0.5</priority>
+    </url>
+    
+    <url>
+        <loc>https://general.support.brightcove.com/utilities/</loc>
         <lastmod>2020-04-01</lastmod>
         <changefreq>daily</changefreq>
         <priority>0.5</priority>
@@ -483,6 +483,20 @@
     
     <url>
         <loc>https://general.support.brightcove.com/assets/js/search.js</loc>
+        <lastmod>2020-04-01</lastmod>
+        <changefreq>daily</changefreq>
+        <priority>0.5</priority>
+    </url>
+    
+    <url>
+        <loc>https://general.support.brightcove.com/sitemap%20copy.json</loc>
+        <lastmod>2020-04-01</lastmod>
+        <changefreq>daily</changefreq>
+        <priority>0.5</priority>
+    </url>
+    
+    <url>
+        <loc>https://general.support.brightcove.com/sitemap.json</loc>
         <lastmod>2020-04-01</lastmod>
         <changefreq>daily</changefreq>
         <priority>0.5</priority>
