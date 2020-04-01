@@ -1,0 +1,372 @@
+[
+  {
+      "newURL": "https://general.support.brightcove.com/404.html",
+      "oldURL": "/404"
+  },
+
+  {
+      "newURL": "https://general.support.brightcove.com/shared-content/general/audio-content.html",
+      "oldURL": "/audio-content"
+  },
+
+  {
+      "newURL": "https://general.support.brightcove.com/ooyala/backlot-and-video-cloud-video-and-playlist-fields.html",
+      "oldURL": "/backlot-and-video-cloud-video-and-playlist-fields"
+  },
+
+  {
+      "newURL": "https://general.support.brightcove.com/ooyala/backlot-video-cloud-cms-connector.html",
+      "oldURL": "/backlot-video-cloud-cms-connector"
+  },
+
+  {
+      "newURL": "https://general.support.brightcove.com/utilities/base-64-encoding-tool.html",
+      "oldURL": "/base-64-encoding-tool"
+  },
+
+  {
+      "newURL": "https://general.support.brightcove.com/general/brightcove-continuum-overview.html",
+      "oldURL": "/brightcove-continuum-overview"
+  },
+
+  {
+      "newURL": "https://general.support.brightcove.com/general/brightcove-forum-groups-and-email-lists.html",
+      "oldURL": "/brightcove-forum-groups-and-email-lists"
+  },
+
+  {
+      "newURL": "https://general.support.brightcove.com/general/brightcove-open-source-projects.html",
+      "oldURL": "/brightcove-open-source-projects"
+  },
+
+  {
+      "newURL": "https://general.support.brightcove.com/shared-content/code-samples/brightcove-player-sample-newest-videos-playlist.html",
+      "oldURL": "/brightcove-player-sample-newest-videos-playlist"
+  },
+
+  {
+      "newURL": "https://general.support.brightcove.com/general/brightcove-product-overview.html",
+      "oldURL": "/brightcove-product-overview"
+  },
+
+  {
+      "newURL": "https://general.support.brightcove.com/shared-content/player/bulk-updating-brightcove-default-player.html",
+      "oldURL": "/bulk-updating-brightcove-default-player"
+  },
+
+  {
+      "newURL": "https://general.support.brightcove.com/shared-content/player/choosing-correct-embed-code.html",
+      "oldURL": "/choosing-correct-embed-code"
+  },
+
+  {
+      "newURL": "https://general.support.brightcove.com/developer/concepts-cors.html",
+      "oldURL": "/concepts-cors"
+  },
+
+  {
+      "newURL": "https://general.support.brightcove.com/developer/concepts-introducing-json.html",
+      "oldURL": "/concepts-introducing-json"
+  },
+
+  {
+      "newURL": "https://general.support.brightcove.com/developer/concepts-javascript-debugging-basics.html",
+      "oldURL": "/concepts-javascript-debugging-basics"
+  },
+
+  {
+      "newURL": "https://general.support.brightcove.com/developer/concepts-javascript-module-design-pattern.html",
+      "oldURL": "/concepts-javascript-module-design-pattern"
+  },
+
+  {
+      "newURL": "https://general.support.brightcove.com/developer/concepts-set-curl.html",
+      "oldURL": "/concepts-set-curl"
+  },
+
+  {
+      "newURL": "https://general.support.brightcove.com/developer/concepts-using-javascript-promises.html",
+      "oldURL": "/concepts-using-javascript-promises"
+  },
+
+  {
+      "newURL": "https://general.support.brightcove.com/shared-content/general/create-jwt.html",
+      "oldURL": "/create-jwt"
+  },
+
+  {
+      "newURL": "https://general.support.brightcove.com/utilities/date-converter.html",
+      "oldURL": "/date-converter"
+  },
+
+  {
+      "newURL": "https://general.support.brightcove.com/developer/debugging-mobile-devices.html",
+      "oldURL": "/debugging-mobile-devices"
+  },
+
+  {
+      "newURL": "https://general.support.brightcove.com/shared-content/integration/embedding-brightcove-page-experiences-cms.html",
+      "oldURL": "/embedding-brightcove-page-experiences-cms"
+  },
+
+  {
+      "newURL": "https://general.support.brightcove.com/shared-content/integration/embedding-brightcove-players-cms.html",
+      "oldURL": "/embedding-brightcove-players-cms"
+  },
+
+  {
+      "newURL": "https://general.support.brightcove.com/shared-content/general/hevc-video.html",
+      "oldURL": "/hevc-video"
+  },
+
+  {
+      "newURL": "https://general.support.brightcove.com/icons.html",
+      "oldURL": "/icons"
+  },
+
+  {
+      "newURL": "https://general.support.brightcove.com/general/implementing-delivery-rules.html",
+      "oldURL": "/implementing-delivery-rules"
+  },
+
+  {
+      "newURL": "https://general.support.brightcove.com/developer/",
+      "oldURL": "/index"
+  },
+
+  {
+      "newURL": "https://general.support.brightcove.com/general/",
+      "oldURL": "/index"
+  },
+
+  {
+      "newURL": "https://general.support.brightcove.com/",
+      "oldURL": "/index"
+  },
+
+  {
+      "newURL": "https://general.support.brightcove.com/ooyala/",
+      "oldURL": "/index"
+  },
+
+  {
+      "newURL": "https://general.support.brightcove.com/utilities/",
+      "oldURL": "/index"
+  },
+
+  {
+      "newURL": "https://general.support.brightcove.com/index_for_launch.html",
+      "oldURL": "/index_for_launch"
+  },
+
+  {
+      "newURL": "https://general.support.brightcove.com/shared-content/integration/integrating-your-cms-video-cloud.html",
+      "oldURL": "/integrating-your-cms-video-cloud"
+  },
+
+  {
+      "newURL": "https://general.support.brightcove.com/general/known-issues-studio-brightcove-player-and-apis.html",
+      "oldURL": "/known-issues-studio-brightcove-player-and-apis"
+  },
+
+  {
+      "newURL": "https://general.support.brightcove.com/shared-content/general/learning-guide-using-rest-apis.html",
+      "oldURL": "/learning-guide-using-rest-apis"
+  },
+
+  {
+      "newURL": "https://general.support.brightcove.com/shared-content/managing-api-authentication-credentials.html",
+      "oldURL": "/managing-api-authentication-credentials"
+  },
+
+  {
+      "newURL": "https://general.support.brightcove.com/ooyala/migrating-analytics-rest-api-brightcove-analytics-api.html",
+      "oldURL": "/migrating-analytics-rest-api-brightcove-analytics-api"
+  },
+
+  {
+      "newURL": "https://general.support.brightcove.com/ooyala/migrating-video-cloud-ad-sets.html",
+      "oldURL": "/migrating-video-cloud-ad-sets"
+  },
+
+  {
+      "newURL": "https://general.support.brightcove.com/ooyala/migrating-video-cloud-ingestion-adapter.html",
+      "oldURL": "/migrating-video-cloud-ingestion-adapter"
+  },
+
+  {
+      "newURL": "https://general.support.brightcove.com/ooyala/migration-docs-ooyala-customers.html",
+      "oldURL": "/migration-docs-ooyala-customers"
+  },
+
+  {
+      "newURL": "https://general.support.brightcove.com/general/mpeg-dash-video.html",
+      "oldURL": "/mpeg-dash-video"
+  },
+
+  {
+      "newURL": "https://general.support.brightcove.com/shared-content/online-training-courses.html",
+      "oldURL": "/online-training-courses"
+  },
+
+  {
+      "newURL": "https://general.support.brightcove.com/ooyala/ooyala-training-videos.html",
+      "oldURL": "/ooyala-training-videos"
+  },
+
+  {
+      "newURL": "https://general.support.brightcove.com/ooyala/ooyala-video-cloud-ingestion-adapter-csv-manifest-files.html",
+      "oldURL": "/ooyala-video-cloud-ingestion-adapter-csv-manifest-files"
+  },
+
+  {
+      "newURL": "https://general.support.brightcove.com/ooyala/ooyala-video-cloud-ingestion-adapter-ingesting-aspera.html",
+      "oldURL": "/ooyala-video-cloud-ingestion-adapter-ingesting-aspera"
+  },
+
+  {
+      "newURL": "https://general.support.brightcove.com/ooyala/ooyala-video-cloud-ingestion-adapter-ingesting-backlot-api.html",
+      "oldURL": "/ooyala-video-cloud-ingestion-adapter-ingesting-backlot-api"
+  },
+
+  {
+      "newURL": "https://general.support.brightcove.com/ooyala/ooyala-video-cloud-ingestion-adapter-ingesting-ftps.html",
+      "oldURL": "/ooyala-video-cloud-ingestion-adapter-ingesting-ftps"
+  },
+
+  {
+      "newURL": "https://general.support.brightcove.com/ooyala/ooyala-video-cloud-ingestion-adapter-ingesting-ois-25.html",
+      "oldURL": "/ooyala-video-cloud-ingestion-adapter-ingesting-ois-25"
+  },
+
+  {
+      "newURL": "https://general.support.brightcove.com/ooyala/ooyala-video-cloud-ingestion-adapter-ingesting-remote-assets-mrss.html",
+      "oldURL": "/ooyala-video-cloud-ingestion-adapter-ingesting-remote-assets-mrss"
+  },
+
+  {
+      "newURL": "https://general.support.brightcove.com/ooyala/ooyala-video-cloud-ingestion-adapter-ingesting-remotely-hosted-mrss-feed.html",
+      "oldURL": "/ooyala-video-cloud-ingestion-adapter-ingesting-remotely-hosted-mrss-feed"
+  },
+
+  {
+      "newURL": "https://general.support.brightcove.com/ooyala/ooyala-video-cloud-ingestion-adapter-manifest-file-formats.html",
+      "oldURL": "/ooyala-video-cloud-ingestion-adapter-manifest-file-formats"
+  },
+
+  {
+      "newURL": "https://general.support.brightcove.com/ooyala/ooyala-video-cloud-ingestion-adapter-xml-manifest-files.html",
+      "oldURL": "/ooyala-video-cloud-ingestion-adapter-xml-manifest-files"
+  },
+
+  {
+      "newURL": "https://general.support.brightcove.com/ooyala/ooyala-video-cloud-ingestion-supported-ingest-formats.html",
+      "oldURL": "/ooyala-video-cloud-ingestion-supported-ingest-formats"
+  },
+
+  {
+      "newURL": "https://general.support.brightcove.com/ooyala/ooyala-video-cloud-migration-adding-brightcove-dns-server-testing.html",
+      "oldURL": "/ooyala-video-cloud-migration-adding-brightcove-dns-server-testing"
+  },
+
+  {
+      "newURL": "https://general.support.brightcove.com/ooyala/ooyala-video-cloud-migration-authentication-brightcove-api-requests.html",
+      "oldURL": "/ooyala-video-cloud-migration-authentication-brightcove-api-requests"
+  },
+
+  {
+      "newURL": "https://general.support.brightcove.com/ooyala/ooyala-video-platform-release-notes.html",
+      "oldURL": "/ooyala-video-platform-release-notes"
+  },
+
+  {
+      "newURL": "https://general.support.brightcove.com/shared-content/support/opening-case-with-brightcove-support.html",
+      "oldURL": "/opening-case-with-brightcove-support"
+  },
+
+  {
+      "newURL": "https://general.support.brightcove.com/shared-content/general/overview-captions.html",
+      "oldURL": "/overview-captions"
+  },
+
+  {
+      "newURL": "https://general.support.brightcove.com/shared-content/general/overview-context-aware-encoding.html",
+      "oldURL": "/overview-context-aware-encoding"
+  },
+
+  {
+      "newURL": "https://general.support.brightcove.com/general/overview-delivery-rules.html",
+      "oldURL": "/overview-delivery-rules"
+  },
+
+  {
+      "newURL": "https://general.support.brightcove.com/shared-content/general/overview-dynamic-delivery.html",
+      "oldURL": "/overview-dynamic-delivery"
+  },
+
+  {
+      "newURL": "https://general.support.brightcove.com/shared-content/player/player-configuration-guide.html",
+      "oldURL": "/player-configuration-guide"
+  },
+
+  {
+      "newURL": "https://general.support.brightcove.com/shared-content/player/plugin-registry.html",
+      "oldURL": "/plugin-registry"
+  },
+
+  {
+      "newURL": "https://general.support.brightcove.com/shared-content/player/policy-keys.html",
+      "oldURL": "/policy-keys"
+  },
+
+  {
+      "newURL": "https://general.support.brightcove.com/shared-content/player/pre-release-player.html",
+      "oldURL": "/pre-release-player"
+  },
+
+  {
+      "newURL": "https://general.support.brightcove.com/shared-content/register-training.html",
+      "oldURL": "/register-training"
+  },
+
+  {
+      "newURL": "https://general.support.brightcove.com/shared-content/ingest-profiles/standard-ingest-profiles-dynamic-delivery-and-context-aware-encoding.html",
+      "oldURL": "/standard-ingest-profiles-dynamic-delivery-and-context-aware-encoding"
+  },
+
+  {
+      "newURL": "https://general.support.brightcove.com/shared-content/ingest-profiles/standard-ingest-profiles-legacy-transcoding.html",
+      "oldURL": "/standard-ingest-profiles-legacy-transcoding"
+  },
+
+  {
+      "newURL": "https://general.support.brightcove.com/shared-content/ingest-profiles/standard-live-ingest-profiles.html",
+      "oldURL": "/standard-live-ingest-profiles"
+  },
+
+  {
+      "newURL": "https://general.support.brightcove.com/shared-content/general/static-url-delivery.html",
+      "oldURL": "/static-url-delivery"
+  },
+
+  {
+      "newURL": "https://general.support.brightcove.com/utilities/string-encoder.html",
+      "oldURL": "/string-encoder"
+  },
+
+  {
+      "newURL": "https://general.support.brightcove.com/ooyala/using-ooyala-players-deliver-video-cloud-content.html",
+      "oldURL": "/using-ooyala-players-deliver-video-cloud-content"
+  },
+
+  {
+      "newURL": "https://general.support.brightcove.com/developer/using-wireshark-track-network-traffic-debugging.html",
+      "oldURL": "/using-wireshark-track-network-traffic-debugging"
+  },
+
+  {
+      "newURL": "https://general.support.brightcove.com/shared-content/support/viewing-brightcove-system-status-page.html",
+      "oldURL": "/viewing-brightcove-system-status-page"
+  },
+]
+

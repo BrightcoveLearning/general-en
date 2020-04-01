@@ -130,4 +130,31 @@
         "width": 768
       }
     },
+    {
+      "id": "default/video550hevc",
+      "version": 0,
+      "name": "Default HEVC 550",
+      "kind": "video",
+      "account_id": "default",
+      "created_at": "2020-02-20T17:58:08.602132077Z",
+      "updated_at": "2020-02-20T17:58:08.602132077Z",
+      "encoding_settings": {
+        "aspect_mode": "preserve",
+        "decoder_bitrate_cap": 825,
+        "decoder_buffer_size": 1100,
+        "fixed_keyframe_interval": true,
+        "fragment_duration": 2000,
+        "height": 360,
+        "keyframe_rate": 1,
+        "segment_seconds": 2,
+        "speed": 3,
+        "video_bframes": 3,
+        "video_bitrate": 550,
+        "video_codec": "hevc",
+        "video_codec_profile": "main",
+        "video_reference_frames": 6,
+        "width": 640
+      }
+    },
+
     ]
