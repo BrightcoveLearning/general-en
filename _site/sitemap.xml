@@ -132,6 +132,13 @@
     </url>
     
     <url>
+        <loc>https://general.support.brightcove.com/shared-content/general/configuring-server-side-ad-settings.html</loc>
+        <lastmod>2020-04-02</lastmod>
+        <changefreq>daily</changefreq>
+        <priority>0.5</priority>
+    </url>
+    
+    <url>
         <loc>https://general.support.brightcove.com/developer/create-jwt.html</loc>
         <lastmod>2020-04-02</lastmod>
         <changefreq>daily</changefreq>
@@ -195,6 +202,13 @@
     </url>
     
     <url>
+        <loc>https://general.support.brightcove.com/developer/</loc>
+        <lastmod>2020-04-02</lastmod>
+        <changefreq>daily</changefreq>
+        <priority>0.5</priority>
+    </url>
+    
+    <url>
         <loc>https://general.support.brightcove.com/general/</loc>
         <lastmod>2020-04-02</lastmod>
         <changefreq>daily</changefreq>
@@ -210,13 +224,6 @@
     
     <url>
         <loc>https://general.support.brightcove.com/ooyala/</loc>
-        <lastmod>2020-04-02</lastmod>
-        <changefreq>daily</changefreq>
-        <priority>0.5</priority>
-    </url>
-    
-    <url>
-        <loc>https://general.support.brightcove.com/developer/</loc>
         <lastmod>2020-04-02</lastmod>
         <changefreq>daily</changefreq>
         <priority>0.5</priority>

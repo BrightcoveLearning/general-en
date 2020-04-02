@@ -90,6 +90,11 @@
   },
 
   {
+      "newURL": "https://general.support.brightcove.com/shared-content/general/configuring-server-side-ad-settings.html",
+      "oldURL": "/configuring-server-side-ad-settings"
+  },
+
+  {
       "newURL": "https://general.support.brightcove.com/developer/create-jwt.html",
       "oldURL": "/create-jwt"
   },
@@ -130,6 +135,11 @@
   },
 
   {
+      "newURL": "https://general.support.brightcove.com/developer/",
+      "oldURL": "/index"
+  },
+
+  {
       "newURL": "https://general.support.brightcove.com/general/",
       "oldURL": "/index"
   },
@@ -141,11 +151,6 @@
 
   {
       "newURL": "https://general.support.brightcove.com/ooyala/",
-      "oldURL": "/index"
-  },
-
-  {
-      "newURL": "https://general.support.brightcove.com/developer/",
       "oldURL": "/index"
   },
 
