@@ -135,6 +135,11 @@
   },
 
   {
+      "newURL": "https://general.support.brightcove.com/ooyala/",
+      "oldURL": "/index"
+  },
+
+  {
       "newURL": "https://general.support.brightcove.com/developer/",
       "oldURL": "/index"
   },
@@ -145,17 +150,12 @@
   },
 
   {
-      "newURL": "https://general.support.brightcove.com/",
-      "oldURL": "/index"
-  },
-
-  {
-      "newURL": "https://general.support.brightcove.com/ooyala/",
-      "oldURL": "/index"
-  },
-
-  {
       "newURL": "https://general.support.brightcove.com/utilities/",
+      "oldURL": "/index"
+  },
+
+  {
+      "newURL": "https://general.support.brightcove.com/",
       "oldURL": "/index"
   },
 
