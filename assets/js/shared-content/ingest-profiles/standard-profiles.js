@@ -1,4 +1,4 @@
-var BCLSprofiles = (function(window, document, BCLSprofileData) {
+var BCLSprofiles = (function(window, document, BCLSprofileData, BCLS_toc) {
   var mainSection = document.querySelector('.bcls-article'),
     data = BCLSprofileData,
     audioTableBody = document.getElementById('audioTableBody'),
@@ -6,11 +6,12 @@ var BCLSprofiles = (function(window, document, BCLSprofileData) {
     videoRenditionsTableBody = document.getElementById('videoRenditionsTableBody'),
     hevcTableBody = document.getElementById('hevcTableBody'),
     progressiveTableBody = document.getElementById('progressiveTableBody'),
+    dd_profile_summary = document.getElementById('dd_profile_summary'),
+    cae_profile_summary = document.getElementById('cae_profile_summary'),
     headersArray,
-    prop,
-    navLabel = [];
+    prop;
 
-    /**
+/**
  * sort an array of objects based on an object property
  * @param {array} targetArray - array to be sorted
  * @param {string|number} objProperty - object property to sort on
@@ -49,27 +50,17 @@ function sortArray(targetArray, objProperty) {
     return false;
   }
 
+
   /**
-   * find index of an object in array of objects
-   * based on some property value
-   *
-   * @param {array} targetArray array to search
-   * @param {string} objProperty object property to search
-   * @param {string} value of the property to search for
-   * @return {integer} index of first instance if found, otherwise returns -1
-  */
-  function findObjectInArray(targetArray, objProperty, value) {
-      var i, totalItems = targetArray.length, objFound = false;
-      for (i = 0; i < totalItems; i++) {
-          if (targetArray[i][objProperty] === value) {
-              objFound = true;
-              return i;
-          }
-      }
-      if (objFound === false) {
-          return -1;
-      }
+   * determine if a rendition is audio
+   */
+  function isAudio(item) {
+    if (item.indexOf('audio') >= 0) {
+      return true;
+    }
+    return false;
   }
+ 
 
   /**
    * remove spaces from passed string
@@ -96,6 +87,27 @@ function sortArray(targetArray, objProperty) {
   }
 
   /**
+   * dedupe a simple array of strings or numbers
+   * @param {array} arr the array to be deduped
+   * @return {array} out the deduped array
+   */
+  function dedupe(arr) {
+    var i,
+      len = arr.length,
+      out = [],
+      obj = {};
+
+    for (i = 0; i < len; i++) {
+      obj[arr[i]] = 0;
+    }
+    for (i in obj) {
+      out.push(i);
+    }
+    return out;
+  }
+ 
+
+  /**
    * create an element
    * @param  {string} type - the element type
    * @param  {object} attributes - attributes to add to the element
@@ -117,22 +129,7 @@ function sortArray(targetArray, objProperty) {
 
 
   function buildSummaryTable() {
-    var newSectionNode = document.createElement("section"),
-      sectionHeadingNode = document.createElement("h2"),
-      sectionSubHeadingNode,
-      sectionIntroNode = document.createElement("p"),
-      profileTableNode = document.createElement("table"),
-      profileTableNodeCAE = document.createElement("table"),
-      profiletheadNode = document.createElement("thead"),
-      profiletheadNodeCAE = document.createElement("thead"),
-      profiletbodyNode = document.createElement("tbody"),
-      profiletbodyNodeCAE = document.createElement("tbody"),
-      sectionHeadingElem,
-      sectionIntroElem,
-      profileTableElem,
-      profiletheadElem,
-      profiletbodyElem,
-      fragment1 = document.createDocumentFragment(),
+    var fragment1 = document.createDocumentFragment(),
       fragment2 = document.createDocumentFragment(),
       i,
       iMax,
@@ -201,37 +198,9 @@ function sortArray(targetArray, objProperty) {
       content = document.createTextNode(item.description);
       td.appendChild(content);
       tr.appendChild(td);
+      fragment1.appendChild(tr);
     }
-    content = document.createTextNode('Standard Profiles List');
-    sectionHeadingNode.appendChild(content);
-    content = document.createTextNode('Click on a profile name to see details of the renditions it includes. Note that the actual renditions created will depend on the quality of the source video.');
-    sectionIntroNode.appendChild(content);
-    tr = document.createElement('tr');
-    profiletheadNode.appendChild(tr);
-    th = document.createElement('th');
-    content = document.createTextNode('Profile Name');
-    th.appendChild(content);
-    tr.appendChild(th);
-    th = document.createElement('th');
-    content = document.createTextNode('Video');
-    th.appendChild(content);
-    tr.appendChild(th);
-    th = document.createElement('th');
-    content = document.createTextNode('Audio');
-    th.appendChild(content);
-    tr.appendChild(th);
-    th = document.createElement('th');
-    content = document.createTextNode('Image');
-    th.appendChild(content);
-    tr.appendChild(th);
-    th = document.createElement('th');
-    content = document.createTextNode('Description');
-    th.appendChild(content);
-    tr.appendChild(th);
-
-    fragment1.appendChild(newSectionNode);
-    mainSection.appendChild(fragment1);
-
+    dd_profile_summary.appendChild(fragment1);
 
     // now the CAE profiles
     iMax = data.BCLSprofilesDynamic.length;
@@ -243,20 +212,7 @@ function sortArray(targetArray, objProperty) {
       item.imageRenditions = item.dynamic_origin.images.length;
 
     }
-    sectionSubHeadingNode = document.createElement('h3');
-    content = document.createTextNode('Context Aware Encoding Profiles');
-    sectionSubHeadingNode.appendChild(content);
-    profileTableNodeCAE.setAttribute("id", "profileSummaryTableCAE");
-    profileTableNodeCAE.setAttribute("class", "bcls-table");
-    profiletheadNodeCAE.setAttribute("id", "profileSummaryTableTheadCAE");
-    profiletheadNodeCAE.setAttribute("class", "bcls-table__head");
-    profiletbodyNodeCAE.setAttribute("id", "profileSummaryTableTbodyCAE");
-    profiletbodyNodeCAE.setAttribute("class", "bcls-table__body");
-    newSectionNode.appendChild(sectionSubHeadingNode);
-    newSectionNode.appendChild(profileTableNodeCAE);
-    profileTableNodeCAE.appendChild(profiletheadNodeCAE);
-    profileTableNodeCAE.appendChild(profiletbodyNodeCAE);
-    iMax = data.BCLSprofilesDynamic.length;
+
     for (i = 0; i < iMax; i++) {
       item = data.BCLSprofilesDynamic[i];
       tr = document.createElement('tr');
@@ -287,32 +243,9 @@ function sortArray(targetArray, objProperty) {
       content = document.createTextNode(item.description);
       td.appendChild(content);
       tr.appendChild(td);
+      fragment2.appendChild(tr);
     }
-    fragment2.appendChild(newSectionNode);
-    mainSection.appendChild(fragment2);
-
-    tr = document.createElement('tr');
-    profiletheadNodeCAE.appendChild(tr);
-    th = document.createElement('th');
-    content = document.createTextNode('Profile Name');
-    th.appendChild(content);
-    tr.appendChild(th);
-    th = document.createElement('th');
-    content = document.createTextNode('Video');
-    th.appendChild(content);
-    tr.appendChild(th);
-    th = document.createElement('th');
-    content = document.createTextNode('Audio');
-    th.appendChild(content);
-    tr.appendChild(th);
-    th = document.createElement('th');
-    content = document.createTextNode('Image');
-    th.appendChild(content);
-    tr.appendChild(th);
-    th = document.createElement('th');
-    content = document.createTextNode('Description');
-    th.appendChild(content);
-    tr.appendChild(th);
+    cae_profile_summary.appendChild(fragment2);
 
   }
 
@@ -738,12 +671,17 @@ function sortArray(targetArray, objProperty) {
     }
   }
 
-  data.BCLSprofilesDynamic = sortArray(data.BCLSprofilesDynamic, 'name')
-  data.BCLSprofilesStatic = sortArray(data.BCLSprofilesStatic, 'name')
-  data.BCLSrenditionsAudio = sortArray(data.BCLSrenditionsAudio, 'name')
-  data.BCLSrenditionsAudioProgressive = sortArray(data.BCLSrenditionsAudioProgressive, 'name')
-  data.BCLSrenditionsVideo = sortArray(data.BCLSrenditionsVideo, 'name')
-  data.BCLSrenditionsVideoHEVC = sortArray(data.BCLSrenditionsVideoHEVC, 'name')
-  data.BCLSrenditionsVideoProgressive = sortArray(data.BCLSrenditionsVideoProgressive, 'name')
+  // actions
+  data.BCLSprofilesDynamic = sortArray(data.BCLSprofilesDynamic, 'name');
+  data.BCLSprofilesStatic = sortArray(data.BCLSprofilesStatic, 'name');
+  data.BCLSrenditionsAudio = sortArray(data.BCLSrenditionsAudio, 'name');
+  data.BCLSrenditionsAudioProgressive = sortArray(data.BCLSrenditionsAudioProgressive, 'name');
+  data.BCLSrenditionsVideo = sortArray(data.BCLSrenditionsVideo, 'name');
+  data.BCLSrenditionsVideoHEVC = sortArray(data.BCLSrenditionsVideoHEVC, 'name');
+  data.BCLSrenditionsVideoProgressive = sortArray(data.BCLSrenditionsVideoProgressive, 'name');
+  buildSummaryTable();
+  buildDetailTables();
+  setCodeBlocks();
+  BCLS_toc.create_inpage_nav();
 
-})(window, document, BCLSprofileData);
+})(window, document, BCLSprofileData, BCLS_toc);
