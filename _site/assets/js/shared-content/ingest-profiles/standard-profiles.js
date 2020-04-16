@@ -181,7 +181,6 @@ function sortArray(targetArray, objProperty) {
     for (i = 0; i < iMax; i++) {
       item = BCLSprofileData.BCLSprofilesStatic[i];
       tr = document.createElement('tr');
-      profiletbodyNode.appendChild(tr);
       td = document.createElement('td');
       a = document.createElement('a');
       a.setAttribute('href', '#' + removeSpaces(item.name));
@@ -226,7 +225,6 @@ function sortArray(targetArray, objProperty) {
     for (i = 0; i < iMax; i++) {
       item = BCLSprofileData.BCLSprofilesDynamic[i];
       tr = document.createElement('tr');
-      profiletbodyNodeCAE.appendChild(tr);
       td = document.createElement('td');
       a = document.createElement('a');
       a.setAttribute('href', '#' + removeSpaces(item.name));
