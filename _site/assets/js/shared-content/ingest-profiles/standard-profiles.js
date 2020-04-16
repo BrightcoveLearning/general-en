@@ -129,6 +129,8 @@ function sortArray(targetArray, objProperty) {
 
 
   function buildSummaryTable() {
+    console.log('buiiding summary tables');
+    
     var fragment1 = document.createDocumentFragment(),
       fragment2 = document.createDocumentFragment(),
       i,
@@ -250,6 +252,8 @@ function sortArray(targetArray, objProperty) {
   }
 
   function buildDetailTables() {
+    console.log('building detail tables');
+    
     // build the details of each rendition as a section
     var section,
       fragment = document.createDocumentFragment(),
@@ -657,6 +661,8 @@ function sortArray(targetArray, objProperty) {
   }
 
   function setCodeBlocks() {
+    console.log('setting code blocks');
+    
     var i,
       iMax;
     codeBlocks = document.getElementsByClassName('bcls-code');
@@ -682,6 +688,8 @@ function sortArray(targetArray, objProperty) {
   buildSummaryTable();
   buildDetailTables();
   setCodeBlocks();
+  console.log('updating inpage nav');
+  
   BCLS_toc.create_inpage_nav();
 
 })(window, document, BCLSprofileData, BCLS_toc);
