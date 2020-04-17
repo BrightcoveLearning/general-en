@@ -89,11 +89,11 @@ var BCLSDDrenditions = (function(window, document) {
         el.appendChild(frag);
       }
 
-      BCLSprofileData.BCLSrenditionsAudio = sortArray(BCLSprofileData.BCLSrenditionsAudio, 'name');
-      BCLSprofileData.BCLSrenditionsAudioProgressive = sortArray(BCLSprofileData.BCLSrenditionsAudioProgressive, 'name');
-      BCLSprofileData.BCLSrenditionsVideo = sortArray(BCLSprofileData.BCLSrenditionsVideo, 'name');
-      BCLSprofileData.BCLSrenditionsVideoHEVC = sortArray(BCLSprofileData.BCLSrenditionsVideoHEVC, 'name');
-      BCLSprofileData.BCLSrenditionsVideoProgressive = sortArray(BCLSprofileData.BCLSrenditionsVideoProgressive, 'name');
+      BCLSrenditionData.BCLSrenditionsAudio = sortArray(BCLSrenditionData.BCLSrenditionsAudio, 'name');
+      BCLSrenditionData.BCLSrenditionsAudioProgressive = sortArray(BCLSrenditionData.BCLSrenditionsAudioProgressive, 'name');
+      BCLSrenditionData.BCLSrenditionsVideo = sortArray(BCLSrenditionData.BCLSrenditionsVideo, 'name');
+      BCLSrenditionData.BCLSrenditionsVideoHEVC = sortArray(BCLSrenditionData.BCLSrenditionsVideoHEVC, 'name');
+      BCLSrenditionData.BCLSrenditionsVideoProgressive = sortArray(BCLSrenditionData.BCLSrenditionsVideoProgressive, 'name');
     
         // build the table bodies
         buildTable(BCLSrenditionData.BCLSrenditionsAudio, audioFields, audioTableBody);
