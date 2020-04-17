@@ -666,11 +666,6 @@ function sortArray(targetArray, objProperty) {
   // actions
   BCLSprofileData.BCLSprofilesDynamic = sortArray(BCLSprofileData.BCLSprofilesDynamic, 'name');
   BCLSprofileData.BCLSprofilesStatic = sortArray(BCLSprofileData.BCLSprofilesStatic, 'name');
-  BCLSprofileData.BCLSrenditionsAudio = sortArray(BCLSprofileData.BCLSrenditionsAudio, 'name');
-  BCLSprofileData.BCLSrenditionsAudioProgressive = sortArray(BCLSprofileData.BCLSrenditionsAudioProgressive, 'name');
-  BCLSprofileData.BCLSrenditionsVideo = sortArray(BCLSprofileData.BCLSrenditionsVideo, 'name');
-  BCLSprofileData.BCLSrenditionsVideoHEVC = sortArray(BCLSprofileData.BCLSrenditionsVideoHEVC, 'name');
-  BCLSprofileData.BCLSrenditionsVideoProgressive = sortArray(BCLSprofileData.BCLSrenditionsVideoProgressive, 'name');
   buildSummaryTable();
   buildDetailTables();
   setCodeBlocks();

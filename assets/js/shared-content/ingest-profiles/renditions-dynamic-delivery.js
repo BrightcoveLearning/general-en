@@ -28,6 +28,27 @@ var BCLSDDrenditions = (function(window, document) {
             frag,
         rendition;
 
+    /**
+     * sort an array of objects based on an object property
+     * @param {array} targetArray - array to be sorted
+     * @param {string|number} objProperty - object property to sort on
+     * @return sorted array
+     */
+    function sortArray(targetArray, objProperty) {
+      targetArray.sort(function (a, b) {
+        var propA = a[objProperty].toLowerCase(), propB = b[objProperty].toLowerCase();
+        // sort ascending; reverse propA and propB to sort descending
+        if (propA < propB) {
+              return -1;
+        } else if (propA > propB) {
+              return 1;
+        } else {
+              return 0;
+        }
+      });
+      return targetArray;
+    }
+
       /**
        * Builds a table body
        * @param {Array} dataSet array of rendition settings
@@ -68,6 +89,12 @@ var BCLSDDrenditions = (function(window, document) {
         el.appendChild(frag);
       }
 
+      BCLSprofileData.BCLSrenditionsAudio = sortArray(BCLSprofileData.BCLSrenditionsAudio, 'name');
+      BCLSprofileData.BCLSrenditionsAudioProgressive = sortArray(BCLSprofileData.BCLSrenditionsAudioProgressive, 'name');
+      BCLSprofileData.BCLSrenditionsVideo = sortArray(BCLSprofileData.BCLSrenditionsVideo, 'name');
+      BCLSprofileData.BCLSrenditionsVideoHEVC = sortArray(BCLSprofileData.BCLSrenditionsVideoHEVC, 'name');
+      BCLSprofileData.BCLSrenditionsVideoProgressive = sortArray(BCLSprofileData.BCLSrenditionsVideoProgressive, 'name');
+    
         // build the table bodies
         buildTable(BCLSrenditionData.BCLSrenditionsAudio, audioFields, audioTableBody);
         buildTable(BCLSrenditionData.BCLSrenditionsAudioProgressive, progressiveAudioFields, progressiveAudioTableBody);
