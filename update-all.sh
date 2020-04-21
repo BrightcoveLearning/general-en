@@ -1,119 +1,74 @@
 git pull
-bundle update
-jekyll build
-git commit --all -m general-update
-git push
-echo 'rebuilt general content'
+sudo bundle update
+echo 'bundle updated general content'
 # apis
 cd ../apis
 git pull
-bundle update
-jekyll build
-git commit --all -m general-update
-git push
-echo 'rebuilt apis'
+sudo bundle update
+echo 'bundle updated apis'
 # audience
 cd ../audience
 git pull
-bundle update
-jekyll build
-git commit --all -m general-update
-git push
-echo 'rebuilt audience'
+sudo bundle update
+echo 'bundle updated audience'
 # beacon
 cd ../beacon-support
 git pull
-bundle update
-jekyll build
-git commit --all -m general-update
-git push
-echo 'rebuilt beacon'
+sudo bundle update
+echo 'bundle updated beacon'
 # campaign
 git pull
 cd ../campaign
-bundle update
-jekyll build
-git commit --all -m general-update
-git push
-echo 'rebuilt campaign'
+sudo bundle update
+echo 'bundle updated campaign'
 # docs-cms-connectors
 cd ../docs-cms-connectors
 git pull
-bundle update
-jekyll build
-git commit --all -m general-update
-git push
-echo 'rebuilt docs-cms-connectors'
+sudo bundle update
+echo 'bundle updated docs-cms-connectors'
 # engage
 cd ../engage
 git pull
-bundle update
-jekyll build
-git commit --all -m general-update
-git push
-echo 'rebuilt engage'
+sudo bundle update
+echo 'bundle updated engage'
 # gallery
 cd ../gallery
 git pull
-bundle update
-jekyll build
-git commit --all -m general-update
-git push
-echo 'rebuilt engage'
+sudo bundle update
+echo 'bundle updated engage'
 # live
 cd ../live
 git pull
-bundle update
-jekyll build
-git commit --all -m general-update
-git push
-echo 'rebuilt live'
+sudo bundle update
+echo 'bundle updated live'
 # player-dev
 cd ../player-dev
 git pull
-bundle update
-jekyll build
-git commit --all -m general-update
-git push
-echo 'rebuilt player-dev'
+sudo bundle update
+echo 'bundle updated player-dev'
 # sdks
 cd ../sdks
 git pull
-bundle update
-jekyll build
-git commit --all -m general-update
-git push
-echo 'rebuilt sdks'
+sudo bundle update
+echo 'bundle updated sdks'
 # social
 cd ../social
 git pull
-bundle update
-jekyll build
-git commit --all -m general-update
-git push
-echo 'rebuilt social'
+sudo bundle update
+echo 'bundle updated social'
 # ssai
 cd ../ssai
 git pull
-bundle update
-jekyll build
-git commit --all -m general-update
-git push
-echo 'rebuilt ssai'
+sudo bundle update
+echo 'bundle updated ssai'
 # studio
 cd ../studio
 git pull
-bundle update
-jekyll build
-git commit --all -m general-update
-git push
-echo 'rebuilt studio'
+sudo bundle update
+echo 'bundle updated studio'
 # zencoder-support
 cd ../zencoder-support
 git pull
-bundle update
-jekyll build
-git commit --all -m general-update
-git push
-echo 'rebuilt zencoder-support'
+sudo bundle update
+echo 'bundle updated zencoder-support'
 echo 'all finished!'
