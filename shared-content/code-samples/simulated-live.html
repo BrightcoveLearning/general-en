@@ -1,0 +1,39 @@
+---
+layout: share
+---
+
+<section class="bcls-section">
+  <h2 id="introduction">Introduction</h2>
+  <p>What distinguishes live streaming from VOD is the passage of time.  The content stream is tied to time and all viewers are in sync to that timeline.</p>
+  <p>This sample simulates this effect of a live streaming event using VOD content in a Video Cloud playlist, and some JavaScript to keep all viewers at the same point in the playlist regardless of when they start playback.</p>
+</section>
+<section class="bcls-section">
+  <h2 id="the_players">The players</h2>
+  <p>For testing purposes, we put two players in the page - one in-page, one iframe.</p>
+  <h3>In-page player</h3>
+  <div style="max-width: 800px;">
+    <video-js
+      data-account="1752604059001"
+      data-player="UCdIrPO1z"
+      data-embed="default"
+      controls=""
+      data-application-id=""
+      class="vjs-fluid"></video-js>
+  </div>
+  <script
+    src="//players.brightcove.net/1752604059001/UCdIrPO1z_default/index.min.js">
+  </script>
+
+  <h3>iframe player</h3>
+  <div
+  style="position: relative; display: block; max-width: 480px;">
+  <div
+    style="padding-top: 56.25%;">
+    <iframe
+      src="//players.brightcove.net/1752604059001/UCdIrPO1z_default/index.html"
+      allowfullscreen=""
+      allow="encrypted-media"
+      style="position: absolute; top: 0px; right: 0px; bottom: 0px; left: 0px; width: 100%; height: 100%;"></iframe>
+  </div>
+</div>
+</section>
