@@ -44,11 +44,14 @@ videojs.registerPlugin('simulated_live', function() {  var my_player = this,
     // set the start video as the current one
     my_player.playlist.currentItem(current_video_index);
 
-    // seek to the start point
-    my_player.currentTime(current_video_position / 1000);
+    // wait for video to load
+    my_player.on('loadedmetadata', function() {
+      // seek to the start point
+      my_player.currentTime(current_video_position / 1000);
+      // start the video
+      my_player.play();
+    }
 
-    // start the video
-    my_player.play();
   })
 
     /**

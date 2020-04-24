@@ -144,7 +144,7 @@
     var i,
       i_max = video_data.length;
     
-    for (i = 0; i < i_max; i++) {
+    for (i = 0; i &lt; i_max; i++) {
       video_ranges[i] = playlist_duration;
       playlist_duration = playlist_duration + video_data[i].duration;
     }
@@ -164,8 +164,8 @@
   function get_current_video_index() {
     var i,
       i_max = video_ranges.length;
-      for (i = 0; i < i_max; i++) {
-        if (playlist_position > video_ranges[i] && playlist_position < video_ranges[i + 1]) {
+      for (i = 0; i &lt; i_max; i++) {
+        if (playlist_position > video_ranges[i] && playlist_position &lt; video_ranges[i + 1]) {
           current_video_index = i;
           return;
         }
