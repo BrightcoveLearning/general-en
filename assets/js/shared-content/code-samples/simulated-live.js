@@ -46,9 +46,6 @@ videojs.registerPlugin('simulated_live', function() {  var my_player = this,
 
     // seek to the start point
     my_player.currentTime(current_video_position / 1000);
-
-    // start the video
-    my_player.play();
   })
 
     /**
