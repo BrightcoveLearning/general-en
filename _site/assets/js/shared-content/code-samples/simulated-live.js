@@ -89,12 +89,12 @@ videojs.registerPlugin('simulated_live', function() {  var my_player = this,
     get_current_video_position();
     
     // set the start video as the current one
-    my_player.playlist.currentItem(current_video_index);
+    my_player.playlist.currentItem(2);
 
     // wait for video to load
     my_player.on('loadedmetadata', function() {
       // seek to the start point
-      my_player.currentTime(current_video_position / 1000);
+      my_player.currentTime(5);
       // start the video
       my_player.play();
     }
