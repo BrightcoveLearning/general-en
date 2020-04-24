@@ -335,6 +335,11 @@
   },
 
   {
+      "newURL": "https://general.support.brightcove.com/shared-content/code-samples/simulated-live.html",
+      "oldURL": "/simulated-live"
+  },
+
+  {
       "newURL": "https://general.support.brightcove.com/shared-content/ingest-profiles/standard-ingest-profiles-dynamic-delivery-and-context-aware-encoding.html",
       "oldURL": "/standard-ingest-profiles-dynamic-delivery-and-context-aware-encoding"
   },
