@@ -1,5 +1,5 @@
 videojs.registerPlugin('simulated_live', function() {  var my_player = this,
-  playlist_id = '1664503635149515112',
+  playlist_id = '1664503635149515112', // replace with your playlist id
   video_data,
   video_ranges = [],
   playlist_duration = 0,
@@ -16,7 +16,8 @@ videojs.registerPlugin('simulated_live', function() {  var my_player = this,
       console.log('There was an error retrieving the playlist: ', error)
     }
     
-    // load the playlist into the player
+    // load the playlist into the player 
+    // the -1 argument prevents the first video from being loaded into the player
     my_player.catalog.load(playlist, -1);
 
     // turn on auto-advance
