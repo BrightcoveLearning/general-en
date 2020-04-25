@@ -277,7 +277,6 @@ style="position: relative; display: block; max-width: 800px;">
     // get the duration of the playlist and the video ranges
     get_playlist_duration();
     log_it(logger, 'playlist duration: ' + playlist_duration);
-    log_it(logger, 'video start points: ' + video_ranges);
     
     
     
@@ -287,7 +286,6 @@ style="position: relative; display: block; max-width: 800px;">
     
     // get the index of the video where the start position is
     get_current_video_index();
-    log_it(logger, 'video index: ' + current_video_index);
     log_it(logger, 'video: ' + video_data[current_video_index].name);
     
     
@@ -303,7 +301,6 @@ style="position: relative; display: block; max-width: 800px;">
     // my_player.on('loadedmetadata', function() {
       // seek to the start point
       my_player.currentTime(current_video_position);
-      log_it(logger, 'set position to ' + current_video_position);
       
       // start the video
       my_player.play();
