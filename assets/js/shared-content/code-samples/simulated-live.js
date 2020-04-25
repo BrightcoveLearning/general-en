@@ -7,7 +7,7 @@ videojs.registerPlugin('simulated_live', function() {
   playlist_position,
   current_video_index,
   current_video_position,
-  origin_time = new Date(2020-01-01),
+  origin_time = new Date('2020-01-01T00:00:00'),
   now_time,
   time_passed,
   logger = document.getElementById('logger');
