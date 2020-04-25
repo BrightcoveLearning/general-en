@@ -26,6 +26,8 @@ layout: share
     src="//players.brightcove.net/1752604059001/sH6eNuv7v_default/index.min.js">
   </script>
 
+<h3>log</h3>
+<div id="logger"></div>
   <h3>Player 2</h3>
 </section>
 <section class="bcls-section">
@@ -189,8 +191,12 @@ layout: share
     current_video_position,
     origin_time = new Date(2020-01-01),
     now_time,
-    time_passed;
+    time_passed,
+    logger = document.getElementById('logger');
 
+  function log_it(element, message) {
+    element.innerHTML += message + '<br>';
+  }
   /**
    * @Desc:  gets the duration of the whole playlist and array of video start times
    * @param {array} video_data array of video data for the playlist videos
@@ -259,38 +265,38 @@ layout: share
     
     // get the duration of the playlist and the video ranges
     get_playlist_duration();
-    console.log('player 2 playlist duration', playlist_duration);
-    console.log('player 2 video start points', video_ranges);
+    log_it(logger, 'playlist duration: ' + playlist_duration);
+    log_it(logger, 'video start points: ' + video_ranges);
     
     
     
     // get the start position in the playlist
     get_playlist_position();
-    console.log('player 2 playlist position', playlist_position);
+    log_it(logger, 'playlist position: ' + playlist_position);
     
     // get the index of the video where the start position is
     get_current_video_index();
-    console.log('player 2 video index', current_video_index);
+    log_it(logger, 'video index: ' + current_video_index);
+    log_it(logger, 'video: ' + video_data[current_video_index].name);
     
     
     // get start position in the video
     get_current_video_position();
-    console.log('player 2 video position', current_video_position);
+    log_it(logger, 'video position:' + current_video_position);
     
     
     // set the start video as the current one
     my_player.playlist.currentItem(current_video_index);
 
     // wait for video to load
-    my_player.on('loadedmetadata', function() {
+    // my_player.on('loadedmetadata', function() {
       // seek to the start point
-      my_player.currentTime(current_video_position / 1000);
-      console.log('player 2 - set position to ' + current_video_position / 1000);
+      my_player.currentTime(current_video_position);
+      log_it(logger, 'set position to ' + current_video_position);
       
       // start the video
       my_player.play();
-    }
-    )
+    // }
   })
 });
 
