@@ -10,37 +10,12 @@ layout: share
 </section>
 <section class="bcls-section">
   <h2 id="the_players">The players</h2>
-  <p>For testing purposes, we put two players in the page - one in-page, one iframe. They will auto-start, and you should see them playing the same video at the same point, give or take a second (which is typical of live stream playback because of latency differences in different networks).</p>
-  <h3>Player 1</h3>
-  <div style="max-width: 800px;">
-    <video-js
-      id="sim_live"
-      data-account="1752604059001"
-      data-player="sH6eNuv7v"
-      data-embed="default"
-      controls=""
-      data-application-id=""
-      class="vjs-fluid"></video-js>
-  </div>
-  <script
-    src="//players.brightcove.net/1752604059001/sH6eNuv7v_default/index.min.js">
-  </script>
-
-<h3>Player 2</h3>
-<div
-style="position: relative; display: block; max-width: 800px;">
-<div
-  style="padding-top: 56.25%;">
-  <iframe
-    src="//players.brightcove.net/1752604059001/pOk7UabjF_default/index.html"
-    allowfullscreen=""
-    allow="encrypted-media"
-    style="position: absolute; top: 0px; right: 0px; bottom: 0px; left: 0px; width: 100%; height: 100%;"></iframe>
-</div>
-</div>
-<h3>log</h3>
-<div id="logger"></div>
-</section>
+  <p class="codepen" data-height="914" data-theme-id="34967" data-default-tab="result" data-user="rcrooks1969" data-slug-hash="MWapVYz" style="height: 914px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;" data-pen-title="Simulated Live Event">
+    <span>See the Pen <a href="https://codepen.io/team/rcrooks1969/pen/MWapVYz">
+    Simulated Live Event</a> by Brightcove Learning Services (<a href="https://codepen.io/rcrooks1969">@rcrooks1969</a>)
+    on <a href="https://codepen.io">CodePen</a>.</span>
+  </p>
+  <script async src="https://static.codepen.io/assets/embed/ei.js"></script></section>
 <section class="bcls-section">
   <h2 id="logic">App logic</h2>
     <p>The logic for creating the simulated live stream is fairly straightforward:</p>
@@ -91,7 +66,8 @@ style="position: relative; display: block; max-width: 800px;">
   </ul>
 
   <h4>Javascript code for the plugin</h4>
-<pre class="line-numbers"><code class="language-javascript">videojs.registerPlugin('simulated_live', function() {  var my_player = this,
+<pre class="line-numbers"><code class="language-javascript">videojs.registerPlugin('simulated_live', function() {
+  var my_player = this,
   playlist_id = '1664503635149515112', // replace with your playlist id
   video_data,
   video_ranges = [],
@@ -100,212 +76,109 @@ style="position: relative; display: block; max-width: 800px;">
   current_video_index,
   current_video_position,
   origin_time = new Date(2020-01-01),
-  now_time = new Date(),
+  now_time,
+  time_passed,
+  logger = document.getElementById('logger');
+
+/**
+ * @Desc:  gets the duration of the whole playlist and array of video start times
+ * @param {array} video_data array of video data for the playlist videos
+ */
+function get_playlist_duration() {
+  var i,
+    i_max = video_data.length;
+  
+  for (i = 0; i &lt; i_max; i++) {
+    video_ranges[i] = playlist_duration;
+    playlist_duration = playlist_duration + video_data[i].duration;
+  }
+}
+
+/** 
+ * @Desc:  gets time position in current playlist
+ */
+function get_playlist_position() {
+  now_time = new Date();
   time_passed = now_time - origin_time;
+  playlist_position = time_passed % playlist_duration;
+  return playlist_position;
+}
 
-  // fetch the playlist
-  my_player.catalog.getPlaylist(playlist_id, function(error, playlist){
-    if (error) {
-      console.log('There was an error retrieving the playlist: ', error)
+/**
+ * @Desc:  gets the index of the video that corresponds to the current position in the playlist
+ */
+function get_current_video_index() {
+  var i,
+    i_max = video_ranges.length;
+    for (i = 0; i &lt; i_max; i++) {
+      if (playlist_position > video_ranges[i] && playlist_position &lt; video_ranges[i + 1]) {
+        current_video_index = i;
+        return;
+      }
     }
-    
-    // load the playlist into the player 
-    // the -1 argument prevents the first video from being loaded into the player
-    my_player.catalog.load(playlist, -1);
+}
 
-    // turn on auto-advance
-    my_player.playlist.autoadvance(0);
+/**
+ * @Desc:  gets the start position for the video to match the start position in the playlist
+ *
+ */
+function get_current_video_position() {
+  current_video_position = playlist_position - video_ranges[current_video_index];
+}
 
-    // turn on replay
-    my_player.playlist.repeat(true);
 
-    // get the video data from the playlist
-    video_data = my_player.playlist();
-    
-    // get the duration of the playlist and the video ranges
-    get_playlist_duration();
-    
-    // get the start position in the playlist
-    get_playlist_position();
-    
-    // get the index of the video where the start position is
-    get_current_video_index();
-    
-    // get start position in the video
-    get_current_video_position();
-    
-    // set the start video as the current one
-    my_player.playlist.currentItem(current_video_index);
+// fetch the playlist
+my_player.catalog.getPlaylist(playlist_id, function(error, playlist){
+  if (error) {
+    console.log('There was an error retrieving the playlist: ', error);
+  }
+  
+  // load the playlist into the player 
+  // the -1 argument prevents the first video from being loaded into the player
+  my_player.catalog.load(playlist, -1);
 
+  // turn on auto-advance
+  my_player.playlist.autoadvance(0);
+
+  // turn on replay
+  my_player.playlist.repeat(true);
+
+  // get the video data from the playlist
+  video_data = my_player.playlist();
+  
+  // get the duration of the playlist and the video ranges
+  get_playlist_duration();
+  console.log(logger, 'playlist duration: ' + playlist_duration);
+  
+  
+  
+  // get the start position in the playlist
+  get_playlist_position();
+  console.log(logger, 'playlist position: ' + playlist_position);
+  
+  // get the index of the video where the start position is
+  get_current_video_index();
+  console.log(logger, 'video index: ' + current_video_index);
+  console.log(logger, 'video: ' + video_data[current_video_index].name);
+  
+  
+  // get start position in the video
+  get_current_video_position();
+  console.log(logger, 'video position:' + current_video_position);
+  
+  
+  // set the start video as the current one
+  my_player.playlist.currentItem(current_video_index);
+
+  // wait for video to load
+  // my_player.on('loadedmetadata', function() {
     // seek to the start point
-    my_player.currentTime(current_video_position / 1000);
-
+    my_player.currentTime(current_video_position);
+    console.log(logger, 'set position to ' + current_video_position);
+    
     // start the video
     my_player.play();
-  })
-
-    /**
-   * @Desc:  gets the duration of the whole playlist and array of video start times
-   * @param {array} video_data array of video data for the playlist videos
-   */
-  function get_playlist_duration() {
-    var i,
-      i_max = video_data.length;
-    
-    for (i = 0; i &lt; i_max; i++) {
-      video_ranges[i] = playlist_duration;
-      playlist_duration = playlist_duration + video_data[i].duration;
-    }
-  }
-
-  /** 
-   * @Desc:  gets time position in current playlist
-   */
-  function get_playlist_position() {
-    playlist_position = time_passed % playlist_duration;
-    return playlist_position;
-  }
-  
-  /**
-   * @Desc:  gets the index of the video that corresponds to the current position in the playlist
-   */
-  function get_current_video_index() {
-    var i,
-      i_max = video_ranges.length;
-      for (i = 0; i &lt; i_max; i++) {
-        if (playlist_position > video_ranges[i] && playlist_position &lt; video_ranges[i + 1]) {
-          current_video_index = i;
-          return;
-        }
-      }
-  }
-  
-  /**
-   * @Desc:  gets the start position for the video to match the start position in the playlist
-   *
-   */
-  function get_current_video_position() {
-    current_video_position = playlist_position - video_ranges[current_video_index];
-  }
-
+  // }
+});
 });</code></pre>
 </section>
-<script>
-  videojs.getPlayer("sim_live").ready(function() {  
-    var my_player = this,
-    playlist_id = '1664503635149515112', // replace with your playlist id
-    video_data,
-    video_ranges = [],
-    playlist_duration = 0,
-    playlist_position,
-    current_video_index,
-    current_video_position,
-    origin_time = new Date(2020-01-01),
-    now_time,
-    time_passed,
-    logger = document.getElementById('logger');
-
-  function log_it(element, message) {
-    element.innerHTML += message + '<br>';
-  }
-  /**
-   * @Desc:  gets the duration of the whole playlist and array of video start times
-   * @param {array} video_data array of video data for the playlist videos
-   */
-  function get_playlist_duration() {
-    var i,
-      i_max = video_data.length;
-    
-    for (i = 0; i < i_max; i++) {
-      video_ranges[i] = playlist_duration;
-      playlist_duration = playlist_duration + video_data[i].duration;
-    }
-  }
-
-  /** 
-   * @Desc:  gets time position in current playlist
-   */
-  function get_playlist_position() {
-    now_time = new Date();
-    time_passed = now_time - origin_time;
-    playlist_position = time_passed % playlist_duration;
-    return playlist_position;
-  }
-  
-  /**
-   * @Desc:  gets the index of the video that corresponds to the current position in the playlist
-   */
-  function get_current_video_index() {
-    var i,
-      i_max = video_ranges.length;
-      for (i = 0; i < i_max; i++) {
-        if (playlist_position > video_ranges[i] && playlist_position < video_ranges[i + 1]) {
-          current_video_index = i;
-          return;
-        }
-      }
-  }
-  
-  /**
-   * @Desc:  gets the start position for the video to match the start position in the playlist
-   *
-   */
-  function get_current_video_position() {
-    current_video_position = playlist_position - video_ranges[current_video_index];
-  }
-
-
-  // fetch the playlist
-  my_player.catalog.getPlaylist(playlist_id, function(error, playlist){
-    if (error) {
-      console.log('There was an error retrieving the playlist: ', error);
-    }
-    
-    // load the playlist into the player 
-    // the -1 argument prevents the first video from being loaded into the player
-    my_player.catalog.load(playlist, -1);
-
-    // turn on auto-advance
-    my_player.playlist.autoadvance(0);
-
-    // turn on replay
-    my_player.playlist.repeat(true);
-
-    // get the video data from the playlist
-    video_data = my_player.playlist();
-    
-    // get the duration of the playlist and the video ranges
-    get_playlist_duration();
-    log_it(logger, 'playlist duration: ' + playlist_duration);
-    
-    
-    
-    // get the start position in the playlist
-    get_playlist_position();
-    log_it(logger, 'playlist position: ' + playlist_position);
-    
-    // get the index of the video where the start position is
-    get_current_video_index();
-    log_it(logger, 'video: ' + video_data[current_video_index].name);
-    
-    
-    // get start position in the video
-    get_current_video_position();
-    log_it(logger, 'video position:' + current_video_position);
-    
-    
-    // set the start video as the current one
-    my_player.playlist.currentItem(current_video_index);
-
-    // wait for video to load
-    // my_player.on('loadedmetadata', function() {
-      // seek to the start point
-      my_player.currentTime(current_video_position);
-      
-      // start the video
-      my_player.play();
-    // }
-  })
-});
-
-</script>
