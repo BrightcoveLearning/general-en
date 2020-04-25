@@ -12,9 +12,6 @@ videojs.registerPlugin('simulated_live', function() {
   time_passed,
   logger = document.getElementById('logger');
 
-function log_it(element, message) {
-  element.innerHTML += message + '<br>';
-}
 /**
  * @Desc:  gets the duration of the whole playlist and array of video start times
  * @param {array} video_data array of video data for the playlist videos
@@ -83,24 +80,24 @@ my_player.catalog.getPlaylist(playlist_id, function(error, playlist){
   
   // get the duration of the playlist and the video ranges
   get_playlist_duration();
-  log_it(logger, 'playlist duration: ' + playlist_duration);
-  log_it(logger, 'video start points: ' + video_ranges);
+  console.log(logger, 'playlist duration: ' + playlist_duration);
+  console.log(logger, 'video start points: ' + video_ranges);
   
   
   
   // get the start position in the playlist
   get_playlist_position();
-  log_it(logger, 'playlist position: ' + playlist_position);
+  console.log(logger, 'playlist position: ' + playlist_position);
   
   // get the index of the video where the start position is
   get_current_video_index();
-  log_it(logger, 'video index: ' + current_video_index);
-  log_it(logger, 'video: ' + video_data[current_video_index].name);
+  console.log(logger, 'video index: ' + current_video_index);
+  console.log(logger, 'video: ' + video_data[current_video_index].name);
   
   
   // get start position in the video
   get_current_video_position();
-  log_it(logger, 'video position:' + current_video_position);
+  console.log(logger, 'video position:' + current_video_position);
   
   
   // set the start video as the current one
@@ -110,7 +107,7 @@ my_player.catalog.getPlaylist(playlist_id, function(error, playlist){
   // my_player.on('loadedmetadata', function() {
     // seek to the start point
     my_player.currentTime(current_video_position);
-    log_it(logger, 'set position to ' + current_video_position);
+    console.log(logger, 'set position to ' + current_video_position);
     
     // start the video
     my_player.play();
