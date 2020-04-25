@@ -98,7 +98,7 @@ videojs.registerPlugin('simulated_live', function() {  var my_player = this,
       // start the video
       my_player.play();
     }
-
+    )
   })
 
 
