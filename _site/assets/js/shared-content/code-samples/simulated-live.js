@@ -31,6 +31,8 @@ function get_playlist_duration() {
  */
 function get_playlist_position() {
   now_time = new Date();
+  console.log('now', now_time);
+  
   time_passed = now_time - origin_time;
   playlist_position = time_passed % playlist_duration;
   return playlist_position;
