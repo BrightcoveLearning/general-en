@@ -135,17 +135,17 @@
   },
 
   {
-      "newURL": "https://general.support.brightcove.com/ooyala/",
-      "oldURL": "/index"
-  },
-
-  {
-      "newURL": "https://general.support.brightcove.com/developer/",
-      "oldURL": "/index"
-  },
-
-  {
       "newURL": "https://general.support.brightcove.com/general/",
+      "oldURL": "/index"
+  },
+
+  {
+      "newURL": "https://general.support.brightcove.com/",
+      "oldURL": "/index"
+  },
+
+  {
+      "newURL": "https://general.support.brightcove.com/ooyala/",
       "oldURL": "/index"
   },
 
@@ -155,7 +155,7 @@
   },
 
   {
-      "newURL": "https://general.support.brightcove.com/",
+      "newURL": "https://general.support.brightcove.com/developer/",
       "oldURL": "/index"
   },
 
@@ -332,6 +332,16 @@
   {
       "newURL": "https://general.support.brightcove.com/shared-content/register-training.html",
       "oldURL": "/register-training"
+  },
+
+  {
+      "newURL": "https://general.support.brightcove.com/search-test.html",
+      "oldURL": "/search-test"
+  },
+
+  {
+      "newURL": "https://general.support.brightcove.com/search.html",
+      "oldURL": "/search"
   },
 
   {
