@@ -31,7 +31,7 @@
       url: '/developer/concepts-javascript-module-design-pattern.html'
     - name: 'Setting up cURL'
       url: '/developer/concepts-set-curl.html'
-    - name: 'CUsing JavaScript Promises'
+    - name: 'Using JavaScript Promises'
       url: '/developer/concepts-using-javascript-promises.html'
     - name: 'Creating a JSON Web Token (JWT)'
       url: '/developer/create-jwt.html'
