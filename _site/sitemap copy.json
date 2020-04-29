@@ -135,12 +135,7 @@
   },
 
   {
-      "newURL": "https://general.support.brightcove.com/general/",
-      "oldURL": "/index"
-  },
-
-  {
-      "newURL": "https://general.support.brightcove.com/",
+      "newURL": "https://general.support.brightcove.com/utilities/",
       "oldURL": "/index"
   },
 
@@ -150,12 +145,22 @@
   },
 
   {
-      "newURL": "https://general.support.brightcove.com/utilities/",
+      "newURL": "https://general.support.brightcove.com/developer/",
       "oldURL": "/index"
   },
 
   {
-      "newURL": "https://general.support.brightcove.com/developer/",
+      "newURL": "https://general.support.brightcove.com/support/",
+      "oldURL": "/index"
+  },
+
+  {
+      "newURL": "https://general.support.brightcove.com/general/",
+      "oldURL": "/index"
+  },
+
+  {
+      "newURL": "https://general.support.brightcove.com/",
       "oldURL": "/index"
   },
 
@@ -285,6 +290,11 @@
   },
 
   {
+      "newURL": "https://general.support.brightcove.com/support/opening-case-with-brightcove-support.html",
+      "oldURL": "/opening-case-with-brightcove-support"
+  },
+
+  {
       "newURL": "https://general.support.brightcove.com/shared-content/support/opening-case-with-brightcove-support.html",
       "oldURL": "/opening-case-with-brightcove-support"
   },
@@ -386,6 +396,11 @@
 
   {
       "newURL": "https://general.support.brightcove.com/shared-content/support/viewing-brightcove-system-status-page.html",
+      "oldURL": "/viewing-brightcove-system-status-page"
+  },
+
+  {
+      "newURL": "https://general.support.brightcove.com/support/viewing-brightcove-system-status-page.html",
       "oldURL": "/viewing-brightcove-system-status-page"
   },
 ]
