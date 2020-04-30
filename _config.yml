@@ -28,6 +28,7 @@ description: |- # this means to ignore newlines until "baseurl:"
   This site contains general information docs that are referenced from our other documentation sites.
 # baseurl: "" # the subpath of your site, e.g. /blog
 site_url: "https://general.support.brightcove.com"
+site_domain: "general.support.brightcove.com"
 
 # Build settings
 # theme: minima
@@ -41,10 +42,7 @@ product_color: rgb(239, 108, 42)
 product_icon: "logo-bc-video-cloud.svg"
 search_id: "017969773216783359937:gqomuefz6aq"
 feedbackify_id: "15079"
-bing_custom_config_id: "78b8bc4d-c158-4b2a-808b-85e58ee33945"
-talla_appID: "00c26be3-4421-41e6-bb00-1dee68740f67"
-talla_token: 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpYXQiOjE1ODI4MDQzNDF9.RYf2x65FXvdDURzM h00i76KfUrYlsDLsw6mVuEv6zmE'
-talla_knowledgegroup: '3811a860-2747-406d-a4a4-0d095d775a2d'
+sajari-tab: 'General'
 defaults:
   -
     scope:

@@ -140,22 +140,22 @@
   },
 
   {
-      "newURL": "https://general.support.brightcove.com/ooyala/",
-      "oldURL": "/index"
-  },
-
-  {
       "newURL": "https://general.support.brightcove.com/developer/",
       "oldURL": "/index"
   },
 
   {
-      "newURL": "https://general.support.brightcove.com/support/",
+      "newURL": "https://general.support.brightcove.com/general/",
       "oldURL": "/index"
   },
 
   {
-      "newURL": "https://general.support.brightcove.com/general/",
+      "newURL": "https://general.support.brightcove.com/ooyala/",
+      "oldURL": "/index"
+  },
+
+  {
+      "newURL": "https://general.support.brightcove.com/support/",
       "oldURL": "/index"
   },
 
@@ -395,12 +395,12 @@
   },
 
   {
-      "newURL": "https://general.support.brightcove.com/shared-content/support/viewing-brightcove-system-status-page.html",
+      "newURL": "https://general.support.brightcove.com/support/viewing-brightcove-system-status-page.html",
       "oldURL": "/viewing-brightcove-system-status-page"
   },
 
   {
-      "newURL": "https://general.support.brightcove.com/support/viewing-brightcove-system-status-page.html",
+      "newURL": "https://general.support.brightcove.com/shared-content/support/viewing-brightcove-system-status-page.html",
       "oldURL": "/viewing-brightcove-system-status-page"
   },
 ]
