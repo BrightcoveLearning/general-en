@@ -8,6 +8,8 @@
   docs:
     - name: 'Brightcove Product Overview'
       url: '/general/brightcove-product-overview.html'
+    - name: 'Brightcove Continuum Overview'
+      url: '/general/brightcove-continuum-overview.html'
     - name: 'Open Source Projects'
       url: '/general/brightcove-open-source-projects.html'
     - name: 'Known Issues'
