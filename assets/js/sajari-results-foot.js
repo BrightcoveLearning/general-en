@@ -17,6 +17,6 @@ layout: null
       maxSuggestions: 5, // Maximum number of suggestions to show.
       results: {"showImages": false }, // Configure the results.
       values: {"q.override": true, "resultsPerPage": "10","q": getUrlParam("q")}, // Set default values.
-      tabFilters: {defaultTab:"{{ site.sajari-tab }}",tabs:[{title:"{{ site.sajari-tab }}",filter:"domain='{{ site.site_domain }}'"}]}, // User selectable filters
+      tabFilters: {defaultTab:"On this site",tabs:[{title:"On this site",filter:"domain='{{ site.site_domain }}'"}, {title:"All Brightcove docs",filter:""}]}, // User selectable filters
       styling: { theme: { colors: { brand: { primary: "#333" }}}}
   });

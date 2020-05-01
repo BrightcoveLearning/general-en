@@ -13,6 +13,6 @@
       maxSuggestions: 5, // Maximum number of suggestions to show.
       results: {"showImages": false }, // Configure the results.
       values: {"q.override": true, "resultsPerPage": "10","q": getUrlParam("q")}, // Set default values.
-      tabFilters: {defaultTab:"General",tabs:[{title:"General",filter:"domain='general.support.brightcove.com'"}]}, // User selectable filters
+      tabFilters: {defaultTab:"On this site",tabs:[{title:"On this site",filter:"domain='general.support.brightcove.com'"}, {title:"All Brightcove docs",filter:""}]}, // User selectable filters
       styling: { theme: { colors: { brand: { primary: "#333" }}}}
   });
