@@ -1,7 +1,7 @@
 ---
 title: 'Utilities' 
 parent: Home
-icon: '<i class=">fal fa-tools"></i>'
+icon: '<i class="fal fa-tools"></i>'
 description: This section provides some online utilities that may be useful for Developers working with Brightcove products.
 ---
 
@@ -16,14 +16,10 @@ description: This section provides some online utilities that may be useful for 
   }
   .card-wrapper {
   justify-content: start;
-}
-.bcls-card h2 {
-  font-size: 1rem;
-}
-.bcls-card ul {
-  font-size: small;
-  margin-left: -3em;
-}
+  }
+  .bcls-card ul li {
+    font-size: small;
+  }
 </style>
 
 <article class="bcls-article">
@@ -32,19 +28,23 @@ description: This section provides some online utilities that may be useful for 
   <section class="card-wrapper">
     <section class="bcls-card">
       <div class="card-content">
-        <h2 id="Topics_in_this_section">Topics in {{ page.title }}</h2>
+        <h2 id="Topics_in_this_section">Topics in this section</h2>
         <ul>
         {% for item in site.data.navigation %}
-          {% if item.name == page.parent %}
-            {% for entry in item.docs %}
-              {% if entry.name == page.title %}
-                {% for doc in entry.docs %}
-                  <li><a href="{{ doc.url }}">{{ doc.name }}</a></li>
-                {% endfor %}
-              {% endif %}
-            {% endfor %}
-          {% endif %}
-        {% endfor %}
+        {% if item.name == page.title %}
+              {% for entry in item.docs %}
+                <li><a href="{{ entry.url }}">{{ entry.name }}</a>
+                {% if entry.docs %}
+                  <ul>
+                    {% for subentry in entry.docs %}
+                      <li><a href="{{ subentry.url }}">{{ subentry.name }}</a></li>
+                    {% endfor %}
+                  </ul>
+                {% endif %}
+                </li>
+              {% endfor %}
+        {% endif %}
+      {% endfor %}
       </div>
     </section>
   </section>

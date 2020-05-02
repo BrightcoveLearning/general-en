@@ -87,7 +87,7 @@
 - section: 
   name: 'Utilities'
   url: '/utilities/'
-  icon: '<i class=">fal fa-tools"></i>'
+  icon: '<i class="fal fa-tools"></i>'
   docs:
     - name: 'Base 64 Encoding Tool'
       url: '/utilities/base-64-encoding-tool.html'
