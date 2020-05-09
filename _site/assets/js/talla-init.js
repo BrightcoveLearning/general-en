@@ -1,7 +1,7 @@
-var appID = ""; 
+var appID = "00c26be3-4421-41e6-bb00-1dee68740f67"; 
 // token for anonymous profile
 var token =
-'';
+'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpYXQiOjE1ODI4MDQzNDF9.RYf2x65FXvdDURzM h00i76KfUrYlsDLsw6mVuEv6zmE';
 // -----
   Talla.config = Talla.init(
     appID,
@@ -10,7 +10,7 @@ var token =
     Talla.OptionAnonymous(true),
     Talla.OptionThemeColor('rgb(239, 108, 42)'),
     Talla.OptionDisplayName('Search Brightcove Docs'),
-    Talla.OptionKnowledgeGroups(['']),
+    Talla.OptionKnowledgeGroups(['3811a860-2747-406d-a4a4-0d095d775a2d']),
     Talla.OptionWideBeacon(true),
     Talla.OptionBeaconCTA("Have a question?"),
     Talla.OptionOpenIcon('https://learning-services-media.brightcove.com/doc-assets/site-assets/images/site/search.png'),
