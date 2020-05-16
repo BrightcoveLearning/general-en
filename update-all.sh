@@ -137,7 +137,8 @@ git pull
 sudo bundle update
 jekyll build
 git add --all
-/zencoder-support
+echo rebuilt studio
+cd ../zencoder-support
 git pull
 sudo bundle update
 jekyll build
