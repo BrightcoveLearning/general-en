@@ -26,6 +26,11 @@ cd ../docs-cms-connectors
 git pull
 
 echo 'pulled docs-cms-connectors'
+# docs-support-home
+cd ../docs-support-home
+git pull
+
+echo 'pulled docs-support-home'
 # engage
 cd ../engage
 git pull
@@ -36,6 +41,11 @@ cd ../gallery
 git pull
 
 echo 'pulled engage'
+# jekyll-template
+cd ../jekyll-template
+git pull
+
+echo 'pulled jekyll-template'
 # live
 cd ../live
 git pull
@@ -71,4 +81,14 @@ cd ../zencoder-support
 git pull
 
 echo 'pulled zencoder-support'
+# BCL-developer-docs
+cd ../BCL-developer-docs
+git pull
+
+echo 'pulled BCL-developer-docs'
+# BCL-Doc-Assets
+cd ../BCL-Doc-Assets
+git pull
+
+echo 'pulled BCL-Doc-Assets'
 echo 'all finished!'

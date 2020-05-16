@@ -26,6 +26,11 @@ cd ../docs-cms-connectors
 git pull
 sudo bundle update
 echo 'bundle updated docs-cms-connectors'
+# docs-support-home
+cd ../docs-support-home
+git pull
+sudo bundle update
+echo 'bundle updated docs-support-home'
 # engage
 cd ../engage
 git pull
@@ -35,7 +40,12 @@ echo 'bundle updated engage'
 cd ../gallery
 git pull
 sudo bundle update
-echo 'bundle updated engage'
+echo 'bundle updated gallery'
+# jekyll-template
+cd ../jekyll-template
+git pull
+sudo bundle update
+echo 'bundle updated jekyll-template'
 # live
 cd ../live
 git pull
