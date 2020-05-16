@@ -50,6 +50,15 @@ git add --all
 git commit --all -m general-update
 git push
 echo 'rebuilt docs-cms-connectors'
+# docs-support-home
+cd ../docs-support-home
+git pull
+sudo bundle update
+jekyll build
+git add --all
+git commit --all -m general-update
+git push
+echo 'rebuilt docs-support-home'
 # engage
 cd ../engage
 git pull
@@ -68,6 +77,15 @@ git add --all
 git commit --all -m general-update
 git push
 echo 'rebuilt engage'
+# jekyll-template
+cd ../jekyll-template
+git pull
+sudo bundle update
+# jekyll build
+git add --all
+git commit --all -m general-update
+git push
+echo 'rebuilt jekyll-template'
 # live
 cd ../live
 git pull
