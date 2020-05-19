@@ -80,10 +80,20 @@ echo 'pulled studio'
 cd ../zencoder-support
 git pull
 
-echo 'pulled zencoder-support'
+# staging-site
+cd ../staging-site
+git pull
+echo 'pulled staging site'
+
+# test-site
+cd ../test-site
+git pull
+echo 'pulled test site'
+
 # BCL-developer-docs
 cd ../BCL-developer-docs
 git pull
+echo 'pulled zencoder-support'
 
 echo 'pulled BCL-developer-docs'
 # BCL-Doc-Assets

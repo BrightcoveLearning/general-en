@@ -146,4 +146,20 @@ git add --all
 git commit --all -m general-update
 git push
 echo 'rebuilt zencoder-support'
+cd ../staging-site
+git pull
+sudo bundle update
+jekyll build
+git add --all
+git commit --all -m general-update
+git push
+echo 'rebuilt staging-site'
+cd ../test-site
+git pull
+sudo bundle update
+jekyll build
+git add --all
+git commit --all -m general-update
+git push
+echo 'rebuilt test-site'
 echo 'all finished!'
