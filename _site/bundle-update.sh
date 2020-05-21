@@ -81,4 +81,14 @@ cd ../zencoder-support
 git pull
 sudo bundle update
 echo 'bundle updated zencoder-support'
+# test site
+cd ../test-site
+git pull
+sudo bundle update
+echo 'bundle updated test-site'
+# stagine site
+cd ../staging-site
+git pull
+sudo bundle update
+echo 'bundle updated staging-site'
 echo 'all finished!'
