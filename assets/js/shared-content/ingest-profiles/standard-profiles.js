@@ -20,7 +20,9 @@ var BCLSprofiles = (function(window, document) {
         frag = document.createDocumentFragment(),
         parent,
         grandparent;
-  
+      
+      console.log('in_page_nav', in_page_nav);
+      
           // in case this gets run multiple times by mistake, clear existing items
           // in_page_nav.innerHTML = '';
           // add new items
