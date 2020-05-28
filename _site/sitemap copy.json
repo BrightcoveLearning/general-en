@@ -135,12 +135,12 @@
   },
 
   {
-      "newURL": "https://general.support.brightcove.com/ooyala/",
+      "newURL": "https://general.support.brightcove.com/support/",
       "oldURL": "/index"
   },
 
   {
-      "newURL": "https://general.support.brightcove.com/",
+      "newURL": "https://general.support.brightcove.com/ooyala/",
       "oldURL": "/index"
   },
 
@@ -160,7 +160,7 @@
   },
 
   {
-      "newURL": "https://general.support.brightcove.com/support/",
+      "newURL": "https://general.support.brightcove.com/",
       "oldURL": "/index"
   },
 
@@ -210,12 +210,12 @@
   },
 
   {
-      "newURL": "https://general.support.brightcove.com/shared-content/online-training-courses.html",
+      "newURL": "https://general.support.brightcove.com/support/online-training-courses.html",
       "oldURL": "/online-training-courses"
   },
 
   {
-      "newURL": "https://general.support.brightcove.com/support/online-training-courses.html",
+      "newURL": "https://general.support.brightcove.com/shared-content/online-training-courses.html",
       "oldURL": "/online-training-courses"
   },
 
@@ -387,6 +387,11 @@
   {
       "newURL": "https://general.support.brightcove.com/utilities/string-encoder.html",
       "oldURL": "/string-encoder"
+  },
+
+  {
+      "newURL": "https://general.support.brightcove.com/ooyala/trending-now-report-reference.html",
+      "oldURL": "/trending-now-report-reference"
   },
 
   {
