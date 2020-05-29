@@ -135,7 +135,12 @@
   },
 
   {
-      "newURL": "https://general.support.brightcove.com/support/",
+      "newURL": "https://general.support.brightcove.com/index-staging.html",
+      "oldURL": "/index-staging"
+  },
+
+  {
+      "newURL": "https://general.support.brightcove.com/developer/",
       "oldURL": "/index"
   },
 
@@ -145,17 +150,17 @@
   },
 
   {
-      "newURL": "https://general.support.brightcove.com/utilities/",
-      "oldURL": "/index"
-  },
-
-  {
-      "newURL": "https://general.support.brightcove.com/developer/",
+      "newURL": "https://general.support.brightcove.com/support/",
       "oldURL": "/index"
   },
 
   {
       "newURL": "https://general.support.brightcove.com/general/",
+      "oldURL": "/index"
+  },
+
+  {
+      "newURL": "https://general.support.brightcove.com/utilities/",
       "oldURL": "/index"
   },
 
@@ -210,12 +215,12 @@
   },
 
   {
-      "newURL": "https://general.support.brightcove.com/support/online-training-courses.html",
+      "newURL": "https://general.support.brightcove.com/shared-content/online-training-courses.html",
       "oldURL": "/online-training-courses"
   },
 
   {
-      "newURL": "https://general.support.brightcove.com/shared-content/online-training-courses.html",
+      "newURL": "https://general.support.brightcove.com/support/online-training-courses.html",
       "oldURL": "/online-training-courses"
   },
 
