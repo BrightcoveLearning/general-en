@@ -140,17 +140,12 @@
   },
 
   {
+      "newURL": "https://general.support.brightcove.com/",
+      "oldURL": "/index"
+  },
+
+  {
       "newURL": "https://general.support.brightcove.com/developer/",
-      "oldURL": "/index"
-  },
-
-  {
-      "newURL": "https://general.support.brightcove.com/ooyala/",
-      "oldURL": "/index"
-  },
-
-  {
-      "newURL": "https://general.support.brightcove.com/support/",
       "oldURL": "/index"
   },
 
@@ -165,7 +160,17 @@
   },
 
   {
-      "newURL": "https://general.support.brightcove.com/",
+      "newURL": "https://general.support.brightcove.com/training/",
+      "oldURL": "/index"
+  },
+
+  {
+      "newURL": "https://general.support.brightcove.com/ooyala/",
+      "oldURL": "/index"
+  },
+
+  {
+      "newURL": "https://general.support.brightcove.com/support/",
       "oldURL": "/index"
   },
 
@@ -216,6 +221,11 @@
 
   {
       "newURL": "https://general.support.brightcove.com/shared-content/online-training-courses.html",
+      "oldURL": "/online-training-courses"
+  },
+
+  {
+      "newURL": "https://general.support.brightcove.com/training/online-training-courses.html",
       "oldURL": "/online-training-courses"
   },
 
@@ -345,6 +355,11 @@
   },
 
   {
+      "newURL": "https://general.support.brightcove.com/training/register-training.html",
+      "oldURL": "/register-training"
+  },
+
+  {
       "newURL": "https://general.support.brightcove.com/shared-content/register-training.html",
       "oldURL": "/register-training"
   },
@@ -395,6 +410,21 @@
   },
 
   {
+      "newURL": "https://general.support.brightcove.com/training/training-demand-introduction-video-cloud-analytics.html",
+      "oldURL": "/training-demand-introduction-video-cloud-analytics"
+  },
+
+  {
+      "newURL": "https://general.support.brightcove.com/training/training-demand-introduction-video-cloud.html",
+      "oldURL": "/training-demand-introduction-video-cloud"
+  },
+
+  {
+      "newURL": "https://general.support.brightcove.com/training/training-demand-video-cloud-basics.html",
+      "oldURL": "/training-demand-video-cloud-basics"
+  },
+
+  {
       "newURL": "https://general.support.brightcove.com/ooyala/trending-now-report-reference.html",
       "oldURL": "/trending-now-report-reference"
   },
@@ -410,12 +440,17 @@
   },
 
   {
-      "newURL": "https://general.support.brightcove.com/support/viewing-brightcove-system-status-page.html",
-      "oldURL": "/viewing-brightcove-system-status-page"
+      "newURL": "https://general.support.brightcove.com/training/video-cloud-studio-training-videos.html",
+      "oldURL": "/video-cloud-studio-training-videos"
   },
 
   {
       "newURL": "https://general.support.brightcove.com/shared-content/support/viewing-brightcove-system-status-page.html",
+      "oldURL": "/viewing-brightcove-system-status-page"
+  },
+
+  {
+      "newURL": "https://general.support.brightcove.com/support/viewing-brightcove-system-status-page.html",
       "oldURL": "/viewing-brightcove-system-status-page"
   },
 ]

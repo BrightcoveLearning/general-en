@@ -415,6 +415,74 @@
       
     
       <url>
+        <loc>https://general.support.brightcove.com/training/</loc>
+        <lastmod>2020-06-01</lastmod>
+        <changefreq>daily</changefreq>
+        <priority>0.5</priority>
+      </url>
+      
+        <url>
+          
+            <loc>https://general.support.brightcove.com/training/online-training-courses.html</loc>
+          
+            <lastmod>2020-06-01</lastmod>
+            <changefreq>daily</changefreq>
+            <priority>0.5</priority>
+        </url>
+        
+      
+        <url>
+          
+            <loc>https://general.support.brightcove.com/training/register-training.html</loc>
+          
+            <lastmod>2020-06-01</lastmod>
+            <changefreq>daily</changefreq>
+            <priority>0.5</priority>
+        </url>
+        
+      
+        <url>
+          
+            <loc>https://general.support.brightcove.com/training/training-demand-introduction-video-cloud.html</loc>
+          
+            <lastmod>2020-06-01</lastmod>
+            <changefreq>daily</changefreq>
+            <priority>0.5</priority>
+        </url>
+        
+      
+        <url>
+          
+            <loc>https://general.support.brightcove.com/training/training-demand-introduction-video-cloud-analytics.html</loc>
+          
+            <lastmod>2020-06-01</lastmod>
+            <changefreq>daily</changefreq>
+            <priority>0.5</priority>
+        </url>
+        
+      
+        <url>
+          
+            <loc>https://general.support.brightcove.com/training/training-demand-video-cloud-basics.html</loc>
+          
+            <lastmod>2020-06-01</lastmod>
+            <changefreq>daily</changefreq>
+            <priority>0.5</priority>
+        </url>
+        
+      
+        <url>
+          
+            <loc>https://general.support.brightcove.com/training/video-cloud-studio-training-videos.html</loc>
+          
+            <lastmod>2020-06-01</lastmod>
+            <changefreq>daily</changefreq>
+            <priority>0.5</priority>
+        </url>
+        
+      
+    
+      <url>
         <loc>https://general.support.brightcove.com/support/</loc>
         <lastmod>2020-06-01</lastmod>
         <changefreq>daily</changefreq>
