@@ -25,6 +25,11 @@
   },
 
   {
+      "newURL": "https://general.support.brightcove.com/support/brightcove-answer.html",
+      "oldURL": "/brightcove-answer"
+  },
+
+  {
       "newURL": "https://general.support.brightcove.com/general/brightcove-continuum-overview.html",
       "oldURL": "/brightcove-continuum-overview"
   },
@@ -225,12 +230,12 @@
   },
 
   {
-      "newURL": "https://general.support.brightcove.com/support/online-training-courses.html",
+      "newURL": "https://general.support.brightcove.com/training/online-training-courses.html",
       "oldURL": "/online-training-courses"
   },
 
   {
-      "newURL": "https://general.support.brightcove.com/training/online-training-courses.html",
+      "newURL": "https://general.support.brightcove.com/support/online-training-courses.html",
       "oldURL": "/online-training-courses"
   },
 
