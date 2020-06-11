@@ -1,6 +1,6 @@
 git pull
 sudo bundle update
-jekyll build
+bundle exec jekyll build
 git add --all
 git commit --all -m general-update
 git push
@@ -9,7 +9,7 @@ echo 'rebuilt general content'
 cd ../apis
 git pull
 sudo bundle update
-jekyll build
+bundle exec jekyll build
 git add --all
 git commit --all -m general-update
 git push
@@ -18,7 +18,7 @@ echo 'rebuilt apis'
 cd ../audience
 git pull
 sudo bundle update
-jekyll build
+bundle exec jekyll build
 git add --all
 git commit --all -m general-update
 git push
@@ -27,7 +27,7 @@ echo 'rebuilt audience'
 cd ../beacon-support
 git pull
 sudo bundle update
-jekyll build
+bundle exec jekyll build
 git add --all
 git commit --all -m general-update
 git push
@@ -36,7 +36,7 @@ echo 'rebuilt beacon'
 git pull
 cd ../campaign
 sudo bundle update
-jekyll build
+bundle exec jekyll build
 git add --all
 git commit --all -m general-update
 git push
@@ -45,7 +45,7 @@ echo 'rebuilt campaign'
 cd ../docs-cms-connectors
 git pull
 sudo bundle update
-jekyll build
+bundle exec jekyll build
 git add --all
 git commit --all -m general-update
 git push
@@ -54,7 +54,7 @@ echo 'rebuilt docs-cms-connectors'
 cd ../docs-support-home
 git pull
 sudo bundle update
-jekyll build
+bundle exec jekyll build
 git add --all
 git commit --all -m general-update
 git push
@@ -63,7 +63,7 @@ echo 'rebuilt docs-support-home'
 cd ../engage
 git pull
 sudo bundle update
-jekyll build
+bundle exec jekyll build
 git add --all
 git commit --all -m general-update
 git push
@@ -72,7 +72,7 @@ echo 'rebuilt engage'
 cd ../gallery
 git pull
 sudo bundle update
-jekyll build
+bundle exec jekyll build
 git add --all
 git commit --all -m general-update
 git push
@@ -81,7 +81,7 @@ echo 'rebuilt engage'
 cd ../jekyll-template
 git pull
 sudo bundle update
-# jekyll build
+# bundle exec jekyll build
 git add --all
 git commit --all -m general-update
 git push
@@ -90,7 +90,7 @@ echo 'rebuilt jekyll-template'
 cd ../live
 git pull
 sudo bundle update
-jekyll build
+bundle exec jekyll build
 git add --all
 git commit --all -m general-update
 git push
@@ -99,7 +99,7 @@ echo 'rebuilt live'
 cd ../player-dev
 git pull
 sudo bundle update
-jekyll build
+bundle exec jekyll build
 git add --all
 git commit --all -m general-update
 git push
@@ -108,7 +108,7 @@ echo 'rebuilt player-dev'
 cd ../sdks
 git pull
 sudo bundle update
-jekyll build
+bundle exec jekyll build
 git add --all
 git commit --all -m general-update
 git push
@@ -117,7 +117,7 @@ echo 'rebuilt sdks'
 cd ../social
 git pull
 sudo bundle update
-jekyll build
+bundle exec jekyll build
 git add --all
 git commit --all -m general-update
 git push
@@ -126,7 +126,7 @@ echo 'rebuilt social'
 cd ../ssai
 git pull
 sudo bundle update
-jekyll build
+bundle exec jekyll build
 git add --all
 git commit --all -m general-update
 git push
@@ -135,13 +135,13 @@ echo 'rebuilt ssai'
 cd ../studio
 git pull
 sudo bundle update
-jekyll build
+bundle exec jekyll build
 git add --all
 echo rebuilt studio
 cd ../zencoder-support
 git pull
 sudo bundle update
-jekyll build
+bundle exec jekyll build
 git add --all
 git commit --all -m general-update
 git push
@@ -149,7 +149,7 @@ echo 'rebuilt zencoder-support'
 cd ../staging-site
 git pull
 sudo bundle update
-jekyll build
+bundle exec jekyll build
 git add --all
 git commit --all -m general-update
 git push
@@ -157,7 +157,7 @@ echo 'rebuilt staging-site'
 cd ../test-site
 git pull
 sudo bundle update
-jekyll build
+bundle exec jekyll build
 git add --all
 git commit --all -m general-update
 git push
