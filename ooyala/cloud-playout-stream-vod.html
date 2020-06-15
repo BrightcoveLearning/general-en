@@ -1,0 +1,48 @@
+---
+title: Using Cloud Playout to Stream VOD Videos
+parent: Migrating from Ooyala
+---
+<h1>Using Cloud Playout to Stream VOD Videos</h1>
+<article class="bcls-article">
+  <summary>In this topic you will learn how to create a collection of VOD videos that can be streamed as a linear channel.</summary>
+  <section class="bcls-section">
+    <aside class="bcls-aside bcls-aside--information">Note: This feature is only enabled for previous Ooyala customers who have migrated to a Video Cloud account.</aside>
+    <p>The  Cloud Playout module enables broadcasters and media publishers to create a collection of  VOD videos and  Live events and then stream it as a linear channel and leverage all the features provided by Brightcove Live.</p>
+    <aside class="bcls-aside bcls-aside--information">Note: This feature is currently in Limited Availability. Contact your Brightcove Account Manager for more information.</aside>
+  </section>
+  <section class="bcls-section">
+    <h2 id="channel">Creating a new channel</h2>
+    <p>To create a new Cloud Playout channel, follow these steps. </p>
+    <ol class="bcls-tasklist-restart" style="--s:1">
+      <li>Login to Video Cloud Studio.</li>
+      <li>Click <strong>Cloud Playout</strong> in the navigation header. A list of all Cloud Playout channels that have been created will be displayed (if any).
+            <figure class="bcls-figure"><img class="bcls-image--no-border" alt="report switcher" src="/assets/images/ooyala/playout-channel-list.png" /></figure>
+      </li>
+        <li>Click <strong>Create New</strong>.</li>
+        <li>Enter the channel <strong>Identification</strong> details:        </li>
+        <ul>
+          <li><strong>Name</strong> - Name for the channel</li>
+          <li><strong>Description</strong> - Channel description</li>
+          <li><strong>Image URL</strong> - URL to an image file for the channel; meant to be a channel image that could be retrieved as part of the channel's metadata</li>
+        </ul>
+        <li>Enter the channel <strong>Schedule</strong> details.        </li>
+        <ul>
+          <li><strong>Loop Playout Content</strong> - If <strong>On</strong>, </li>
+          <li><strong>Enable Server Side Ad Insertion(SSAI)</strong> - </li>
+          <li><strong>Start Date/Time</strong> - </li>
+          <li><strong>End Date/Time</strong> - </li>
+        </ul>
+      <li>Enter the channel <strong>Destination</strong> details.        </li>
+        <ul>
+          <li><strong>Mobile &amp; Web</strong> - If checked, will optimize the display for mobile and web display</li>
+          <li><strong>Smart TV</strong> - If checked, will optimize the display for Smart TV display</li>
+          <li><strong>Output Region</strong> - </li>
+          <li><strong>RTMP</strong> - Select to output the stream to an RTMP URL and then enter the RTMP URL to use</li>
+          <li><strong>Brightcove Live Event</strong> - Select to output the stream to a Brightcove live event and then select a live event.</li>
+          <li><strong>S3 Bucket </strong>- Select to output to an Amazon S3 bucket. Enter the bucket details</li>
+        </ul>
+        <li></li>
+    </ol>
+<figure class="bcls-figure"><img class="bcls-image--no-border" alt="report switcher" src="/assets/images/ooyala/playout-new-channel.png" /></figure>
+  </section>
+</article>
