@@ -1,0 +1,61 @@
+---
+title: Kollective eCDN Integration
+parent: Home
+icon: '<i class="far fa-images"></i>'
+description: "Brightcove has created an integration to deliver Video On Demand (VOD) and Brightcove Live events to Brightcove Players using the Kollective eCDN. "
+layout: staging
+---
+<style>
+  h1 i.fal, h1 i.fab, h1 i.fas, h1 i.far {
+    font-size: 3rem;
+    color:{{site.product_color}};
+    margin-right: .5rem;
+  }
+  .card-icon i {
+    color: {{site.product_color}};
+  }
+  .card-wrapper {
+  justify-content: start;
+  }
+  .bcls-card ul li {
+    font-size: small;
+  }
+</style>
+
+<article class="bcls-article">
+  <h1>{{ page.icon }} {{ page.title }}</h1>
+    
+  <section class="card-wrapper">
+    {% for item in site.data.navigation %}
+      {% if item.name == page.title %}
+        {% for subsection in item.docs %}
+            <section class="bcls-card-small" onclick="window.location.href='{{subsection.url}}'">
+              <div class="card-content">
+                <h2>{{ subsection.name }}</h2>
+                <ul>
+                  {% for doc in subsection.docs %}
+                        <li><a href="{{ doc.url }}">{{ doc.name }}</a></li>
+                  {% endfor %}
+                </ul>
+              </div>
+            </section>
+        {% endfor %}
+      {% endif %}
+    {% endfor %}
+    <!-- remove sections below when this goes live -->
+    <section class="bcls-card-small" onclick="window.location.href='/playback-authorization/getting-started/index.html'">
+      <div class="card-content">
+        <h2>Guides</h2>
+        <ul>
+         <li>
+           <a href="https://player.support.brightcove.com/plugins/kollective-plugin.html">Kollective Plugin with Brightcove Player</a>
+          </li>
+         <li>
+           <a href="https://player.support.brightcove.com/plugins/kollective-app.html">Kollective Syndicator Application</a>
+          </li>
+        </ul>
+      </div>
+    </section>
+    <!-- end removal -->
+  </section>
+</article>

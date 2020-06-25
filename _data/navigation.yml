@@ -82,6 +82,8 @@
       url: '/ooyala/ooyala-video-cloud-migration-adding-brightcove-dns-server-testing.html'
     - name: 'Authentication for Brightcove API Requests'
       url: '/ooyala/ooyala-video-cloud-migration-authentication-brightcove-api-requests.html'
+    - name: 'Trending Now Report Reference'
+      url: '/ooyala/trending-now-report-reference.html'
     - name: 'Using Ooyala Players for Video Cloud Content'
       url: '/ooyala/using-ooyala-players-deliver-video-cloud-content.html'
 - section: 
