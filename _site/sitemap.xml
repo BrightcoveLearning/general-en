@@ -367,6 +367,16 @@
       
         <url>
           
+            <loc>https://general.support.brightcove.com/ooyala/trending-now-report-reference.html</loc>
+          
+            <lastmod>2020-06-25</lastmod>
+            <changefreq>daily</changefreq>
+            <priority>0.5</priority>
+        </url>
+        
+      
+        <url>
+          
             <loc>https://general.support.brightcove.com/ooyala/using-ooyala-players-deliver-video-cloud-content.html</loc>
           
             <lastmod>2020-06-25</lastmod>
