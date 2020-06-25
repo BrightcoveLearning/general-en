@@ -1,21 +1,56 @@
 ---
 title: Training
 parent: Home
+description: On-demand training courses and videos.
+icon: '<i class="far fa-chalkboard-teacher"></i>'
 ---
+<style>
+  h1 i.fal, h1 i.fab, h1 i.fas, h1 i.far {
+    font-size: 3rem;
+    color:{{site.product_color}};
+    margin-right: .5rem;
+  }
+  .card-icon i {
+    color: {{site.product_color}};
+  }
+  .card-wrapper {
+  justify-content: start;
+  min-width: 100%;
+  }
+
+  .bcls-card {
+    min-width: 100%;
+  }
+  .bcls-card ul li {
+    font-size: small;
+  }
+</style>
+
 <article class="bcls-article">
-  <h1><i class="far fa-chalkboard-teacher"></i>Training</h1>
-  <summary>On-demand training courses and videos.</summary>
-  <br/>
-  <a href="register-training.html">
-  <h4><i class="fas fa-arrow-circle-right"></i>&nbsp;&nbsp;&nbsp;Register for Instructor-Led Training</h4>
-  </a>
-  <section class="bcls-section">
-    <ul>
-      <li><a href="/training/online-training-courses.html">All Online Training Courses</a></li>
-      <li><a href="/training/training-demand-video-cloud-basics.html">Training on Demand: Video Cloud Basics</a></li>
-      <li><a href="/training/training-demand-introduction-video-cloud.html">Training on Demand: Introduction to Video Cloud</a></li>
-      <li><a href="/training/training-demand-introduction-video-cloud-analytics.html">Training on Demand:  Introduction to Video Cloud Analytics</a></li>
-      <li><a href="/training/video-cloud-studio-training-videos.html">Video Cloud Studio Training Videos</a></li>
-    </ul>
+  <h1>{{ page.icon }} {{ page.title }}</h1>
+  <summary>{{ page.description }}</summary>
+  <section class="card-wrapper">
+    <section class="bcls-card">
+      <div class="card-content">
+        <h2 id="Topics_in_this_section">Topics in this section</h2>
+        <ul>
+        {% for item in site.data.navigation %}
+        {% if item.name == page.title %}
+              {% for entry in item.docs %}
+                <li><a href="{{ entry.url }}">{{ entry.name }}</a>
+                {% if entry.docs %}
+                  <ul>
+                    {% for subentry in entry.docs %}
+                      <li><a href="{{ subentry.url }}">{{ subentry.name }}</a></li>
+                    {% endfor %}
+                  </ul>
+                {% endif %}
+                </li>
+              {% endfor %}
+        {% endif %}
+      {% endfor %}
+  
+      </div>
+    </section>
   </section>
 </article>

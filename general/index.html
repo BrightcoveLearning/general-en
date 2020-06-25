@@ -15,14 +15,19 @@ parent: Home
   }
   .card-wrapper {
   justify-content: start;
+  min-width: 100%;
+  }
+
+  .bcls-card {
+    min-width: 100%;
   }
   .bcls-card ul li {
     font-size: small;
   }
 </style>
 
+<h1>{{ page.icon }} {{ page.title }}</h1>
 <article class="bcls-article">
-  <h1>{{ page.icon }} {{ page.title }}</h1>
   <summary>{{ page.description }}</summary>
   <section class="card-wrapper">
     <section class="bcls-card">
