@@ -12,8 +12,6 @@
       url: '/general/brightcove-continuum-overview.html'
     - name: 'Open Source Projects'
       url: '/general/brightcove-open-source-projects.html'
-    - name: 'Known Issues'
-      url: '/general/known-issues-studio-brightcove-player-and-apis.html'
     - name: 'MPEG-DASH Video'
       url: '/general/mpeg-dash-video.html'
     - name: 'Brightcove Forum Groups and Email Lists'
@@ -118,6 +116,8 @@
   url: '/support/'
   icon: '<i class="far fa-question-circle"></i>'
   docs:
+    - name: 'Known Issues'
+      url: '/support/known-issues-studio-brightcove-player-and-apis.html'
     - name: 'Brightcove Answers'
       url: '/support/brightcove-answer.html'
     - name: 'Viewing the Brightcove System Status Page'

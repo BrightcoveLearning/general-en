@@ -150,7 +150,12 @@
   },
 
   {
-      "newURL": "https://general.support.brightcove.com/",
+      "newURL": "https://general.support.brightcove.com/developer/thumbnail-scrubbing/",
+      "oldURL": "/index"
+  },
+
+  {
+      "newURL": "https://general.support.brightcove.com/developer/kollective/",
       "oldURL": "/index"
   },
 
@@ -160,27 +165,12 @@
   },
 
   {
-      "newURL": "https://general.support.brightcove.com/training/",
-      "oldURL": "/index"
-  },
-
-  {
-      "newURL": "https://general.support.brightcove.com/developer/thumbnail-scrubbing/",
-      "oldURL": "/index"
-  },
-
-  {
-      "newURL": "https://general.support.brightcove.com/support/",
-      "oldURL": "/index"
-  },
-
-  {
       "newURL": "https://general.support.brightcove.com/general/",
       "oldURL": "/index"
   },
 
   {
-      "newURL": "https://general.support.brightcove.com/utilities/",
+      "newURL": "https://general.support.brightcove.com/training/",
       "oldURL": "/index"
   },
 
@@ -190,7 +180,17 @@
   },
 
   {
-      "newURL": "https://general.support.brightcove.com/developer/kollective/",
+      "newURL": "https://general.support.brightcove.com/utilities/",
+      "oldURL": "/index"
+  },
+
+  {
+      "newURL": "https://general.support.brightcove.com/support/",
+      "oldURL": "/index"
+  },
+
+  {
+      "newURL": "https://general.support.brightcove.com/",
       "oldURL": "/index"
   },
 
@@ -201,6 +201,11 @@
 
   {
       "newURL": "https://general.support.brightcove.com/general/known-issues-studio-brightcove-player-and-apis.html",
+      "oldURL": "/known-issues-studio-brightcove-player-and-apis"
+  },
+
+  {
+      "newURL": "https://general.support.brightcove.com/support/known-issues-studio-brightcove-player-and-apis.html",
       "oldURL": "/known-issues-studio-brightcove-player-and-apis"
   },
 
@@ -375,12 +380,12 @@
   },
 
   {
-      "newURL": "https://general.support.brightcove.com/training/register-training.html",
+      "newURL": "https://general.support.brightcove.com/shared-content/register-training.html",
       "oldURL": "/register-training"
   },
 
   {
-      "newURL": "https://general.support.brightcove.com/shared-content/register-training.html",
+      "newURL": "https://general.support.brightcove.com/training/register-training.html",
       "oldURL": "/register-training"
   },
 
@@ -465,12 +470,12 @@
   },
 
   {
-      "newURL": "https://general.support.brightcove.com/shared-content/support/viewing-brightcove-system-status-page.html",
+      "newURL": "https://general.support.brightcove.com/support/viewing-brightcove-system-status-page.html",
       "oldURL": "/viewing-brightcove-system-status-page"
   },
 
   {
-      "newURL": "https://general.support.brightcove.com/support/viewing-brightcove-system-status-page.html",
+      "newURL": "https://general.support.brightcove.com/shared-content/support/viewing-brightcove-system-status-page.html",
       "oldURL": "/viewing-brightcove-system-status-page"
   },
 ]

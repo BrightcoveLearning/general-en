@@ -51,16 +51,6 @@
       
         <url>
           
-            <loc>https://general.support.brightcove.com/general/known-issues-studio-brightcove-player-and-apis.html</loc>
-          
-            <lastmod>2020-07-16</lastmod>
-            <changefreq>daily</changefreq>
-            <priority>0.5</priority>
-        </url>
-        
-      
-        <url>
-          
             <loc>https://general.support.brightcove.com/general/mpeg-dash-video.html</loc>
           
             <lastmod>2020-07-16</lastmod>
@@ -498,6 +488,16 @@
         <changefreq>daily</changefreq>
         <priority>0.5</priority>
       </url>
+      
+        <url>
+          
+            <loc>https://general.support.brightcove.com/support/known-issues-studio-brightcove-player-and-apis.html</loc>
+          
+            <lastmod>2020-07-16</lastmod>
+            <changefreq>daily</changefreq>
+            <priority>0.5</priority>
+        </url>
+        
       
         <url>
           
