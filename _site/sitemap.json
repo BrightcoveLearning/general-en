@@ -55,6 +55,11 @@
   },
 
   {
+      "newURL": "https://general.support.brightcove.com/training/brightcove-university.html",
+      "oldURL": "/brightcove-university"
+  },
+
+  {
       "newURL": "https://general.support.brightcove.com/shared-content/player/bulk-updating-brightcove-default-player.html",
       "oldURL": "/bulk-updating-brightcove-default-player"
   },
@@ -150,17 +155,7 @@
   },
 
   {
-      "newURL": "https://general.support.brightcove.com/developer/thumbnail-scrubbing/",
-      "oldURL": "/index"
-  },
-
-  {
-      "newURL": "https://general.support.brightcove.com/developer/kollective/",
-      "oldURL": "/index"
-  },
-
-  {
-      "newURL": "https://general.support.brightcove.com/developer/",
+      "newURL": "https://general.support.brightcove.com/ooyala/",
       "oldURL": "/index"
   },
 
@@ -170,17 +165,12 @@
   },
 
   {
+      "newURL": "https://general.support.brightcove.com/developer/thumbnail-scrubbing/",
+      "oldURL": "/index"
+  },
+
+  {
       "newURL": "https://general.support.brightcove.com/training/",
-      "oldURL": "/index"
-  },
-
-  {
-      "newURL": "https://general.support.brightcove.com/ooyala/",
-      "oldURL": "/index"
-  },
-
-  {
-      "newURL": "https://general.support.brightcove.com/utilities/",
       "oldURL": "/index"
   },
 
@@ -191,6 +181,21 @@
 
   {
       "newURL": "https://general.support.brightcove.com/",
+      "oldURL": "/index"
+  },
+
+  {
+      "newURL": "https://general.support.brightcove.com/developer/",
+      "oldURL": "/index"
+  },
+
+  {
+      "newURL": "https://general.support.brightcove.com/developer/kollective/",
+      "oldURL": "/index"
+  },
+
+  {
+      "newURL": "https://general.support.brightcove.com/utilities/",
       "oldURL": "/index"
   },
 
@@ -245,7 +250,7 @@
   },
 
   {
-      "newURL": "https://general.support.brightcove.com/support/online-training-courses.html",
+      "newURL": "https://general.support.brightcove.com/shared-content/online-training-courses.html",
       "oldURL": "/online-training-courses"
   },
 
@@ -255,7 +260,7 @@
   },
 
   {
-      "newURL": "https://general.support.brightcove.com/shared-content/online-training-courses.html",
+      "newURL": "https://general.support.brightcove.com/support/online-training-courses.html",
       "oldURL": "/online-training-courses"
   },
 
@@ -330,12 +335,12 @@
   },
 
   {
-      "newURL": "https://general.support.brightcove.com/support/opening-case-with-brightcove-support.html",
+      "newURL": "https://general.support.brightcove.com/shared-content/support/opening-case-with-brightcove-support.html",
       "oldURL": "/opening-case-with-brightcove-support"
   },
 
   {
-      "newURL": "https://general.support.brightcove.com/shared-content/support/opening-case-with-brightcove-support.html",
+      "newURL": "https://general.support.brightcove.com/support/opening-case-with-brightcove-support.html",
       "oldURL": "/opening-case-with-brightcove-support"
   },
 
@@ -385,12 +390,12 @@
   },
 
   {
-      "newURL": "https://general.support.brightcove.com/training/register-training.html",
+      "newURL": "https://general.support.brightcove.com/support/register-training.html",
       "oldURL": "/register-training"
   },
 
   {
-      "newURL": "https://general.support.brightcove.com/support/register-training.html",
+      "newURL": "https://general.support.brightcove.com/training/register-training.html",
       "oldURL": "/register-training"
   },
 
