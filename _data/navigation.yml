@@ -111,6 +111,8 @@
       url: /training/training-demand-video-cloud-basics.html
     - name: Video Cloud Studio Training Videos
       url: /training/video-cloud-studio-training-videos.html
+    - name: Brightcove University Training Courses
+      url: /training/brightcove-university.html
 - section: 
   name: 'Support'
   url: '/support/'
