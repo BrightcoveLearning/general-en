@@ -1,36 +1,30 @@
 var BCLS_toc = ( function (window, document) {
   var side_nav_created = false,
-    in_page_nav_right = true;
-  function remove_children(el) {
-    var children = el.children,
-      i,
-      iMax = children.length;
-    for (i = 0; i < iMax; i++) {
-      el.removeChild(children[i]);
-    }
-  }
+  in_page_nav_right = true;
+  
   function create_inpage_nav() {
     var h2s = document.getElementsByTagName('h2'),
-      in_page_nav = document.getElementById('in_page_nav'),
-      centered_in_page_toc = document.getElementById('centered_in_page_toc'),
-      right_side_nav = document.getElementsByClassName('right-side-nav')[0],
-      centered_inpage_nav = document.getElementById('centered_inpage_nav'),
-      navEl = in_page_nav,
-      navWrapper = right_side_nav,
-      h2,
-      li,
-      link,
-      i,
-      iMax,
-      frag = document.createDocumentFragment(),
-      parent,
-      grandparent;
+    in_page_nav = document.getElementById('in_page_nav'),
+    centered_in_page_toc = document.getElementById('centered_in_page_toc'),
+    right_side_nav = document.getElementById('right_side_nav'),
+    centered_inpage_nav = document.getElementById('centered_inpage_nav'),
+    navEl = in_page_nav,
+    navWrapper = right_side_nav,
+    h2,
+    li,
+    link,
+    i,
+    iMax,
+    frag = document.createDocumentFragment(),
+    parent;
 
     // check window width to set the element to use
     if (window.innerWidth < 1360) {
       navEl = centered_in_page_toc;
       navWrapper = centered_inpage_nav;
       in_page_nav_right = false;
+    } else {
+      in_page_nav_right = true;
     }
 
     // display the nav block we're using
@@ -103,15 +97,15 @@ var BCLS_toc = ( function (window, document) {
           if (window.innerWidth > 1360) {
             if (!in_page_nav_right) {
               side_nav_created = false;
-              centered_in_page_toc.setAttribute('style', 'visibility:hidden;');
-              remove_children(centered_inpage_nav);
+              centered_inpage_nav.setAttribute('style', 'visibility: hidden;')
+              centered_in_page_toc.innerHTML = '';
               create_inpage_nav();
             }
           } else {
             if (in_page_nav_right) {
               side_nav_created = false;
-              in_page_nav.setAttribute('style', 'visibility:hidden;');
-              remove_children(right_side_nav);
+              right_side_nav.setAttribute('style', 'visibility:hidden;');
+              in_page_nav.innerHTML = '';
               create_inpage_nav();
             }
           }
