@@ -1,9 +1,9 @@
 - section: 
   name: 'Home'
-  url: '/'
+  url: '/index.html'
 - section: 
   name: 'General Information'
-  url: '/general/'
+  url: '/general/index.html'
   icon: '<i class="far fa-info-circle"></i>'
   docs:
     - name: 'Brightcove Product Overview'
@@ -18,7 +18,7 @@
       url: '/general/brightcove-forum-groups-and-email-lists.html'
 - section: 
   name: 'Developers'
-  url: '/developer/'
+  url: '/developer/index.html'
   icon: '<i class="far fa-brackets-curly"></i>'
   docs:
     - name: 'Understanding CORS'
@@ -41,7 +41,7 @@
       url: '/developer/using-wireshark-track-network-traffic-debugging.html'
 - section: 
   name: 'Migrating from Ooyala'
-  url: '/ooyala/'
+  url: '/ooyala/index.html'
   icon: '<i class="fal fa-person-dolly"></i>'
   docs:
     - name: 'Migration Docs for Ooyala Customers'
@@ -86,7 +86,7 @@
       url: '/ooyala/using-ooyala-players-deliver-video-cloud-content.html'
 - section: 
   name: 'Utilities'
-  url: '/utilities/'
+  url: '/utilities/index.html'
   icon: '<i class="fal fa-tools"></i>'
   docs:
     - name: 'Base 64 Encoding Tool'
@@ -97,7 +97,7 @@
       url: '/utilities/string-encoder.html'
 - section: 
   name: Training
-  url: /training/
+  url: /training/index.html
   docs:
     - name: All Online Training Courses
       url: /training/online-training-courses.html
@@ -115,7 +115,7 @@
       url: /training/brightcove-university.html
 - section: 
   name: 'Support'
-  url: '/support/'
+  url: '/support/index.html'
   icon: '<i class="far fa-question-circle"></i>'
   docs:
     - name: 'Known Issues'
