@@ -100,6 +100,7 @@ var BCLS_toc = ( function (window, document) {
               centered_inpage_nav.setAttribute('style', 'visibility: hidden;')
               centered_in_page_toc.innerHTML = '';
               create_inpage_nav();
+              docum
             }
           } else {
             if (in_page_nav_right) {
