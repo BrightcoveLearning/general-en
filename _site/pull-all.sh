@@ -21,11 +21,11 @@ git pull
 cd ../campaign
 
 echo 'pulled campaign'
-# docs-cms-connectors
-cd ../docs-cms-connectors
+# docs-integrations
+cd ../docs-integrations
 git pull
 
-echo 'pulled docs-cms-connectors'
+echo 'pulled docs-integrations'
 # docs-support-home
 cd ../docs-support-home
 git pull

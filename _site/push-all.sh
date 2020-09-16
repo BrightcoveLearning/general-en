@@ -21,11 +21,11 @@ git push
 cd ../campaign
 
 echo 'pushed campaign'
-# docs-cms-connectors
-cd ../docs-cms-connectors
+# docs-integrations
+cd ../docs-integrations
 git push
 
-echo 'pushed docs-cms-connectors'
+echo 'pushed docs-integrations'
 # docs-support-home
 cd ../docs-support-home
 git push

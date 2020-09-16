@@ -26,12 +26,12 @@ cd ../campaign
 bundle install
 sudo bundle update
 echo 'bundle updated campaign'
-# docs-cms-connectors
-cd ../docs-cms-connectors
+# docs-integrations
+cd ../docs-integrations
 git pull
 bundle install
 sudo bundle update
-echo 'bundle updated docs-cms-connectors'
+echo 'bundle updated docs-integrations'
 # docs-support-home
 cd ../docs-support-home
 git pull

@@ -36,14 +36,14 @@ jekyll serve
 #
 #
 echo 'serving campaign'
-# docs-cms-connectors
-cd ../docs-cms-connectors
+# docs-integrations
+cd ../docs-integrations
 #
 bundle update
 jekyll serve
 #
 #
-echo 'serving docs-cms-connectors'
+echo 'serving docs-integrations'
 # engage
 cd ../engage
 #

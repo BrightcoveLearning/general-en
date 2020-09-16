@@ -41,15 +41,15 @@ git add --all
 git commit --all -m general-update
 git push
 echo 'rebuilt campaign'
-# docs-cms-connectors
-cd ../docs-cms-connectors
+# docs-integrations
+cd ../docs-integrations
 git pull
 sudo bundle update
 sudo bundle exec jekyll build --trace
 git add --all
 git commit --all -m general-update
 git push
-echo 'rebuilt docs-cms-connectors'
+echo 'rebuilt docs-integrations'
 # docs-support-home
 cd ../docs-support-home
 git pull

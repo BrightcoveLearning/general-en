@@ -21,11 +21,11 @@ git pull
 cd ../campaign
 bundle install
 echo 'bundle installed campaign'
-# docs-cms-connectors
-cd ../docs-cms-connectors
+# docs-integrations
+cd ../docs-integrations
 git pull
 bundle install
-echo 'bundle installed docs-cms-connectors'
+echo 'bundle installed docs-integrations'
 # docs-support-home
 cd ../docs-support-home
 git pull
