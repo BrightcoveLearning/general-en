@@ -1,7 +1,7 @@
-- section: 
+- section:
   name: 'Home'
   url: '/index.html'
-- section: 
+- section:
   name: 'General Information'
   url: '/general/index.html'
   icon: '<i class="far fa-info-circle"></i>'
@@ -16,7 +16,7 @@
       url: '/general/mpeg-dash-video.html'
     - name: 'Brightcove Forum Groups and Email Lists'
       url: '/general/brightcove-forum-groups-and-email-lists.html'
-- section: 
+- section:
   name: 'Developers'
   url: '/developer/index.html'
   icon: '<i class="far fa-brackets-curly"></i>'
@@ -37,9 +37,11 @@
       url: '/developer/create-jwt.html'
     - name: 'Debugging on Mobile Devices'
       url: '/developer/debugging-mobile-devices.html'
+    - name: 'Using MTR (my traceroute)'
+      url: '/developer/using-mtr-to-look-at-network-traffic.html'
     - name: 'Using Wireshark to Track Network Traffic'
       url: '/developer/using-wireshark-track-network-traffic-debugging.html'
-- section: 
+- section:
   name: 'Migrating from Ooyala'
   url: '/ooyala/index.html'
   icon: '<i class="fal fa-person-dolly"></i>'
@@ -84,7 +86,7 @@
       url: '/ooyala/trending-now-report-reference.html'
     - name: 'Using Ooyala Players for Video Cloud Content'
       url: '/ooyala/using-ooyala-players-deliver-video-cloud-content.html'
-- section: 
+- section:
   name: 'Utilities'
   url: '/utilities/index.html'
   icon: '<i class="fal fa-tools"></i>'
@@ -95,7 +97,7 @@
       url: '/utilities/date-converter.html'
     - name: 'String Encoder'
       url: '/utilities/string-encoder.html'
-- section: 
+- section:
   name: Training
   url: /training/index.html
   docs:
@@ -113,7 +115,7 @@
       url: /training/video-cloud-studio-training-videos.html
     - name: Brightcove University Training Courses
       url: /training/brightcove-university.html
-- section: 
+- section:
   name: 'Support'
   url: '/support/index.html'
   icon: '<i class="far fa-question-circle"></i>'

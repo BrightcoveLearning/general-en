@@ -4,9 +4,9 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <meta name="description" content="">
+  <meta name="description" content="MTR is a command line tool that combines the capacities of the standard traceroute and ping commands to help debug network issues.">
   
-  <title>Base 64 Encoding Tool</title>
+  <title>Using MTR (my traceroute)</title>
   <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
   <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
   <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
@@ -119,9 +119,9 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
       
       
       
-      <li class="breadcrumb-item"><a href="/utilities/">Utilities</a></li>
+      <li class="breadcrumb-item"><a href="/developer/">Developers</a></li>
       
-      <li class="breadcrumb-item active" aria-current="page">Base 64 Encoding Tool</li>
+      <li class="breadcrumb-item active" aria-current="page">Using MTR (my traceroute)</li>
     </ol>
   </nav>
 </header>
@@ -390,42 +390,50 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
     
 </details>
 
+<h1>Using MTR (my traceroute)</h1>
 <article class="bcls-article">
-  <h1>Base 64 Encoding Tool</h1>
-  <summary>This is a simple utility to Base64 encode strings. Its primary purpose is to help you test <a href="https://apis.support.brightcove.com/getting-started/concepts-testing-tools-brightcove-apis.html">getting access tokens</a> from the Brightcove OAuth API.</summary>
+  <summary></summary>
   <section class="bcls-section">
-    <h2 id="encoding_tool">Encoding tool</h2>
-    <p>Paste strings into the fields below, then click the button to get the equivalent Base64-encoded strings.</p>
-    <p>Client ID to encode:
-      <input id="str1" type="text" style="width:70%" />
-    </p>
-    <p>Client Secret to encode:
-      <input id="str2" type="text" style="width:70%" />
-    </p>
-    <p>
-      <button id="encode" class="bcls-button">Encode Them</button>
-    </p>
-    <p>Encoded authentication string:<br />
-      <textarea id="str1encoded" rows="2" style="width:80%"></textarea>
-    </p>
+    <h2 id="Introduction">Introduction</h2>
+    <p>MTR is a popular tool for diagnosing network-related issues. It combines the functionality of the <code>ping</code> and <code>traceroute</code> commands. Submitting MTR reports can help Brightcove Support resolve issues in some cases.</p>
+    <p>See <a href="https://xneelo.co.za/help-centre/website/how-to-run-an-mtr/">How to Run an MTR</a> for information on installing MTR.</p>
+    <p>The steps below will walk you through the basic installation and use of Wireshark.</p>
+  </section>
+  <section class="bcls-section">
+    <h2 id="using_wireshark">Using MTR</h2>
+    <p>The instructions below assume you are running MTR as a command line application on Mac OS. If you are running WinMTR instead, the only difference is that you will simply enter the domain or IP address that you want to analyze instead running <code>mtr {domain or IP address}</code>.</p>
+    <ol class="bcls-tasklist">
+      <li>Launch Terminal.</li>
+      <li>
+        Enter the following command:
+        <pre class="line-numbers"><code class="language-bash">sudo mtr players.brightcove.net</code></pre>
+      </li>
+      <li>
+        You should see a display that looks something like this:
+        <figure class="bcls-figure">
+          <img class="bcls-image" src="/assets/images/developer/mtr-display.png" alt="MTR Display">
+          <figcaption class="bcls-caption--image">MTR Display</figcaption>
+        </figure>
+      </li>
+      <li>
+        Note the commands listed above the data display, or press <samp>h</samp> to see all available commands:
+        <figure class="bcls-figure">
+          <img class="bcls-image" src="/assets/images/developer/mtr-commands.png" alt="MTR Commands">
+          <figcaption class="bcls-caption--image">MTR Commands</figcaption>
+        </figure>
+      </li>
+      <li>
+        Copy and paste the information you want from terminal:
+        <figure class="bcls-figure">
+          <img class="bcls-image" src="/assets/images/developer/mtr-data.png" alt="Copy MTR Data">
+          <figcaption class="bcls-caption--image">Copy MTR Data</figcaption>
+        </figure>
+      </li>
+      <li>You can press <samp>q</samp> at any time to stop MTR.</li>
+    </ol>
   </section>
 </article>
-<script>
-var BCLS = ( function (window, document) {
-  var str1 = document.getElementById('str1'),
-    str2 = document.getElementById('str2'),
-    str1encoded = document.getElementById('str1encoded'),
-    encode = document.getElementById('encode');
 
-    encode.addEventListener('click', function() {
-      str1encoded.value = btoa(str1.value + ':' + str2.value);
-    });
-
-    str1encoded.addEventListener('click', function() {
-      this.select();
-    })
-})(window, document);
-</script>
 <!-- complete bootstrap layout -->
     </div>
     <div class="col-sm-2 right-side-bar">
@@ -441,7 +449,7 @@ var BCLS = ( function (window, document) {
 
 <hr>
 <div class="last-updated">
-  Page last updated on 17 Mar 2020
+  Page last updated on 17 Sep 2020
 </div>
 
 

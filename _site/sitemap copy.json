@@ -155,7 +155,17 @@
   },
 
   {
-      "newURL": "https://general.support.brightcove.com/ooyala/",
+      "newURL": "https://general.support.brightcove.com/utilities/",
+      "oldURL": "/index"
+  },
+
+  {
+      "newURL": "https://general.support.brightcove.com/developer/kollective/",
+      "oldURL": "/index"
+  },
+
+  {
+      "newURL": "https://general.support.brightcove.com/developer/",
       "oldURL": "/index"
   },
 
@@ -165,12 +175,17 @@
   },
 
   {
-      "newURL": "https://general.support.brightcove.com/developer/thumbnail-scrubbing/",
+      "newURL": "https://general.support.brightcove.com/training/",
       "oldURL": "/index"
   },
 
   {
-      "newURL": "https://general.support.brightcove.com/training/",
+      "newURL": "https://general.support.brightcove.com/ooyala/",
+      "oldURL": "/index"
+  },
+
+  {
+      "newURL": "https://general.support.brightcove.com/developer/thumbnail-scrubbing/",
       "oldURL": "/index"
   },
 
@@ -185,32 +200,17 @@
   },
 
   {
-      "newURL": "https://general.support.brightcove.com/developer/",
-      "oldURL": "/index"
-  },
-
-  {
-      "newURL": "https://general.support.brightcove.com/developer/kollective/",
-      "oldURL": "/index"
-  },
-
-  {
-      "newURL": "https://general.support.brightcove.com/utilities/",
-      "oldURL": "/index"
-  },
-
-  {
       "newURL": "https://general.support.brightcove.com/shared-content/integration/integrating-your-cms-video-cloud.html",
       "oldURL": "/integrating-your-cms-video-cloud"
   },
 
   {
-      "newURL": "https://general.support.brightcove.com/general/known-issues-studio-brightcove-player-and-apis.html",
+      "newURL": "https://general.support.brightcove.com/support/known-issues-studio-brightcove-player-and-apis.html",
       "oldURL": "/known-issues-studio-brightcove-player-and-apis"
   },
 
   {
-      "newURL": "https://general.support.brightcove.com/support/known-issues-studio-brightcove-player-and-apis.html",
+      "newURL": "https://general.support.brightcove.com/general/known-issues-studio-brightcove-player-and-apis.html",
       "oldURL": "/known-issues-studio-brightcove-player-and-apis"
   },
 
@@ -250,17 +250,17 @@
   },
 
   {
-      "newURL": "https://general.support.brightcove.com/shared-content/online-training-courses.html",
-      "oldURL": "/online-training-courses"
-  },
-
-  {
       "newURL": "https://general.support.brightcove.com/training/online-training-courses.html",
       "oldURL": "/online-training-courses"
   },
 
   {
       "newURL": "https://general.support.brightcove.com/support/online-training-courses.html",
+      "oldURL": "/online-training-courses"
+  },
+
+  {
+      "newURL": "https://general.support.brightcove.com/shared-content/online-training-courses.html",
       "oldURL": "/online-training-courses"
   },
 
@@ -457,6 +457,11 @@
   {
       "newURL": "https://general.support.brightcove.com/ooyala/trending-now-report-reference.html",
       "oldURL": "/trending-now-report-reference"
+  },
+
+  {
+      "newURL": "https://general.support.brightcove.com/developer/using-mtr-to-look-at-network-traffic.html",
+      "oldURL": "/using-mtr-to-look-at-network-traffic"
   },
 
   {
