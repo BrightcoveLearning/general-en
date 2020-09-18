@@ -13,8 +13,8 @@ var token =
     Talla.OptionKnowledgeGroups(['3811a860-2747-406d-a4a4-0d095d775a2d']),
     Talla.OptionWideBeacon(true),
     Talla.OptionBeaconCTA("Have a question?"),
-    Talla.OptionOpenIcon('https://learning-services-media.brightcove.com/doc-assets/site-assets/images/site/search.png'),
-    Talla.OptionBotIcon('https://learning-services-media.brightcove.com/doc-assets/site-assets/images/site/search.png'),
+    Talla.OptionOpenIcon('https://support.brightcove.com/site-assets/images/site/search.png'),
+    Talla.OptionBotIcon('https://support.brightcove.com/site-assets/images/site/search.png'),
     Talla.OptionAutodetectSession,
     //---- NEW-----Redirects to portal
     Talla.OptionRequestSubmittedCallback( function(widget, data) {

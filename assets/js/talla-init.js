@@ -17,8 +17,8 @@ var token =
     Talla.OptionKnowledgeGroups(['{{ site.talla_knowledgegroup }}']),
     Talla.OptionWideBeacon(true),
     Talla.OptionBeaconCTA("Have a question?"),
-    Talla.OptionOpenIcon('https://learning-services-media.brightcove.com/doc-assets/site-assets/images/site/search.png'),
-    Talla.OptionBotIcon('https://learning-services-media.brightcove.com/doc-assets/site-assets/images/site/search.png'),
+    Talla.OptionOpenIcon('https://support.brightcove.com/site-assets/images/site/search.png'),
+    Talla.OptionBotIcon('https://support.brightcove.com/site-assets/images/site/search.png'),
     Talla.OptionAutodetectSession,
     //---- NEW-----Redirects to portal
     Talla.OptionRequestSubmittedCallback( function(widget, data) {
