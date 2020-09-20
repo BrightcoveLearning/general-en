@@ -1,7 +1,8 @@
 var BCLS_toc = ( function (window, document) {
   var side_nav_created = false,
-  in_page_nav_right = true;
-  
+  in_page_nav_right = true,
+  navMenu = document.getElementById('');
+
   function create_inpage_nav() {
     var h2s = document.getElementsByTagName('h2'),
     in_page_nav = document.getElementById('in_page_nav'),
@@ -46,7 +47,7 @@ var BCLS_toc = ( function (window, document) {
           frag.appendChild(li);
         }
       }
-      
+
       if (frag.firstChild) {
         navEl.appendChild(frag);
         implementHighlighting();
@@ -61,7 +62,7 @@ var BCLS_toc = ( function (window, document) {
 
       // implement highlighting
       // smooth scrolling for Safari
-  
+
       function implementHighlighting() {
         var navItems = document.getElementsByClassName('toc-item'),
           linkEl,
@@ -75,15 +76,15 @@ var BCLS_toc = ( function (window, document) {
           linkTarget = linkEl.firstElementChild.getAttribute('href');
 
           linkEl.addEventListener('click', function(e) {
-            document.querySelector(linkTarget).scrollIntoView({ 
-              behavior: 'smooth' 
+            document.querySelector(linkTarget).scrollIntoView({
+              behavior: 'smooth'
             });
             jMax = navItems.length;
             for (j = 0; j < jMax; j++) {
               navItems[j].removeAttribute('style');
             }
             console.log('this', this);
-            
+
             this.setAttribute('style', 'color:#dcf3fb;background-color:rgb(21, 160, 183);');
           });
         }
@@ -100,7 +101,6 @@ var BCLS_toc = ( function (window, document) {
               centered_inpage_nav.setAttribute('style', 'visibility: hidden;')
               centered_in_page_toc.innerHTML = '';
               create_inpage_nav();
-              docum
             }
           } else {
             if (in_page_nav_right) {
@@ -111,7 +111,7 @@ var BCLS_toc = ( function (window, document) {
             }
           }
         });
-  
+
   // this creates a public method, allow it to be run again (imported content for example)
   return {
     create_inpage_nav: create_inpage_nav,
