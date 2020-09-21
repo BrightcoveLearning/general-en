@@ -1,7 +1,8 @@
 var BCLS_toc = ( function (window, document) {
   var side_nav_created = false,
   in_page_nav_right = true,
-  navMenu = document.getElementById('');
+  nav_menu = document.getElementById('nav_menu'),
+  nav_menu_collapsed = false;
 
   function create_inpage_nav() {
     var h2s = document.getElementsByTagName('h2'),
