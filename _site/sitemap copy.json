@@ -70,6 +70,11 @@
   },
 
   {
+      "newURL": "https://general.support.brightcove.com/general/common-abbreviations.html",
+      "oldURL": "/common-abbreviations"
+  },
+
+  {
       "newURL": "https://general.support.brightcove.com/developer/concepts-cors.html",
       "oldURL": "/concepts-cors"
   },
