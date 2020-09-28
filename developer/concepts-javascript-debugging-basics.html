@@ -21,7 +21,7 @@ parent: Developers
       <li>Lines 11, 21: Player <code translate="No">id</code> added and used. This is an addition to the standard in-page embed implementation code.</li>
     </ul>
     <pre class="line-numbers">
-<code class="language-html">&lt;!DOCTYPE html&gt;
+<code class="language-html" translate="No">&lt;!DOCTYPE html&gt;
 &lt;html&gt;
 
 &lt;head&gt;
@@ -59,16 +59,16 @@ parent: Developers
     <ul>
       <li>The <code translate="No">log()</code> method for general output of logging information. This allows string substitution and additional arguments.
         <pre class="line-numbers">
-<code class="language-javascript">console.log("test",1,{},[1,2,3]);</code></pre>
+<code class="language-javascript" translate="No">console.log("test",1,{},[1,2,3]);</code></pre>
       </li>
       <li>The <code translate="No">dir()</code> method for displaying an interactive list of object properties.
         <pre class="line-numbers">
-<code class="language-javascript">console.dir({one:1, two: {three:3}});</code></pre>
+<code class="language-javascript" translate="No">console.dir({one:1, two: {three:3}});</code></pre>
       </li>
     </ul>
     <p>Here is example code and a screenshot of the console displaying the <code translate="No">console.log()</code> of messages.</p>
     <pre class="line-numbers">
-<code class="language-javascript">&lt;video-js id="myPlayerID"
+<code class="language-javascript" translate="No">&lt;video-js id="myPlayerID"
 style="width: 640px; height: 360px;"
 data-video-id="4845798282001"
 data-account="1752604059001"
@@ -173,7 +173,7 @@ class="video-js" controls&gt;&lt;/video-js&gt;
     </ol>
     <p>For some older IE browsers, you may see an error message or the browser may crash if you try to use the <code translate="No">console</code> object in your code when the developer tools panel is not open. This is because the <code translate="No">console</code> object is not defined. To avoid this problem, add the following code snippet to the top of your JavaScript code:</p>
     <pre class="line-numbers">
-<code class="language-javascript">if(!window.console){ window.console = {log: function(){} }; }</code></pre>
+<code class="language-javascript" translate="No">if(!window.console){ window.console = {log: function(){} }; }</code></pre>
     <p>This code checks to see if the <code translate="No">console</code> object exists. If not, it defines the <code translate="No">console</code> object with a blank function named <code translate="No">log</code>.</p>
     <p>View details about using the <a href="http://msdn.microsoft.com/en-us/library/ie/gg589507%28v=vs.85%29.aspx">Internet Explorer Developer Tools</a>.</p>
   </section>

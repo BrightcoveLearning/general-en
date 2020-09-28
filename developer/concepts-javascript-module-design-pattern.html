@@ -10,7 +10,7 @@ parent: Developers
     <p>In JavaScript, when you define a variable using the <code translate="No">var</code> element, it is scoped within the function that it is defined. If you define a variable without using <code translate="No">var</code>, then it is assigned the global scope. This means that global variables are vulnerable to collisions with other scripts on your page.</p>
     <p>Let's look at a code example. In the following code, the function and the variables exist within the scope of the page.</p>
     <pre class="line-numbers">
-<code class="language-javascript">// script 1
+<code class="language-javascript" translate="No">// script 1
 var incrementCount = function() {
     count++;
 }
@@ -21,7 +21,7 @@ var count = 0;
 myButton.onclick = incrementCount;</code></pre>
     <p>Now, let's say there is a function outside of your script that also modifies the global <code translate="No">count</code> variable. This collision of scripts can cause unexpected results.</p>
     <pre class="line-numbers">
-<code class="language-javascript">// script 2
+<code class="language-javascript" translate="No">// script 2
 var countVideos = function(videoList) {
     count = videoList.length;
 }</code></pre>
@@ -54,7 +54,7 @@ var countVideos = function(videoList) {
       <li>Line 3: includes an additional set of parentheses, which tells JavaScript to execute the function immediately after it has been parsed, instead of waiting for some other code to call the function.</li>
     </ul>
     <pre class="line-numbers">
-<code class="language-javascript">(function () {
+<code class="language-javascript" translate="No">(function () {
     // your code
 }<span class="bcls-highlight">()</span>);</code></pre>
     <p>Closures can be powerful, as they provide privacy and state throughout the lifetime of the application. For the code inside the closure, all variables and functions are in the closure scope only. But, your code inside the closure can still access any global variables or functions.</p>
@@ -70,15 +70,15 @@ var countVideos = function(videoList) {
       <li>Line 3: passes the <code translate="No">window</code> object into the function.</li>
     </ul>
     <pre class="line-numbers">
-<code class="language-javascript">(function( window1, undefined ) {
+<code class="language-javascript" translate="No">(function( window1, undefined ) {
     ...
 })(window);</code></pre>
     <p>Since there is only 1 object being passed in, but there are two parameters, the value of <code translate="No">undefined</code> will be undefined.</p>
     <pre class="line-numbers">
-<code class="language-javascript">typeof undefined == "undefined"</code></pre>
+<code class="language-javascript" translate="No">typeof undefined == "undefined"</code></pre>
     <p>This can be handy if you want an easy way to check if other variables are defined.</p>
     <pre class="line-numbers">
-<code class="language-javascript">if(variable1 === undefined)</code></pre>
+<code class="language-javascript" translate="No">if(variable1 === undefined)</code></pre>
     <h3>Export globals</h3>
     <p>You may also want to pass variables and functions outside of your anonymous function. You can do this by using the <code translate="No">return</code> value.</p>
     <p>Here is an example:</p>
@@ -86,7 +86,7 @@ var countVideos = function(videoList) {
       <li>Line 1: assigns our anonymous function to <code translate="No">BCLS</code>. This value can be anything you choose. In this example, we are using BCLS (Brightcove Learning Services).</li>
     </ul>
     <pre class="line-numbers">
-<code class="language-javascript">var BCLS = (function( window1, undefined ) {
+<code class="language-javascript" translate="No">var BCLS = (function( window1, undefined ) {
     var object1 = {};
     object1.count = 1;
     object1.method = function () {
@@ -112,7 +112,7 @@ var countVideos = function(videoList) {
       <li>Public function: <code translate="No">fname3</code></li>
     </ul>
     <pre class="line-numbers">
-<code class="language-javascript">var BCLS = ( function() {
+<code class="language-javascript" translate="No">var BCLS = ( function() {
    var myvar = value,
        myvar2 = value;
 
@@ -133,7 +133,7 @@ var countVideos = function(videoList) {
     <h3>Example 2</h3>
     <p>This example passes in global objects and exposes a public function.</p>
     <pre class="line-numbers">
-<code class="language-javascript">var BCLS = (function( window, document, videojs ) {
+<code class="language-javascript" translate="No">var BCLS = (function( window, document, videojs ) {
     var myvar = value;
 
     // use a global object passed into the anonymous function

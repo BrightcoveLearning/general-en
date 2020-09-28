@@ -404,7 +404,7 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
     <p>There are three instances when CORS must be used with Brightcove services/products:</p>
     <ol>
       <li><strong>Captions for videos</strong>: The file that contains captions for a video can be stored on a non-Brightcove domain. Since the video itself will be served from a Brightcove domain, this will cause cross-domain issues.</li>
-      <li><strong>Brightcove Player and HLS</strong>: The <span class="video-cloud-only">Brightcove</span> Player's HLS plugin uses AJAX requests to retrieve the HLS video's manifest and individual segments. Since these HLS resources can be stored on any Internet accessible domain, it is likely these resources will be served from a different server (typically a CDN domain) than from the Brightcove domain that served the player. This will again cause cross-domain issues.</li>
+      <li><strong>Brightcove Player and HLS</strong>: The <span class="video-cloud-only" translate="No">Brightcove Player's </span>HLS plugin uses AJAX requests to retrieve the HLS video's manifest and individual segments. Since these HLS resources can be stored on any Internet accessible domain, it is likely these resources will be served from a different server (typically a CDN domain) than from the Brightcove domain that served the player. This will again cause cross-domain issues.</li>
       <li><strong>Video Still and Thumbnail Images</strong>: for <a href="https://studio.support.brightcove.com/media/capturing-poster-and-thumbnail-images.html">capturing video still and thumbnail images in Studio</a>, the video rendition must be served with CORS headers (which should be enabled on most of Brightcove's house CDNs by default); if you have a custom CDN, or one we haven't updated yet, image capture will not work</li>
     </ol>
   </section>
@@ -413,7 +413,7 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
     <p>The solution that Brightcove is using at this time involves configuring an <code translate="No">Access-Control-Allow-Origin</code> header in the CDN origin server’s configuration file. It’s important to note that since different CDN partners use different server solutions to deliver their content, the header information below is offered as an example, and not as a drop-in code snippet.</p>
     <p>Brightcove has had success with the following header directive for in-house CDN server's properties:</p>
     <pre class="line-numbers">
-<code class="language-apache">&lt;FilesMatch ".(vtt|xml)$"&gt;
+<code class="language-apache" translate="No">&lt;FilesMatch ".(vtt|xml)$"&gt;
               Header set Access-Control-Allow-Headers: X-Requested-With
               Header add Access-Control-Allow-Origin: http://admin.brightcove.com
           &lt;/FilesMatch&gt;</code></pre>
@@ -426,7 +426,7 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
     <h3>Enabling CORS on Apache</h3>
     <p>You can set a header in the configuration of Apache servers to enable CORS. Place the following in the appropriate <code translate="No">.conf</code> file:</p>
     <pre class="line-numbers">
-<code class="language-bash">Header set Access-Control-Allow-Origin "*"</code></pre>
+<code class="language-bash" translate="No">Header set Access-Control-Allow-Origin "*"</code></pre>
     <p>In the example above the asterisks acts as a wild card and allows access to all domains. The wildcard can also be replaced by <strong>one</strong> specific domain. That generally won't work for Brightcove players, because in many cases assets will reside on multiple domains. You can implement other solutions to limit access to a specific whitelist of acceptable domains.</p>
     <h3>BYO CDN</h3>
     <p>If you are a customer with a BYO CDN and having cross-domain issues, you should contact your CDN for help in configuring CORS for your account. Here are the settings we recommend:</p>
@@ -439,7 +439,7 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
     <p>In the case where token authorization is required alterations need to be made to the solution above. In the case of token authorization, the CORS security model specifically disallows the use of the <code translate="No">*</code> character as a value for the <code translate="No">Access-Control-Allow-Origin</code> response header. In addition, the <code translate="No">Access-Control-Allow-Credentials</code> response header is required, and must be set to true.</p>
     <p>An updated header directive for token authorization is:</p>
     <pre class="line-numbers">
-<code class="language-apache">&lt;FilesMatch ".(m3u8 | m3u | ts)$"&gt;
+<code class="language-apache" translate="No">&lt;FilesMatch ".(m3u8 | m3u | ts)$"&gt;
         # with AJAX withCredentials=true (cookies sent, SSL allowed...)
         SetEnvIfNoCase ORIGIN (.*) ORIGIN=$1
         Header set Access-Control-Allow-Origin "%{ORIGIN}e"
@@ -461,7 +461,7 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
     <h2 id="hls">HLS and CORS</h2>
     <p>In some environments (such as Amazon S3) you can specify a CORS configuration for HLS. The following configures CORS to allow HLS playback.</p>
     <pre class="line-numbers">
-<code class="language-apache">&lt;CORSConfiguration&gt;
+<code class="language-apache" translate="No">&lt;CORSConfiguration&gt;
       &lt;CORSRule&gt;
       &lt;AllowedOrigin&gt;*&lt;/AllowedOrigin&gt;
       &lt;AllowedMethod&gt;GET&lt;/AllowedMethod&gt;
@@ -487,7 +487,7 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
 
 <hr>
 <div class="last-updated">
-  Page last updated on 12 Jun 2020
+  Page last updated on 28 Sep 2020
 </div>
 
 

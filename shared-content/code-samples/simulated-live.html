@@ -25,7 +25,7 @@ layout: share
     </figure>
     <h3>Player details</h3>
     <p>The player is enabled for playlists (to get the Playlist API) but without a playlist display. The JSON for the player configuration is as follows:</p>
-<pre class="line-numbers"><code class="language-json">{
+<pre class="line-numbers"><code class="language-json" translate="No">{
   "compatibility": true,
   "video_cloud": {
     "policy_key": "{your player policy key will be here}"
@@ -66,7 +66,7 @@ layout: share
   </ul>
 
   <h4>Javascript code for the plugin</h4>
-<pre class="line-numbers"><code class="language-javascript">videojs.registerPlugin('simulated_live', function() {
+<pre class="line-numbers"><code class="language-javascript" translate="No">videojs.registerPlugin('simulated_live', function() {
   var my_player = this,
   playlist_id = '1664503635149515112', // replace with your playlist id
   video_data,

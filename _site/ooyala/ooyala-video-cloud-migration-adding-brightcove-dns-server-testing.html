@@ -544,7 +544,7 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
     <p>The above steps may not work if your computer/device is on VPN, because the VPN server may override your DNS server settings with its own. If this happens, you will need to add the Brightcove DNS server to you VPN. Exactly what commands you will need will depend on the platform and VPN, but a sample for MacOS is shown below to give you an idea.</p>
     <p>Get the subKey for the DNS entry on the VPN interface. E.g. with Pulse Secure, it looks like:</p>
     <pre class="line-numbers">
-<code class="language-bash">sudo scutil
+<code class="language-bash" translate="No">sudo scutil
 &gt; get subKey [127 = State:/Network/Service/net.pulsesecure.pulse.nc.main/DNS]
 &gt; d.add ServerAddresses * 35.170.73.174
 &gt; set State:/Network/Service/net.pulsesecure.pulse.nc.main/DNS</code></pre>
@@ -566,7 +566,7 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
 
 <hr>
 <div class="last-updated">
-  Page last updated on 12 Jun 2020
+  Page last updated on 28 Sep 2020
 </div>
 
 
