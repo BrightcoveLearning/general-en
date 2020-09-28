@@ -15,8 +15,8 @@ parent: Migrating from Ooyala
     <p>In migrating videos to Video Cloud that are associated with an as set, we are doing two things:</p>
     
     <ul>
-      <li>Migrating some ad set data to cuepoints (what is migrated varies by the <code>ad_source</code>, and is detailed in sections below)</li>
-      <li>Storing the ad set id in a custom field called <code>ad_set_id</code>, so that the video can be updated later for changes to the ad set</li>
+      <li>Migrating some ad set data to cuepoints (what is migrated varies by the <code translate="No">ad_source</code>, and is detailed in sections below)</li>
+      <li>Storing the ad set id in a custom field called <code translate="No">ad_set_id</code>, so that the video can be updated later for changes to the ad set</li>
     </ul>
     
     <p>If the video is played in an existing <a href="/ooyala/using-ooyala-players-deliver-video-cloud-content.html">Ooyala player</a> the ads should continue to play as before. For Brightcove players, you will need to add and configure the appropriate ad plugin to the player - see <a href="https://studio.support.brightcove.com/players/configuring-player-advertising-using-players-module.html">Configuring Player Advertising using the Players Module</a> and the other Advertising documentation for the <a href="https://player.support.brightcove.com/advertising/">Brightcove Player</a> for more details.</p>
@@ -25,7 +25,7 @@ parent: Migrating from Ooyala
     <section class="bcls-section">
     <h2 id="supported_ad_sources">Supported Ad Sources</h2>
     
-    <p>Only the following <code>ad_source</code> types are supported for migrating ad set data to Video Cloud:</p>
+    <p>Only the following <code translate="No">ad_source</code> types are supported for migrating ad set data to Video Cloud:</p>
     
     <ul>
       <li>Videoplaza</li>
@@ -39,11 +39,11 @@ parent: Migrating from Ooyala
     <p>The following fields will be dropped for all sources in the above list that support it:</p>
     
     <ul>
-      <li><code>tracking_pixel_url</code></li>
-      <li><code>ad_frequency</code></li>
+      <li><code translate="No">tracking_pixel_url</code></li>
+      <li><code translate="No">ad_frequency</code></li>
     </ul>
     
-    <p>Additional fields for these ad_sources will be stored as <code>cue_points[i].metadata</code> of type "CODE" as stringified JSON. See the sections below for exact mappings.</p>
+    <p>Additional fields for these ad_sources will be stored as <code translate="No">cue_points[i].metadata</code> of type "CODE" as stringified JSON. See the sections below for exact mappings.</p>
     </section>
     
     <section class="bcls-section">
@@ -59,44 +59,44 @@ parent: Migrating from Ooyala
       </thead>
       <tbody class="bcls-table__body">
         <tr>
-          <td><code>ad_source [=videoplaze]</code></td>
-          <td><code>cue_points[i].name</code></td>
+          <td><code translate="No">ad_source [=videoplaze]</code></td>
+          <td><code translate="No">cue_points[i].name</code></td>
         </tr>
         <tr>
-          <td><code>ad_position</code></td>
-          <td><code>cue_points[i].time</code></td>
+          <td><code translate="No">ad_position</code></td>
+          <td><code translate="No">cue_points[i].time</code></td>
         </tr>
         <tr>
-          <td><code>vpDomain</code></td>
-          <td><code>cue_points[i].metadata.vpd</code></td>
+          <td><code translate="No">vpDomain</code></td>
+          <td><code translate="No">cue_points[i].metadata.vpd</code></td>
         </tr>
         <tr>
-          <td><code>player_level_midroll_ad_breaks</code></td>
-          <td><code>cue_points[i].metadata.pmab</code></td>
+          <td><code translate="No">player_level_midroll_ad_breaks</code></td>
+          <td><code translate="No">cue_points[i].metadata.pmab</code></td>
         </tr>
         <tr>
-          <td><code>player_level_tags</code></td>
-          <td><code>cue_points[i].metadata.pt</code></td>
+          <td><code translate="No">player_level_tags</code></td>
+          <td><code translate="No">cue_points[i].metadata.pt</code></td>
         </tr>
         <tr>
-          <td><code>player_level_videoplaza_flags</code></td>
-          <td><code>cue_points[i].metadata.pvp</code></td>
+          <td><code translate="No">player_level_videoplaza_flags</code></td>
+          <td><code translate="No">cue_points[i].metadata.pvp</code></td>
         </tr>
         <tr>
-          <td><code>player_level_shares</code></td>
-          <td><code>cue_points[i].metadata.ps</code></td>
+          <td><code translate="No">player_level_shares</code></td>
+          <td><code translate="No">cue_points[i].metadata.ps</code></td>
         </tr>
         <tr>
-          <td><code>short_form_content_max_length</code></td>
-          <td><code>cue_points[i].metadata.scml</code></td>
+          <td><code translate="No">short_form_content_max_length</code></td>
+          <td><code translate="No">cue_points[i].metadata.scml</code></td>
         </tr>
         <tr>
-          <td><code>non_linear_ad_breaks</code></td>
-          <td><code>cue_points[i].metadata.nlab</code></td>
+          <td><code translate="No">non_linear_ad_breaks</code></td>
+          <td><code translate="No">cue_points[i].metadata.nlab</code></td>
         </tr>
         <tr>
-          <td><code>account_id</code></td>
-          <td><code>cue_points[i].metadata.account_id</code></td>
+          <td><code translate="No">account_id</code></td>
+          <td><code translate="No">cue_points[i].metadata.account_id</code></td>
         </tr>
       </tbody>
     </table>
@@ -115,16 +115,16 @@ parent: Migrating from Ooyala
       </thead>
       <tbody class="bcls-table__body">
         <tr>
-          <td><code>ad_source [=googleimav3]</code></td>
-          <td><code>cue_points[i].name</code></td>
+          <td><code translate="No">ad_source [=googleimav3]</code></td>
+          <td><code translate="No">cue_points[i].name</code></td>
         </tr>
         <tr>
-          <td><code>ad_position</code></td>
-          <td><code>cue_points[i].time</code></td>
+          <td><code translate="No">ad_position</code></td>
+          <td><code translate="No">cue_points[i].time</code></td>
         </tr>
         <tr>
-          <td><code>ad_tag</code></td>
-          <td><code>cue_points[i].metadata.ad_tag</code></td>
+          <td><code translate="No">ad_tag</code></td>
+          <td><code translate="No">cue_points[i].metadata.ad_tag</code></td>
         </tr>
       </tbody>
     </table>
@@ -143,36 +143,36 @@ parent: Migrating from Ooyala
       </thead>
       <tbody class="bcls-table__body">
         <tr>
-          <td><code>ad_source [=freewheel]</code></td>
-          <td><code>cue_points[i].name</code></td>
+          <td><code translate="No">ad_source [=freewheel]</code></td>
+          <td><code translate="No">cue_points[i].name</code></td>
         </tr>
         <tr>
-          <td><code>aab_vast_tag</code> (only for Freewheel -AAB)</td>
-          <td><code>cue_points[i].metadata.avt</code></td>
+          <td><code translate="No">aab_vast_tag</code> (only for Freewheel -AAB)</td>
+          <td><code translate="No">cue_points[i].metadata.avt</code></td>
         </tr>
         <tr>
-          <td><code>mrm_network_id</code></td>
-          <td><code>cue_points[i].metadata.mni</code></td>
+          <td><code translate="No">mrm_network_id</code></td>
+          <td><code translate="No">cue_points[i].metadata.mni</code></td>
         </tr>
         <tr>
-          <td><code>player_profile</code></td>
-          <td><code>cue_points[i].metadata.pp</code></td>
+          <td><code translate="No">player_profile</code></td>
+          <td><code translate="No">cue_points[i].metadata.pp</code></td>
         </tr>
         <tr>
-          <td><code>video_asset_network_id</code></td>
-          <td><code>cue_points[i].metadata.vani</code></td>
+          <td><code translate="No">video_asset_network_id</code></td>
+          <td><code translate="No">cue_points[i].metadata.vani</code></td>
         </tr>
         <tr>
-          <td><code>site_section_id</code></td>
-          <td><code>cue_points[i].metadata.ssi</code></td>
+          <td><code translate="No">site_section_id</code></td>
+          <td><code translate="No">cue_points[i].metadata.ssi</code></td>
         </tr>
         <tr>
-          <td><code>site_section_id_type</code></td>
-          <td><code>cue_points[i].metadata.ssit</code></td>
+          <td><code translate="No">site_section_id_type</code></td>
+          <td><code translate="No">cue_points[i].metadata.ssit</code></td>
         </tr>
         <tr>
-          <td><code>site_section_network_id</code></td>
-          <td><code>cue_points[i].metadata.ssni</code></td>
+          <td><code translate="No">site_section_network_id</code></td>
+          <td><code translate="No">cue_points[i].metadata.ssni</code></td>
         </tr>
       </tbody>
     </table>
@@ -191,20 +191,20 @@ parent: Migrating from Ooyala
       </thead>
       <tbody class="bcls-table__body">
         <tr>
-          <td><code>ad_source [=my_ads]</code></td>
-          <td><code>cue_points[i].name</code></td>
+          <td><code translate="No">ad_source [=my_ads]</code></td>
+          <td><code translate="No">cue_points[i].name</code></td>
         </tr>
         <tr>
-          <td><code>ad_position</code></td>
-          <td><code>cue_points[i].time</code></td>
+          <td><code translate="No">ad_position</code></td>
+          <td><code translate="No">cue_points[i].time</code></td>
         </tr>
         <tr>
-          <td><code>click_url</code></td>
-          <td><code>cue_points[i].metadata.cu</code></td>
+          <td><code translate="No">click_url</code></td>
+          <td><code translate="No">cue_points[i].metadata.cu</code></td>
         </tr>
         <tr>
-          <td><code>ad_tag</code></td>
-          <td><code>cue_points[i].metadata.ad_tag</code></td>
+          <td><code translate="No">ad_tag</code></td>
+          <td><code translate="No">cue_points[i].metadata.ad_tag</code></td>
         </tr>
       </tbody>
     </table>
@@ -223,16 +223,16 @@ parent: Migrating from Ooyala
       </thead>
       <tbody class="bcls-table__body">
         <tr>
-          <td><code>ad_source [=vast_compliant_instream OR vast_compliant_overlay OR vast_live_opf]</code></td>
-          <td><code>cue_points[i].name</code></td>
+          <td><code translate="No">ad_source [=vast_compliant_instream OR vast_compliant_overlay OR vast_live_opf]</code></td>
+          <td><code translate="No">cue_points[i].name</code></td>
         </tr>
         <tr>
-          <td><code>ad_position</code></td>
-          <td><code>cue_points[i].time</code></td>
+          <td><code translate="No">ad_position</code></td>
+          <td><code translate="No">cue_points[i].time</code></td>
         </tr>
         <tr>
-          <td><code>ad_tag</code></td>
-          <td><code>cue_points[i].metadata.ad_tag</code></td>
+          <td><code translate="No">ad_tag</code></td>
+          <td><code translate="No">cue_points[i].metadata.ad_tag</code></td>
         </tr>
       </tbody>
     </table>
@@ -251,16 +251,16 @@ parent: Migrating from Ooyala
       </thead>
       <tbody class="bcls-table__body">
         <tr>
-          <td><code>ad_source [=vpaid_opf OR vpaid_opf_overlay]</code></td>
-          <td><code>cue_points[i].name</code></td>
+          <td><code translate="No">ad_source [=vpaid_opf OR vpaid_opf_overlay]</code></td>
+          <td><code translate="No">cue_points[i].name</code></td>
         </tr>
         <tr>
-          <td><code>ad_position</code></td>
-          <td><code>cue_points[i].time</code></td>
+          <td><code translate="No">ad_position</code></td>
+          <td><code translate="No">cue_points[i].time</code></td>
         </tr>
         <tr>
-          <td><code>ad_tag</code></td>
-          <td><code>cue_points[i].metadata.ad_tag</code></td>
+          <td><code translate="No">ad_tag</code></td>
+          <td><code translate="No">cue_points[i].metadata.ad_tag</code></td>
         </tr>
       </tbody>
     </table>

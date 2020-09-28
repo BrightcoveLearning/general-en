@@ -66,8 +66,8 @@ parent: Migrating from Ooyala
     <h2 id="File_Names">File Names</h2>
     <p>During the ingestion process, the source file name will need to be passed as part of an API request URL. For that reason, the name must be URI compatible. Avoid the following in source file names for all videos and assets:</p>
     <ul>
-      <li><strong>Spaces</strong>: instead of <code>my video.mov</code>, use <code>my-video.mov</code> or <code>my_video.mov</code></li>
-      <li><strong>Special characters</strong>: do <strong>not</strong> use the following characters in source file names: <code>"!", "@", "#", "$", "%", "^", "&amp;", "*", "(", ")", "?", "/", "\", "{", "}", "[", "]"</code></li>
+      <li><strong>Spaces</strong>: instead of <code translate="No">my video.mov</code>, use <code translate="No">my-video.mov</code> or <code translate="No">my_video.mov</code></li>
+      <li><strong>Special characters</strong>: do <strong>not</strong> use the following characters in source file names: <code translate="No">"!", "@", "#", "$", "%", "^", "&amp;", "*", "(", ")", "?", "/", "\", "{", "}", "[", "]"</code></li>
     </ul>
   </section>
   <section class="bcls-section">
@@ -75,18 +75,18 @@ parent: Migrating from Ooyala
     <h3>Video files</h3>
     <p>Since <span class="”notranslate”">Brightcove</span> supports so many video input types, it is actually more helpful to talk about the formats we do not support. At the moment, there are only a few. The list below shows the formats <strong><em>not</em></strong> supported for Video Cloud.</p>
     <ul>
-      <li><code>Apple Intermediate</code></li>
-      <li><code>HDV 720p60</code></li>
-      <li><code>Go2Meeting3 (G2M3)</code></li>
-      <li><code>Avid Meridien Uncompressed</code></li>
-      <li><code>Windows Media Audio Lossless</code></li>
-      <li><code>CineForm</code> - partly supported; there are variants that can come from the software used to encode the source, or from OS, that make the source unusable by Video Cloud. We are still trying to identify the exact factors that cause problems.</li>
-      <li><code>SWF</code></li>
+      <li><code translate="No">Apple Intermediate</code></li>
+      <li><code translate="No">HDV 720p60</code></li>
+      <li><code translate="No">Go2Meeting3 (G2M3)</code></li>
+      <li><code translate="No">Avid Meridien Uncompressed</code></li>
+      <li><code translate="No">Windows Media Audio Lossless</code></li>
+      <li><code translate="No">CineForm</code> - partly supported; there are variants that can come from the software used to encode the source, or from OS, that make the source unusable by Video Cloud. We are still trying to identify the exact factors that cause problems.</li>
+      <li><code translate="No">SWF</code></li>
     </ul>
     <h4>Special cases</h4>
     <ul>
       <li>
-        <aside class="bcls-aside bcls-aside--information">Note: <code>AVdh (DNxHQ)</code> also does not work for <strong>422 10-bit and 444 12-bit sources (only)</strong> - this is a bug, and this note will be removed when it is fixed.</aside>
+        <aside class="bcls-aside bcls-aside--information">Note: <code translate="No">AVdh (DNxHQ)</code> also does not work for <strong>422 10-bit and 444 12-bit sources (only)</strong> - this is a bug, and this note will be removed when it is fixed.</aside>
       </li>
       <li>Content encrypted with KMS is supported but requires that you pre-sign your object URLs, ala what is outlined here: <a href="https://aws.amazon.com/blogs/developer/generating-amazon-s3-pre-signed-urls-with-sse-kms-part-2/">https://aws.amazon.com/blogs/developer/generating-amazon-s3-pre-signed-urls-with-sse-kms-part-2/</a>.
         <p>Steps to implement:</p>

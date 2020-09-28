@@ -446,7 +446,7 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
     <p>Since the JSON format is very closely related to the JavaScript language (the characters U+2028 and U+2029 are handled differently in the two languages), it can be used in the language with little effort. The JSON text format uses the same syntax as the code used to create a JavaScript object. The JSON object contains methods for converting values to JSON format and for converting JSON format to values.</p>
     <p>The JSON object has several methods which include:</p>
     <ul>
-      <li>The <code>parse()</code> method for converting a JSON string to a JavaScript object or array.
+      <li>The <code translate="No">parse()</code> method for converting a JSON string to a JavaScript object or array.
         <pre class="line-numbers">
 <code class="language-javascript">var jsonstring = '{"firstName":"John","lastName":"Smith","phone":["555-0100","555-0120"]}';
 var contact = JSON.parse(jsonstring);
@@ -454,7 +454,7 @@ console.log(contact.lastName + ", " + contact.firstName);
 //Output: Smith, John</code></pre>
         <p>For details, refer to the <a href="//msdn.microsoft.com/en-us/library/ie/cc836466%28v=vs.94%29.aspx">JSON.parse Function (JavaScript)</a> document.</p>
       </li>
-      <li>The <code>stringify()</code> method for converting a JavaScript value, usually an object or array, to a JSON string.
+      <li>The <code translate="No">stringify()</code> method for converting a JavaScript value, usually an object or array, to a JSON string.
         <p>Example 1:</p>
         <pre class="line-numbers">
 <code class="language-javascript">var contact = new Object();

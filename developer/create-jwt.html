@@ -231,10 +231,10 @@ console.log(&quot;Public key saved in &quot; + dir + &quot;/public_key.txt&quot;
 </p>
 <ul>
   <li>
-    <code>video-cloud/playback-auth/key/read</code>
+    <code translate="No">video-cloud/playback-auth/key/read</code>
   </li>
   <li>
-    <code>video-cloud/playback-auth/key/write</code>
+    <code translate="No">video-cloud/playback-auth/key/write</code>
   </li>
 </ul>
 
@@ -333,25 +333,25 @@ https://playback-auth.api.brightcove.com/v1/accounts/{accountID}/keys
       </thead>
       <tbody class="bcls-table__body">
         <tr>
-          <td><code>accid</code></td>
+          <td><code translate="No">accid</code></td>
           <td>String</td>
           <td>Yes</td>
           <td>The account id that owns the content being played</td>
         </tr>
         <tr>
-          <td><code>exp</code></td>
+          <td><code translate="No">exp</code></td>
           <td>Integer</td>
           <td>Yes</td>
-          <td>Time this token will no longer be valid, in seconds since the Epoch. Must be no more than 30 days from <code>iat</code></td>
+          <td>Time this token will no longer be valid, in seconds since the Epoch. Must be no more than 30 days from <code translate="No">iat</code></td>
         </tr>
         <tr>
-          <td><code>iat</code></td>
+          <td><code translate="No">iat</code></td>
           <td>Integer</td>
           <td>Yes</td>
           <td>Time this token was issued, in seconds since the Epoch</td>
         </tr>
         <tr>
-          <td><code>ua</code></td>
+          <td><code translate="No">ua</code></td>
           <td>String</td>
           <td></td>
           <td>If present, this token will only be valid for requests from this User-Agent.
@@ -360,7 +360,7 @@ https://playback-auth.api.brightcove.com/v1/accounts/{accountID}/keys
           </td>
         </tr>
         <tr>
-          <td><code>conid</code></td>
+          <td><code translate="No">conid</code></td>
           <td>String</td>
           <td></td>
           <td>If present, this token will only authorize license fetching for a specific Video Cloud video id.
@@ -369,7 +369,7 @@ https://playback-auth.api.brightcove.com/v1/accounts/{accountID}/keys
           </td>
         </tr>
         <tr>
-          <td><code>maxip</code></td>
+          <td><code translate="No">maxip</code></td>
           <td>Integer</td>
           <td></td>
           <td>If present, this token will only be able to be used by this many different IP addresses. (DRM & AES-128)
@@ -378,7 +378,7 @@ https://playback-auth.api.brightcove.com/v1/accounts/{accountID}/keys
           </td>
         </tr>
         <tr>
-          <td><code>maxu</code></td>
+          <td><code translate="No">maxu</code></td>
           <td>Integer</td>
           <td></td>
           <td>
@@ -386,7 +386,7 @@ https://playback-auth.api.brightcove.com/v1/accounts/{accountID}/keys
             <br><br>
             <ul>
               <li>
-                For HLSe, players will make multiple requests when playing a video, typically one per rendition. The <code>maxu</code> must be set high enough to account for these additional requests.
+                For HLSe, players will make multiple requests when playing a video, typically one per rendition. The <code translate="No">maxu</code> must be set high enough to account for these additional requests.
               </li>
               <li>
                 For DRM, one license request is made per playback
@@ -417,7 +417,7 @@ https://playback-auth.api.brightcove.com/v1/accounts/{accountID}/keys
           </thead>
           <tbody class="bcls-table__body">
             <tr>
-              <td><code>accid</code></td>
+              <td><code translate="No">accid</code></td>
               <td>String</td>
               <td>Yes</td>
               <td></td>
@@ -425,15 +425,15 @@ https://playback-auth.api.brightcove.com/v1/accounts/{accountID}/keys
               <td>The account id that owns the content being played</td>
             </tr>
             <tr>
-              <td><code>exp</code></td>
+              <td><code translate="No">exp</code></td>
               <td>Integer</td>
               <td>Yes</td>
               <td></td>
               <td></td>
-              <td>Time this token will no longer be valid, in seconds since the Epoch. Must be no more than 30 days from <code>iat</code></td>
+              <td>Time this token will no longer be valid, in seconds since the Epoch. Must be no more than 30 days from <code translate="No">iat</code></td>
             </tr>
             <tr>
-              <td><code>iat</code></td>
+              <td><code translate="No">iat</code></td>
               <td>Integer</td>
               <td>Yes</td>
               <td></td>
@@ -441,7 +441,7 @@ https://playback-auth.api.brightcove.com/v1/accounts/{accountID}/keys
               <td>Time this token was issued, in seconds since the Epoch</td>
             </tr>
             <tr>
-              <td><code>pkid</code></td>
+              <td><code translate="No">pkid</code></td>
               <td>String</td>
               <td>Yes</td>
               <td></td>
@@ -454,7 +454,7 @@ https://playback-auth.api.brightcove.com/v1/accounts/{accountID}/keys
               </td>
             </tr>
             <tr>
-              <td><code>nbf</code></td>
+              <td><code translate="No">nbf</code></td>
               <td>Integer</td>
               <td></td>
               <td></td>
@@ -462,18 +462,18 @@ https://playback-auth.api.brightcove.com/v1/accounts/{accountID}/keys
               <td>Time this token will begin being valid, in seconds since the Epoch</td>
             </tr>
             <tr>
-              <td><code>prid</code></td>
+              <td><code translate="No">prid</code></td>
               <td>String</td>
               <td></td>
               <td></td>
               <td></td>
-              <td>A <code>playback_rights_id</code>. Used to override the id set in the catalog for this video
+              <td>A <code translate="No">playback_rights_id</code>. Used to override the id set in the catalog for this video
                 <br /><br />
                 This field is not validated.
               </td>
             </tr>
             <tr>
-              <td><code>tags</code></td>
+              <td><code translate="No">tags</code></td>
               <td>Array &lt;Strings&gt;</td>
               <td></td>
               <td></td>
@@ -481,7 +481,7 @@ https://playback-auth.api.brightcove.com/v1/accounts/{accountID}/keys
               <td>if present, this token is valid only for the listed tags authorized to playback.</td>
             </tr>
             <tr>
-              <td><code>offers</code></td>
+              <td><code translate="No">offers</code></td>
               <td>Array &lt;Strings&gt;</td>
               <td></td>
               <td></td>
@@ -489,7 +489,7 @@ https://playback-auth.api.brightcove.com/v1/accounts/{accountID}/keys
               <td>if present, this token is valid only for the listed offers authorized to playback.</td>
             </tr>
             <tr>
-              <td><code>vids</code></td>
+              <td><code translate="No">vids</code></td>
               <td>Array &lt;Strings&gt;</td>
               <td></td>
               <td></td>
@@ -497,7 +497,7 @@ https://playback-auth.api.brightcove.com/v1/accounts/{accountID}/keys
               <td>If present, this token will only authorize license fetching for a set of video ids.</td>
             </tr>
             <tr>
-              <td><code>uid</code></td>
+              <td><code translate="No">uid</code></td>
               <td>String</td>
               <td></td>
               <td>Yes</td>
@@ -508,7 +508,7 @@ https://playback-auth.api.brightcove.com/v1/accounts/{accountID}/keys
               </td>
             </tr>
             <tr>
-              <td><code>sid</code></td>
+              <td><code translate="No">sid</code></td>
               <td>String</td>
               <td></td>
               <td></td>
@@ -521,20 +521,20 @@ https://playback-auth.api.brightcove.com/v1/accounts/{accountID}/keys
               </td>
             </tr>
             <tr>
-              <td><code>cexp</code></td>
+              <td><code translate="No">cexp</code></td>
               <td>String</td>
               <td></td>
               <td></td>
               <td>Yes</td>
               <td>Concurrency expiration of session - Defaults to 2 times the content duration.
                 <br /><br />
-                This defines how long the session is valid, after which time the end viewer has to start a new session to continue playback. Example: <code>2h</code> or <code>42m</code>
+                This defines how long the session is valid, after which time the end viewer has to start a new session to continue playback. Example: <code translate="No">2h</code> or <code translate="No">42m</code>
                 <br /><br />
           Required for session concurrency.
               </td>
             </tr>
             <tr>
-              <td><code>climit</code></td>
+              <td><code translate="No">climit</code></td>
               <td>Integer</td>
               <td></td>
               <td>Yes</td>
@@ -545,18 +545,18 @@ https://playback-auth.api.brightcove.com/v1/accounts/{accountID}/keys
         </td>
             </tr>
             <tr>
-              <td><code>dlimit</code></td>
+              <td><code translate="No">dlimit</code></td>
               <td>Integer</td>
               <td></td>
               <td></td>
               <td>Yes</td>
-              <td>When this field is included, it controls how many devices can be associated with the specified user (<code>uid</code>). Value must be &gt; <code>0</code>.
+              <td>When this field is included, it controls how many devices can be associated with the specified user (<code translate="No">uid</code>). Value must be &gt; <code translate="No">0</code>.
                 <br /><br />
-                Previously allowed devices will continue to operate if the <code>dlimit</code> value is dropped in later requests.
+                Previously allowed devices will continue to operate if the <code translate="No">dlimit</code> value is dropped in later requests.
                 <br /><br />
-                Example: if value is set to <code>3</code>, the user can play on devices A, B, & C (all would be allowed). Trying to play on device D would be denied.
+                Example: if value is set to <code translate="No">3</code>, the user can play on devices A, B, & C (all would be allowed). Trying to play on device D would be denied.
                 <br /><br />
-                If value is changed to <code>1</code>, the user can still play on all 3 devices A, B, & C, unless the devices are manually revoked by managing devices with the <a href="https://docs.brightcove.com/en/staging/epa/playback-rights-api/v1/doc/#operation/GetDevices">Playback Rights API</a>.
+                If value is changed to <code translate="No">1</code>, the user can still play on all 3 devices A, B, & C, unless the devices are manually revoked by managing devices with the <a href="https://docs.brightcove.com/en/staging/epa/playback-rights-api/v1/doc/#operation/GetDevices">Playback Rights API</a>.
                 <br /><br />
             Required for device registration.
               </td>

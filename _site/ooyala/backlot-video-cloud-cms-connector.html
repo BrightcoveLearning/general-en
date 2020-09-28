@@ -403,11 +403,11 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
     <section class="bcls-section">
     <h2 id="ad_set_apis">Ad Set Endpoints</h2>
     
-    <p>Video Cloud does not have the concept of an <code>ad_set</code>, but ad set data associated with a video will be migrated to <code>cue_points</code>, and the <code>ad_set_id</code> will be stored in a custom field of that name to allow us to identify videos that were associated with an ad set.</p>
+    <p>Video Cloud does not have the concept of an <code translate="No">ad_set</code>, but ad set data associated with a video will be migrated to <code translate="No">cue_points</code>, and the <code translate="No">ad_set_id</code> will be stored in a custom field of that name to allow us to identify videos that were associated with an ad set.</p>
     
     <p>See <a href="/ooyala/migrating-video-cloud-ad-sets.html">Migrating to Video Cloud: Ad Sets</a> for more information on how ad set data is mapped to cuepoints for different ad sources.</p>
     
-    <p>The table below shows what Backlot API <code>ad_sets</code> operations are supported.</p>
+    <p>The table below shows what Backlot API <code translate="No">ad_sets</code> operations are supported.</p>
     
     <table class="bcls-table">
       <caption class="bcls-caption--table">ad_sets Endpoints</caption>
@@ -421,8 +421,8 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
       </thead>
       <tbody class="bcls-table__body">
         <tr>
-          <td rowspan="2"><code>v2/ad_sets</code></td>
-          <td><code>GET</code></td>
+          <td rowspan="2"><code translate="No">v2/ad_sets</code></td>
+          <td><code translate="No">GET</code></td>
           <td style="text-align:center;"><img alt="Yes" src="//learning-services-media.brightcove.com/doc-assets/site-assets/images/site/check16.png" /></td>
           <td>
           <ul>
@@ -431,7 +431,7 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
           </td>
         </tr>
         <tr>
-          <td><code>POST</code></td>
+          <td><code translate="No">POST</code></td>
           <td style="text-align:center;"><img alt="No" src="//learning-services-media.brightcove.com/doc-assets/site-assets/images/site/x16.png" /></td>
           <td>
           <ul>
@@ -440,8 +440,8 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
           </td>
         </tr>
         <tr>
-          <td rowspan="3"><code>v2/ad_sets/{set_id}</code></td>
-          <td><code>GET</code></td>
+          <td rowspan="3"><code translate="No">v2/ad_sets/{set_id}</code></td>
+          <td><code translate="No">GET</code></td>
           <td style="text-align:center;"><img alt="Yes" src="//learning-services-media.brightcove.com/doc-assets/site-assets/images/site/check16.png" /></td>
           <td>
           <ul>
@@ -450,7 +450,7 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
           </td>
         </tr>
         <tr>
-          <td><code>PATCH</code></td>
+          <td><code translate="No">PATCH</code></td>
           <td style="text-align:center;"><img alt="Yes" src="//learning-services-media.brightcove.com/doc-assets/site-assets/images/site/check16.png" /></td>
           <td>
           <ul>
@@ -459,7 +459,7 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
           </td>
         </tr>
         <tr>
-          <td><code>DELETE</code></td>
+          <td><code translate="No">DELETE</code></td>
           <td style="text-align:center;"><img alt="Yes" src="//learning-services-media.brightcove.com/doc-assets/site-assets/images/site/check16.png" /></td>
           <td>
           <ul>
@@ -468,8 +468,8 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
           </td>
         </tr>
         <tr>
-          <td rowspan="3"><code>v2/ad_sets/{set_id}ads</code></td>
-          <td><code>POST</code></td>
+          <td rowspan="3"><code translate="No">v2/ad_sets/{set_id}ads</code></td>
+          <td><code translate="No">POST</code></td>
           <td style="text-align:center;"><img alt="Yes" src="//learning-services-media.brightcove.com/doc-assets/site-assets/images/site/check16.png" /></td>
           <td>
           <ul>
@@ -478,7 +478,7 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
           </td>
         </tr>
         <tr>
-          <td><code>DELETE</code></td>
+          <td><code translate="No">DELETE</code></td>
           <td style="text-align:center;"><img alt="Yes" src="//learning-services-media.brightcove.com/doc-assets/site-assets/images/site/check16.png" /></td>
           <td>
           <ul>
@@ -493,9 +493,9 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
     <section class="bcls-section">
     <h2 id="asset_apis">Asset Endpoints</h2>
     
-    <p>The table below shows what Backlot API <code>asset</code> operations are supported.</p>
+    <p>The table below shows what Backlot API <code translate="No">asset</code> operations are supported.</p>
     
-    <p>Note that the <a href="http://api.ooyala.com/docs/v2/query_api">Query API</a> that provides filtering of asset operations using SQL statements is only partly supported. <code>where</code> and <code>orderby</code> queries are <strong>not</strong> supported. <code>limit</code> queries should work.</p>
+    <p>Note that the <a href="http://api.ooyala.com/docs/v2/query_api">Query API</a> that provides filtering of asset operations using SQL statements is only partly supported. <code translate="No">where</code> and <code translate="No">orderby</code> queries are <strong>not</strong> supported. <code translate="No">limit</code> queries should work.</p>
     
     <table class="bcls-table">
       <caption class="bcls-caption--table">Asset Endpoints</caption>
@@ -509,52 +509,52 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
       </thead>
       <tbody class="bcls-table__body">
         <tr>
-          <td rowspan="2"><code>/v2/assets</code></td>
-          <td><code>GET</code></td>
+          <td rowspan="2"><code translate="No">/v2/assets</code></td>
+          <td><code translate="No">GET</code></td>
           <td style="text-align:center;"><img alt="Yes" src="//learning-services-media.brightcove.com/doc-assets/site-assets/images/site/check16.png" /></td>
           <td>
           <ul>
-            <li><code>ad</code> type videos will be regular videos in Video Cloud with the tag <code>ooyala_my_ads</code></li>
-            <li><code>youtube</code> type videos will not be migrated to Video Cloud</li>
-            <li><code>external_id</code> is being migrated to Video Cloud, but will be a read-only field available to the Playback API (for Ooyala players delivering Video Cloud content)</li>
+            <li><code translate="No">ad</code> type videos will be regular videos in Video Cloud with the tag <code translate="No">ooyala_my_ads</code></li>
+            <li><code translate="No">youtube</code> type videos will not be migrated to Video Cloud</li>
+            <li><code translate="No">external_id</code> is being migrated to Video Cloud, but will be a read-only field available to the Playback API (for Ooyala players delivering Video Cloud content)</li>
             <li>Recurring time restrictions and IP restrictions are not being migrated to Video Cloud</li>
           </ul>
           </td>
         </tr>
         <tr>
-          <td><code>POST</code></td>
+          <td><code translate="No">POST</code></td>
           <td style="text-align:center;"><img alt="Yes" src="//learning-services-media.brightcove.com/doc-assets/site-assets/images/site/check16.png" /></td>
           <td>
           <ul>
             <li>See <a href="/ooyala/backlot-video-cloud-cms-connector.html">Ingestion Using the Backlot API</a> for more details</li>
-            <li>Video Cloud ingestion requires that the <code>chunk_size</code> be 5MB or greater (except for the last chunk) - an error will be returned if the <code>chunk_size</code> is set to lower value</li>
-            <li>Since <code>youtube</code> type videos are not supported in Video Cloud, attempting to create videos of these types will return an error. <code>ad</code> type videos can be created as regular videos having the tag <code>ooyala_my_ads</code>.</li>
-            <li><code>youtube</code> type videos will not be migrated to Video Cloud</li>
+            <li>Video Cloud ingestion requires that the <code translate="No">chunk_size</code> be 5MB or greater (except for the last chunk) - an error will be returned if the <code translate="No">chunk_size</code> is set to lower value</li>
+            <li>Since <code translate="No">youtube</code> type videos are not supported in Video Cloud, attempting to create videos of these types will return an error. <code translate="No">ad</code> type videos can be created as regular videos having the tag <code translate="No">ooyala_my_ads</code>.</li>
+            <li><code translate="No">youtube</code> type videos will not be migrated to Video Cloud</li>
           </ul>
           </td>
         </tr>
         <tr>
-          <td rowspan="4"><code>/v2/assets/{asset_id}</code></td>
-          <td><code>GET</code></td>
+          <td rowspan="4"><code translate="No">/v2/assets/{asset_id}</code></td>
+          <td><code translate="No">GET</code></td>
           <td style="text-align:center;"><img alt="Yes" src="//learning-services-media.brightcove.com/doc-assets/site-assets/images/site/check16.png" /></td>
           <td>
           <ul>
-            <li><code>ad</code> type videos will be regular videos in Video Cloud with the tag <code>ooyala_my_ads</code></li>
-            <li><code>youtube</code> type videos will not be migrated to Video Cloud</li>
+            <li><code translate="No">ad</code> type videos will be regular videos in Video Cloud with the tag <code translate="No">ooyala_my_ads</code></li>
+            <li><code translate="No">youtube</code> type videos will not be migrated to Video Cloud</li>
           </ul>
           </td>
         </tr>
         <tr>
-          <td><code>POST</code></td>
+          <td><code translate="No">POST</code></td>
           <td style="text-align:center;"><img alt="No" src="//learning-services-media.brightcove.com/doc-assets/site-assets/images/site/x16.png" /></td>
           <td>
           <ul>
-            <li>Only updating properties via <code>PATCH</code></li>
+            <li>Only updating properties via <code translate="No">PATCH</code></li>
           </ul>
           </td>
         </tr>
         <tr>
-          <td><code>PATCH</code></td>
+          <td><code translate="No">PATCH</code></td>
           <td style="text-align:center;"><img alt="Yes" src="//learning-services-media.brightcove.com/doc-assets/site-assets/images/site/check16.png" /></td>
           <td>
           <ul>
@@ -563,13 +563,13 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
           </td>
         </tr>
         <tr>
-          <td><code>DELETE</code></td>
+          <td><code translate="No">DELETE</code></td>
           <td style="text-align:center;"><img alt="Yes" src="//learning-services-media.brightcove.com/doc-assets/site-assets/images/site/check16.png" /></td>
           <td>Note that Video Cloud will <strong>not</strong> allow a video to be deleted if it belongs to any playlists</td>
         </tr>
         <tr>
-          <td><code>/v2/assets/{asset_id}/ad_set</code></td>
-          <td><code>GET</code></td>
+          <td><code translate="No">/v2/assets/{asset_id}/ad_set</code></td>
+          <td><code translate="No">GET</code></td>
           <td style="text-align:center;"><img alt="Yes" src="//learning-services-media.brightcove.com/doc-assets/site-assets/images/site/check16.png" /></td>
           <td>
           <ul>
@@ -578,8 +578,8 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
           </td>
         </tr>
         <tr>
-          <td rowspan="3"><code>/v2/assets/{asset_id}/closed_captions</code></td>
-          <td><code>GET</code></td>
+          <td rowspan="3"><code translate="No">/v2/assets/{asset_id}/closed_captions</code></td>
+          <td><code translate="No">GET</code></td>
           <td style="text-align:center;"><img alt="Yes" src="//learning-services-media.brightcove.com/doc-assets/site-assets/images/site/check16.png" /></td>
           <td>
           <ul>
@@ -588,7 +588,7 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
           </td>
         </tr>
         <tr>
-          <td><code>PUT</code></td>
+          <td><code translate="No">PUT</code></td>
           <td style="text-align:center;"><img alt="Yes" src="//learning-services-media.brightcove.com/doc-assets/site-assets/images/site/check16.png" /></td>
           <td>
           <ul>
@@ -597,39 +597,39 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
     
             <ul>
               <li>If multiple language captions are stored in the DFXP, it will be split and turned into multiple WebVTT text tracks for the different languages. The English text-tracks will be set as default. You can change the default language in <a href="https://studio.support.brightcove.com/media/adding-captions-videos-using-media-module.html">Studio</a> if needed.</li>
-              <li>Because text tracks require a language identifier, if the DFXP file does not include one, <code>en</code> will be assigned to the converted WebVTT captions. If this is not the correct language, you will need to correct it by <a href="https://studio.support.brightcove.com/media/adding-captions-videos-using-media-module.html#edit_captions">editing the text track properties</a> in Studio so that the closed caption menu will show the correct language.</li>
+              <li>Because text tracks require a language identifier, if the DFXP file does not include one, <code translate="No">en</code> will be assigned to the converted WebVTT captions. If this is not the correct language, you will need to correct it by <a href="https://studio.support.brightcove.com/media/adding-captions-videos-using-media-module.html#edit_captions">editing the text track properties</a> in Studio so that the closed caption menu will show the correct language.</li>
             </ul>
             </li>
           </ul>
           </td>
         </tr>
         <tr>
-          <td><code>DELETE</code></td>
+          <td><code translate="No">DELETE</code></td>
           <td style="text-align:center;"><img alt="Yes" src="//learning-services-media.brightcove.com/doc-assets/site-assets/images/site/check16.png" /></td>
           <td>&nbsp;</td>
         </tr>
         <tr>
-          <td rowspan="2"><code>/v2/assets/{asset_id}/drm_attributes/{drm_type}</code></td>
-          <td><code>GET</code></td>
+          <td rowspan="2"><code translate="No">/v2/assets/{asset_id}/drm_attributes/{drm_type}</code></td>
+          <td><code translate="No">GET</code></td>
           <td style="text-align:center;"><img alt="No" src="//learning-services-media.brightcove.com/doc-assets/site-assets/images/site/x16.png" /></td>
           <td>
           <ul>
-            <li>DRM in Video Cloud is applied to all videos in a DRM-enabled account unless they are flagged not to be packaged with a <code>drm_disabled</code> field</li>
+            <li>DRM in Video Cloud is applied to all videos in a DRM-enabled account unless they are flagged not to be packaged with a <code translate="No">drm_disabled</code> field</li>
           </ul>
           </td>
         </tr>
         <tr>
-          <td><code>PATCH</code></td>
+          <td><code translate="No">PATCH</code></td>
           <td style="text-align:center;"><img alt="No" src="//learning-services-media.brightcove.com/doc-assets/site-assets/images/site/x16.png" /></td>
           <td>
           <ul>
-            <li>DRM in Video Cloud is applied to all videos in a DRM-enabled account unless they are flagged not to be packaged with a <code>drm_disabled</code> field</li>
+            <li>DRM in Video Cloud is applied to all videos in a DRM-enabled account unless they are flagged not to be packaged with a <code translate="No">drm_disabled</code> field</li>
           </ul>
           </td>
         </tr>
         <tr>
-          <td><code>/v2/assets/{asset_id}/generated_preview_images</code></td>
-          <td><code>GET</code></td>
+          <td><code translate="No">/v2/assets/{asset_id}/generated_preview_images</code></td>
+          <td><code translate="No">GET</code></td>
           <td style="text-align:center;"><img alt="No" src="//learning-services-media.brightcove.com/doc-assets/site-assets/images/site/x16.png" /></td>
           <td>
           <ul>
@@ -638,102 +638,102 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
           </td>
         </tr>
         <tr>
-          <td rowspan="2"><code>/v2/assets/{asset_id}/labels</code></td>
-          <td><code>GET</code></td>
+          <td rowspan="2"><code translate="No">/v2/assets/{asset_id}/labels</code></td>
+          <td><code translate="No">GET</code></td>
           <td style="text-align:center;"><img alt="Yes" src="//learning-services-media.brightcove.com/doc-assets/site-assets/images/site/check16.png" /></td>
           <td>
           <ul>
-            <li>All <code>labels</code> will be migrated to <code>tags</code>, so this request will return the video tags</li>
+            <li>All <code translate="No">labels</code> will be migrated to <code translate="No">tags</code>, so this request will return the video tags</li>
           </ul>
           </td>
         </tr>
         <tr>
-          <td><code>POST</code></td>
+          <td><code translate="No">POST</code></td>
           <td style="text-align:center;"><img alt="Yes" src="//learning-services-media.brightcove.com/doc-assets/site-assets/images/site/check16.png" /></td>
           <td>
           <ul>
-            <li>All <code>labels</code> will be migrated to <code>tags</code>, so this request will add a video tag. Note that updating labels directly in Video Cloud is <strong>not</strong> supported.</li>
+            <li>All <code translate="No">labels</code> will be migrated to <code translate="No">tags</code>, so this request will add a video tag. Note that updating labels directly in Video Cloud is <strong>not</strong> supported.</li>
           </ul>
           </td>
         </tr>
         <tr>
-          <td rowspan="2"><code>/v2/assets/{asset_id}/labels/{label_id}</code></td>
-          <td><code>PUT</code></td>
+          <td rowspan="2"><code translate="No">/v2/assets/{asset_id}/labels/{label_id}</code></td>
+          <td><code translate="No">PUT</code></td>
           <td style="text-align:center;"><img alt="Yes" src="//learning-services-media.brightcove.com/doc-assets/site-assets/images/site/check16.png" /></td>
           <td>
           <ul>
-            <li>This will replace the label (a <code>tag</code>) in Video Cloud. Note that updating labels directly in Video Cloud is <strong>not</strong> supported.</li>
+            <li>This will replace the label (a <code translate="No">tag</code>) in Video Cloud. Note that updating labels directly in Video Cloud is <strong>not</strong> supported.</li>
           </ul>
           </td>
         </tr>
         <tr>
-          <td><code>DELETE</code></td>
+          <td><code translate="No">DELETE</code></td>
           <td style="text-align:center;"><img alt="Yes" src="//learning-services-media.brightcove.com/doc-assets/site-assets/images/site/check16.png" /></td>
           <td>
           <ul>
-            <li>This will delete the label (a <code>tag</code>) in Video Cloud. Note that updating labels directly in Video Cloud is <strong>not</strong> supported.</li>
+            <li>This will delete the label (a <code translate="No">tag</code>) in Video Cloud. Note that updating labels directly in Video Cloud is <strong>not</strong> supported.</li>
           </ul>
           </td>
         </tr>
         <tr>
-          <td rowspan="4"><code>/v2/assets/{asset_id}/metadata</code></td>
-          <td><code>GET</code></td>
+          <td rowspan="4"><code translate="No">/v2/assets/{asset_id}/metadata</code></td>
+          <td><code translate="No">GET</code></td>
           <td style="text-align:center;"><img alt="Yes" src="//learning-services-media.brightcove.com/doc-assets/site-assets/images/site/check16.png" /></td>
           <td>
           <ul>
-            <li><code>metadata</code> items will be migrated to <code>tags</code> in the form <code>meta:;:{key}:;:{value}</code>. Note that overall length of each tag is limited to 128 single-byte characters.</li>
+            <li><code translate="No">metadata</code> items will be migrated to <code translate="No">tags</code> in the form <code translate="No">meta:;:{key}:;:{value}</code>. Note that overall length of each tag is limited to 128 single-byte characters.</li>
           </ul>
           </td>
         </tr>
         <tr>
-          <td><code>PUT</code></td>
+          <td><code translate="No">PUT</code></td>
           <td style="text-align:center;"><img alt="Yes" src="//learning-services-media.brightcove.com/doc-assets/site-assets/images/site/check16.png" /></td>
           <td>
           <ul>
-            <li><code>metadata</code> items will be migrated to <code>tags</code> in the form <code>meta:;:{key}:;:{value}</code> - this request will add or replace tags in that format. Note that overall length of each tag is limited to 128 single-byte characters.</li>
+            <li><code translate="No">metadata</code> items will be migrated to <code translate="No">tags</code> in the form <code translate="No">meta:;:{key}:;:{value}</code> - this request will add or replace tags in that format. Note that overall length of each tag is limited to 128 single-byte characters.</li>
           </ul>
           </td>
         </tr>
         <tr>
-          <td><code>PATCH</code></td>
+          <td><code translate="No">PATCH</code></td>
           <td style="text-align:center;"><img alt="Yes" src="//learning-services-media.brightcove.com/doc-assets/site-assets/images/site/check16.png" /></td>
           <td>
           <ul>
-            <li><code>metadata</code> items will be migrated to <code>tags</code> in the form <code>meta:;:{key}:;:{value}</code> - this request will modify tags in that format</li>
+            <li><code translate="No">metadata</code> items will be migrated to <code translate="No">tags</code> in the form <code translate="No">meta:;:{key}:;:{value}</code> - this request will modify tags in that format</li>
           </ul>
           </td>
         </tr>
         <tr>
-          <td><code>DELETE</code></td>
+          <td><code translate="No">DELETE</code></td>
           <td style="text-align:center;"><img alt="Yes" src="//learning-services-media.brightcove.com/doc-assets/site-assets/images/site/check16.png" /></td>
           <td>
           <ul>
-            <li><code>metadata</code> items will be migrated to <code>tags</code> in the form <code>meta:;:{key}:;:{value}</code> - this request will delete all tags in that format</li>
+            <li><code translate="No">metadata</code> items will be migrated to <code translate="No">tags</code> in the form <code translate="No">meta:;:{key}:;:{value}</code> - this request will delete all tags in that format</li>
           </ul>
           </td>
         </tr>
         <tr>
-          <td rowspan="2"><code>/v2/assets/{asset_id}/movie_urls</code></td>
-          <td><code>GET</code></td>
+          <td rowspan="2"><code translate="No">/v2/assets/{asset_id}/movie_urls</code></td>
+          <td><code translate="No">GET</code></td>
           <td style="text-align:center;"><img alt="Yes" src="//learning-services-media.brightcove.com/doc-assets/site-assets/images/site/check16.png" /></td>
           <td>
           <ul>
-            <li><code>movie_urls</code> are <code>sources</code> in Video Cloud</li>
+            <li><code translate="No">movie_urls</code> are <code translate="No">sources</code> in Video Cloud</li>
           </ul>
           </td>
         </tr>
         <tr>
-          <td><code>POST</code></td>
+          <td><code translate="No">POST</code></td>
           <td style="text-align:center;"><img alt="Yes" src="//learning-services-media.brightcove.com/doc-assets/site-assets/images/site/check16.png" /></td>
           <td>
           <ul>
-            <li>Works the same way in Video Cloud - this request will add a remote <code>rendition</code> (and therefore <code>source</code>) to the video</li>
+            <li>Works the same way in Video Cloud - this request will add a remote <code translate="No">rendition</code> (and therefore <code translate="No">source</code>) to the video</li>
           </ul>
           </td>
         </tr>
         <tr>
-          <td><code>/v2/assets/{asset_id}/movie_urls/{type}</code></td>
-          <td><code>DELETE</code></td>
+          <td><code translate="No">/v2/assets/{asset_id}/movie_urls/{type}</code></td>
+          <td><code translate="No">DELETE</code></td>
           <td style="text-align:center;"><img alt="Yes" src="//learning-services-media.brightcove.com/doc-assets/site-assets/images/site/check16.png" /></td>
           <td>
           <ul>
@@ -742,65 +742,55 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
           </td>
         </tr>
         <tr>
-          <td><code>/v2/assets/{asset_id}/player</code></td>
-          <td><code>GET</code></td>
+          <td><code translate="No">/v2/assets/{asset_id}/player</code></td>
+          <td><code translate="No">GET</code></td>
           <td style="text-align:center;"><img alt="Yes" src="//learning-services-media.brightcove.com/doc-assets/site-assets/images/site/check16.png" /></td>
           <td>
           <ul>
-            <li>This request will return the default Ooyala player construct, because Video Cloud does not associate players with videos; instead, any video can be associated with any player instance by its video <code>id</code>. You can get Video Cloud players via the <a href="https://apis.support.brightcove.com/player-management/">Player Management API</a></li>
+            <li>This request will return the default Ooyala player construct, because Video Cloud does not associate players with videos; instead, any video can be associated with any player instance by its video <code translate="No">id</code>. You can get Video Cloud players via the <a href="https://apis.support.brightcove.com/player-management/">Player Management API</a></li>
           </ul>
           </td>
         </tr>
         <tr>
-          <td><code>/v2/assets/{asset_id}/player/{player_id}</code></td>
-          <td><code>GET</code></td>
+          <td><code translate="No">/v2/assets/{asset_id}/player/{player_id}</code></td>
+          <td><code translate="No">GET</code></td>
           <td style="text-align:center;"><img alt="No" src="//learning-services-media.brightcove.com/doc-assets/site-assets/images/site/x16.png" /></td>
           <td>
           <ul>
-            <li>Video Cloud does not associate players with videos; instead, any video can be associated with any player instance by its video <code>id</code>. You can get Video Cloud players via the <a href="https://apis.support.brightcove.com/player-management/">Player Management API</a></li>
+            <li>Video Cloud does not associate players with videos; instead, any video can be associated with any player instance by its video <code translate="No">id</code>. You can get Video Cloud players via the <a href="https://apis.support.brightcove.com/player-management/">Player Management API</a></li>
           </ul>
           </td>
         </tr>
         <tr>
-          <td rowspan="4"><code>/v2/assets/{asset_id}/preview_image_urls</code></td>
-          <td><code>GET</code></td>
+          <td rowspan="4"><code translate="No">/v2/assets/{asset_id}/preview_image_urls</code></td>
+          <td><code translate="No">GET</code></td>
           <td style="text-align:center;"><img alt="Yes" src="//learning-services-media.brightcove.com/doc-assets/site-assets/images/site/check16.png" /></td>
           <td>
           <ul>
-            <li>Video Cloud does not store multiple thumbnail images, so this request will return the <code>poster</code> image</li>
+            <li>Video Cloud does not store multiple thumbnail images, so this request will return the <code translate="No">poster</code> image</li>
           </ul>
           </td>
         </tr>
         <tr>
-          <td><code>POST</code></td>
+          <td><code translate="No">POST</code></td>
           <td style="text-align:center;"><img alt="Yes" src="//learning-services-media.brightcove.com/doc-assets/site-assets/images/site/check16.png" /></td>
           <td>
           <ul>
-            <li>Video Cloud does not store multiple thumbnail images, so this request will set the <code>poster</code> image using the first image in the list</li>
+            <li>Video Cloud does not store multiple thumbnail images, so this request will set the <code translate="No">poster</code> image using the first image in the list</li>
           </ul>
           </td>
         </tr>
         <tr>
-          <td><code>PUT</code></td>
+          <td><code translate="No">PUT</code></td>
           <td style="text-align:center;"><img alt="Yes" src="//learning-services-media.brightcove.com/doc-assets/site-assets/images/site/check16.png" /></td>
           <td>
           <ul>
-            <li>Video Cloud does not store multiple thumbnail images, so this request will set the <code>poster</code> image using the first image in the list</li>
+            <li>Video Cloud does not store multiple thumbnail images, so this request will set the <code translate="No">poster</code> image using the first image in the list</li>
           </ul>
           </td>
         </tr>
         <tr>
-          <td><code>DELETE</code></td>
-          <td style="text-align:center;"><img alt="No" src="//learning-services-media.brightcove.com/doc-assets/site-assets/images/site/x16.png" /></td>
-          <td>
-          <ul>
-            <li>Video Cloud stores only a single poster image, and you can replace, but not delete it</li>
-          </ul>
-          </td>
-        </tr>
-        <tr>
-          <td><code>/v2/assets/{asset_id}/preview_image_files/{image_id}</code></td>
-          <td><code>DELETE</code></td>
+          <td><code translate="No">DELETE</code></td>
           <td style="text-align:center;"><img alt="No" src="//learning-services-media.brightcove.com/doc-assets/site-assets/images/site/x16.png" /></td>
           <td>
           <ul>
@@ -809,35 +799,8 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
           </td>
         </tr>
         <tr>
-          <td rowspan="4"><code>/v2/assets/{asset_id}/preview_image_files</code></td>
-          <td><code>GET</code></td>
-          <td style="text-align:center;"><img alt="Yes" src="//learning-services-media.brightcove.com/doc-assets/site-assets/images/site/check16.png" /></td>
-          <td>
-          <ul>
-            <li>Video Cloud does not store multiple thumbnail images, so this request will return the <code>poster</code> image URL</li>
-          </ul>
-          </td>
-        </tr>
-        <tr>
-          <td><code>POST</code></td>
-          <td style="text-align:center;"><img alt="Yes" src="//learning-services-media.brightcove.com/doc-assets/site-assets/images/site/check16.png" /></td>
-          <td>
-          <ul>
-            <li>Video Cloud does not store multiple thumbnail images, so this request will set the <code>poster</code> image using the first image URL in the list as a remote asset</li>
-          </ul>
-          </td>
-        </tr>
-        <tr>
-          <td><code>PUT</code></td>
-          <td style="text-align:center;"><img alt="Yes" src="//learning-services-media.brightcove.com/doc-assets/site-assets/images/site/check16.png" /></td>
-          <td>
-          <ul>
-            <li>Video Cloud does not store multiple thumbnail images, so this request will set the <code>poster</code> image using the first image in the list URL in the list as a remote asset</li>
-          </ul>
-          </td>
-        </tr>
-        <tr>
-          <td><code>DELETE</code></td>
+          <td><code translate="No">/v2/assets/{asset_id}/preview_image_files/{image_id}</code></td>
+          <td><code translate="No">DELETE</code></td>
           <td style="text-align:center;"><img alt="No" src="//learning-services-media.brightcove.com/doc-assets/site-assets/images/site/x16.png" /></td>
           <td>
           <ul>
@@ -846,8 +809,45 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
           </td>
         </tr>
         <tr>
-          <td><code>/v2/assets/{asset_id}/primary_preview_image</code></td>
-          <td><code>GET</code></td>
+          <td rowspan="4"><code translate="No">/v2/assets/{asset_id}/preview_image_files</code></td>
+          <td><code translate="No">GET</code></td>
+          <td style="text-align:center;"><img alt="Yes" src="//learning-services-media.brightcove.com/doc-assets/site-assets/images/site/check16.png" /></td>
+          <td>
+          <ul>
+            <li>Video Cloud does not store multiple thumbnail images, so this request will return the <code translate="No">poster</code> image URL</li>
+          </ul>
+          </td>
+        </tr>
+        <tr>
+          <td><code translate="No">POST</code></td>
+          <td style="text-align:center;"><img alt="Yes" src="//learning-services-media.brightcove.com/doc-assets/site-assets/images/site/check16.png" /></td>
+          <td>
+          <ul>
+            <li>Video Cloud does not store multiple thumbnail images, so this request will set the <code translate="No">poster</code> image using the first image URL in the list as a remote asset</li>
+          </ul>
+          </td>
+        </tr>
+        <tr>
+          <td><code translate="No">PUT</code></td>
+          <td style="text-align:center;"><img alt="Yes" src="//learning-services-media.brightcove.com/doc-assets/site-assets/images/site/check16.png" /></td>
+          <td>
+          <ul>
+            <li>Video Cloud does not store multiple thumbnail images, so this request will set the <code translate="No">poster</code> image using the first image in the list URL in the list as a remote asset</li>
+          </ul>
+          </td>
+        </tr>
+        <tr>
+          <td><code translate="No">DELETE</code></td>
+          <td style="text-align:center;"><img alt="No" src="//learning-services-media.brightcove.com/doc-assets/site-assets/images/site/x16.png" /></td>
+          <td>
+          <ul>
+            <li>Video Cloud stores only a single poster image, and you can replace, but not delete it</li>
+          </ul>
+          </td>
+        </tr>
+        <tr>
+          <td><code translate="No">/v2/assets/{asset_id}/primary_preview_image</code></td>
+          <td><code translate="No">GET</code></td>
           <td style="text-align:center;"><img alt="No" src="//learning-services-media.brightcove.com/doc-assets/site-assets/images/site/x16.png" /></td>
           <td>
           <ul>
@@ -856,8 +856,8 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
           </td>
         </tr>
         <tr>
-          <td><code>/v2/assets/{asset_id}/primary_preview_image</code></td>
-          <td><code>PUT</code></td>
+          <td><code translate="No">/v2/assets/{asset_id}/primary_preview_image</code></td>
+          <td><code translate="No">PUT</code></td>
           <td style="text-align:center;"><img alt="No" src="//learning-services-media.brightcove.com/doc-assets/site-assets/images/site/x16.png" /></td>
           <td>
           <ul>
@@ -866,8 +866,8 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
           </td>
         </tr>
         <tr>
-          <td><code>/v2/assets/{asset_id}/publishing_rule</code></td>
-          <td><code>GET</code></td>
+          <td><code translate="No">/v2/assets/{asset_id}/publishing_rule</code></td>
+          <td><code translate="No">GET</code></td>
           <td style="text-align:center;"><img alt="Yes" src="//learning-services-media.brightcove.com/doc-assets/site-assets/images/site/check16.png" /></td>
           <td>
           <ul>
@@ -876,44 +876,34 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
           </td>
         </tr>
         <tr>
-          <td><code>/v2/assets/{asset_id}/publishing_rule/{rule_id}</code></td>
-          <td><code>PUT</code></td>
+          <td><code translate="No">/v2/assets/{asset_id}/publishing_rule/{rule_id}</code></td>
+          <td><code translate="No">PUT</code></td>
           <td style="text-align:center;"><img alt="Yes" src="//learning-services-media.brightcove.com/doc-assets/site-assets/images/site/check16.png" /></td>
           <td>
           <ul>
-            <li>Video Cloud does not have the concept of a publishing rule. Only geo-restrictions and scheduling properties for the video can be updated. The publishing rule id will be stored in a custom field with the name <code>publishing_rule_id</code></li>
+            <li>Video Cloud does not have the concept of a publishing rule. Only geo-restrictions and scheduling properties for the video can be updated. The publishing rule id will be stored in a custom field with the name <code translate="No">publishing_rule_id</code></li>
           </ul>
           </td>
         </tr>
         <tr>
-          <td><code>/v2/assets/{asset_id}/source_file_info</code></td>
-          <td><code>GET</code></td>
+          <td><code translate="No">/v2/assets/{asset_id}/source_file_info</code></td>
+          <td><code translate="No">GET</code></td>
           <td style="text-align:center;"><img alt="No" src="//learning-services-media.brightcove.com/doc-assets/site-assets/images/site/x16.png" /></td>
           <td>&nbsp;</td>
         </tr>
         <tr>
-          <td><code>/v2/assets/{asset_id}/streams</code></td>
-          <td><code>GET</code></td>
+          <td><code translate="No">/v2/assets/{asset_id}/streams</code></td>
+          <td><code translate="No">GET</code></td>
           <td style="text-align:center;"><img alt="Yes" src="//learning-services-media.brightcove.com/doc-assets/site-assets/images/site/check16.png" /></td>
           <td>
           <ul>
-            <li>Will return Video Cloud <code>sources</code></li>
+            <li>Will return Video Cloud <code translate="No">sources</code></li>
           </ul>
           </td>
         </tr>
         <tr>
-          <td><code>/v2/assets/{asset_id}/uploading_urls</code></td>
-          <td><code>GET</code></td>
-          <td style="text-align:center;"><img alt="Yes" src="//learning-services-media.brightcove.com/doc-assets/site-assets/images/site/check16.png" /></td>
-          <td>
-          <ul>
-            <li>Supported through the Backlot API and the <a href="/ooyala/migrating-video-cloud-ingestion-adapter.html">Ingestion Adapter</a></li>
-          </ul>
-          </td>
-        </tr>
-        <tr>
-          <td><code>/v2/assets/{asset_id}/upload_status</code></td>
-          <td><code>PUT</code></td>
+          <td><code translate="No">/v2/assets/{asset_id}/uploading_urls</code></td>
+          <td><code translate="No">GET</code></td>
           <td style="text-align:center;"><img alt="Yes" src="//learning-services-media.brightcove.com/doc-assets/site-assets/images/site/check16.png" /></td>
           <td>
           <ul>
@@ -922,87 +912,97 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
           </td>
         </tr>
         <tr>
-          <td rowspan="3"><code>/v2/assets/{asset_id}/youtube</code></td>
-          <td><code>GET</code></td>
-          <td style="text-align:center;"><img alt="No" src="//learning-services-media.brightcove.com/doc-assets/site-assets/images/site/x16.png" /></td>
-          <td>
-          <ul>
-            <li>Not supported in Video Cloud - see <a href="https://social.support.brightcove.com">Brightcove Social</a> for Video Cloud alternatives</li>
-          </ul>
-          </td>
-        </tr>
-        <tr>
-          <td><code>PUT</code></td>
-          <td style="text-align:center;"><img alt="No" src="//learning-services-media.brightcove.com/doc-assets/site-assets/images/site/x16.png" /></td>
-          <td>
-          <ul>
-            <li>Not supported in Video Cloud - see <a href="https://social.support.brightcove.com">Brightcove Social</a> for Video Cloud alternatives</li>
-          </ul>
-          </td>
-        </tr>
-        <tr>
-          <td><code>PATCH</code></td>
-          <td style="text-align:center;"><img alt="No" src="//learning-services-media.brightcove.com/doc-assets/site-assets/images/site/x16.png" /></td>
-          <td>
-          <ul>
-            <li>Not supported in Video Cloud - see <a href="https://social.support.brightcove.com">Brightcove Social</a> for Video Cloud alternatives</li>
-          </ul>
-          </td>
-        </tr>
-        <tr>
-          <td rowspan="2"><code>/v2/assets/{asset_id}/lineup</code></td>
-          <td><code>GET</code></td>
-          <td style="text-align:center;"><img alt="No" src="//learning-services-media.brightcove.com/doc-assets/site-assets/images/site/x16.png" /></td>
-          <td>&nbsp;</td>
-        </tr>
-        <tr>
-          <td><code>PUT</code></td>
-          <td style="text-align:center;"><img alt="No" src="//learning-services-media.brightcove.com/doc-assets/site-assets/images/site/x16.png" /></td>
-          <td>&nbsp;</td>
-        </tr>
-        <tr>
-          <td rowspan="2"><code>/v2/assets/lineup/{asset_id}</code></td>
-          <td><code>PUT</code></td>
-          <td style="text-align:center;"><img alt="No" src="//learning-services-media.brightcove.com/doc-assets/site-assets/images/site/x16.png" /></td>
-          <td>&nbsp;</td>
-        </tr>
-        <tr>
-          <td><code>DELETE</code></td>
-          <td style="text-align:center;"><img alt="No" src="//learning-services-media.brightcove.com/doc-assets/site-assets/images/site/x16.png" /></td>
-          <td>&nbsp;</td>
-        </tr>
-        <tr>
-          <td rowspan="3"><code>/v2/assets/{asset_id}/closed_captions</code></td>
-          <td><code>GET</code></td>
+          <td><code translate="No">/v2/assets/{asset_id}/upload_status</code></td>
+          <td><code translate="No">PUT</code></td>
           <td style="text-align:center;"><img alt="Yes" src="//learning-services-media.brightcove.com/doc-assets/site-assets/images/site/check16.png" /></td>
           <td>
           <ul>
-            <li>Will return the default <code>text_track</code> for the video. Migrated videos will have only one <code>text_track</code> - additional ones can be added through Video Cloud. If you add more text tracks, set the default one to have it returned for this request.
+            <li>Supported through the Backlot API and the <a href="/ooyala/migrating-video-cloud-ingestion-adapter.html">Ingestion Adapter</a></li>
+          </ul>
+          </td>
+        </tr>
+        <tr>
+          <td rowspan="3"><code translate="No">/v2/assets/{asset_id}/youtube</code></td>
+          <td><code translate="No">GET</code></td>
+          <td style="text-align:center;"><img alt="No" src="//learning-services-media.brightcove.com/doc-assets/site-assets/images/site/x16.png" /></td>
+          <td>
+          <ul>
+            <li>Not supported in Video Cloud - see <a href="https://social.support.brightcove.com">Brightcove Social</a> for Video Cloud alternatives</li>
+          </ul>
+          </td>
+        </tr>
+        <tr>
+          <td><code translate="No">PUT</code></td>
+          <td style="text-align:center;"><img alt="No" src="//learning-services-media.brightcove.com/doc-assets/site-assets/images/site/x16.png" /></td>
+          <td>
+          <ul>
+            <li>Not supported in Video Cloud - see <a href="https://social.support.brightcove.com">Brightcove Social</a> for Video Cloud alternatives</li>
+          </ul>
+          </td>
+        </tr>
+        <tr>
+          <td><code translate="No">PATCH</code></td>
+          <td style="text-align:center;"><img alt="No" src="//learning-services-media.brightcove.com/doc-assets/site-assets/images/site/x16.png" /></td>
+          <td>
+          <ul>
+            <li>Not supported in Video Cloud - see <a href="https://social.support.brightcove.com">Brightcove Social</a> for Video Cloud alternatives</li>
+          </ul>
+          </td>
+        </tr>
+        <tr>
+          <td rowspan="2"><code translate="No">/v2/assets/{asset_id}/lineup</code></td>
+          <td><code translate="No">GET</code></td>
+          <td style="text-align:center;"><img alt="No" src="//learning-services-media.brightcove.com/doc-assets/site-assets/images/site/x16.png" /></td>
+          <td>&nbsp;</td>
+        </tr>
+        <tr>
+          <td><code translate="No">PUT</code></td>
+          <td style="text-align:center;"><img alt="No" src="//learning-services-media.brightcove.com/doc-assets/site-assets/images/site/x16.png" /></td>
+          <td>&nbsp;</td>
+        </tr>
+        <tr>
+          <td rowspan="2"><code translate="No">/v2/assets/lineup/{asset_id}</code></td>
+          <td><code translate="No">PUT</code></td>
+          <td style="text-align:center;"><img alt="No" src="//learning-services-media.brightcove.com/doc-assets/site-assets/images/site/x16.png" /></td>
+          <td>&nbsp;</td>
+        </tr>
+        <tr>
+          <td><code translate="No">DELETE</code></td>
+          <td style="text-align:center;"><img alt="No" src="//learning-services-media.brightcove.com/doc-assets/site-assets/images/site/x16.png" /></td>
+          <td>&nbsp;</td>
+        </tr>
+        <tr>
+          <td rowspan="3"><code translate="No">/v2/assets/{asset_id}/closed_captions</code></td>
+          <td><code translate="No">GET</code></td>
+          <td style="text-align:center;"><img alt="Yes" src="//learning-services-media.brightcove.com/doc-assets/site-assets/images/site/check16.png" /></td>
+          <td>
+          <ul>
+            <li>Will return the default <code translate="No">text_track</code> for the video. Migrated videos will have only one <code translate="No">text_track</code> - additional ones can be added through Video Cloud. If you add more text tracks, set the default one to have it returned for this request.
             <p><strong>Note:</strong> DFXP captions migrated to Video Cloud are converted to WebVTT text tracks, as that is what the Brightcove Player uses. Two important notes on the migration of data:</p>
     
             <ul>
               <li>If multiple language captions are stored in the DFXP, only the English captions will be stored in the WebVTT text tracks, because WebVTT does not support multiple language captions in a single file. If you want to create captions in additional languages, you will need to split them into individual DFXP files and ingest them using Studio.</li>
-              <li>Because text tracks require a language identifier, if the DFXP file does not include one, <code>en</code> will be assigned to the converted WebVTT captions. If this is not the correct language, you will need to correct it by <a href="https://studio.support.brightcove.com/media/adding-captions-videos-using-media-module.html#edit_captions">editing the text track properties</a> in Studio so that the closed caption menu will show the correct language.</li>
+              <li>Because text tracks require a language identifier, if the DFXP file does not include one, <code translate="No">en</code> will be assigned to the converted WebVTT captions. If this is not the correct language, you will need to correct it by <a href="https://studio.support.brightcove.com/media/adding-captions-videos-using-media-module.html#edit_captions">editing the text track properties</a> in Studio so that the closed caption menu will show the correct language.</li>
             </ul>
             </li>
           </ul>
           </td>
         </tr>
         <tr>
-          <td><code>PUT</code></td>
+          <td><code translate="No">PUT</code></td>
           <td style="text-align:center;"><img alt="Yes" src="//learning-services-media.brightcove.com/doc-assets/site-assets/images/site/check16.png" /></td>
           <td>
           <ul>
-            <li>Will replace the default <code>text_track</code> for the video - ingested captions can be in WebVTT or DFXP format; DFXP will be converted to WebVTT</li>
+            <li>Will replace the default <code translate="No">text_track</code> for the video - ingested captions can be in WebVTT or DFXP format; DFXP will be converted to WebVTT</li>
           </ul>
           </td>
         </tr>
         <tr>
-          <td><code>DELETE</code></td>
+          <td><code translate="No">DELETE</code></td>
           <td style="text-align:center;"><img alt="Yes" src="//learning-services-media.brightcove.com/doc-assets/site-assets/images/site/check16.png" /></td>
           <td>
           <ul>
-            <li>Will remove the default <code>text_track</code> for the video</li>
+            <li>Will remove the default <code translate="No">text_track</code> for the video</li>
           </ul>
           </td>
         </tr>
@@ -1025,7 +1025,7 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
     <section class="bcls-section">
     <h2 id="labels_endpoints">Labels endpoints</h2>
     
-    <p>Labels will be migrated to Video Cloud as <code>tags</code>. Unlike labels, tags are set on individual videos - there is no account-level "tag set", and tags are not hierarchical. Label hierarchies will be preserved in Video Cloud tags like this:</p>
+    <p>Labels will be migrated to Video Cloud as <code translate="No">tags</code>. Unlike labels, tags are set on individual videos - there is no account-level "tag set", and tags are not hierarchical. Label hierarchies will be preserved in Video Cloud tags like this:</p>
     
     <figure class="bcls-figure"><img class="bcls-image" alt="Labels to Tags" src="/assets/images/ooyala/labels2tags.png" />
     <figcaption class="bcls-caption--image">Labels to Tags</figcaption>
@@ -1038,9 +1038,9 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
       <li>Selecting videos for a <a href="https://studio.support.brightcove.com/media/introduction-playlists.html">"smart" playlist</a> at runtime</li>
     </ul>
     
-    <aside class="bcls-aside bcls-aside--information language-editable">Note that while all the <code>/labels</code> endpoints are supported, some operations, particularly for accounts that have a large number of videos, will take longer.</aside>
+    <aside class="bcls-aside bcls-aside--information language-editable">Note that while all the <code translate="No">/labels</code> endpoints are supported, some operations, particularly for accounts that have a large number of videos, will take longer.</aside>
     
-    <p>The table below shows what Backlot API <code>labels</code> endpoints are supported.</p>
+    <p>The table below shows what Backlot API <code translate="No">labels</code> endpoints are supported.</p>
     
     <table class="bcls-table">
       <caption class="bcls-caption--table">Backlot API Labels Endpoints</caption>
@@ -1054,58 +1054,58 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
       </thead>
       <tbody class="bcls-table__body">
         <tr>
-          <td><code>/v2/labels</code></td>
-          <td><code>GET</code></td>
+          <td><code translate="No">/v2/labels</code></td>
+          <td><code translate="No">GET</code></td>
           <td style="text-align:center;"><img alt="Yes" src="//learning-services-media.brightcove.com/doc-assets/site-assets/images/site/check16.png" /></td>
-          <td>Labels will appear as <code>tags</code> in Video Cloud</td>
+          <td>Labels will appear as <code translate="No">tags</code> in Video Cloud</td>
         </tr>
         <tr>
-          <td><code>/v2/labels</code></td>
-          <td><code>POST</code></td>
+          <td><code translate="No">/v2/labels</code></td>
+          <td><code translate="No">POST</code></td>
           <td style="text-align:center;"><img alt="Yes" src="//learning-services-media.brightcove.com/doc-assets/site-assets/images/site/check16.png" /></td>
-          <td>Labels will appear as <code>tags</code> in Video Cloud</td>
+          <td>Labels will appear as <code translate="No">tags</code> in Video Cloud</td>
         </tr>
         <tr>
-          <td><code>/v2/labels/by_full_path/{paths}</code></td>
-          <td><code>GET</code></td>
+          <td><code translate="No">/v2/labels/by_full_path/{paths}</code></td>
+          <td><code translate="No">GET</code></td>
           <td style="text-align:center;"><img alt="Yes" src="//learning-services-media.brightcove.com/doc-assets/site-assets/images/site/check16.png" /></td>
-          <td>Labels will appear as <code>tags</code> in Video Cloud</td>
+          <td>Labels will appear as <code translate="No">tags</code> in Video Cloud</td>
         </tr>
         <tr>
-          <td><code>/v2/labels/by_full_path/{paths}</code></td>
-          <td><code>POST</code></td>
+          <td><code translate="No">/v2/labels/by_full_path/{paths}</code></td>
+          <td><code translate="No">POST</code></td>
           <td style="text-align:center;"><img alt="Yes" src="//learning-services-media.brightcove.com/doc-assets/site-assets/images/site/check16.png" /></td>
-          <td>Labels will appear as <code>tags</code> in Video Cloud</td>
+          <td>Labels will appear as <code translate="No">tags</code> in Video Cloud</td>
         </tr>
         <tr>
-          <td><code>/v2/labels/{label_id}</code></td>
-          <td><code>GET</code></td>
+          <td><code translate="No">/v2/labels/{label_id}</code></td>
+          <td><code translate="No">GET</code></td>
           <td style="text-align:center;"><img alt="Yes" src="//learning-services-media.brightcove.com/doc-assets/site-assets/images/site/check16.png" /></td>
-          <td>Labels will appear as <code>tags</code> in Video Cloud</td>
+          <td>Labels will appear as <code translate="No">tags</code> in Video Cloud</td>
         </tr>
         <tr>
-          <td><code>/v2/labels/{label_id}</code></td>
-          <td><code>PATCH</code></td>
+          <td><code translate="No">/v2/labels/{label_id}</code></td>
+          <td><code translate="No">PATCH</code></td>
           <td style="text-align:center;"><img alt="Yes" src="//learning-services-media.brightcove.com/doc-assets/site-assets/images/site/check16.png" /></td>
-          <td>Labels will appear as <code>tags</code> in Video Cloud</td>
+          <td>Labels will appear as <code translate="No">tags</code> in Video Cloud</td>
         </tr>
         <tr>
-          <td><code>/v2/labels/{label_id}</code></td>
-          <td><code>DELETE</code></td>
+          <td><code translate="No">/v2/labels/{label_id}</code></td>
+          <td><code translate="No">DELETE</code></td>
           <td style="text-align:center;"><img alt="Yes" src="//learning-services-media.brightcove.com/doc-assets/site-assets/images/site/check16.png" /></td>
-          <td>Labels will appear as <code>tags</code> in Video Cloud. Note that a label will not be deleted if it is referenced by a playlist.</td>
+          <td>Labels will appear as <code translate="No">tags</code> in Video Cloud. Note that a label will not be deleted if it is referenced by a playlist.</td>
         </tr>
         <tr>
-          <td><code>/v2/labels/{label_id}/children</code></td>
-          <td><code>GET</code></td>
+          <td><code translate="No">/v2/labels/{label_id}/children</code></td>
+          <td><code translate="No">GET</code></td>
           <td style="text-align:center;"><img alt="Yes" src="//learning-services-media.brightcove.com/doc-assets/site-assets/images/site/check16.png" /></td>
-          <td>Labels will appear as <code>tags</code> in Video Cloud</td>
+          <td>Labels will appear as <code translate="No">tags</code> in Video Cloud</td>
         </tr>
         <tr>
-          <td><code>/v2/labels/{label_id}/assets</code></td>
-          <td><code>GET</code></td>
+          <td><code translate="No">/v2/labels/{label_id}/assets</code></td>
+          <td><code translate="No">GET</code></td>
           <td style="text-align:center;"><img alt="Yes" src="//learning-services-media.brightcove.com/doc-assets/site-assets/images/site/check16.png" /></td>
-          <td>Labels will appear as <code>tags</code> in Video Cloud</td>
+          <td>Labels will appear as <code translate="No">tags</code> in Video Cloud</td>
         </tr>
       </tbody>
     </table>
@@ -1120,12 +1120,12 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
     <section class="bcls-section">
     <h2 id="players_endpoints">Players endpoints</h2>
     
-    <p>The table below shows what Backlot API <code>players</code> operations are supported.</p>
+    <p>The table below shows what Backlot API <code translate="No">players</code> operations are supported.</p>
     
     <aside class="bcls-aside bcls-aside--information language-editable">Notes:
     <ul>
       <li>Only GET is supported. You cannot create or update Ooyala players</li>
-      <li>For videos that were associated with a player prior to migration, the id of the player will be stored in a Video Cloud custom field called <code>player_id</code> to maintain the association with the Ooyala player. See <a href="/ooyala/using-ooyala-players-deliver-video-cloud-content.html">Using Ooyala Players with Video Cloud Videos</a> for more information.</li>
+      <li>For videos that were associated with a player prior to migration, the id of the player will be stored in a Video Cloud custom field called <code translate="No">player_id</code> to maintain the association with the Ooyala player. See <a href="/ooyala/using-ooyala-players-deliver-video-cloud-content.html">Using Ooyala Players with Video Cloud Videos</a> for more information.</li>
     </ul>
     </aside>
     
@@ -1141,83 +1141,83 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
       </thead>
       <tbody class="bcls-table__body">
         <tr>
-          <td rowspan="2"><code>/v2/players</code></td>
-          <td><code>GET</code></td>
+          <td rowspan="2"><code translate="No">/v2/players</code></td>
+          <td><code translate="No">GET</code></td>
           <td style="text-align:center;"><img alt="Yes" src="//learning-services-media.brightcove.com/doc-assets/site-assets/images/site/check16.png" /></td>
           <td>&nbsp;</td>
         </tr>
         <tr>
-          <td><code>POST</code></td>
+          <td><code translate="No">POST</code></td>
           <td style="text-align:center;"><img alt="No" src="//learning-services-media.brightcove.com/doc-assets/site-assets/images/site/x16.png" /></td>
           <td>&nbsp;</td>
         </tr>
         <tr>
-          <td rowspan="3"><code>/v2/players/{player_id}</code></td>
-          <td><code>GET</code></td>
+          <td rowspan="3"><code translate="No">/v2/players/{player_id}</code></td>
+          <td><code translate="No">GET</code></td>
           <td style="text-align:center;"><img alt="No" src="//learning-services-media.brightcove.com/doc-assets/site-assets/images/site/x16.png" /></td>
           <td>&nbsp;</td>
         </tr>
         <tr>
-          <td><code>PATCH</code></td>
+          <td><code translate="No">PATCH</code></td>
           <td style="text-align:center;"><img alt="No" src="//learning-services-media.brightcove.com/doc-assets/site-assets/images/site/x16.png" /></td>
           <td>&nbsp;</td>
         </tr>
         <tr>
-          <td><code>DELETE</code></td>
+          <td><code translate="No">DELETE</code></td>
           <td style="text-align:center;"><img alt="No" src="//learning-services-media.brightcove.com/doc-assets/site-assets/images/site/x16.png" /></td>
           <td>&nbsp;</td>
         </tr>
         <tr>
-          <td rowspan="4"><code>/v2/players/{player_id}/metadata</code></td>
-          <td><code>GET</code></td>
+          <td rowspan="4"><code translate="No">/v2/players/{player_id}/metadata</code></td>
+          <td><code translate="No">GET</code></td>
           <td style="text-align:center;"><img alt="No" src="//learning-services-media.brightcove.com/doc-assets/site-assets/images/site/x16.png" /></td>
           <td>&nbsp;</td>
         </tr>
         <tr>
-          <td><code>PATCH</code></td>
+          <td><code translate="No">PATCH</code></td>
           <td style="text-align:center;"><img alt="No" src="//learning-services-media.brightcove.com/doc-assets/site-assets/images/site/x16.png" /></td>
           <td>&nbsp;</td>
         </tr>
         <tr>
-          <td><code>PUT</code></td>
+          <td><code translate="No">PUT</code></td>
           <td style="text-align:center;"><img alt="No" src="//learning-services-media.brightcove.com/doc-assets/site-assets/images/site/x16.png" /></td>
           <td>&nbsp;</td>
         </tr>
         <tr>
-          <td><code>DELETE</code></td>
+          <td><code translate="No">DELETE</code></td>
           <td style="text-align:center;"><img alt="No" src="//learning-services-media.brightcove.com/doc-assets/site-assets/images/site/x16.png" /></td>
           <td>&nbsp;</td>
         </tr>
         <tr>
-          <td><code>/v2/players/{player_id}/scrubber_image</code></td>
-          <td><code>PUT</code></td>
+          <td><code translate="No">/v2/players/{player_id}/scrubber_image</code></td>
+          <td><code translate="No">PUT</code></td>
           <td style="text-align:center;"><img alt="No" src="//learning-services-media.brightcove.com/doc-assets/site-assets/images/site/x16.png" /></td>
           <td>&nbsp;</td>
         </tr>
         <tr>
-          <td><code>/v2/players/{player_id}/watermark</code></td>
-          <td><code>PUT</code></td>
+          <td><code translate="No">/v2/players/{player_id}/watermark</code></td>
+          <td><code translate="No">PUT</code></td>
           <td style="text-align:center;"><img alt="No" src="//learning-services-media.brightcove.com/doc-assets/site-assets/images/site/x16.png" /></td>
           <td>&nbsp;</td>
         </tr>
         <tr>
-          <td rowspan="4"><code>/v2/players/{player_id}/third_party_modules/{module_id}</code></td>
-          <td><code>GET</code></td>
+          <td rowspan="4"><code translate="No">/v2/players/{player_id}/third_party_modules/{module_id}</code></td>
+          <td><code translate="No">GET</code></td>
           <td style="text-align:center;"><img alt="No" src="//learning-services-media.brightcove.com/doc-assets/site-assets/images/site/x16.png" /></td>
           <td>&nbsp;</td>
         </tr>
         <tr>
-          <td><code>PUT</code></td>
+          <td><code translate="No">PUT</code></td>
           <td style="text-align:center;"><img alt="No" src="//learning-services-media.brightcove.com/doc-assets/site-assets/images/site/x16.png" /></td>
           <td>&nbsp;</td>
         </tr>
         <tr>
-          <td><code>PATCH</code></td>
+          <td><code translate="No">PATCH</code></td>
           <td style="text-align:center;"><img alt="No" src="//learning-services-media.brightcove.com/doc-assets/site-assets/images/site/x16.png" /></td>
           <td>&nbsp;</td>
         </tr>
         <tr>
-          <td><code>DELETE</code></td>
+          <td><code translate="No">DELETE</code></td>
           <td style="text-align:center;"><img alt="No" src="//learning-services-media.brightcove.com/doc-assets/site-assets/images/site/x16.png" /></td>
           <td>&nbsp;</td>
         </tr>
@@ -1228,7 +1228,7 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
     <section class="bcls-section">
     <h2 id="playlist_endpoints">Playlists endpoints</h2>
     
-    <p>The table below shows what Backlot API <code>playlists</code> operations are supported. Also see <a href="/ooyala/backlot-and-video-cloud-video-and-playlist-fields.html">Playlist fields</a> for a better understanding of differences between Ooyala and Video Cloud playlists.</p>
+    <p>The table below shows what Backlot API <code translate="No">playlists</code> operations are supported. Also see <a href="/ooyala/backlot-and-video-cloud-video-and-playlist-fields.html">Playlist fields</a> for a better understanding of differences between Ooyala and Video Cloud playlists.</p>
     
     <table class="bcls-table">
       <caption class="bcls-caption--table">Backlot API Playlists Endpoints</caption>
@@ -1242,34 +1242,34 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
       </thead>
       <tbody class="bcls-table__body">
         <tr>
-          <td rowspan="2"><code>/v2/playlists</code></td>
-          <td><code>GET</code></td>
+          <td rowspan="2"><code translate="No">/v2/playlists</code></td>
+          <td><code translate="No">GET</code></td>
           <td style="text-align:center;"><img alt="Yes" src="//learning-services-media.brightcove.com/doc-assets/site-assets/images/site/check16.png" /></td>
           <td>&nbsp;</td>
         </tr>
         <tr>
-          <td><code>POST</code></td>
+          <td><code translate="No">POST</code></td>
           <td style="text-align:center;"><img alt="Yes" src="//learning-services-media.brightcove.com/doc-assets/site-assets/images/site/check16.png" /></td>
           <td>&nbsp;</td>
         </tr>
         <tr>
-          <td rowspan="4"><code>/v2/playlists/{playlist_id}</code></td>
-          <td><code>GET</code></td>
+          <td rowspan="4"><code translate="No">/v2/playlists/{playlist_id}</code></td>
+          <td><code translate="No">GET</code></td>
           <td style="text-align:center;"><img alt="Yes" src="//learning-services-media.brightcove.com/doc-assets/site-assets/images/site/check16.png" /></td>
           <td>&nbsp;</td>
         </tr>
         <tr>
-          <td><code>PUT</code></td>
+          <td><code translate="No">PUT</code></td>
           <td style="text-align:center;"><img alt="Yes" src="//learning-services-media.brightcove.com/doc-assets/site-assets/images/site/check16.png" /></td>
           <td>&nbsp;</td>
         </tr>
         <tr>
-          <td><code>PATCH</code></td>
+          <td><code translate="No">PATCH</code></td>
           <td style="text-align:center;"><img alt="Yes" src="//learning-services-media.brightcove.com/doc-assets/site-assets/images/site/check16.png" /></td>
           <td>&nbsp;</td>
         </tr>
         <tr>
-          <td><code>DELETE</code></td>
+          <td><code translate="No">DELETE</code></td>
           <td style="text-align:center;"><img alt="Yes" src="//learning-services-media.brightcove.com/doc-assets/site-assets/images/site/check16.png" /></td>
           <td>&nbsp;</td>
         </tr>
@@ -1280,7 +1280,7 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
     <section class="bcls-section">
     <h2 id="processing_profiles_endpoints">Processing Profiles endpoint</h2>
     
-    <p>The table below shows what Backlot API <code>playlists</code> operations are <strong>not</strong> supported. Also see <a href="https://apis.support.brightcove.com/ingest-profiles/">Ingest Profiles API</a> <a href="https://studio.support.brightcove.com/admin/managing-ingest-profiles.html">Managing Ingest Profiles</a> for a better understanding of how Video Cloud ingest profiles work - your account is a Dynamic Delivery account, so you need not pay attention to the documentation on the legacy ingest system.</p>
+    <p>The table below shows what Backlot API <code translate="No">playlists</code> operations are <strong>not</strong> supported. Also see <a href="https://apis.support.brightcove.com/ingest-profiles/">Ingest Profiles API</a> <a href="https://studio.support.brightcove.com/admin/managing-ingest-profiles.html">Managing Ingest Profiles</a> for a better understanding of how Video Cloud ingest profiles work - your account is a Dynamic Delivery account, so you need not pay attention to the documentation on the legacy ingest system.</p>
     </section>
     
     <section class="bcls-section">
@@ -1310,7 +1310,7 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
       </dd>
     </dl>
     
-    <p>Ooyala publishing rules properties relating to geo-restrictions and scheduling will be applied to videos associated with the publishing rule, and the <code>id</code> will be stored in a custom field with the name <code>publishing_rule_id</code>. The Backlot API publishing rule operations will work on all videos associated with the publishing rule, but only scheduling or geo-restrictions will be returned.</p>
+    <p>Ooyala publishing rules properties relating to geo-restrictions and scheduling will be applied to videos associated with the publishing rule, and the <code translate="No">id</code> will be stored in a custom field with the name <code translate="No">publishing_rule_id</code>. The Backlot API publishing rule operations will work on all videos associated with the publishing rule, but only scheduling or geo-restrictions will be returned.</p>
     
     <table class="bcls-table">
       <caption class="bcls-caption--table">Backlot API Processing Profiles Endpoints</caption>
@@ -1324,14 +1324,14 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
       </thead>
       <tbody class="bcls-table__body">
         <tr>
-          <td><code>/v2/processing_profiles</code></td>
-          <td><code>GET</code></td>
+          <td><code translate="No">/v2/processing_profiles</code></td>
+          <td><code translate="No">GET</code></td>
           <td style="text-align:center;"><img alt="Yes" src="//learning-services-media.brightcove.com/doc-assets/site-assets/images/site/check16.png" /></td>
           <td>&nbsp;</td>
         </tr>
         <tr>
-          <td><code>/v2/processing_profiles/{profile_id}</code></td>
-          <td><code>GET</code></td>
+          <td><code translate="No">/v2/processing_profiles/{profile_id}</code></td>
+          <td><code translate="No">GET</code></td>
           <td style="text-align:center;"><img alt="Yes" src="//learning-services-media.brightcove.com/doc-assets/site-assets/images/site/check16.png" /></td>
           <td>&nbsp;</td>
         </tr>

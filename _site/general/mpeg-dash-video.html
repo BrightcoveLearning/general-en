@@ -402,8 +402,8 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
   <section class="bcls-section">
     <h2 id="nodrm">Sample Profile (no DRM)</h2>
     <p>This sample shows the packaging of MPEG-DASH renditions without DRM packaging.</p>
-    <aside class="bcls-aside bcls-aside--information">For DASH renditions, set the <code>decoder_bitrate_cap</code> <code>decoder_buffer_size</code> to optimize playback on your target viewing environments.
-      <p>Our general recommendation is to set <code>decoder_bitrate_cap</code> to the maximum bitrate available for the video stream. Remember you need to take into account the audio, as well as overhead for the file format. The <code>decoder_buffer_size</code> is technically supposed to match the available video buffer memory on the decoding device, but is often better used to control how much content may be pre-buffered. It works as a multiple of the <code>decoder_bitrate_cap</code>, so that for example, if <code>decoder_bitrate_cap</code> was 500 kbps, and <code>decoder_buffer_size</code> was 1000 kbps, then the buffer could store 2 seconds worth of video. We also recommend setting the <code>video_bitrate</code> a little lower than the <code>decoder_bitrate_cap</code>, which allows the encoder to use more data to encode complex scenes and less data on simpler scenes. A decent starting point would be to assume up to 10% of overhead for the file format, setting the <code>video_bitrate</code> 10% lower than the <code>decoder_bitrate_cap</code>, and allowing about 1.5 seconds of video to be buffered.</p>
+    <aside class="bcls-aside bcls-aside--information">For DASH renditions, set the <code translate="No">decoder_bitrate_cap</code> <code translate="No">decoder_buffer_size</code> to optimize playback on your target viewing environments.
+      <p>Our general recommendation is to set <code translate="No">decoder_bitrate_cap</code> to the maximum bitrate available for the video stream. Remember you need to take into account the audio, as well as overhead for the file format. The <code translate="No">decoder_buffer_size</code> is technically supposed to match the available video buffer memory on the decoding device, but is often better used to control how much content may be pre-buffered. It works as a multiple of the <code translate="No">decoder_bitrate_cap</code>, so that for example, if <code translate="No">decoder_bitrate_cap</code> was 500 kbps, and <code translate="No">decoder_buffer_size</code> was 1000 kbps, then the buffer could store 2 seconds worth of video. We also recommend setting the <code translate="No">video_bitrate</code> a little lower than the <code translate="No">decoder_bitrate_cap</code>, which allows the encoder to use more data to encode complex scenes and less data on simpler scenes. A decent starting point would be to assume up to 10% of overhead for the file format, setting the <code translate="No">video_bitrate</code> 10% lower than the <code translate="No">decoder_bitrate_cap</code>, and allowing about 1.5 seconds of video to be buffered.</p>
       <p>Assuming a 1000 Kbps connection is available to the viewer:</p>
       <ul>
         <li>1000 * 0.90 = 900 Kbps available after subtracting 10% for format overhead.</li>
@@ -415,16 +415,16 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
     <aside class="bcls-aside bcls-aside--warning">
       <ol>
         <li>The Brightcove player currently supports DASH playback only with special plugins.</li>
-        <li>The <code>force_aac_profile</code> property has to be present in each DASH rendition.
+        <li>The <code translate="No">force_aac_profile</code> property has to be present in each DASH rendition.
           <ul>
-            <li><code>force_aac_profile</code> must one of these three values:
+            <li><code translate="No">force_aac_profile</code> must one of these three values:
               <ul>
-                <li><code>aac-lc</code></li>
-                <li><code>he-aac</code></li>
-                <li><code>he-aac-v2</code></li>
+                <li><code translate="No">aac-lc</code></li>
+                <li><code translate="No">he-aac</code></li>
+                <li><code translate="No">he-aac-v2</code></li>
               </ul>
             </li>
-            <li>The value for <code>force_aac_profile</code> must be the same for all renditions in a profile</li>
+            <li>The value for <code translate="No">force_aac_profile</code> must be the same for all renditions in a profile</li>
           </ul>
         </li>
       </ol>
@@ -732,7 +732,7 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
   <section class="bcls-section">
     <h2 id="Known_issues">Known issues</h2>
     <ul>
-      <li>The <strong>Default (Auto Display)</strong> caption setting in the&nbsp;<strong>Media</strong> module's <strong>TEXT TRACK</strong> section is not supported when used in conjunction with DASH and in-manifest captions. In-manifest captions are used with the Brightcove products Dynamic Delivery and SSAI, for example. A workaround for this issue is to use the <code>&lt;track&gt;</code> tag with the Advanced Brightcove Player implementation. This is detailed in the <a href="https://player.support.brightcove.com/general/adding-captions-videos-programmatically.html">Adding Captions to Videos Programmatically</a> document. Note you must use the <code>default</code> attribute with the <code>&lt;track&gt;</code> tag.</li>
+      <li>The <strong>Default (Auto Display)</strong> caption setting in the&nbsp;<strong>Media</strong> module's <strong>TEXT TRACK</strong> section is not supported when used in conjunction with DASH and in-manifest captions. In-manifest captions are used with the Brightcove products Dynamic Delivery and SSAI, for example. A workaround for this issue is to use the <code translate="No">&lt;track&gt;</code> tag with the Advanced Brightcove Player implementation. This is detailed in the <a href="https://player.support.brightcove.com/general/adding-captions-videos-programmatically.html">Adding Captions to Videos Programmatically</a> document. Note you must use the <code translate="No">default</code> attribute with the <code translate="No">&lt;track&gt;</code> tag.</li>
     </ul>
   </section>
 </article>

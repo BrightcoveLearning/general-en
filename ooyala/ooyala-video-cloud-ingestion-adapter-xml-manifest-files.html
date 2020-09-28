@@ -14,10 +14,10 @@ parent: Migrating from Ooyala
   </section>
   <section class="bcls-section">
     <h2 id="Handling_of_metadata">Handling of metadata</h2>
-    <p>If you include <code>metadata</code> for videos when you ingest them, it is mapped to Video Cloud video fields in one of two ways:</p>
+    <p>If you include <code translate="No">metadata</code> for videos when you ingest them, it is mapped to Video Cloud video fields in one of two ways:</p>
     <ol>
-      <li><strong>By default</strong>, each <code>metadata</code> key/value pair is added as a <em>tag</em> in the form: <code>meta::key::value</code>. For example, <code>&lt;ooyala:metadata name="category"&gt;cooking&lt;/ooyala:metadata&gt;</code> would produce the tag <code>meta::category::cooking</code></li>
-      <li>If you would rather use <code>custom_fields</code> to store metadata, Brightcove Support can change a setting on your account to do that. Be aware of the following:
+      <li><strong>By default</strong>, each <code translate="No">metadata</code> key/value pair is added as a <em>tag</em> in the form: <code translate="No">meta::key::value</code>. For example, <code translate="No">&lt;ooyala:metadata name="category"&gt;cooking&lt;/ooyala:metadata&gt;</code> would produce the tag <code translate="No">meta::category::cooking</code></li>
+      <li>If you would rather use <code translate="No">custom_fields</code> to store metadata, Brightcove Support can change a setting on your account to do that. Be aware of the following:
         <ul>
           <li>You will need to create custom fields with names corresponding to your metadata keys.</li>
           <li>The number of custom fields is limited to 10 by default, so if you will need more than that to accommodate your metadata, you will need to request additional custom fields from Support.</li>
@@ -136,7 +136,7 @@ parent: Migrating from Ooyala
         </tr>
         <tr>
           <td><samp>&lt;ooyala:metadata&gt;</samp></td>
-          <td>Custom metadata for the video. You can have an element for each type of metadata. See the <a href="#Handling_of_metadata">Handling of metadata</a> section for details on how <code>metadata</code> is added to videos as special tags. Example: <code>&lt;ooyala:metadata name="category"&gt;cooking&lt;/ooyala:metadata&gt;</code></td>
+          <td>Custom metadata for the video. You can have an element for each type of metadata. See the <a href="#Handling_of_metadata">Handling of metadata</a> section for details on how <code translate="No">metadata</code> is added to videos as special tags. Example: <code translate="No">&lt;ooyala:metadata name="category"&gt;cooking&lt;/ooyala:metadata&gt;</code></td>
           <td>optional</td>
         </tr>
         <tr>

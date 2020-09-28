@@ -410,7 +410,7 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
   </section>
   <section class="bcls-section">
     <h2 id="solution">Solutions</h2>
-    <p>The solution that Brightcove is using at this time involves configuring an <code>Access-Control-Allow-Origin</code> header in the CDN origin server’s configuration file. It’s important to note that since different CDN partners use different server solutions to deliver their content, the header information below is offered as an example, and not as a drop-in code snippet.</p>
+    <p>The solution that Brightcove is using at this time involves configuring an <code translate="No">Access-Control-Allow-Origin</code> header in the CDN origin server’s configuration file. It’s important to note that since different CDN partners use different server solutions to deliver their content, the header information below is offered as an example, and not as a drop-in code snippet.</p>
     <p>Brightcove has had success with the following header directive for in-house CDN server's properties:</p>
     <pre class="line-numbers">
 <code class="language-apache">&lt;FilesMatch ".(vtt|xml)$"&gt;
@@ -419,12 +419,12 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
           &lt;/FilesMatch&gt;</code></pre>
     <p>The following provides brief explanations of the directive:</p>
     <ul>
-      <li><code>&lt;FilesMatch ".(vtt|xml)$"&gt;</code>: This conditional sets the <code>Access-Control-Allow-Origin</code> header only on vtt or xml files. Testing has confirmed that this header is not sent with images or other http-delivered content.</li>
-      <li><code>Header set Access-Control-Allow-Headers: X-Requested-With</code>: This header is required for the <code>Access-Control-Allow-Origin</code> header to work, since the request the player is making is an XmlHttpRequest.</li>
-      <li><code>Header add Access-Control-Allow-Origin: http://admin.brightcove.com</code>: This is the access control header itself to allow content from the indicated domain.</li>
+      <li><code translate="No">&lt;FilesMatch ".(vtt|xml)$"&gt;</code>: This conditional sets the <code translate="No">Access-Control-Allow-Origin</code> header only on vtt or xml files. Testing has confirmed that this header is not sent with images or other http-delivered content.</li>
+      <li><code translate="No">Header set Access-Control-Allow-Headers: X-Requested-With</code>: This header is required for the <code translate="No">Access-Control-Allow-Origin</code> header to work, since the request the player is making is an XmlHttpRequest.</li>
+      <li><code translate="No">Header add Access-Control-Allow-Origin: http://admin.brightcove.com</code>: This is the access control header itself to allow content from the indicated domain.</li>
     </ul>
     <h3>Enabling CORS on Apache</h3>
-    <p>You can set a header in the configuration of Apache servers to enable CORS. Place the following in the appropriate <code>.conf</code> file:</p>
+    <p>You can set a header in the configuration of Apache servers to enable CORS. Place the following in the appropriate <code translate="No">.conf</code> file:</p>
     <pre class="line-numbers">
 <code class="language-bash">Header set Access-Control-Allow-Origin "*"</code></pre>
     <p>In the example above the asterisks acts as a wild card and allows access to all domains. The wildcard can also be replaced by <strong>one</strong> specific domain. That generally won't work for Brightcove players, because in many cases assets will reside on multiple domains. You can implement other solutions to limit access to a specific whitelist of acceptable domains.</p>
@@ -436,7 +436,7 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
       <li>file formats: m3u8 m3u ts xml dfxp vtt mpd m4f mp4 jpg png</li>
     </ul>
     <h3>Token authorization requirements</h3>
-    <p>In the case where token authorization is required alterations need to be made to the solution above. In the case of token authorization, the CORS security model specifically disallows the use of the <code>*</code> character as a value for the <code>Access-Control-Allow-Origin</code> response header. In addition, the <code>Access-Control-Allow-Credentials</code> response header is required, and must be set to true.</p>
+    <p>In the case where token authorization is required alterations need to be made to the solution above. In the case of token authorization, the CORS security model specifically disallows the use of the <code translate="No">*</code> character as a value for the <code translate="No">Access-Control-Allow-Origin</code> response header. In addition, the <code translate="No">Access-Control-Allow-Credentials</code> response header is required, and must be set to true.</p>
     <p>An updated header directive for token authorization is:</p>
     <pre class="line-numbers">
 <code class="language-apache">&lt;FilesMatch ".(m3u8 | m3u | ts)$"&gt;
@@ -450,11 +450,11 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
   &lt;/FilesMatch&gt;</code></pre>
     <p>The following points detail the differences from the earlier solution:</p>
     <ul>
-      <li>The directive queries the incoming request for the presence of an Origin header, and if that header is present (it usually is), sets its value to a variable called <code>ORIGIN</code>: <code>SetEnvIfNoCase ORIGIN (.*) ORIGIN=$1</code></li>
-      <li>The <code>Access-Control-Allow-Origin</code> response header value is set to the value of the <code>ORIGIN</code> variable just created: <code>Header set Access-Control-Allow-Origin "%{ORIGIN}e"</code>
-        <aside class="bcls-aside bcls-aside--information">The <code>e</code> is required, to denote that this is an environment variable.</aside>
+      <li>The directive queries the incoming request for the presence of an Origin header, and if that header is present (it usually is), sets its value to a variable called <code translate="No">ORIGIN</code>: <code translate="No">SetEnvIfNoCase ORIGIN (.*) ORIGIN=$1</code></li>
+      <li>The <code translate="No">Access-Control-Allow-Origin</code> response header value is set to the value of the <code translate="No">ORIGIN</code> variable just created: <code translate="No">Header set Access-Control-Allow-Origin "%{ORIGIN}e"</code>
+        <aside class="bcls-aside bcls-aside--information">The <code translate="No">e</code> is required, to denote that this is an environment variable.</aside>
       </li>
-      <li>The <code>Access-Control-Allow-Credentials</code> header must be set to <code>true</code>: <code>Header set Access-Control-Allow-Credentials "true"</code></li>
+      <li>The <code translate="No">Access-Control-Allow-Credentials</code> header must be set to <code translate="No">true</code>: <code translate="No">Header set Access-Control-Allow-Credentials "true"</code></li>
     </ul>
   </section>
   <section class="bcls-section">
