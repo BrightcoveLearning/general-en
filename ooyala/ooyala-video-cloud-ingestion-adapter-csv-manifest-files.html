@@ -116,8 +116,8 @@ parent: Migrating from Ooyala
           <td><samp translate="No">subTitle</samp></td>
           <td class="entry" id="ingestion_ftp_csv__subtitle" valign="top" width="71.42857142857143%" headers="d1039925e42 ">Specifies a closed caption file (supported for DFXP files only). One of the following:
             <ul>
-              <li class="language-editable">Filename of the closed caption file you uploaded. Example: <samp translate="No">&lt;media:subTitle href="caption-1.dfxp"/&gt;</samp></li>
-              <li class="language-editable">URL where the closed caption file is located. The URL can include <samp translate="No">http://</samp> or <samp translate="No">https://</samp>.</li>
+              <li >Filename of the closed caption file you uploaded. Example: <samp translate="No">&lt;media:subTitle href="caption-1.dfxp"/&gt;</samp></li>
+              <li >URL where the closed caption file is located. The URL can include <samp translate="No">http://</samp> or <samp translate="No">https://</samp>.</li>
             </ul>
             <p>See <a title="You can ingest closed caption files via Backlot or the Ooyala Ingestion Service (OIS)." href="/ooyala/migrating-video-cloud-ingestion-adapter.html">Ingesting Closed Caption Files</a>.</p></td>
           <td>optional</td>
@@ -149,18 +149,18 @@ parent: Migrating from Ooyala
     <p class="p"><strong class="ph b">Creating a CSV Manifest File</strong></p>
     <p class="p">Keep the following in mind when generating a CSV metadata file:</p>
     <ul>
-      <li class="language-editable">If a text value in a data field has a comma (,), you must enclose the field in double quotes (").</li>
-      <li class="language-editable">If a text value in a data field has a double quote (") in it, you must enclose the field in double quotes and escape the double quote character in the text field with a second quote (e.g., "She said, ""Have a nice day.""" )</li>
+      <li >If a text value in a data field has a comma (,), you must enclose the field in double quotes (").</li>
+      <li >If a text value in a data field has a double quote (") in it, you must enclose the field in double quotes and escape the double quote character in the text field with a second quote (e.g., "She said, ""Have a nice day.""" )</li>
     </ul>
     <p class="p">If you are creating your CSV metadata file from Excel, it automatically handles escaping.</p>
     <p class="p">To create a CSV metadata file:</p>
     <ol class="bcls-tasklist">
-      <li class="language-editable">Upload one or more videos.</li>
-      <li class="language-editable">Open a spreadsheet program, such as Microsoft Excel.</li>
-      <li class="language-editable">Add the column headings to the first row.</li>
-      <li class="language-editable">Add a row for each video.</li>
-      <li class="language-editable">Save the file as a CSV. For example, you might select <strong>Save as</strong> from the <strong>File</strong> menu. When prompted, select the comma-separated value file type.</li>
-      <li class="language-editable"><span>With your upload method of choice, upload the CSV file as you uploaded the video(s). See either <a title="You can use FTPS (recommended) or FTP (deprecated) to upload videos, thumbnails, closed captions, and manifest files to Backlot." href="/ooyala/ooyala-video-cloud-ingestion-adapter-ingesting-ftps.html">FTP</a> or <a title="You can use Aspera file transfer software to upload videos, thumbnails, closed captions and manifest files to Backlot." href="/ooyala/ooyala-video-cloud-ingestion-adapter-ingesting-aspera.html">Aspera</a>.</span></li>
+      <li >Upload one or more videos.</li>
+      <li >Open a spreadsheet program, such as Microsoft Excel.</li>
+      <li >Add the column headings to the first row.</li>
+      <li >Add a row for each video.</li>
+      <li >Save the file as a CSV. For example, you might select <strong>Save as</strong> from the <strong>File</strong> menu. When prompted, select the comma-separated value file type.</li>
+      <li ><span>With your upload method of choice, upload the CSV file as you uploaded the video(s). See either <a title="You can use FTPS (recommended) or FTP (deprecated) to upload videos, thumbnails, closed captions, and manifest files to Backlot." href="/ooyala/ooyala-video-cloud-ingestion-adapter-ingesting-ftps.html">FTP</a> or <a title="You can use Aspera file transfer software to upload videos, thumbnails, closed captions and manifest files to Backlot." href="/ooyala/ooyala-video-cloud-ingestion-adapter-ingesting-aspera.html">Aspera</a>.</span></li>
     </ol>
   </section>
 </article>
