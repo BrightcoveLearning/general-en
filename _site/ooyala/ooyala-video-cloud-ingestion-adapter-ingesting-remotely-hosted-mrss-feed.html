@@ -30,7 +30,7 @@
   <div class="div-header">
     <a href="/"><img class="product-logo" src="https://support.brightcove.com/site-assets/images/site/product-logos/logo-bc-video-cloud.svg" alt="product logo" style="max-height: 100px;max-width: 232px;"></a>
 <!-- GTranslate: https://gtranslate.io/ -->
-<select onchange="doGTranslate(this);"><option value="">Select Language</option><option value="en|en">English</option><option value="en|zh-TW">繁體中文</option><option value="en|fr">Français</option><option value="en|de">Deutsch</option><option value="en|ja">日本語</option><option value="en|ko">한국어</option><option value="en|es">Español</option></select>
+<select onchange="doGTranslate(this);"><option value="">Select Language</option><option value="en|en" translate="No">English</option><option value="en|zh-TW" translate="No">繁體中文</option><option value="en|fr" translate="No">Français</option><option value="en|de" translate="No">Deutsch</option><option value="en|ja" translate="No">日本語</option><option value="en|ko" translate="No">한국어</option><option value="en|es" translate="No">Español</option></select>
 
 <script>
 /* <![CDATA[ */
@@ -413,25 +413,25 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
   </section>
   <section class="bcls-section" id="ingestion_mrss__mrss_setup">
     <h2 id="Setting_Up_MRSS">Setting Up MRSS</h2>
-    <p>Contact your Account Manager and indicate that you want to use MRSS. For each video you want to ingest, you must provide Ooyala with valid content URLs. URLs can include <samp>http://</samp> or <samp>https://</samp>.</p>
+    <p>Contact your Account Manager and indicate that you want to use MRSS. For each video you want to ingest, you must provide Ooyala with valid content URLs. URLs can include <samp translate="No">http://</samp> or <samp translate="No">https://</samp>.</p>
   </section>
   <section class="bcls-section">
     <h2 id="Using_MRSS">Using MRSS</h2>
     To use MRSS, you host metadata and/or videos and other files (thumbnails, closed captions) on a web server, and create an XML manifest file that references that content.
     <h3>Using MRSS to Pull Metadata Only</h3>
     <ol class="bcls-tasklist">
-      <li>Create an XML manifest file as described in <a title="When ingesting videos, you can use XML manifest files to specify extra metadata (including the video title, description, flight times, labels, and custom metadata), as well as thumbnail and closed caption files. You can use XML manifest files when you ingest content with FTP, Aspera, or MRSS." href="/ooyala/ooyala-video-cloud-ingestion-adapter-xml-manifest-files.html">XML Manifest File</a>. You must use the <samp>ooyala:remoteasset</samp> tag for metadata-only ingestion.</li>
+      <li>Create an XML manifest file as described in <a title="When ingesting videos, you can use XML manifest files to specify extra metadata (including the video title, description, flight times, labels, and custom metadata), as well as thumbnail and closed caption files. You can use XML manifest files when you ingest content with FTP, Aspera, or MRSS." href="/ooyala/ooyala-video-cloud-ingestion-adapter-xml-manifest-files.html">XML Manifest File</a>. You must use the <samp translate="No">ooyala:remoteasset</samp> tag for metadata-only ingestion.</li>
       <li>Host the XML manifest file on one of the MRSS locations you provided. Make sure that the filename and path matches exactly one of the paths you provided to Ooyala.</li>
     </ol>
     <p><strong>Using MRSS to Pull Videos, Thumbnails, and Closed Caption Files</strong></p>
     <ol class="bcls-tasklist">
       <li>Host one or more files (videos, thumbnails, and closed caption files) on a web server.</li>
-      <li>Create an XML manifest file (see <a title="When ingesting videos, you can use XML manifest files to specify extra metadata (including the video title, description, flight times, labels, and custom metadata), as well as thumbnail and closed caption files. You can use XML manifest files when you ingest content with FTP, Aspera, or MRSS." href="/ooyala/ooyala-video-cloud-ingestion-adapter-xml-manifest-files.html">XML Manifest File</a>). Make sure that the entries in the file reference the files on your server. In particular, the value of the <samp>&lt;media:content&gt;</samp> element's <samp>href</samp> attribute <em class="ph i">must</em> be an HTTP URL to the file on your server, as in the following example:
+      <li>Create an XML manifest file (see <a title="When ingesting videos, you can use XML manifest files to specify extra metadata (including the video title, description, flight times, labels, and custom metadata), as well as thumbnail and closed caption files. You can use XML manifest files when you ingest content with FTP, Aspera, or MRSS." href="/ooyala/ooyala-video-cloud-ingestion-adapter-xml-manifest-files.html">XML Manifest File</a>). Make sure that the entries in the file reference the files on your server. In particular, the value of the <samp translate="No">&lt;media:content&gt;</samp> element's <samp translate="No">href</samp> attribute <em class="ph i">must</em> be an HTTP URL to the file on your server, as in the following example:
         <pre class="pre">
 &lt;media:content url="http://mysite.com/upload/lacrosse_70.mov" /&gt;</pre>
       </li>
       <li>Host the XML manifest file on one of the MRSS locations you provided. Make sure that the filename and path exactly matches one of the paths you provided to Ooyala.
-        <p class="note note"><span class="notetitle">Note:</span> Unfortunately, the concept of "client logging" does not apply to MRSS feed-based processing. The best way to verify that your feed is processing successfully is to check for the appearance of your assets, either with the Video Cloud Studio UI or the <span translate="No">Backlot API</span> <samp>/v2/assets</samp> request.</p>
+        <p class="note note"><span class="notetitle">Note:</span> Unfortunately, the concept of "client logging" does not apply to MRSS feed-based processing. The best way to verify that your feed is processing successfully is to check for the appearance of your assets, either with the Video Cloud Studio UI or the <span translate="No">Backlot API</span> <samp translate="No">/v2/assets</samp> request.</p>
       </li>
     </ol>
     <p>After the videos and any other associated files are processed, to pull more files, you simply host another MRSS file in the agreed-upon location.</p>
@@ -453,7 +453,7 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
 
 <hr>
 <div class="last-updated">
-  Page last updated on 12 Jun 2020
+  Page last updated on 28 Sep 2020
 </div>
 
 

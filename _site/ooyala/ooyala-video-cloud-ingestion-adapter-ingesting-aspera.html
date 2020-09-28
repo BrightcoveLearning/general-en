@@ -30,7 +30,7 @@
   <div class="div-header">
     <a href="/"><img class="product-logo" src="https://support.brightcove.com/site-assets/images/site/product-logos/logo-bc-video-cloud.svg" alt="product logo" style="max-height: 100px;max-width: 232px;"></a>
 <!-- GTranslate: https://gtranslate.io/ -->
-<select onchange="doGTranslate(this);"><option value="">Select Language</option><option value="en|en">English</option><option value="en|zh-TW">繁體中文</option><option value="en|fr">Français</option><option value="en|de">Deutsch</option><option value="en|ja">日本語</option><option value="en|ko">한국어</option><option value="en|es">Español</option></select>
+<select onchange="doGTranslate(this);"><option value="">Select Language</option><option value="en|en" translate="No">English</option><option value="en|zh-TW" translate="No">繁體中文</option><option value="en|fr" translate="No">Français</option><option value="en|de" translate="No">Deutsch</option><option value="en|ja" translate="No">日本語</option><option value="en|ko" translate="No">한국어</option><option value="en|es" translate="No">Español</option></select>
 
 <script>
 /* <![CDATA[ */
@@ -426,12 +426,12 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
 
 <p>You can set VR 360 file metadata in the manifest file (see <a href="ingestion_fileformats.html">Manifest File Formats</a>).</p>
 
-<p>If you are not using a manifest file, indicate the file type by setting file metadata with the <samp>ffmpeg</samp> command-line utility. For example, suppose you are going to upload a Matroska (.mkv) file. With this type of file, you can create a custom metadata tag named <samp>vr360type</samp> and assign it one of the following values: <samp>mono</samp> or <samp>stereo_lr</samp>. For example:</p>
+<p>If you are not using a manifest file, indicate the file type by setting file metadata with the <samp translate="No">ffmpeg</samp> command-line utility. For example, suppose you are going to upload a Matroska (.mkv) file. With this type of file, you can create a custom metadata tag named <samp translate="No">vr360type</samp> and assign it one of the following values: <samp translate="No">mono</samp> or <samp translate="No">stereo_lr</samp>. For example:</p>
 
 <pre class="line-numbers">
 <code class="language-bash" translate="No">ffmpeg -i inputFile.mkv -c copy -metadata "vr360type=mono" outputFile.mkv</code></pre>
 
-<p>Some file formats do not support custom metadata. For example, with MP4 files, <samp>ffmpeg</samp> allows only predefined metadata tags. As a workaround, use the general-purpose <samp>description</samp> field with predefined values to indicate the VR 360 file type. The value of <samp>description</samp> must include the text <samp>VR 360</samp> and one of the following: <samp>mono</samp> or <samp>stereo_lr</samp>. For example:</p>
+<p>Some file formats do not support custom metadata. For example, with MP4 files, <samp translate="No">ffmpeg</samp> allows only predefined metadata tags. As a workaround, use the general-purpose <samp translate="No">description</samp> field with predefined values to indicate the VR 360 file type. The value of <samp translate="No">description</samp> must include the text <samp translate="No">VR 360</samp> and one of the following: <samp translate="No">mono</samp> or <samp translate="No">stereo_lr</samp>. For example:</p>
 
 <pre class="line-numbers">
 <code class="language-bash" translate="No">ffmpeg -i inputFile.mp4 -c copy -metadata "description"="VR 360 Type is mono ..."  outputFile.mp4</code></pre>

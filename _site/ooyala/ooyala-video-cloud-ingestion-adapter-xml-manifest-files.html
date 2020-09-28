@@ -30,7 +30,7 @@
   <div class="div-header">
     <a href="/"><img class="product-logo" src="https://support.brightcove.com/site-assets/images/site/product-logos/logo-bc-video-cloud.svg" alt="product logo" style="max-height: 100px;max-width: 232px;"></a>
 <!-- GTranslate: https://gtranslate.io/ -->
-<select onchange="doGTranslate(this);"><option value="">Select Language</option><option value="en|en">English</option><option value="en|zh-TW">繁體中文</option><option value="en|fr">Français</option><option value="en|de">Deutsch</option><option value="en|ja">日本語</option><option value="en|ko">한국어</option><option value="en|es">Español</option></select>
+<select onchange="doGTranslate(this);"><option value="">Select Language</option><option value="en|en" translate="No">English</option><option value="en|zh-TW" translate="No">繁體中文</option><option value="en|fr" translate="No">Français</option><option value="en|de" translate="No">Deutsch</option><option value="en|ja" translate="No">日本語</option><option value="en|ko" translate="No">한국어</option><option value="en|es" translate="No">Español</option></select>
 
 <script>
 /* <![CDATA[ */
@@ -431,66 +431,66 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
       </thead>
       <tbody class="bcls-table__body">
         <tr>
-          <td><samp>&lt;channel&gt; </samp></td>
-          <td>Contains one or more <samp>&lt;item&gt;</samp> elements.</td>
+          <td><samp translate="No">&lt;channel&gt; </samp></td>
+          <td>Contains one or more <samp translate="No">&lt;item&gt;</samp> elements.</td>
           <td>required</td>
         </tr>
         <tr>
-          <td><samp>&lt;item&gt;</samp></td>
-          <td>Represents a single video to ingest. You can specify multiple videos (<samp>&lt;item&gt;</samp> tags) in an XML manifest file. Contains the remaining tags in this table.</td>
+          <td><samp translate="No">&lt;item&gt;</samp></td>
+          <td>Represents a single video to ingest. You can specify multiple videos (<samp translate="No">&lt;item&gt;</samp> tags) in an XML manifest file. Contains the remaining tags in this table.</td>
           <td>required</td>
         </tr>
         <tr>
-          <td><samp>&lt;media:content&gt;</samp></td>
+          <td><samp translate="No">&lt;media:content&gt;</samp></td>
           <td>Specifies a video to ingest. One of the following:
             <ul class="ul">
               <li class="language-editable">Filename of a video that you uploaded.</li>
-              <li class="language-editable">For ingestion via MRSS (see <a class="xref" title="You can use Media RSS (MRSS) to have Ooyala pull your content from your own system from an MRSS feed that you publish. Backlot pulls the metadata from the MRSS feed and either creates a remote asset or downloads (from where they are hosted) and processes the videos and any associated files (thumbnails, closed caption files, etc.)." href="/ooyala/ooyala-video-cloud-ingestion-adapter-ingesting-remotely-hosted-mrss-feed.html">Ingesting from a Remotely Hosted MRSS Feed</a>), the URL where the video is located. The URL can include <samp>http://</samp> or <samp>https://</samp>.</li>
+              <li class="language-editable">For ingestion via MRSS (see <a class="xref" title="You can use Media RSS (MRSS) to have Ooyala pull your content from your own system from an MRSS feed that you publish. Backlot pulls the metadata from the MRSS feed and either creates a remote asset or downloads (from where they are hosted) and processes the videos and any associated files (thumbnails, closed caption files, etc.)." href="/ooyala/ooyala-video-cloud-ingestion-adapter-ingesting-remotely-hosted-mrss-feed.html">Ingesting from a Remotely Hosted MRSS Feed</a>), the URL where the video is located. The URL can include <samp translate="No">http://</samp> or <samp translate="No">https://</samp>.</li>
             </ul>
-            For a remote asset, use <samp>&lt;ooyala:remoteasset&gt;</samp> instead.</td>
+            For a remote asset, use <samp translate="No">&lt;ooyala:remoteasset&gt;</samp> instead.</td>
           <td>required (except for remote assets)</td>
         </tr>
         <tr>
-          <td><samp>&lt;media:title&gt;</samp></td>
+          <td><samp translate="No">&lt;media:title&gt;</samp></td>
           <td>Name or title of the video.</td>
           <td>optional</td>
         </tr>
         <tr>
-          <td><samp>&lt;media:thumbnail&gt;</samp></td>
+          <td><samp translate="No">&lt;media:thumbnail&gt;</samp></td>
           <td>Specifies a thumbnail (preview image). One of the following:
             <ul class="ul">
               <li class="language-editable">Filename of a thumbnail you uploaded.</li>
-              <li class="language-editable">URL where the thumbnail is located. The URL can include <samp>http://</samp> or <samp>https://</samp>.</li>
+              <li class="language-editable">URL where the thumbnail is located. The URL can include <samp translate="No">http://</samp> or <samp translate="No">https://</samp>.</li>
             </ul></td>
           <td>optional</td>
         </tr>
         <tr>
-          <td><samp>&lt;media:subTitle&gt;</samp></td>
+          <td><samp translate="No">&lt;media:subTitle&gt;</samp></td>
           <td>Specifies a closed caption file (supported for DFXP, WebVTT, and SRT files). See <a class="xref" title="You can ingest closed caption files via Backlot or the Ooyala Ingestion Service (OIS)." href="/ooyala/migrating-video-cloud-ingestion-adapter.html">Ingesting Closed Caption Files</a>. Attributes:
             <ul class="ul">
-              <li class="language-editable"><samp>href</samp> (required) - One of the following:
+              <li class="language-editable"><samp translate="No">href</samp> (required) - One of the following:
                 <ul class="ul">
-                  <li class="language-editable">Filename of the closed caption file you uploaded. Example: <samp>caption-1.dfxp</samp></li>
-                  <li class="language-editable">URL where the closed caption file is located. The URL can include <samp>http://</samp> or <samp>https://</samp>.</li>
+                  <li class="language-editable">Filename of the closed caption file you uploaded. Example: <samp translate="No">caption-1.dfxp</samp></li>
+                  <li class="language-editable">URL where the closed caption file is located. The URL can include <samp translate="No">http://</samp> or <samp translate="No">https://</samp>.</li>
                 </ul>
-                <samp>lang</samp> (optional) - language of the closed caption file. Two-letter code. See <a class="xref" title="Before uploading closed caption files to Backlot, verify that you are using a supported language and file format." href="/ooyala/migrating-video-cloud-ingestion-adapter.html">Supported Closed Captions</a>.</li>
-              <li class="language-editable"><samp>frameRate</samp> (optional) - Frame rate of the closed caption file. Units are in Frames Per Second (FPS). Default is 30. Older closed caption files might be 24.</li>
+                <samp translate="No">lang</samp> (optional) - language of the closed caption file. Two-letter code. See <a class="xref" title="Before uploading closed caption files to Backlot, verify that you are using a supported language and file format." href="/ooyala/migrating-video-cloud-ingestion-adapter.html">Supported Closed Captions</a>.</li>
+              <li class="language-editable"><samp translate="No">frameRate</samp> (optional) - Frame rate of the closed caption file. Units are in Frames Per Second (FPS). Default is 30. Older closed caption files might be 24.</li>
             </ul>
-            <div class="note note"><span class="notetitle">Note:</span> If specified, it is your responsibility to provide valid values for <samp>lang</samp> and <samp>frameRate</samp>. Valid values are added to the DFXP file. Non-compliant values are ignored. Either way, the closed caption file is added into Backlot and linked to the asset.</div></td>
+            <div class="note note"><span class="notetitle">Note:</span> If specified, it is your responsibility to provide valid values for <samp translate="No">lang</samp> and <samp translate="No">frameRate</samp>. Valid values are added to the DFXP file. Non-compliant values are ignored. Either way, the closed caption file is added into Backlot and linked to the asset.</div></td>
           <td>optional</td>
         </tr>
         <tr>
-          <td><samp>&lt;media:description&gt;</samp></td>
+          <td><samp translate="No">&lt;media:description&gt;</samp></td>
           <td>Description of the video.</td>
           <td>optional</td>
         </tr>
         <tr>
-          <td><samp>&lt;link&gt;</samp></td>
-          <td>Permanent URL where you embed the video. Maps to the created asset's <samp>hosted_at</samp> property.</td>
+          <td><samp translate="No">&lt;link&gt;</samp></td>
+          <td>Permanent URL where you embed the video. Maps to the created asset's <samp translate="No">hosted_at</samp> property.</td>
           <td>optional</td>
         </tr>
         <tr>
-          <td><samp>&lt;dcterms:valid&gt;</samp></td>
+          <td><samp translate="No">&lt;dcterms:valid&gt;</samp></td>
           <td>Flight times representing the start and end times when the asset can be played. Example:
             <pre class="pre codeblock">
   &lt;dcterms:valid&gt;start=2011-06-28T15:15:00-07:00;
@@ -499,48 +499,48 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
           <td>optional</td>
         </tr>
         <tr>
-          <td><samp>&lt;ooyala:labels&gt;</samp></td>
-          <td>One or more labels, separated by commas. Example: <samp>/sports,/sports/jogging</samp>. For background, see <a class="xref" title="When added to external publishing targets, labels specify which videos, channels, and channel sets to publish externally." href="/ooyala/migrating-video-cloud-ingestion-adapter.html">Labels</a>.</td>
+          <td><samp translate="No">&lt;ooyala:labels&gt;</samp></td>
+          <td>One or more labels, separated by commas. Example: <samp translate="No">/sports,/sports/jogging</samp>. For background, see <a class="xref" title="When added to external publishing targets, labels specify which videos, channels, and channel sets to publish externally." href="/ooyala/migrating-video-cloud-ingestion-adapter.html">Labels</a>.</td>
           <td>optional</td>
         </tr>
         <tr>
-          <td><samp>&lt;media:keywords&gt;</samp></td>
+          <td><samp translate="No">&lt;media:keywords&gt;</samp></td>
           <td>Another way to define labels (without a forward slash). The contents, separated by commas, will be added as tags to the video. A new tag will be created only if a tag with the same name does not already exist.
-            <p>For example, for the following <samp>&lt;media:keywords&gt;</samp> tag, the labels <samp>label1</samp> and <samp>label2</samp> would be created and added to the video as tags. A label named <samp>parentlabel</samp> would also be created, with the label <samp>childlabel</samp> nested inside it.</p>
+            <p>For example, for the following <samp translate="No">&lt;media:keywords&gt;</samp> tag, the labels <samp translate="No">label1</samp> and <samp translate="No">label2</samp> would be created and added to the video as tags. A label named <samp translate="No">parentlabel</samp> would also be created, with the label <samp translate="No">childlabel</samp> nested inside it.</p>
             <pre class="pre codeblock">
   &lt;media:keywords&gt;label1, label2,
       parentlabel/childlabel&lt;/media:keywords&gt;</pre>
-            <div class="note note"><span class="notetitle">Note:</span> The contents of <samp>&lt;media:keywords&gt;</samp> are ignored when the <samp>&lt;ooyala:labels&gt;</samp> tag is included in the XML manifest file or MRSS.</div></td>
+            <div class="note note"><span class="notetitle">Note:</span> The contents of <samp translate="No">&lt;media:keywords&gt;</samp> are ignored when the <samp translate="No">&lt;ooyala:labels&gt;</samp> tag is included in the XML manifest file or MRSS.</div></td>
           <td>optional</td>
         </tr>
         <tr>
-          <td><samp>&lt;ooyala:embedcode&gt;</samp></td>
+          <td><samp translate="No">&lt;ooyala:embedcode&gt;</samp></td>
           <td>Video Cloud video ID.</td>
           <td>optional (required if you are updating a video rather than adding a new one)</td>
         </tr>
         <tr>
-          <td><samp>&lt;ooyala:profileguid&gt;</samp></td>
+          <td><samp translate="No">&lt;ooyala:profileguid&gt;</samp></td>
           <td>ID of the processing profile, which is a group of encodes that define the formats a master video must be converted into during transcoding. Contact your Ooyala support representative for details.</td>
           <td>optional</td>
         </tr>
         <tr>
-          <td><samp>&lt;ooyala:metadata&gt;</samp></td>
+          <td><samp translate="No">&lt;ooyala:metadata&gt;</samp></td>
           <td>Custom metadata for the video. You can have an element for each type of metadata. See the <a href="#Handling_of_metadata">Handling of metadata</a> section for details on how <code translate="No">metadata</code> is added to videos as special tags. Example: <code translate="No">&lt;ooyala:metadata name="category"&gt;cooking&lt;/ooyala:metadata&gt;</code></td>
           <td>optional</td>
         </tr>
         <tr>
-          <td><samp>&lt;ooyala:remoteasset&gt;</samp></td>
+          <td><samp translate="No">&lt;ooyala:remoteasset&gt;</samp></td>
           <td>Specifies a remote asset to ingest. A remote asset is a video that is hosted somewhere other than Backlot. Specify the following attributes:
             <ul class="ul">
-              <li class="language-editable"><samp>durationInMs</samp>: media duration (in milliseconds)</li>
-              <li class="language-editable"><samp>url</samp>: URL of the remote asset. The URL can include <samp>http://</samp> or <samp>https://</samp>.</li>
+              <li class="language-editable"><samp translate="No">durationInMs</samp>: media duration (in milliseconds)</li>
+              <li class="language-editable"><samp translate="No">url</samp>: URL of the remote asset. The URL can include <samp translate="No">http://</samp> or <samp translate="No">https://</samp>.</li>
             </ul>
-            This setting maps to the value of the <samp>hosted_at</samp> property for a remote asset. Example: <samp>&lt;ooyala:remoteasset durationInMs='5000' url="http://your_website/your_remote_assets.mp4" /&gt;</samp>
-            <div class="note note"><span class="notetitle">Note:</span> After a remote asset has been created, its propagation to the various CDNs might be delayed 60 seconds or more. If you request a remote asset too soon after its creation, the results will be cached by the CDNs, which might take several minutes to clear. Best practice: after creation, wait 30 or 60 seconds, query with the <span class="ph">Backlot API</span> <samp>[GET] /v2/assets/<var class="keyword varname">asset_id</var></samp> route, and after retrieving the remote asset's embed code (content ID or asset ID), then proceed to embed the asset.</div></td>
+            This setting maps to the value of the <samp translate="No">hosted_at</samp> property for a remote asset. Example: <samp translate="No">&lt;ooyala:remoteasset durationInMs='5000' url="http://your_website/your_remote_assets.mp4" /&gt;</samp>
+            <div class="note note"><span class="notetitle">Note:</span> After a remote asset has been created, its propagation to the various CDNs might be delayed 60 seconds or more. If you request a remote asset too soon after its creation, the results will be cached by the CDNs, which might take several minutes to clear. Best practice: after creation, wait 30 or 60 seconds, query with the <span class="ph">Backlot API</span> <samp translate="No">[GET] /v2/assets/<var class="keyword varname">asset_id</var></samp> route, and after retrieving the remote asset's embed code (content ID or asset ID), then proceed to embed the asset.</div></td>
           <td>required (remote assets only)</td>
         </tr>
         <tr>
-          <td><samp>&lt;ooyala:profileguid&gt;</samp></td>
+          <td><samp translate="No">&lt;ooyala:profileguid&gt;</samp></td>
           <td>Specifies a Video Cloud ingest profile to use for processing the video. If you do not want to use the account default profile, you must specify the one you want to use instead. See <a href="https://studio.support.brightcove.com/admin/managing-ingest-profiles.html">Managing Ingest Profiles</a>.</td>
           <td>optional</td>
         </tr>
@@ -586,8 +586,8 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
        xmlns:fh="http://purl.org/syndication/history/1.0"
        xmlns:ooyala="http://www.ooyala.com/mrss/"&gt;</pre>
       </li>
-      <li class="language-editable">Create a <samp>channel</samp> container.</li>
-      <li class="language-editable">Create an <samp>item</samp> entry for each video, containing the desired elements from the table above.
+      <li class="language-editable">Create a <samp translate="No">channel</samp> container.</li>
+      <li class="language-editable">Create an <samp translate="No">item</samp> entry for each video, containing the desired elements from the table above.
         <p>In the following example, the XML specifies metadata for two videos. For the first video, the file and thumbnails are located on an upload server and are pulled from that server. For the second video, the file and thumbnail were already uploaded to an Ooyala server. The second video also has flight times.</p>
         <pre class="pre codeblock">
   &lt;?xml version="1.0" encoding="utf-8"?&gt;

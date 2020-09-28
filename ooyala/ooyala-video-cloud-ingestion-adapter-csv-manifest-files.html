@@ -47,93 +47,93 @@ parent: Migrating from Ooyala
       </thead>
       <tbody class="bcls-table__body">
         <tr>
-          <td><samp>video</samp></td>
-          <td>Filename of the video or the URL where the video is located. The URL can include <samp>http://</samp> or <samp>https://</samp>.</td>
+          <td><samp translate="No">video</samp></td>
+          <td>Filename of the video or the URL where the video is located. The URL can include <samp translate="No">http://</samp> or <samp translate="No">https://</samp>.</td>
           <td>required</td>
         </tr>
         <tr>
-          <td><samp>title</samp></td>
+          <td><samp translate="No">title</samp></td>
           <td>Name or title of the video.</td>
           <td>optional</td>
         </tr>
         <tr>
-          <td><samp>thumbnail</samp></td>
+          <td><samp translate="No">thumbnail</samp></td>
           <td>Filename of the thumbnail or the URL where the thumbnail is located.</td>
           <td>optional</td>
         </tr>
         <tr>
-          <td><samp>content_type</samp></td>
-          <td>Content type (video or remote asset). If the filename specified in the video column is a URL where the video is located, and if you want to define a remote asset, change the value of the content_type column (from <samp>video</samp>, the default) to <samp>content_type=remoteasset</samp>.</td>
+          <td><samp translate="No">content_type</samp></td>
+          <td>Content type (video or remote asset). If the filename specified in the video column is a URL where the video is located, and if you want to define a remote asset, change the value of the content_type column (from <samp translate="No">video</samp>, the default) to <samp translate="No">content_type=remoteasset</samp>.</td>
           <td>required (remote assets only)</td>
         </tr>
         <tr>
-          <td><samp>description</samp></td>
+          <td><samp translate="No">description</samp></td>
           <td>Description of the video.</td>
           <td>optional</td>
         </tr>
         <tr>
-          <td><samp>hosted_at</samp></td>
-          <td>Permanent URL where you embed the video. Maps to the value of the <samp>hosted_at</samp> property for a remote asset.
-            <div class="note note"><span class="notetitle">Note:</span> After a remote asset has been created, its propagation to the various CDNs might be delayed 60 seconds or more. If you request a remote asset too soon after its creation, the results will be cached by the CDNs, which might take several minutes to clear. Best practice: after creation, wait 30 or 60 seconds, query with the <span class="ph">Backlot API</span> <samp>[GET] /v2/assets/<var class="keyword varname">asset_id</var></samp> route, and after retrieving the remote asset's embed code (content ID or asset ID), then proceed to embed the asset.</div></td>
+          <td><samp translate="No">hosted_at</samp></td>
+          <td>Permanent URL where you embed the video. Maps to the value of the <samp translate="No">hosted_at</samp> property for a remote asset.
+            <div class="note note"><span class="notetitle">Note:</span> After a remote asset has been created, its propagation to the various CDNs might be delayed 60 seconds or more. If you request a remote asset too soon after its creation, the results will be cached by the CDNs, which might take several minutes to clear. Best practice: after creation, wait 30 or 60 seconds, query with the <span class="ph">Backlot API</span> <samp translate="No">[GET] /v2/assets/<var class="keyword varname">asset_id</var></samp> route, and after retrieving the remote asset's embed code (content ID or asset ID), then proceed to embed the asset.</div></td>
           <td>optional</td>
         </tr>
         <tr>
-          <td><samp>flight_start_time</samp></td>
-          <td>The start time when the asset can be played, in UTC. Example: <samp>2011-06-01T00:00:00Z</samp></td>
-          <td>required (only if <samp>flight_end_time</samp>is specified)</td>
+          <td><samp translate="No">flight_start_time</samp></td>
+          <td>The start time when the asset can be played, in UTC. Example: <samp translate="No">2011-06-01T00:00:00Z</samp></td>
+          <td>required (only if <samp translate="No">flight_end_time</samp>is specified)</td>
         </tr>
         <tr>
-          <td><samp>flight_end_time</samp></td>
-          <td>The end time when the asset can be played, in UTC. Example: <samp>2011-07-01T00:00:00Z</samp></td>
+          <td><samp translate="No">flight_end_time</samp></td>
+          <td>The end time when the asset can be played, in UTC. Example: <samp translate="No">2011-07-01T00:00:00Z</samp></td>
           <td>optional</td>
         </tr>
         <tr>
-          <td><samp>durationInMs</samp></td>
-          <td>(OS v2.5 only) The duration representing the length of the video (in milliseconds). Required when <samp>content_type=remoteasset</samp>.</td>
+          <td><samp translate="No">durationInMs</samp></td>
+          <td>(OS v2.5 only) The duration representing the length of the video (in milliseconds). Required when <samp translate="No">content_type=remoteasset</samp>.</td>
           <td>required (for remote assets only)</td>
         </tr>
         <tr>
-          <td><samp>labels</samp></td>
-          <td>One or more labels, separated by commas. For example: <samp>/sports,/sports/jogging</samp>.</td>
+          <td><samp translate="No">labels</samp></td>
+          <td>One or more labels, separated by commas. For example: <samp translate="No">/sports,/sports/jogging</samp>.</td>
           <td>optional</td>
         </tr>
         <tr>
-          <td><samp>metadata</samp></td>
+          <td><samp translate="No">metadata</samp></td>
           <td>Custom metadata for the video. You can have a column for each type of metadata. See the <a href="#Handling_of_metadata">Handling of metadata</a> section above to see how metadata is mapped to Video Cloud video fields.</td>
           <td>optional</td>
         </tr>
         <tr>
-          <td><samp>embed_code</samp></td>
+          <td><samp translate="No">embed_code</samp></td>
           <td>(Reserved). Content ID in Backlot of the video asset.</td>
           <td>reserved</td>
         </tr>
         <tr>
-          <td><samp>id</samp></td>
+          <td><samp translate="No">id</samp></td>
           <td>Maps to the created asset's external ID property: a custom identifier you define that you can use instead of the content ID.</td>
           <td>optional</td>
         </tr>
         <tr>
-          <td><samp>subTitle</samp></td>
+          <td><samp translate="No">subTitle</samp></td>
           <td class="entry" id="ingestion_ftp_csv__subtitle" valign="top" width="71.42857142857143%" headers="d1039925e42 ">Specifies a closed caption file (supported for DFXP files only). One of the following:
             <ul>
-              <li class="language-editable">Filename of the closed caption file you uploaded. Example: <samp>&lt;media:subTitle href="caption-1.dfxp"/&gt;</samp></li>
-              <li class="language-editable">URL where the closed caption file is located. The URL can include <samp>http://</samp> or <samp>https://</samp>.</li>
+              <li class="language-editable">Filename of the closed caption file you uploaded. Example: <samp translate="No">&lt;media:subTitle href="caption-1.dfxp"/&gt;</samp></li>
+              <li class="language-editable">URL where the closed caption file is located. The URL can include <samp translate="No">http://</samp> or <samp translate="No">https://</samp>.</li>
             </ul>
             <p>See <a title="You can ingest closed caption files via Backlot or the Ooyala Ingestion Service (OIS)." href="/ooyala/migrating-video-cloud-ingestion-adapter.html">Ingesting Closed Caption Files</a>.</p></td>
           <td>optional</td>
         </tr>
         <tr>
-          <td><samp>subTitle:lang</samp></td>
+          <td><samp translate="No">subTitle:lang</samp></td>
           <td>(optional) - Language of the closed caption file. Two-letter language code./td&gt;</td>
           <td>optional</td>
         </tr>
         <tr>
-          <td><samp>subTitle:frameRate</samp></td>
+          <td><samp translate="No">subTitle:frameRate</samp></td>
           <td>(optional) - Frame rate of the closed caption file. Units are in Frames Per Second (FPS). Default is 30. Older closed caption files might be 24.</td>
           <td>optional</td>
         </tr>
         <tr>
-          <td><samp>profileguid</samp></td>
+          <td><samp translate="No">profileguid</samp></td>
           <td>ID of the processing profile, which is a group of encodes that define the formats a master video must be converted into during transcoding. If you do not want to use the default Video Cloud ingest profile, you must include the ID of the one you want to use. See <a href="https://studio.support.brightcove.com/admin/managing-ingest-profiles.html">Managing Ingest Profiles</a>.</td>
           <td>optional</td>
         </tr>
