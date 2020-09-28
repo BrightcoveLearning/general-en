@@ -14,14 +14,14 @@ parent: Migrating from Ooyala
       <h3 id="policy_key">Policy key authentication: Playback API</h3>
       <p>The <a href="https://apis.support.brightcove.com/playback/">Playback API</a> used mainly to retrieve video and playlist data from players or web portals, uses a <code translate="No">policy_key</code>, for authentication, usually passed as an argument in an <code translate="No">Accept</code> header:</p>
       <pre>
-		<code class="language-http">Accept: application/json;pk={policy_key}</code></pre>
+		<code class="language-http" translate="No">Accept: application/json;pk={policy_key}</code></pre>
       <p>Policy keys are generated automatically for Brightcove players, and may be taken from a <a href="https://apis.support.brightcove.com/policy/getting-started/policy-keys.html#Getting_the_policy_key">player configuration</a>, or generated using the <a href="https://apis.support.brightcove.com/policy/">Policy API</a></p>
     </section>
     <section class="bcls-subsection">
       <h3 id="authentication_api_key">API-key authentication: Live API</h3>
       <p>The <a href="https://support.brightcove.com/live">Live API</a> uses an API key that is supplied when you account is set up to authenticate requests. The API key is passed in an <code translate="No">X-API-KEY</code> header:</p>
       <pre>
-		<code class="language-http">X-API-KEY : {YOUR_APIKey}</code></pre>
+		<code class="language-http" translate="No">X-API-KEY : {YOUR_APIKey}</code></pre>
     </section>
   </section>
   <section class="bcls-section">
@@ -31,7 +31,7 @@ parent: Migrating from Ooyala
       <li><strong>Get client credentials:</strong> this is a one-time operation that is most easily carried out using the <strong>API Authentication</strong> page of the Admin tools in Studio. See <a href="https://studio.support.brightcove.com/admin/managing-api-authentication-credentials.html">Managing API Authentication Credentials</a> for details and step-by-step instructions.</li>
       <li><strong>Get an access token:</strong> each API request must contain an access token sent in an <code translate="No">Authorization</code> header:
         <pre>
-		<code class="language-http">Authorization: Bearer {access_token}</code></pre>
+		<code class="language-http" translate="No">Authorization: Bearer {access_token}</code></pre>
         <p>Access tokens live for five minutes, so unless you running a process that will be generating repeated API requests, you will probably just want to get a new one for each request.</p>
         <p>Access tokens are obtained by sending the client credentials in a request to Brightcove's OAuth API. See <a href="https://apis.support.brightcove.com/getting-started/concepts-testing-tools-brightcove-apis.html">Getting Access Tokens</a> for full details. There is also a <a href="https://apis.support.brightcove.com/oauth/code-samples/oauth-api-sample-get-access-token.html">sample app</a> you can use to get a one-off token for testing API calls. There are also instructions for configuring the popular REST clients <a href="https://apis.support.brightcove.com/general/use-postman-api-requests.html">Postman</a> and <a href="https://apis.support.brightcove.com/general/use-insomnia-api-requests.html">Insomnia</a>.</p>
       </li>
