@@ -10,14 +10,14 @@ function buildComparisonTable() {
     bodyFrag = document.createDocumentFragment();
 
   // segmented audio renditions
-  iMax = 
+  iMax =
 
   // progressive video Renditions
   iMax = progressiveRenditions.length;
   for (i = 0; i < iMax; i++) {
     tr = document.createElement('tr');
     td = document.createElement('td');
-    td.setAttribute('class', 'notranslate');
+    td.setAttribute('translate', 'No');
     td.textContent = progressiveRenditions[i].id;
     tr.appendChild(td);
     jMax = profiles.length;
