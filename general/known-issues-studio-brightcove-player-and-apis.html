@@ -2,8 +2,23 @@
 title: 'Known Issues: Studio, Brightcove Player and APIs'
 parent: General Information
 ---
+
+
 <article class="bcls-article">
-  <h1>Known Issues: Studio and Brightcove Player</h1>
+
+  <script>
+    var BCLS = ( function (window, document) {
+      var newURL = '/support/known-issues-studio-brightcove-player-and-apis.html',
+          message = '<h1 style="color:#990000;">This page has moved to the Integrations site. The new url is: ' + newURL + ' You will be redirected in 5 seconds. Please update your bookmarks.</h1>',
+          t;
+      function goToNewURL() {
+        window.location.href = newURL;
+      }
+      document.write(message);
+      t = window.setTimeout(goToNewURL, 5000);
+    })(window, document);
+  </script>
+
   <summary>This topic lists the known issues with Studio, Brightcove Player and APIs.</summary>
   <section class="bcls-section">
     <p><strong>Identified known issues include:</strong></p>
@@ -159,7 +174,7 @@ parent: General Information
       <dt>IE11 images for audio only content not displaying</dt>
       <dd>When playing only audio content in IE11, the video still image will not be displayed, only a black screen is seen. The image can be retained with the following code:
         <pre>
-  <code class="notranslate language-css">.vjs-has-started .vjs-poster {
+  <code class="language-css" translate="No">.vjs-has-started .vjs-poster {
   display: block;
   }
   </code>
@@ -203,7 +218,7 @@ parent: General Information
         <p> In environments where Flash is disabled or Flash-based HLS is disabled for the player, and the player is explicitly sized using a <code translate="No">style </code> attribute on the <code translate="No">video </code> tag, fullscreen viewing may not function in some browsers. </p>
         <p>Workaround: remove the <code translate="No">style </code> attribute from the <code translate="No">video </code> tag, and instead create a rule in page stylesheet like this:</p>
         <pre>
-  <code class="notranslate language-css">.video-js{
+  <code class="language-css" translate="No">.video-js{
   width:640px;
   height:360px;
   }

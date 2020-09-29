@@ -532,7 +532,7 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
       <dt>IE11 images for audio only content not displaying</dt>
       <dd>When playing only audio content in IE11, the video still image will not be displayed, only a black screen is seen. The image can be retained with the following code:
       <pre>
-  <code class="notranslate language-css">.vjs-has-started .vjs-poster {
+  <code class="language-css" translate="No">.vjs-has-started .vjs-poster {
   display: block;
   }
   </code>
@@ -580,7 +580,7 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
         </p>
       <p>Workaround: remove the <code translate="No">style </code> attribute from the <code translate="No">video </code> tag, and instead create a rule in page stylesheet like this:</p>
       <pre>
-  <code class="notranslate language-css">.video-js{
+  <code class="language-css" translate="No">.video-js{
   width:640px;
   height:360px;
   }
