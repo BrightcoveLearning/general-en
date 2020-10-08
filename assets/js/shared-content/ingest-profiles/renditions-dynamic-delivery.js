@@ -94,7 +94,7 @@ var BCLSDDrenditions = (function(window, document) {
       BCLSrenditionData.BCLSrenditionsVideo = sortArray(BCLSrenditionData.BCLSrenditionsVideo, 'name');
       BCLSrenditionData.BCLSrenditionsVideoHEVC = sortArray(BCLSrenditionData.BCLSrenditionsVideoHEVC, 'name');
       BCLSrenditionData.BCLSrenditionsVideoProgressive = sortArray(BCLSrenditionData.BCLSrenditionsVideoProgressive, 'name');
-    
+
         // build the table bodies
         buildTable(BCLSrenditionData.BCLSrenditionsAudio, audioFields, audioTableBody);
         buildTable(BCLSrenditionData.BCLSrenditionsAudioProgressive, progressiveAudioFields, progressiveAudioTableBody);
