@@ -88,11 +88,11 @@ var BCLSDDrenditions = (function(window, document) {
         el.appendChild(frag);
       }
 
-      BCLSrenditionData.BCLSrenditionsAudio = sortArray(BCLSrenditionData.BCLSrenditionsAudio, 'name');
-      BCLSrenditionData.BCLSrenditionsAudioProgressive = sortArray(BCLSrenditionData.BCLSrenditionsAudioProgressive, 'name');
-      BCLSrenditionData.BCLSrenditionsVideo = sortArray(BCLSrenditionData.BCLSrenditionsVideo, 'name');
-      BCLSrenditionData.BCLSrenditionsVideoHEVC = sortArray(BCLSrenditionData.BCLSrenditionsVideoHEVC, 'name');
-      BCLSrenditionData.BCLSrenditionsVideoProgressive = sortArray(BCLSrenditionData.BCLSrenditionsVideoProgressive, 'name');
+      // BCLSrenditionData.BCLSrenditionsAudio = sortArray(BCLSrenditionData.BCLSrenditionsAudio, 'name');
+      // BCLSrenditionData.BCLSrenditionsAudioProgressive = sortArray(BCLSrenditionData.BCLSrenditionsAudioProgressive, 'name');
+      // BCLSrenditionData.BCLSrenditionsVideo = sortArray(BCLSrenditionData.BCLSrenditionsVideo, 'name');
+      // BCLSrenditionData.BCLSrenditionsVideoHEVC = sortArray(BCLSrenditionData.BCLSrenditionsVideoHEVC, 'name');
+      // BCLSrenditionData.BCLSrenditionsVideoProgressive = sortArray(BCLSrenditionData.BCLSrenditionsVideoProgressive, 'name');
 
         // build the table bodies
         buildTable(BCLSrenditionData.BCLSrenditionsAudio, audioFields, audioTableBody);
@@ -101,8 +101,8 @@ var BCLSDDrenditions = (function(window, document) {
         buildTable(BCLSrenditionData.BCLSrenditionsVideoProgressive, progressiveFields, progressiveTableBody);
         buildTable(BCLSrenditionData.BCLSrenditionsVideoHEVC, hevcFields, hevcTableBody);
         return {
-          videoRenditions: videoRenditions,
-          audioRenditions: audioRenditions,
-          progressiveRenditions: progressiveRenditions
+          videoRenditions: BCLSrenditionData.BCLSrenditionsVideo,
+          audioRenditions: BCLSrenditionData.BCLSrenditionsAudio,
+          progressiveRenditions: BCLSrenditionData.BCLSrenditionsVideoProgressive
         };
       })(window, document);
