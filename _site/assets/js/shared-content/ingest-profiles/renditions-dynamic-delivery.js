@@ -101,8 +101,8 @@ var BCLSDDrenditions = (function(window, document) {
         buildTable(BCLSrenditionData.BCLSrenditionsVideoProgressive, progressiveFields, progressiveTableBody);
         buildTable(BCLSrenditionData.BCLSrenditionsVideoHEVC, hevcFields, hevcTableBody);
         return {
-          videoRenditions: BCLSrenditionData.BCLSrenditionsVideo,
-          audioRenditions: BCLSrenditionData.BCLSrenditionsAudio,
-          progressiveRenditions: BCLSrenditionData.BCLSrenditionsVideoProgressive
+          'videoRenditions': BCLSrenditionData.BCLSrenditionsVideo,
+          'audioRenditions': BCLSrenditionData.BCLSrenditionsAudio,
+          'progressiveRenditions': BCLSrenditionData.BCLSrenditionsVideoProgressive
         };
       })(window, document);
