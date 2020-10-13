@@ -5,11 +5,6 @@
   },
 
   {
-      "newURL": "https://general.support.brightcove.com/shared-content/general/audio-content.html",
-      "oldURL": "/audio-content"
-  },
-
-  {
       "newURL": "https://general.support.brightcove.com/ooyala/backlot-and-video-cloud-video-and-playlist-fields.html",
       "oldURL": "/backlot-and-video-cloud-video-and-playlist-fields"
   },
@@ -45,11 +40,6 @@
   },
 
   {
-      "newURL": "https://general.support.brightcove.com/shared-content/code-samples/brightcove-player-sample-newest-videos-playlist.html",
-      "oldURL": "/brightcove-player-sample-newest-videos-playlist"
-  },
-
-  {
       "newURL": "https://general.support.brightcove.com/general/brightcove-product-overview.html",
       "oldURL": "/brightcove-product-overview"
   },
@@ -57,16 +47,6 @@
   {
       "newURL": "https://general.support.brightcove.com/training/brightcove-university.html",
       "oldURL": "/brightcove-university"
-  },
-
-  {
-      "newURL": "https://general.support.brightcove.com/shared-content/player/bulk-updating-brightcove-default-player.html",
-      "oldURL": "/bulk-updating-brightcove-default-player"
-  },
-
-  {
-      "newURL": "https://general.support.brightcove.com/shared-content/player/choosing-correct-embed-code.html",
-      "oldURL": "/choosing-correct-embed-code"
   },
 
   {
@@ -105,11 +85,6 @@
   },
 
   {
-      "newURL": "https://general.support.brightcove.com/shared-content/general/configuring-server-side-ad-settings.html",
-      "oldURL": "/configuring-server-side-ad-settings"
-  },
-
-  {
       "newURL": "https://general.support.brightcove.com/support/contact-sales.html",
       "oldURL": "/contact-sales"
   },
@@ -127,21 +102,6 @@
   {
       "newURL": "https://general.support.brightcove.com/developer/debugging-mobile-devices.html",
       "oldURL": "/debugging-mobile-devices"
-  },
-
-  {
-      "newURL": "https://general.support.brightcove.com/shared-content/integration/embedding-brightcove-page-experiences-cms.html",
-      "oldURL": "/embedding-brightcove-page-experiences-cms"
-  },
-
-  {
-      "newURL": "https://general.support.brightcove.com/shared-content/integration/embedding-brightcove-players-cms.html",
-      "oldURL": "/embedding-brightcove-players-cms"
-  },
-
-  {
-      "newURL": "https://general.support.brightcove.com/shared-content/general/hevc-video.html",
-      "oldURL": "/hevc-video"
   },
 
   {
@@ -165,7 +125,7 @@
   },
 
   {
-      "newURL": "https://general.support.brightcove.com/developer/kollective/",
+      "newURL": "https://general.support.brightcove.com/ooyala/",
       "oldURL": "/index"
   },
 
@@ -180,12 +140,12 @@
   },
 
   {
-      "newURL": "https://general.support.brightcove.com/training/",
+      "newURL": "https://general.support.brightcove.com/support/",
       "oldURL": "/index"
   },
 
   {
-      "newURL": "https://general.support.brightcove.com/ooyala/",
+      "newURL": "https://general.support.brightcove.com/developer/kollective/",
       "oldURL": "/index"
   },
 
@@ -195,23 +155,13 @@
   },
 
   {
-      "newURL": "https://general.support.brightcove.com/support/",
-      "oldURL": "/index"
-  },
-
-  {
       "newURL": "https://general.support.brightcove.com/",
       "oldURL": "/index"
   },
 
   {
-      "newURL": "https://general.support.brightcove.com/shared-content/integration/integrating-your-cms-video-cloud.html",
-      "oldURL": "/integrating-your-cms-video-cloud"
-  },
-
-  {
-      "newURL": "https://general.support.brightcove.com/support/known-issues-studio-brightcove-player-and-apis.html",
-      "oldURL": "/known-issues-studio-brightcove-player-and-apis"
+      "newURL": "https://general.support.brightcove.com/training/",
+      "oldURL": "/index"
   },
 
   {
@@ -220,13 +170,8 @@
   },
 
   {
-      "newURL": "https://general.support.brightcove.com/shared-content/general/learning-guide-using-rest-apis.html",
-      "oldURL": "/learning-guide-using-rest-apis"
-  },
-
-  {
-      "newURL": "https://general.support.brightcove.com/shared-content/managing-api-authentication-credentials.html",
-      "oldURL": "/managing-api-authentication-credentials"
+      "newURL": "https://general.support.brightcove.com/support/known-issues-studio-brightcove-player-and-apis.html",
+      "oldURL": "/known-issues-studio-brightcove-player-and-apis"
   },
 
   {
@@ -255,17 +200,12 @@
   },
 
   {
-      "newURL": "https://general.support.brightcove.com/training/online-training-courses.html",
-      "oldURL": "/online-training-courses"
-  },
-
-  {
       "newURL": "https://general.support.brightcove.com/support/online-training-courses.html",
       "oldURL": "/online-training-courses"
   },
 
   {
-      "newURL": "https://general.support.brightcove.com/shared-content/online-training-courses.html",
+      "newURL": "https://general.support.brightcove.com/training/online-training-courses.html",
       "oldURL": "/online-training-courses"
   },
 
@@ -340,58 +280,13 @@
   },
 
   {
-      "newURL": "https://general.support.brightcove.com/shared-content/support/opening-case-with-brightcove-support.html",
-      "oldURL": "/opening-case-with-brightcove-support"
-  },
-
-  {
       "newURL": "https://general.support.brightcove.com/support/opening-case-with-brightcove-support.html",
       "oldURL": "/opening-case-with-brightcove-support"
   },
 
   {
-      "newURL": "https://general.support.brightcove.com/shared-content/general/overview-captions.html",
-      "oldURL": "/overview-captions"
-  },
-
-  {
-      "newURL": "https://general.support.brightcove.com/shared-content/general/overview-context-aware-encoding.html",
-      "oldURL": "/overview-context-aware-encoding"
-  },
-
-  {
       "newURL": "https://general.support.brightcove.com/general/overview-delivery-rules.html",
       "oldURL": "/overview-delivery-rules"
-  },
-
-  {
-      "newURL": "https://general.support.brightcove.com/shared-content/general/overview-dynamic-delivery.html",
-      "oldURL": "/overview-dynamic-delivery"
-  },
-
-  {
-      "newURL": "https://general.support.brightcove.com/shared-content/player/player-configuration-guide.html",
-      "oldURL": "/player-configuration-guide"
-  },
-
-  {
-      "newURL": "https://general.support.brightcove.com/shared-content/player/plugin-registry.html",
-      "oldURL": "/plugin-registry"
-  },
-
-  {
-      "newURL": "https://general.support.brightcove.com/shared-content/player/policy-keys.html",
-      "oldURL": "/policy-keys"
-  },
-
-  {
-      "newURL": "https://general.support.brightcove.com/shared-content/player/pre-release-player.html",
-      "oldURL": "/pre-release-player"
-  },
-
-  {
-      "newURL": "https://general.support.brightcove.com/shared-content/register-training.html",
-      "oldURL": "/register-training"
   },
 
   {
@@ -412,31 +307,6 @@
   {
       "newURL": "https://general.support.brightcove.com/search.html",
       "oldURL": "/search"
-  },
-
-  {
-      "newURL": "https://general.support.brightcove.com/shared-content/code-samples/simulated-live.html",
-      "oldURL": "/simulated-live"
-  },
-
-  {
-      "newURL": "https://general.support.brightcove.com/shared-content/ingest-profiles/standard-ingest-profiles-dynamic-delivery-and-context-aware-encoding.html",
-      "oldURL": "/standard-ingest-profiles-dynamic-delivery-and-context-aware-encoding"
-  },
-
-  {
-      "newURL": "https://general.support.brightcove.com/shared-content/ingest-profiles/standard-ingest-profiles-legacy-transcoding.html",
-      "oldURL": "/standard-ingest-profiles-legacy-transcoding"
-  },
-
-  {
-      "newURL": "https://general.support.brightcove.com/shared-content/ingest-profiles/standard-live-ingest-profiles.html",
-      "oldURL": "/standard-live-ingest-profiles"
-  },
-
-  {
-      "newURL": "https://general.support.brightcove.com/shared-content/general/static-url-delivery.html",
-      "oldURL": "/static-url-delivery"
   },
 
   {
@@ -486,11 +356,6 @@
 
   {
       "newURL": "https://general.support.brightcove.com/support/viewing-brightcove-system-status-page.html",
-      "oldURL": "/viewing-brightcove-system-status-page"
-  },
-
-  {
-      "newURL": "https://general.support.brightcove.com/shared-content/support/viewing-brightcove-system-status-page.html",
       "oldURL": "/viewing-brightcove-system-status-page"
   },
 ]
