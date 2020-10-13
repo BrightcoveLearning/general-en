@@ -1,3 +1,5 @@
+sudo chmod -R g+w /Users/rcrooks/github
+
 git pull
 sudo bundle update
 sudo bundle exec jekyll build --trace
