@@ -133,6 +133,17 @@ parent: General Information
     <dl>
       <dt>Elements with <code translate="No">id</code> Set to <code translate="No">default</code></dt>
       <dd>Brightcove Player is known to behave poorly if there is an element with <code translate="No">id="default"</code> on the page. The blog post <a href="https://2ality.com/2012/08/ids-are-global.html">DOM: element IDs are global variables</a> explains why this is an issue.</dd>
+      <dt>Ads blocked on Safari and/or iOS</dt>
+      <dd>
+        Changes made by Apple to cross-origin policies for Safari and iOS may result in ads not playing.
+        <h4>Workaround</h4>
+        <p>We have resolved this issue for SSAI by adding additional CORs headers. If you are using client-side ads, this will not address the issue, as the CORs headers have to be sent from your server or hosting service. The headers we added are:</p>
+        <pre><code translate="No">access-control-allow-headers: Server,Range,Content-Length,Content-Range
+          access-control-allow-headers: X-Requested-With,Origin,Range,Accept-Encoding,Referer
+          access-control-allow-methods: GET,HEAD,OPTIONS
+          access-control-allow-origin: *
+          </code></pre>
+      </dd>
       <dt>Console warnings</dt>
       <p>Brightcove Player may generate <strong>warnings</strong> that appear in browser's console. The warnings, as opposed to error messages, are harmless and do not effect play back. An example of a warning is displayed here:</p>
       <figure class="bcls-figure"><img class="bcls-image" alt="console warning" src="/assets/images/general/console-warning.png" /></figure>
@@ -239,10 +250,10 @@ parent: General Information
       <dd>The <code translate="No">referrer_url </code> value may have different values between iOS and Android devices. Because of this, it is recommended to use the <code translate="No">description_url </code> value instead. This value is consistent across all platforms and devices.</dd>
       <dt>loop attribute on Safari</dt>
       <dd>The <strong>loop</strong> attribute does not work correctly on Safari. You can use the solution detailed in the&nbsp;<a href="https://player.support.brightcove.com/code-samples/brightcove-player-sample-creating-video-loop.html">Brightcove Player Sample: Creating a Video Loop</a> document.</dd>
-  
+
       <dt>Captions on Safari</dt>
       <dd>Because Safari uses the native capabilities for styling captions, the <strong>Captions Settings</strong> menu option is not available in the the <strong>CC</strong> menu on Safari browsers (both iOS and macOS).</dd>
-  
+
       <dt>Using an HTML element id named global</dt>
       <dd>You should not nest your advanced (in-page embed) player implementation code in a parent <code translate="No">&lt;div&gt; </code> tag with an <code translate="No">id </code> assigned the value <code translate="No">global </code>. This causes issues with Brightcove Player.</dd>
       <dt>Player version 5 icon issue</dt>
