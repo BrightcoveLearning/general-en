@@ -27,7 +27,7 @@
                     <VideoClicks/>
                     <MediaFiles>
                       <MediaFile type="video/mp4" width="1280" height="720" delivery="progressive" id="2" bitrate="4316" minBitrate="320" maxBitrate="320" scalable="true" maintainAspectRatio="true">
-                        <![CDATA[https://solutions.brightcove.com/bcls/ads/bc-ads/bcls-ad-6-5seconds.mp4]]>
+                        <![CDATA[https://general.support.brightcove.com/assets/ads/bc-ads/bcls-ad-6-5seconds.mp4]]>
                       </MediaFile>
                     </MediaFiles>
                   </Linear>
@@ -72,7 +72,7 @@
                     <VideoClicks/>
                     <MediaFiles>
                       <MediaFile type="video/mp4" width="1280" height="720" delivery="progressive" id="3" bitrate="3026" minBitrate="320" maxBitrate="320" scalable="true" maintainAspectRatio="true">
-                        <![CDATA[https://solutions.brightcove.com/bcls/ads/bc-ads/bcls-ad-4-12seconds.mp4]]>
+                        <![CDATA[https://general.support.brightcove.com/assets/ads/bc-ads/bcls-ad-4-12seconds.mp4]]>
                       </MediaFile>
                     </MediaFiles>
                   </Linear>
@@ -117,7 +117,7 @@
                     <VideoClicks/>
                     <MediaFiles>
                       <MediaFile type="video/mp4" width="1280" height="720" delivery="progressive" id="4" bitrate="2115" minBitrate="320" maxBitrate="320" scalable="true" maintainAspectRatio="true">
-                        <![CDATA[https://solutions.brightcove.com/bcls/ads/bc-ads/bcls-ad-1-8seconds.mp4]]>
+                        <![CDATA[https://general.support.brightcove.com/assets/ads/bc-ads/bcls-ad-1-8seconds.mp4]]>
                       </MediaFile>
                     </MediaFiles>
                   </Linear>
