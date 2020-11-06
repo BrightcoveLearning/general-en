@@ -87,11 +87,6 @@ cd ../staging-site
 git pull
 echo 'pulled staging site'
 
-# test-site
-cd ../test-site
-git pull
-echo 'pulled test site'
-
 # BCL-developer-docs
 cd ../BCL-developer-docs
 git pull
@@ -99,8 +94,12 @@ echo 'pulled zencoder-support'
 
 echo 'pulled BCL-developer-docs'
 # BCL-Doc-Assets
-cd ../BCL-Doc-Assets
+cd /Users/rcrooks/git-bcl/BCL-Doc-Assets
 git pull
 
 echo 'pulled BCL-Doc-Assets'
+
+cd /Users/rcrooks/git-bcl/BCL-General
+git pull
+echo 'pulled BCL-General'
 echo 'all finished!'

@@ -451,20 +451,20 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
 set -euo pipefail
 
 NAME=${1:-}
-test -z &quot;${NAME:-}&quot; &amp;&amp; NAME=&quot;brightcove-playback-auth-key-$(date +%s)&quot;
-mkdir &quot;$NAME&quot;
+test -z "${NAME:-}" &amp;&amp; NAME="brightcove-playback-auth-key-$(date +%s)"
+mkdir "$NAME"
 
-PRIVATE_PEM=&quot;./$NAME/private.pem&quot;
-PUBLIC_PEM=&quot;./$NAME/public.pem&quot;
-PUBLIC_TXT=&quot;./$NAME/public_key.txt&quot;
+PRIVATE_PEM="./$NAME/private.pem"
+PUBLIC_PEM="./$NAME/public.pem"
+PUBLIC_TXT="./$NAME/public_key.txt"
 
-ssh-keygen -t rsa -b 2048 -m PEM -f &quot;$PRIVATE_PEM&quot; -q -N &quot;&quot;
-openssl rsa -in &quot;$PRIVATE_PEM&quot; -pubout -outform PEM -out &quot;$PUBLIC_PEM&quot; 2&gt;/dev/null
-openssl rsa -in &quot;$PRIVATE_PEM&quot; -pubout -outform DER | base64 &gt; &quot;$PUBLIC_TXT&quot;
+ssh-keygen -t rsa -b 2048 -m PEM -f "$PRIVATE_PEM" -q -N ""
+openssl rsa -in "$PRIVATE_PEM" -pubout -outform PEM -out "$PUBLIC_PEM" 2&gt;/dev/null
+openssl rsa -in "$PRIVATE_PEM" -pubout -outform DER | base64 &gt; "$PUBLIC_TXT"
 
-rm &quot;$PRIVATE_PEM&quot;.pub
+rm "$PRIVATE_PEM".pub
 
-echo &quot;Public key to saved in $PUBLIC_TXT&quot;
+echo "Public key to saved in $PUBLIC_TXT"
 </code></pre>
 <p>
   Run the script:
@@ -481,28 +481,28 @@ echo &quot;Public key to saved in $PUBLIC_TXT&quot;
 <pre class="line-numbers"><code class="language-bash" translate="No">package main
 
 import (
-	&quot;crypto/rand&quot;
-	&quot;crypto/rsa&quot;
-	&quot;crypto/x509&quot;
-	&quot;encoding/base64&quot;
-	&quot;encoding/pem&quot;
-	&quot;flag&quot;
-	&quot;fmt&quot;
-	&quot;io/ioutil&quot;
-	&quot;os&quot;
-	&quot;path&quot;
-	&quot;strconv&quot;
-	&quot;time&quot;
+	"crypto/rand"
+	"crypto/rsa"
+	"crypto/x509"
+	"encoding/base64"
+	"encoding/pem"
+	"flag"
+	"fmt"
+	"io/ioutil"
+	"os"
+	"path"
+	"strconv"
+	"time"
 )
 
 func main() {
 	var out string
 
-	flag.StringVar(&amp;out, &quot;output-dir&quot;, &quot;&quot;, &quot;Output directory to write files into&quot;)
+	flag.StringVar(&amp;out, "output-dir", "", "Output directory to write files into")
 	flag.Parse()
 
-	if out == &quot;&quot; {
-		out = &quot;rsa-key_&quot; + strconv.FormatInt(time.Now().Unix(), 10)
+	if out == "" {
+		out = "rsa-key_" + strconv.FormatInt(time.Now().Unix(), 10)
 	}
 
 	if err := os.MkdirAll(out, os.ModePerm); err != nil {
@@ -521,32 +521,32 @@ func main() {
 		panic(err.Error())
 	}
 
-	privOut, err := os.OpenFile(path.Join(out, &quot;private.pem&quot;), os.O_WRONLY|os.O_CREATE|os.O_TRUNC, 0600)
+	privOut, err := os.OpenFile(path.Join(out, "private.pem"), os.O_WRONLY|os.O_CREATE|os.O_TRUNC, 0600)
 	if err != nil {
 		panic(err.Error())
 	}
 
-	if err := pem.Encode(privOut, &amp;pem.Block{Type: &quot;RSA PRIVATE KEY&quot;, Bytes: privBytes}); err != nil {
+	if err := pem.Encode(privOut, &amp;pem.Block{Type: "RSA PRIVATE KEY", Bytes: privBytes}); err != nil {
 		panic(err.Error())
 	}
 
-	pubOut, err := os.OpenFile(path.Join(out, &quot;public.pem&quot;), os.O_WRONLY|os.O_CREATE|os.O_TRUNC, 0600)
+	pubOut, err := os.OpenFile(path.Join(out, "public.pem"), os.O_WRONLY|os.O_CREATE|os.O_TRUNC, 0600)
 	if err != nil {
 		panic(err.Error())
 	}
 
-	if err := pem.Encode(pubOut, &amp;pem.Block{Type: &quot;PUBLIC KEY&quot;, Bytes: pubBytes}); err != nil {
+	if err := pem.Encode(pubOut, &amp;pem.Block{Type: "PUBLIC KEY", Bytes: pubBytes}); err != nil {
 		panic(err.Error())
 	}
 
 	var pubEnc = base64.StdEncoding.EncodeToString(pubBytes)
 
-	var pubEncOut = path.Join(out, &quot;public_key.txt&quot;)
-	if err := ioutil.WriteFile(pubEncOut, []byte(pubEnc+&quot;\n&quot;), 0600); err != nil {
+	var pubEncOut = path.Join(out, "public_key.txt")
+	if err := ioutil.WriteFile(pubEncOut, []byte(pubEnc+"\n"), 0600); err != nil {
 		panic(err.Error())
 	}
 
-	fmt.Println(&quot;Public key saved in &quot; + pubEncOut)
+	fmt.Println("Public key saved in " + pubEncOut)
 }
 </code></pre>
 </div>
@@ -557,37 +557,37 @@ func main() {
   Example using node.js to generate the key pair:
 </p>
 <aside class="bcls-aside bcls-aside--tip">This script example requires node version 11 or later.</aside>
-<pre class="line-numbers"><code class="language-javascript" translate="No">var crypto = require(&quot;crypto&quot;);
-var fs = require(&quot;fs&quot;);
+<pre class="line-numbers"><code class="language-javascript" translate="No">var crypto = require("crypto");
+var fs = require("fs");
 
 var now = Math.floor(new Date() / 1000);
-var dir = &quot;rsa-key_&quot; + now;
+var dir = "rsa-key_" + now;
 fs.mkdirSync(dir);
 
 crypto.generateKeyPair(
-  &quot;rsa&quot;,
+  "rsa",
   {modulusLength: 2048},
   (err, publicKey, privateKey) =&gt; {
     fs.writeFile(
-      dir + &quot;/public.pem&quot;,
-      publicKey.export({ type: &quot;spki&quot;, format: &quot;pem&quot; }),
+      dir + "/public.pem",
+      publicKey.export({ type: "spki", format: "pem" }),
       err =&gt; {}
     );
     fs.writeFile(
-      dir + &quot;/public_key.txt&quot;,
-      publicKey.export({ type: &quot;spki&quot;, format: &quot;der&quot; }).toString(&quot;base64&quot;) +
-        &quot;\n&quot;,
+      dir + "/public_key.txt",
+      publicKey.export({ type: "spki", format: "der" }).toString("base64") +
+        "\n",
       err =&gt; {}
     );
     fs.writeFile(
-      dir + &quot;/private.pem&quot;,
-      privateKey.export({ type: &quot;pkcs1&quot;, format: &quot;pem&quot; }),
+      dir + "/private.pem",
+      privateKey.export({ type: "pkcs1", format: "pem" }),
       err =&gt; {}
     );
   }
 );
 
-console.log(&quot;Public key saved in &quot; + dir + &quot;/public_key.txt&quot;);</code></pre>
+console.log("Public key saved in " + dir + "/public_key.txt");</code></pre>
 
 </div>
 
@@ -667,24 +667,24 @@ console.log(&quot;Public key saved in &quot; + dir + &quot;/public_key.txt&quot;
 <h5>Request</h5>
 <pre class="line-numbers"><code class="language-http" translate="No">POST /v1/accounts/{accountID}/keys
     Content-Type: application/json
-    Body: {&quot;value&quot;: &quot;MFkwEwYHKoZIzj0CAQYIKoZIzj...MyeQviqploA==&quot;}
+    Body: {"value": "MFkwEwYHKoZIzj0CAQYIKoZIzj...MyeQviqploA=="}
 </code></pre>
 <h5 id="Using_Curl" class="bcls-expander-head">Using Curl</h5>
 <div class="bcls-expander-content">
   <pre class="line-numbers"><code class="language-curl">curl -X POST \
-  -H &quot;Content-Type: application/json&quot; \
-  -H &quot;Authorization: Bearer {access_token}&quot; \
-  -d '{&quot;value&quot;: &quot;{your_public_key_value}&quot;}' \
+  -H "Content-Type: application/json" \
+  -H "Authorization: Bearer {access_token}" \
+  -d '{"value": "{your_public_key_value}"}' \
 https://playback-auth.api.brightcove.com/v1/accounts/{accountID}/keys
 </code></pre>
 </div>
 <h5>Response</h5>
 <pre class="line-numbers"><code class="language-json" translate="No">{
-  &quot;id&quot;: &quot;{your_public_key_id}&quot;,
-  &quot;type&quot;: &quot;public&quot;,
-  &quot;algorithm&quot;: &quot;rsa&quot;,
-  &quot;value&quot;: &quot;{your_public_key_value}&quot;,
-  &quot;createdAt&quot;: &quot;2020-01-03T20:30:36.488Z&quot;
+  "id": "{your_public_key_id}",
+  "type": "public",
+  "algorithm": "rsa",
+  "value": "{your_public_key_value}",
+  "createdAt": "2020-01-03T20:30:36.488Z"
 }</code></pre>
 
 
@@ -718,8 +718,116 @@ https://playback-auth.api.brightcove.com/v1/accounts/{accountID}/keys
 
 <h3>Claims for Static URL Delivery</h3>
 <p>
-  For a list of claims that can be used, see the <a href="https://apis.support.brightcove.com/playback/guides/static-url-delivery.html">Static URL Delivery</a> document.
+  The following claims can be used with Brightcove's Static URL Delivery.
 </p>
+<aside class="bcls-aside bcls-aside--tip">Notice that none of the claims are required for Static URL Delivery.</aside>
+
+<table class="bcls-table">
+  <thead class="bcls-table__head">
+    <tr>
+      <th>Field</th>
+      <th>Type</th>
+      <th>Required</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody class="bcls-table__body">
+    <tr>
+      <td><code translate="No">accid</code></td>
+      <td>String</td>
+      <td></td>
+      <td>The account id that owns the content being played</td>
+    </tr>
+    <tr>
+      <td><code translate="No">drules</code></td>
+      <td>String[]</td>
+      <td></td>
+      <td>List of delivery rule action IDs to apply, see <a href="/delivery-rules/implementing-delivery-rules.html">Implementing Delivery Rules</a> for details. If the config_id query parameter is also set it will be ignored, as this claim overrides it.</td>
+    </tr>
+    <tr>
+      <td><code translate="No">exp</code></td>
+      <td>Integer</td>
+      <td></td>
+      <td>Time this token will no longer be valid, in seconds since the Epoch. Must be no more than 30 days from <code translate="No">iat</code></td>
+    </tr>
+    <tr>
+      <td><code translate="No">iat</code></td>
+      <td>Integer</td>
+      <td></td>
+      <td>Time this token was issued, in seconds since the Epoch</td>
+    </tr>
+    <tr>
+      <td><code translate="No">conid</code></td>
+      <td>String</td>
+      <td></td>
+      <td>If present, this token will only authorize license fetching for a specific Video Cloud video id.
+        <br /><br />
+        Must be a valid video id.
+      </td>
+    </tr>
+    <tr>
+      <td><code translate="No">pro</code></td>
+      <td>String</td>
+      <td></td>
+      <td>Specifies a protection type in the case where multiple are available for a single video.
+        <br /><br />
+        Values:
+        <ul>
+          <li>
+            "" (default for clear content)
+          </li>
+          <li>
+            "aes128"
+          </li>
+          <li>
+            "widevine"
+          </li>
+          <li>
+            "playready"
+          </li>
+          <li>
+            "fairplay"
+          </li>
+        </ul>
+      </td>
+    </tr>
+    <tr>
+      <td><code translate="No">vod</code></td>
+      <td>Object</td>
+      <td></td>
+      <td>Contains specific configuration options for Video-On-Demand.</td>
+    </tr>
+    <tr>
+      <td><code translate="No">ssai</code></td>
+      <td>String</td>
+      <td></td>
+      <td>Your Server-Side Ad Insertion (SSAI) configuration id. This claim is <strong>required</strong> to retrieve either an HLS or a DASH VMAP.</td>
+    </tr>
+  </tbody>
+</table>
+<br />
+<p>
+  Here is an example of the <span translate="No">JSON Web Token</span> (JWT) claims that you might use:
+</p>
+<pre class="line-numbers"><code class="language-json" translate="No">{
+// account id: JWT is only valid for this accounts
+"accid":"4590388311111",
+// drules: list of delivery rule IDs to be applied
+"drules": ["0758da1f-e913-4f30-a587-181db8b1e4eb"]
+// expires: timestamp when JWT expires
+"exp":1577989732,
+// issued at: timestamp when the JWT was created
+"iat":1575484132,
+// content id: JWT is only valid for video id or reference id
+"conid":"5805807122222",
+// protection: specify a protection type in the case where multiple are available for a single video
+"pro":"aes128",
+// VOD specific configuration options
+"vod":{
+// SSAI configuration to apply
+"ssai":"efcc566-b44b-5a77-a0e2-d33333333333"
+}
+}</code></pre>
 
 <!-- <h3>Claims for Playback Authorization</h3>
 <p>
@@ -981,20 +1089,20 @@ https://playback-auth.api.brightcove.com/v1/accounts/{accountID}/keys
 <pre class="line-numbers"><code class="language-bash" translate="No">#! /usr/bin/env bash
 # Static header fields.
 HEADER='{
-	&quot;type&quot;: &quot;JWT&quot;,
-	&quot;alg&quot;: &quot;RS256&quot;
+	"type": "JWT",
+	"alg": "RS256"
 }'
 
 payload='{
-	&quot;pkid&quot;: &quot;{your_public_key_id}&quot;,
-	&quot;accid&quot;: &quot;{your_account_id}&quot;
+	"pkid": "{your_public_key_id}",
+	"accid": "{your_account_id}"
 }'
 
 # Use jq to set the dynamic `iat` and `exp`
 # fields on the payload using the current time.
 # `iat` is set to now, and `exp` is now + 1 second.
 PAYLOAD=$(
-	echo &quot;${payload}&quot; | jq --arg time_str &quot;$(date +%s)&quot; \
+	echo "${payload}" | jq --arg time_str "$(date +%s)" \
 	'
 	($time_str | tonumber) as $time_num
 	| .iat=$time_num
@@ -1006,12 +1114,12 @@ function b64enc() { openssl enc -base64 -A | tr '+/' '-_' | tr -d '='; }
 
 function rs_sign() { openssl dgst -binary -sha256 -sign playback-auth-keys/private.pem ; }
 
-JWT_HDR_B64=&quot;$(echo -n &quot;$HEADER&quot; | b64enc)&quot;
-JWT_PAY_B64=&quot;$(echo -n &quot;$PAYLOAD&quot; | b64enc)&quot;
-UNSIGNED_JWT=&quot;$JWT_HDR_B64.$JWT_PAY_B64&quot;
-SIGNATURE=$(echo -n &quot;$UNSIGNED_JWT&quot; | rs_sign | b64enc)
+JWT_HDR_B64="$(echo -n "$HEADER" | b64enc)"
+JWT_PAY_B64="$(echo -n "$PAYLOAD" | b64enc)"
+UNSIGNED_JWT="$JWT_HDR_B64.$JWT_PAY_B64"
+SIGNATURE=$(echo -n "$UNSIGNED_JWT" | rs_sign | b64enc)
 
-echo &quot;$UNSIGNED_JWT.$SIGNATURE&quot;
+echo "$UNSIGNED_JWT.$SIGNATURE"
 </code></pre>
 <p>
   Run the script:
@@ -1030,38 +1138,38 @@ echo &quot;$UNSIGNED_JWT.$SIGNATURE&quot;
 <pre class="line-numbers"><code class="language-bash" translate="No">package main
 
 import (
-	&quot;crypto&quot;
-	&quot;crypto/ecdsa&quot;
-	&quot;crypto/rand&quot;
-	&quot;crypto/rsa&quot;
-	&quot;crypto/sha256&quot;
-	&quot;crypto/x509&quot;
-	&quot;encoding/base64&quot;
-	&quot;encoding/json&quot;
-	&quot;encoding/pem&quot;
-	&quot;flag&quot;
-	&quot;fmt&quot;
-	&quot;io/ioutil&quot;
-	&quot;os&quot;
-	&quot;strings&quot;
-	&quot;time&quot;
+	"crypto"
+	"crypto/ecdsa"
+	"crypto/rand"
+	"crypto/rsa"
+	"crypto/sha256"
+	"crypto/x509"
+	"encoding/base64"
+	"encoding/json"
+	"encoding/pem"
+	"flag"
+	"fmt"
+	"io/ioutil"
+	"os"
+	"strings"
+	"time"
 )
 
 // Header is the base64UrlEncoded string of a JWT header for the RS256 algorithm
-const RSAHeader = &quot;eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9&quot;
+const RSAHeader = "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9"
 
 // Header is the base64UrlEncoded string of a JWT header for the EC256 algorithm
-const ECHeader = &quot;eyJhbGciOiJFUzI1NiIsInR5cCI6IkpXVCJ9&quot;
+const ECHeader = "eyJhbGciOiJFUzI1NiIsInR5cCI6IkpXVCJ9"
 
 // Claims represents constraints that should be applied to the use of the token
 type Claims struct {
-	Iat   float64 `json:&quot;iat,omitempty&quot;`   // Issued At
-	Exp   float64 `json:&quot;exp,omitempty&quot;`   // Expires At
-	Accid string  `json:&quot;accid,omitempty&quot;` // Account ID
-	Conid string  `json:&quot;conid,omitempty&quot;` // Content ID
-	Maxu  float64 `json:&quot;maxu,omitempty&quot;`  // Max Uses
-	Maxip float64 `json:&quot;maxip,omitempty&quot;` // Max IPs
-	Ua    string  `json:&quot;ua,omitempty&quot;`    // User Agent
+	Iat   float64 `json:"iat,omitempty"`   // Issued At
+	Exp   float64 `json:"exp,omitempty"`   // Expires At
+	Accid string  `json:"accid,omitempty"` // Account ID
+	Conid string  `json:"conid,omitempty"` // Content ID
+	Maxu  float64 `json:"maxu,omitempty"`  // Max Uses
+	Maxip float64 `json:"maxip,omitempty"` // Max IPs
+	Ua    string  `json:"ua,omitempty"`    // User Agent
 }
 
 func main() {
@@ -1069,53 +1177,53 @@ func main() {
 
 	c := Claims{Iat: float64(time.Now().Unix())}
 
-	flag.StringVar(&amp;key, &quot;key&quot;, &quot;&quot;, &quot;Path to private.pem key file&quot;)
-	flag.StringVar(&amp;c.Accid, &quot;account-id&quot;, &quot;&quot;, &quot;Account ID&quot;)
-	flag.StringVar(&amp;c.Conid, &quot;content-id&quot;, &quot;&quot;, &quot;Content ID (eg, video_id or live_job_id)&quot;)
-	flag.Float64Var(&amp;c.Exp, &quot;expires-at&quot;, float64(time.Now().AddDate(0, 0, 1).Unix()), &quot;Epoch timestamp (in seconds) for when the token should stop working&quot;)
-	flag.Float64Var(&amp;c.Maxu, &quot;max-uses&quot;, 0, &quot;Maximum number of times the token is valid for&quot;)
-	flag.Float64Var(&amp;c.Maxip, &quot;max-ips&quot;, 0, &quot;Maximum number of unique IP addresses the token is valid for&quot;)
-	flag.StringVar(&amp;c.Ua, &quot;user-agent&quot;, &quot;&quot;, &quot;User Agent that the token is valid for&quot;)
-	flag.StringVar(&amp;algorithm, &quot;algo&quot;, &quot;&quot;, &quot;Key algorithm to use for signing. Valid: ec256, rsa256&quot;)
+	flag.StringVar(&amp;key, "key", "", "Path to private.pem key file")
+	flag.StringVar(&amp;c.Accid, "account-id", "", "Account ID")
+	flag.StringVar(&amp;c.Conid, "content-id", "", "Content ID (eg, video_id or live_job_id)")
+	flag.Float64Var(&amp;c.Exp, "expires-at", float64(time.Now().AddDate(0, 0, 1).Unix()), "Epoch timestamp (in seconds) for when the token should stop working")
+	flag.Float64Var(&amp;c.Maxu, "max-uses", 0, "Maximum number of times the token is valid for")
+	flag.Float64Var(&amp;c.Maxip, "max-ips", 0, "Maximum number of unique IP addresses the token is valid for")
+	flag.StringVar(&amp;c.Ua, "user-agent", "", "User Agent that the token is valid for")
+	flag.StringVar(&amp;algorithm, "algo", "", "Key algorithm to use for signing. Valid: ec256, rsa256")
 	flag.Parse()
 
-	if key == &quot;&quot; {
-		fmt.Printf(&quot;missing required flag: -key\n\n&quot;)
+	if key == "" {
+		fmt.Printf("missing required flag: -key\n\n")
 		flag.Usage()
 		os.Exit(1)
 	}
 
-	if algorithm == &quot;&quot; {
-		fmt.Printf(&quot;missing required flag: -algo\n\n&quot;)
+	if algorithm == "" {
+		fmt.Printf("missing required flag: -algo\n\n")
 		flag.Usage()
 		os.Exit(2)
 	}
 
-	if algorithm != &quot;rsa256&quot; &amp;&amp; algorithm != &quot;ec256&quot; {
-		fmt.Printf(&quot;missing valid value for -algo flag. Valid: rsa256, ec256\n\n&quot;)
+	if algorithm != "rsa256" &amp;&amp; algorithm != "ec256" {
+		fmt.Printf("missing valid value for -algo flag. Valid: rsa256, ec256\n\n")
 		flag.Usage()
 		os.Exit(3)
 	}
 
-	if c.Accid == &quot;&quot; {
-		fmt.Printf(&quot;missing required flag: -account-id\n\n&quot;)
+	if c.Accid == "" {
+		fmt.Printf("missing required flag: -account-id\n\n")
 		flag.Usage()
 		os.Exit(4)
 	}
 
 	bs, err := json.Marshal(c)
 	if err != nil {
-		fmt.Println(&quot;failed to marshal token to json&quot;, err)
+		fmt.Println("failed to marshal token to json", err)
 		os.Exit(5)
 	}
 
 	kbs, err := ioutil.ReadFile(key)
 	if err != nil {
-		fmt.Println(&quot;failed to read private key&quot;, err)
+		fmt.Println("failed to read private key", err)
 		os.Exit(6)
 	}
 
-	if algorithm == &quot;rsa256&quot; {
+	if algorithm == "rsa256" {
 		processRSA256(kbs, bs)
 	} else {
 		processEC256(kbs, bs)
@@ -1125,22 +1233,22 @@ func main() {
 func processRSA256(kbs, bs []byte) {
 	block, _ := pem.Decode(kbs)
 	if block == nil {
-		fmt.Println(&quot;failed to decode PEM block containing private key&quot;)
+		fmt.Println("failed to decode PEM block containing private key")
 		os.Exit(7)
 	}
 
-	if block.Type != &quot;RSA PRIVATE KEY&quot; {
-		fmt.Println(&quot;failed to decode PEM block containing private key&quot;)
+	if block.Type != "RSA PRIVATE KEY" {
+		fmt.Println("failed to decode PEM block containing private key")
 		os.Exit(8)
 	}
 
 	pKey, err := x509.ParsePKCS1PrivateKey(block.Bytes)
 	if err != nil {
-		fmt.Println(&quot;failed to parse rsa private key&quot;, err)
+		fmt.Println("failed to parse rsa private key", err)
 		os.Exit(9)
 	}
 
-	message := RSAHeader + &quot;.&quot; + base64.RawURLEncoding.EncodeToString(bs)
+	message := RSAHeader + "." + base64.RawURLEncoding.EncodeToString(bs)
 
 	hash := crypto.SHA256
 	hasher := hash.New()
@@ -1149,39 +1257,39 @@ func processRSA256(kbs, bs []byte) {
 
 	r, err := rsa.SignPKCS1v15(rand.Reader, pKey, hash, hashed)
 	if err != nil {
-		fmt.Println(&quot;failed to sign token&quot;, err)
+		fmt.Println("failed to sign token", err)
 		os.Exit(10)
 	}
 
-	sig := strings.TrimRight(base64.RawURLEncoding.EncodeToString(r), &quot;=&quot;)
+	sig := strings.TrimRight(base64.RawURLEncoding.EncodeToString(r), "=")
 
-	fmt.Println(message + &quot;.&quot; + sig)
+	fmt.Println(message + "." + sig)
 }
 
 func processEC256(kbs, bs []byte) {
 	block, _ := pem.Decode(kbs)
 	if block == nil {
-		fmt.Println(&quot;failed to decode PEM block containing private key&quot;)
+		fmt.Println("failed to decode PEM block containing private key")
 		os.Exit(7)
 	}
 
-	if block.Type != &quot;EC PRIVATE KEY&quot; {
-		fmt.Println(&quot;failed to decode PEM block containing private key&quot;)
+	if block.Type != "EC PRIVATE KEY" {
+		fmt.Println("failed to decode PEM block containing private key")
 		os.Exit(8)
 	}
 
 	pkey, err := x509.ParseECPrivateKey(block.Bytes)
 	if err != nil {
-		fmt.Println(&quot;failed to parse ec private key&quot;, err)
+		fmt.Println("failed to parse ec private key", err)
 		os.Exit(9)
 	}
 
-	message := ECHeader + &quot;.&quot; + base64.RawURLEncoding.EncodeToString(bs)
+	message := ECHeader + "." + base64.RawURLEncoding.EncodeToString(bs)
 	hash := sha256.Sum256([]byte(message))
 
 	r, s, err := ecdsa.Sign(rand.Reader, pkey, hash[:])
 	if err != nil {
-		fmt.Println(&quot;failed to sign token&quot;, err)
+		fmt.Println("failed to sign token", err)
 		os.Exit(10)
 	}
 
@@ -1203,7 +1311,7 @@ func processEC256(kbs, bs []byte) {
 	out := append(rBytesPadded, sBytesPadded...)
 
 	sig := base64.RawURLEncoding.EncodeToString(out)
-	fmt.Println(message + &quot;.&quot; + sig)
+	fmt.Println(message + "." + sig)
 }
 </code></pre>
 </div>
@@ -1216,8 +1324,8 @@ func processEC256(kbs, bs []byte) {
   HEADER:
 </p>
 <pre class="line-numbers"><code class="language-json" translate="No">{
-  &quot;alg&quot;: &quot;RS256&quot;,
-  &quot;type&quot;: &quot;JWT&quot;
+  "alg": "RS256",
+  "type": "JWT"
 }
 </code></pre>
 
@@ -1225,13 +1333,13 @@ func processEC256(kbs, bs []byte) {
   PAYLOAD:
 </p>
 <pre class="line-numbers"><code class="language-json" translate="No">{
-  &quot;accid&quot;: &quot;1100863500123&quot;,
-  &quot;conid&quot;: &quot;51141412620123&quot;,
-  &quot;exp&quot;: 1554200832,
-  &quot;iat&quot;: 1554199032,
-  &quot;maxip&quot;: 10,
-  &quot;maxu&quot;: 10,
-  &quot;ua&quot;: &quot;Mozilla/5.0 (Macintosh; Intel Mac OS X 10_14_3) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/73.0.3683.86 Safari/537.36&quot;
+  "accid": "1100863500123",
+  "conid": "51141412620123",
+  "exp": 1554200832,
+  "iat": 1554199032,
+  "maxip": 10,
+  "maxu": 10,
+  "ua": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_14_3) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/73.0.3683.86 Safari/537.36"
 }
 </code></pre>
 </section>
