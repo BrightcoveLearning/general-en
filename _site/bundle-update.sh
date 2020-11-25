@@ -105,9 +105,15 @@ bundle install
 sudo bundle update
 echo 'bundle updated test-site'
 # stagine site
-cd ../staging-site
+cd ../beacon-la
 git pull
 bundle install
 sudo bundle update
 echo 'bundle updated staging-site'
+# stagine site
+cd ../beacon-help
+git pull
+bundle install
+sudo bundle update
+echo 'bundle updated beacon-help'
 echo 'all finished!'

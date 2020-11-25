@@ -82,8 +82,12 @@ echo 'pulled studio'
 cd ../zencoder-support
 git pull
 
-# staging-site
-cd ../staging-site
+# staging-site - temporarily beacon-la
+cd ../beacon-la
+git pull
+echo 'pulled staging site'
+# in-app help
+cd ../beacon-help
 git pull
 echo 'pulled staging site'
 
