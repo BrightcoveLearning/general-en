@@ -87,8 +87,12 @@ git pull
 bundle install
 echo 'bundle installed test-site'
 # stagine site
-cd ../staging-site
+cd ../beacon-la
 git pull
 bundle install
 echo 'bundle installed staging-site'
+cd ../beacon-help
+git pull
+bundle install
+echo 'bundle installed beacon-help'
 echo 'all finished!'
