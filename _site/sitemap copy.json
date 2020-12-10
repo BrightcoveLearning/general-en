@@ -125,37 +125,7 @@
   },
 
   {
-      "newURL": "https://general.support.brightcove.com/",
-      "oldURL": "/index"
-  },
-
-  {
       "newURL": "https://general.support.brightcove.com/training/",
-      "oldURL": "/index"
-  },
-
-  {
-      "newURL": "https://general.support.brightcove.com/general/",
-      "oldURL": "/index"
-  },
-
-  {
-      "newURL": "https://general.support.brightcove.com/ooyala/",
-      "oldURL": "/index"
-  },
-
-  {
-      "newURL": "https://general.support.brightcove.com/developer/thumbnail-scrubbing/",
-      "oldURL": "/index"
-  },
-
-  {
-      "newURL": "https://general.support.brightcove.com/support/",
-      "oldURL": "/index"
-  },
-
-  {
-      "newURL": "https://general.support.brightcove.com/developer/",
       "oldURL": "/index"
   },
 
@@ -165,7 +135,37 @@
   },
 
   {
+      "newURL": "https://general.support.brightcove.com/developer/",
+      "oldURL": "/index"
+  },
+
+  {
+      "newURL": "https://general.support.brightcove.com/general/",
+      "oldURL": "/index"
+  },
+
+  {
+      "newURL": "https://general.support.brightcove.com/",
+      "oldURL": "/index"
+  },
+
+  {
+      "newURL": "https://general.support.brightcove.com/ooyala/",
+      "oldURL": "/index"
+  },
+
+  {
+      "newURL": "https://general.support.brightcove.com/support/",
+      "oldURL": "/index"
+  },
+
+  {
       "newURL": "https://general.support.brightcove.com/utilities/",
+      "oldURL": "/index"
+  },
+
+  {
+      "newURL": "https://general.support.brightcove.com/developer/thumbnail-scrubbing/",
       "oldURL": "/index"
   },
 
@@ -295,12 +295,12 @@
   },
 
   {
-      "newURL": "https://general.support.brightcove.com/support/register-training.html",
+      "newURL": "https://general.support.brightcove.com/training/register-training.html",
       "oldURL": "/register-training"
   },
 
   {
-      "newURL": "https://general.support.brightcove.com/training/register-training.html",
+      "newURL": "https://general.support.brightcove.com/support/register-training.html",
       "oldURL": "/register-training"
   },
 
