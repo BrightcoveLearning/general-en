@@ -950,7 +950,7 @@ https://playback-auth.api.brightcove.com/v1/accounts/{accountID}/keys
           <tr>
             <td><code translate="No">pkid</code></td>
             <td>String</td>
-            <td>Yes</td>
+            <td>No</td>
             <td></td>
             <td></td>
             <td>The public key id used to verify this token.
@@ -1130,7 +1130,6 @@ echo "$UNSIGNED_JWT.$SIGNATURE"
         <summary>
           Here is an example of a reference <span translate="No">Go</span> implementation (as a cli tool) for generating tokens without the use of any 3rd party library:
         </summary>
-        <aside class="bcls-aside bcls-aside--tip">If you are new to <span translate="No">Go</span>, see the <a href="https://golang.org/">The <span translate="No">Go</span> Programming Language</a> homepage.</aside>
         <pre class="line-numbers"><code class="language-bash" translate="No">package main
 
 import (
