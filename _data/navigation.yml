@@ -4,7 +4,7 @@
 - section:
   name: 'General Information'
   url: '/general/index.html'
-  icon: '<i class="far fa-info-circle"></i>'
+  icon: '<img class="bcls-icon" src="/assets/images/feather/info.svg">'
   docs:
     - name: 'Brightcove Product Overview'
       url: '/general/brightcove-product-overview.html'
@@ -89,7 +89,7 @@
 - section:
   name: 'Utilities'
   url: '/utilities/index.html'
-  icon: '<i class="fal fa-tools"></i>'
+  icon: '<img class="bcls-icon" src="/assets/images/feather/tool.svg">'
   docs:
     - name: 'Base 64 Encoding Tool'
       url: '/utilities/base-64-encoding-tool.html'
@@ -118,7 +118,7 @@
 - section:
   name: 'Support'
   url: '/support/index.html'
-  icon: '<i class="far fa-question-circle"></i>'
+  icon: '<img class="bcls-icon" src="/assets/images/feather/help-circle.svg">'
   docs:
     - name: 'Known Issues'
       url: '/support/known-issues-studio-brightcove-player-and-apis.html'
