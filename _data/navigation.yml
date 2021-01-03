@@ -19,7 +19,7 @@
 - section:
   name: 'Developers'
   url: '/developer/index.html'
-  icon: '<i class="far fa-brackets-curly"></i>'
+  icon: '<img class="bcls-icon" src="/assets/images/feather/code.svg">'
   docs:
     - name: 'Understanding CORS'
       url: '/developer/concepts-cors.html'
@@ -44,7 +44,7 @@
 - section:
   name: 'Migrating from Ooyala'
   url: '/ooyala/index.html'
-  icon: '<i class="fal fa-person-dolly"></i>'
+  icon: '<img class="bcls-icon" src="/assets/images/feather/truck.svg">'
   docs:
     - name: 'Migration Docs for Ooyala Customers'
       url: '/ooyala/migration-docs-ooyala-customers.html'
@@ -100,6 +100,7 @@
 - section:
   name: Training
   url: /training/index.html
+  icon: '<img class="bcls-icon" src="/assets/images/feather/award.svg">'
   docs:
     - name: All Online Training Courses
       url: /training/online-training-courses.html
