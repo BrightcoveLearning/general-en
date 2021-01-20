@@ -805,7 +805,7 @@ https://playback-auth.api.brightcove.com/v1/accounts/{accountID}/keys
       <td>Contains specific configuration options for Video-On-Demand.</td>
     </tr>
     <tr>
-      <td><code translate="No">ssai</code></td>
+      <td><code translate="No">vod.ssai</code></td>
       <td>String</td>
       <td></td>
       <td>Your Server-Side Ad Insertion (SSAI) configuration id. This claim is <strong>required</strong> to retrieve either an HLS or a DASH VMAP.</td>
@@ -875,7 +875,7 @@ https://playback-auth.api.brightcove.com/v1/accounts/{accountID}/keys
           <td></td>
           <td>If present, this token will only be valid for requests from this User-Agent.
             <br /><br />
-            This field is not validated.
+            This field does not have to follow any particular format.
           </td>
         </tr>
         <tr>
@@ -997,7 +997,7 @@ https://playback-auth.api.brightcove.com/v1/accounts/{accountID}/keys
               <td></td>
               <td></td>
               <td></td>
-              <td>if present, this token is valid only for the listed tags authorized to playback.</td>
+              <td>if present, this token is valid only for the videos that have the listed tags authorized to playback.</td>
             </tr>
             <tr>
               <td><code translate="No">offers</code></td>
@@ -1024,19 +1024,6 @@ https://playback-auth.api.brightcove.com/v1/accounts/{accountID}/keys
               <td>The user id of the end viewer. This field is used to correlate multiple sessions to enforce Stream Concurrency.
                 <br /><br />
             Required for device registration.
-              </td>
-            </tr>
-            <tr>
-              <td><code translate="No">sid</code></td>
-              <td>String</td>
-              <td></td>
-              <td></td>
-              <td>Yes</td>
-              <td>Specifying the Session ID of the current stream allows for custom control over what defines a session.
-                <br /><br />
-                  When not specified, the default is a combination of User-Agent, IP address, & video id.
-                  <br /><br />
-            Required for session concurrency.
               </td>
             </tr>
             <tr>
@@ -1101,7 +1088,6 @@ HEADER='{
 }'
 
 payload='{
-	"pkid": "{your_public_key_id}",
 	"accid": "{your_account_id}"
 }'
 

@@ -754,7 +754,7 @@ https://playback-auth.api.brightcove.com/v1/accounts/{accountID}/keys
             <td>String</td>
             <td></td>
             <td>If present, this token will only authorize license fetching for a specific Video Cloud video id.
-              <br /><br />
+              <br><br>
               Must be a valid video id.
             </td>
           </tr>
@@ -763,7 +763,7 @@ https://playback-auth.api.brightcove.com/v1/accounts/{accountID}/keys
             <td>String</td>
             <td></td>
             <td>Specifies a protection type in the case where multiple are available for a single video.
-              <br /><br />
+              <br><br>
               Values:
               <ul>
                 <li>
@@ -791,14 +791,14 @@ https://playback-auth.api.brightcove.com/v1/accounts/{accountID}/keys
             <td>Contains specific configuration options for Video-On-Demand.</td>
           </tr>
           <tr>
-            <td><code translate="No">ssai</code></td>
+            <td><code translate="No">vod.ssai</code></td>
             <td>String</td>
             <td></td>
             <td>Your Server-Side Ad Insertion (SSAI) configuration id. This claim is <strong>required</strong> to retrieve either an HLS or a DASH VMAP.</td>
           </tr>
         </tbody>
       </table>
-      <br />
+      <br>
       <p>
         Here is an example of the <span translate="No">JSON Web Token</span> (JWT) claims that you might use:
       </p>
@@ -861,8 +861,8 @@ https://playback-auth.api.brightcove.com/v1/accounts/{accountID}/keys
             <td>String</td>
             <td></td>
             <td>If present, this token will only be valid for requests from this User-Agent.
-              <br /><br />
-              This field is not validated.
+              <br><br>
+              This field does not have to follow any particular format.
             </td>
           </tr>
           <tr>
@@ -870,7 +870,7 @@ https://playback-auth.api.brightcove.com/v1/accounts/{accountID}/keys
             <td>String</td>
             <td></td>
             <td>If present, this token will only authorize license fetching for a specific Video Cloud video id.
-              <br /><br />
+              <br><br>
               Must be a valid video id.
             </td>
           </tr>
@@ -879,7 +879,7 @@ https://playback-auth.api.brightcove.com/v1/accounts/{accountID}/keys
             <td>Integer</td>
             <td></td>
             <td>If present, this token will only be able to be used by this many different IP addresses. (DRM & AES-128)
-              <br /><br />
+              <br><br>
               Required for session tracking.
             </td>
           </tr>
@@ -954,9 +954,9 @@ https://playback-auth.api.brightcove.com/v1/accounts/{accountID}/keys
             <td></td>
             <td></td>
             <td>The public key id used to verify this token.
-              <br /><br />
+              <br><br>
               The public key registered with Brightcove's Playback Authorization Service must use the RSA key format. Previously created EC keys will not work.
-              <br /><br />
+              <br><br>
               This field is not validated.
             </td>
           </tr>
@@ -975,7 +975,7 @@ https://playback-auth.api.brightcove.com/v1/accounts/{accountID}/keys
             <td></td>
             <td></td>
             <td>A <code translate="No">playback_rights_id</code>. Used to override the id set in the catalog for this video
-              <br /><br />
+              <br><br>
               This field is not validated.
             </td>
           </tr>
@@ -985,7 +985,7 @@ https://playback-auth.api.brightcove.com/v1/accounts/{accountID}/keys
             <td></td>
             <td></td>
             <td></td>
-            <td>if present, this token is valid only for the listed tags authorized to playback.</td>
+            <td>if present, this token is valid only for the videos that have the listed tags authorized to playback.</td>
           </tr>
           <tr>
             <td><code translate="No">offers</code></td>
@@ -1010,21 +1010,8 @@ https://playback-auth.api.brightcove.com/v1/accounts/{accountID}/keys
             <td>Yes</td>
             <td>Yes</td>
             <td>The user id of the end viewer. This field is used to correlate multiple sessions to enforce Stream Concurrency.
-              <br /><br />
+              <br><br>
               Required for device registration.
-            </td>
-          </tr>
-          <tr>
-            <td><code translate="No">sid</code></td>
-            <td>String</td>
-            <td></td>
-            <td></td>
-            <td>Yes</td>
-            <td>Specifying the Session ID of the current stream allows for custom control over what defines a session.
-              <br /><br />
-              When not specified, the default is a combination of User-Agent, IP address, & video id.
-              <br /><br />
-              Required for session concurrency.
             </td>
           </tr>
           <tr>
@@ -1034,9 +1021,9 @@ https://playback-auth.api.brightcove.com/v1/accounts/{accountID}/keys
             <td></td>
             <td>Yes</td>
             <td>Concurrency expiration of session - Defaults to 2 times the content duration.
-              <br /><br />
+              <br><br>
               This defines how long the session is valid, after which time the end viewer has to start a new session to continue playback. Example: <code translate="No">2h</code> or <code translate="No">42m</code>
-              <br /><br />
+              <br><br>
               Required for session concurrency.
             </td>
           </tr>
@@ -1047,7 +1034,7 @@ https://playback-auth.api.brightcove.com/v1/accounts/{accountID}/keys
             <td>Yes</td>
             <td>Yes</td>
             <td>When this field is included, it enables Stream Concurrency checking along with license renewal requests. This value indicates the number of concurrent watchers allowed.
-              <br /><br />
+              <br><br>
               Required for session concurrency.
             </td>
           </tr>
@@ -1058,13 +1045,13 @@ https://playback-auth.api.brightcove.com/v1/accounts/{accountID}/keys
             <td></td>
             <td>Yes</td>
             <td>When this field is included, it controls how many devices can be associated with the specified user (<code translate="No">uid</code>). Value must be &gt; <code translate="No">0</code>.
-              <br /><br />
+              <br><br>
               Previously allowed devices will continue to operate if the <code translate="No">dlimit</code> value is dropped in later requests.
-              <br /><br />
+              <br><br>
               Example: if value is set to <code translate="No">3</code>, the user can play on devices A, B, & C (all would be allowed). Trying to play on device D would be denied.
-              <br /><br />
+              <br><br>
               If value is changed to <code translate="No">1</code>, the user can still play on all 3 devices A, B, & C, unless the devices are manually revoked by managing devices with the <a href="https://apis.support.brightcove.com/playback-rights/references/devices-api/reference.htmlc/#operation/GetDevices">Playback Rights API</a>.
-              <br /><br />
+              <br><br>
               Required for device registration.
             </td>
           </tr>
@@ -1090,7 +1077,6 @@ HEADER='{
 }'
 
 payload='{
-	"pkid": "{your_public_key_id}",
 	"accid": "{your_account_id}"
 }'
 
