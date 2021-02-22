@@ -12,10 +12,20 @@ git pull
 bundle install
 echo 'bundle installed audience'
 # beacon
-cd ../beacon-support
+cd ../beacon-
 git pull
 bundle install
 echo 'bundle installed beacon'
+# beacon support
+cd ../beacon-support
+git pull
+bundle install
+echo 'bundle installed beacon support'
+# beacon private
+cd ../beacon-private
+git pull
+bundle install
+echo 'bundle installed beacon private'
 # campaign
 git pull
 cd ../campaign

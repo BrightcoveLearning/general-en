@@ -17,7 +17,17 @@ echo 'pulled audience'
 cd ../beacon-support
 git pull
 
+echo 'pulled beacon support'
+# beacon support
+cd ../beacon
+git pull
+
 echo 'pulled beacon'
+# beacon private
+cd ../beacon-private
+git pull
+
+echo 'pulled beacon private'
 # campaign
 git pull
 cd ../campaign

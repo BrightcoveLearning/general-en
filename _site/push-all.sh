@@ -12,10 +12,20 @@ git push
 
 echo 'pushed audience'
 # beacon
-cd ../beacon-support
+cd ../beacon
 git push
 
 echo 'pushed beacon'
+# beacon support
+cd ../beacon-support
+git push
+
+echo 'pushed beacon support'
+# beacon private
+cd ../beacon-private
+git push
+
+echo 'pushed beacon private'
 # campaign
 git push
 cd ../campaign

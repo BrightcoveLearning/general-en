@@ -15,11 +15,23 @@ bundle install
 sudo bundle update
 echo 'bundle updated audience'
 # beacon
+cd ../beacon-
+git pull
+bundle install
+sudo bundle update
+echo 'bundle installed beacon'
+# beacon support
 cd ../beacon-support
 git pull
 bundle install
 sudo bundle update
-echo 'bundle updated beacon'
+echo 'bundle installed beacon support'
+# beacon private
+cd ../beacon-private
+git pull
+bundle install
+sudo bundle update
+echo 'bundle installed beacon private'
 # campaign
 git pull
 cd ../campaign
