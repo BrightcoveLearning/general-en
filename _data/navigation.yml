@@ -4,7 +4,7 @@
 - section:
   name: 'General Information'
   url: '/general/index.html'
-  icon: '<img class="bcls-icon" src="/assets/images/feather/info.svg">'
+  icon: '<i data-feather="info"></i>'
   docs:
     - name: 'Brightcove Product Overview'
       url: '/general/brightcove-product-overview.html'
@@ -21,7 +21,7 @@
 - section:
   name: 'Developers'
   url: '/developer/index.html'
-  icon: '<img class="bcls-icon" src="/assets/images/feather/code.svg">'
+  icon: '<i data-feather="code"></i>'
   docs:
     - name: 'Understanding CORS'
       url: '/developer/concepts-cors.html'
@@ -46,7 +46,7 @@
 - section:
   name: 'Migrating from Ooyala'
   url: '/ooyala/index.html'
-  icon: '<img class="bcls-icon" src="/assets/images/feather/truck.svg">'
+  icon: '<i data-feather="truck"></i>'
   docs:
     - name: 'Migration Docs for Ooyala Customers'
       url: '/ooyala/migration-docs-ooyala-customers.html'
@@ -91,7 +91,7 @@
 - section:
   name: 'Utilities'
   url: '/utilities/index.html'
-  icon: '<img class="bcls-icon" src="/assets/images/feather/tool.svg">'
+  icon: '<i data-feather="tool"></i>'
   docs:
     - name: 'Base 64 Encoding Tool'
       url: '/utilities/base-64-encoding-tool.html'
@@ -102,7 +102,7 @@
 - section:
   name: Training
   url: /training/index.html
-  icon: '<img class="bcls-icon" src="/assets/images/feather/award.svg">'
+  icon: '<i data-feather="award"></i>'
   docs:
     - name: All Online Training Courses
       url: /training/online-training-courses.html
@@ -121,7 +121,7 @@
 - section:
   name: 'Support'
   url: '/support/index.html'
-  icon: '<img class="bcls-icon" src="/assets/images/feather/help-circle.svg">'
+  icon: '<i data-feather="help-circle"></i>'
   docs:
     - name: 'Known Issues'
       url: '/support/known-issues-studio-brightcove-player-and-apis.html'
