@@ -93,13 +93,9 @@ cd ../zencoder-support
 git pull
 
 # staging-site - temporarily beacon-la
-cd ../beacon-la
+cd ../beacon-private
 git pull
-echo 'pulled staging site'
-# in-app help
-cd ../beacon-help
-git pull
-echo 'pulled staging site'
+echo 'pulled beacon private site'
 
 # BCL-developer-docs
 cd ../BCL-developer-docs
