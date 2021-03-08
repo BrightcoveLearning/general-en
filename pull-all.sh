@@ -92,13 +92,9 @@ echo 'pulled studio'
 cd ../zencoder-support
 git pull
 
-# staging-site - temporarily beacon-la
-cd ../beacon-private
-git pull
-echo 'pulled beacon private site'
 
 # BCL-developer-docs
-cd ../BCL-developer-docs
+cd /Users/rcrooks/git-bcl/BCL-developer-docs
 git pull
 echo 'pulled zencoder-support'
 
