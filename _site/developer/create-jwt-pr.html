@@ -627,12 +627,12 @@ echo "Public key to saved in $PUBLIC_TXT"
     </p>
     <pre><code class="language-http" translate="No">Authorization: Bearer {access_token}</code></pre>
     <p>
-      The access token is a temporary OAuth2 access token that must be obtained from the Brightcove OAuth service. For details on how to obtain client credentials and use them to retrieve access tokens, see the <a href="https://support.brightcove.com/overview-oauth-api-v4">Brightcove OAuth Overview</a>.
+      The access token is a temporary OAuth2 access token that must be obtained from the Brightcove OAuth service. For details on how to obtain client credentials and use them to retrieve access tokens, see the <a href="https://apis.support.brightcove.com/oauth/getting-started/overview-oauth-api-v4.html">Brightcove OAuth Overview</a>.
     </p>
 
     <h3>Permissions</h3>
     <p>
-      Requests to the Key API must be made from <a href="https://support.brightcove.com/oauth-api">client credentials</a> with the following permissions:
+      Requests to the Key API must be made from <a href="https://apis.support.brightcove.com/oauth/getting-started/overview-oauth-api-v4.html#Get_Client_Credentials">client credentials</a> with the following permissions:
     </p>
     <ul>
       <li>
@@ -1149,14 +1149,13 @@ echo "$UNSIGNED_JWT.$SIGNATURE"
       </p>
       <pre><code class="language-bash" translate="No">$ bash jwtgen.sh
 </code></pre>
-      <p>
+      <br>
 
-      </p>
-      <h4 id="Example_using_Go_token" class="bcls-expander-head">Example using <span translate="No">Go</span></h4>
       <details>
         <summary>
-          Here is an example of a reference <span translate="No">Go</span> implementation (as a cli tool) for generating tokens without the use of any 3rd party library:
+          Example using <span translate="No">Go</span>
         </summary>
+        <p>Here is an example of a reference <span translate="No">Go</span> implementation (as a cli tool) for generating tokens without the use of any 3rd party library:</p>
         <pre class="line-numbers"><code class="language-bash" translate="No">package main
 
 import (
