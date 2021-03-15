@@ -90,8 +90,8 @@
   },
 
   {
-      "newURL": "https://general.support.brightcove.com/developer/create-jwt-pr.html",
-      "oldURL": "/create-jwt-pr"
+      "newURL": "https://general.support.brightcove.com/developer/create-json-web-token.html",
+      "oldURL": "/create-json-web-token"
   },
 
   {
@@ -130,7 +130,7 @@
   },
 
   {
-      "newURL": "https://general.support.brightcove.com/",
+      "newURL": "https://general.support.brightcove.com/training/",
       "oldURL": "/index"
   },
 
@@ -140,7 +140,12 @@
   },
 
   {
-      "newURL": "https://general.support.brightcove.com/training/",
+      "newURL": "https://general.support.brightcove.com/developer/thumbnail-scrubbing/",
+      "oldURL": "/index"
+  },
+
+  {
+      "newURL": "https://general.support.brightcove.com/",
       "oldURL": "/index"
   },
 
@@ -166,11 +171,6 @@
 
   {
       "newURL": "https://general.support.brightcove.com/utilities/",
-      "oldURL": "/index"
-  },
-
-  {
-      "newURL": "https://general.support.brightcove.com/developer/thumbnail-scrubbing/",
       "oldURL": "/index"
   },
 
@@ -210,12 +210,12 @@
   },
 
   {
-      "newURL": "https://general.support.brightcove.com/support/online-training-courses.html",
+      "newURL": "https://general.support.brightcove.com/training/online-training-courses.html",
       "oldURL": "/online-training-courses"
   },
 
   {
-      "newURL": "https://general.support.brightcove.com/training/online-training-courses.html",
+      "newURL": "https://general.support.brightcove.com/support/online-training-courses.html",
       "oldURL": "/online-training-courses"
   },
 
