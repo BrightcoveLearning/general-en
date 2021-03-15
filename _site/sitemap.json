@@ -90,6 +90,11 @@
   },
 
   {
+      "newURL": "https://general.support.brightcove.com/developer/create-jwt-pr.html",
+      "oldURL": "/create-jwt-pr"
+  },
+
+  {
       "newURL": "https://general.support.brightcove.com/developer/create-jwt-stage.html",
       "oldURL": "/create-jwt-stage"
   },
@@ -125,27 +130,12 @@
   },
 
   {
-      "newURL": "https://general.support.brightcove.com/developer/thumbnail-scrubbing/",
-      "oldURL": "/index"
-  },
-
-  {
-      "newURL": "https://general.support.brightcove.com/developer/kollective/",
-      "oldURL": "/index"
-  },
-
-  {
-      "newURL": "https://general.support.brightcove.com/developer/",
+      "newURL": "https://general.support.brightcove.com/",
       "oldURL": "/index"
   },
 
   {
       "newURL": "https://general.support.brightcove.com/general/",
-      "oldURL": "/index"
-  },
-
-  {
-      "newURL": "https://general.support.brightcove.com/",
       "oldURL": "/index"
   },
 
@@ -165,7 +155,22 @@
   },
 
   {
+      "newURL": "https://general.support.brightcove.com/developer/",
+      "oldURL": "/index"
+  },
+
+  {
+      "newURL": "https://general.support.brightcove.com/developer/kollective/",
+      "oldURL": "/index"
+  },
+
+  {
       "newURL": "https://general.support.brightcove.com/utilities/",
+      "oldURL": "/index"
+  },
+
+  {
+      "newURL": "https://general.support.brightcove.com/developer/thumbnail-scrubbing/",
       "oldURL": "/index"
   },
 
@@ -205,12 +210,12 @@
   },
 
   {
-      "newURL": "https://general.support.brightcove.com/training/online-training-courses.html",
+      "newURL": "https://general.support.brightcove.com/support/online-training-courses.html",
       "oldURL": "/online-training-courses"
   },
 
   {
-      "newURL": "https://general.support.brightcove.com/support/online-training-courses.html",
+      "newURL": "https://general.support.brightcove.com/training/online-training-courses.html",
       "oldURL": "/online-training-courses"
   },
 
