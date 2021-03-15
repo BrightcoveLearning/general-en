@@ -763,9 +763,9 @@ echo "Public key to saved in $PUBLIC_TXT"
             <td><code translate="No">conid</code></td>
             <td>String</td>
             <td></td>
-            <td>If present, this token will only authorize license fetching for a specific Video Cloud video id.
+            <td>If present, this token will only authorize license fetching for a specific Video Cloud video ID.
               <br><br>
-              Must be a valid video id.
+              Must be a valid video ID. Note that reference ID is not supported.
             </td>
           </tr>
           <tr>
@@ -821,7 +821,7 @@ echo "Public key to saved in $PUBLIC_TXT"
 "exp":1577989732,
 // issued at: timestamp when the JWT was created
 "iat":1575484132,
-// content id: JWT is only valid for video id or reference id
+// content id: JWT is only valid for video ID
 "conid":"5805807122222",
 // protection: specify a protection type in the case where multiple are available for a single video
 "pro":"aes128",
