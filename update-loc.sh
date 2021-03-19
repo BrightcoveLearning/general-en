@@ -116,6 +116,43 @@ git pull
 git add --all
 git commit --all -m general-update
 git push
+echo 'upated beacon-support-de'
+cd /Users/rcrooks/git-loc/beacon-support-es
+git pull
+git add --all
+git commit --all -m general-update
+git push
+echo 'upated beacon-support-es'
+cd /Users/rcrooks/git-loc/beacon-support-fr
+git pull
+git add --all
+git commit --all -m general-update
+git push
+echo 'upated beacon-support-fr'
+cd /Users/rcrooks/git-loc/beacon-support-ja
+git pull
+git add --all
+git commit --all -m general-update
+git push
+echo 'upated beacon-support-ja'
+cd /Users/rcrooks/git-loc/beacon-support-ko
+git pull
+git add --all
+git commit --all -m general-update
+git push
+echo 'upated beacon-support-ko'
+cd /Users/rcrooks/git-loc/beacon-support-zh-tw
+git pull
+git add --all
+git commit --all -m general-update
+git push
+echo 'upated beacon-support-zh-tw'
+# campaign
+cd /Users/rcrooks/git-loc/campaign-de
+git pull
+git add --all
+git commit --all -m general-update
+git push
 echo 'upated campaign-de'
 cd /Users/rcrooks/git-loc/campaign-es
 git pull
