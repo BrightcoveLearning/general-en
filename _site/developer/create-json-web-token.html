@@ -846,7 +846,7 @@ echo "Public key to saved in $PUBLIC_TXT"
             <td>If present, this token will only authorize license fetching for a set of video IDs.</td>
           </tr>
           <tr>
-            <td rowspan="5" style="background-color:#dbdbdb;font-weight: bold;border-bottom:1px solid #707070;">Concurrent streams</td>
+            <td rowspan="6" style="background-color:#dbdbdb;font-weight: bold;border-bottom:1px solid #707070;">Concurrent streams</td>
             <td><code translate="No">uid</code></td>
             <td>String</td>
             <td>Yes</td>
@@ -904,7 +904,26 @@ echo "Public key to saved in $PUBLIC_TXT"
             <!-- <td>DRM only</td> -->
           </tr>
           <tr>
-            <td rowspan="2" style="background-color:#dbdbdb;font-weight: bold;border-bottom:1px solid #707070;">Device limits</td>
+            <td><code translate="No">maxu</code></td>
+            <td>Integer</td>
+            <td>Yes</td>
+            <td></td>
+            <td>
+              If present, this token will only be valid for this number of license requests.
+              <br><br>
+              <ul>
+                <li>
+                  For HLSe, players will make multiple requests when playing a video, typically one per rendition. The <code translate="No">maxu</code> must be set high enough to account for these additional requests.
+                </li>
+                <!-- <li>
+                  For DRM, one license request is made per playback
+                </li> -->
+              </ul>
+              <strong>Required</strong> for session tracking, HLSe (AES-128) only
+            </td>
+          </tr>
+          <tr>
+            <td rowspan="3" style="background-color:#dbdbdb;font-weight: bold;border-bottom:1px solid #707070;">Device limits</td>
             <td><code translate="No">uid</code></td>
             <td>String</td>
             <td>Yes</td>
@@ -932,35 +951,14 @@ echo "Public key to saved in $PUBLIC_TXT"
             </td>
             <!-- <td>DRM only</td> -->
           </tr>
-          
           <tr>
-            <td rowspan="2" style="background-color:#dbdbdb;font-weight: bold;border-bottom:1px solid #707070;">Session tracking</td>
             <td><code translate="No">maxip</code></td>
             <td>Integer</td>
             <td>Yes</td>
             <td></td>
-            <td>If present, this token will only be able to be used by this many different IP addresses. (DRM & AES-128)
+            <td>If present, this token will only be able to be used by this number different IP addresses. 
               <br><br>
-              <strong>Required</strong> for session tracking
-            </td>
-          </tr>
-          <tr>
-            <td><code translate="No">maxu</code></td>
-            <td>Integer</td>
-            <td>Yes</td>
-            <td></td>
-            <td>
-              If present, this token will only be valid for this many license requests. (DRM & AES-128)
-              <br><br>
-              <ul>
-                <li>
-                  For HLSe, players will make multiple requests when playing a video, typically one per rendition. The <code translate="No">maxu</code> must be set high enough to account for these additional requests.
-                </li>
-                <li>
-                  For DRM, one license request is made per playback
-                </li>
-              </ul>
-              <strong>Required</strong> for session tracking
+              <strong>Required</strong> for session tracking, HLSe (AES-128) only
             </td>
           </tr>
         </tbody>
