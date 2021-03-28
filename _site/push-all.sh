@@ -2,12 +2,12 @@ git push
 
 echo 'pushed general content'
 # apis
-cd ../apis
+cd ../apis-en
 git push
 
 echo 'pushed apis'
 # audience
-cd ../audience
+cd ../audience-en
 git push
 
 echo 'pushed audience'
@@ -17,37 +17,37 @@ git push
 
 echo 'pushed beacon'
 # beacon support
-cd ../beacon-support
+cd ../beacon-support-en
 git push
 
 echo 'pushed beacon support'
 # beacon private
-cd ../beacon-private
+cd ../beacon-private-en
 git push
 
 echo 'pushed beacon private'
 # campaign
 git push
-cd ../campaign
+cd ../campaign-en
 
 echo 'pushed campaign'
 # docs-integrations
-cd ../docs-integrations
+cd ../docs-integrations-en
 git push
 
 echo 'pushed docs-integrations'
 # docs-support-home
-cd ../docs-support-home
+cd ../docs-support-home-en
 git push
 
 echo 'pushed docs-support-home'
 # engage
-cd ../engage
+cd ../engage-en
 git push
 
 echo 'pushed engage'
 # gallery
-cd ../gallery
+cd ../gallery-en
 git push
 
 echo 'pushed engage'
@@ -57,37 +57,37 @@ git push
 
 echo 'pushed jekyll-template'
 # live
-cd ../live
+cd ../live-en
 git push
 
 echo 'pushed live'
 # player-dev
-cd ../player-dev
+cd ../player-en
 git push
 
 echo 'pushed player-dev'
 # sdks
-cd ../sdks
+cd ../sdks-en
 git push
 
 echo 'pushed sdks'
 # social
-cd ../social
+cd ../social-en
 git push
 
 echo 'pushed social'
 # ssai
-cd ../ssai
+cd ../ssai-en
 git push
 
 echo 'pushed ssai'
 # studio
-cd ../studio
+cd ../studio-en
 git push
 
 echo 'pushed studio'
 # zencoder-support
-cd ../zencoder-support
+cd ../zencoder-en
 git push
 
 # staging-site
@@ -101,7 +101,7 @@ git push
 echo 'pushed test site'
 
 # BCL-developer-docs
-cd ../BCL-developer-docs
+cd ../BCL-developer-docs-en
 git push
 echo 'pushed zencoder-support'
 

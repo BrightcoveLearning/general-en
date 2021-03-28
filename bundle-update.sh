@@ -3,13 +3,13 @@ bundle install
 sudo bundle update
 echo 'bundle updated general content'
 # apis
-cd ../apis
+cd ../apis-en
 git pull
 bundle install
 sudo bundle update
 echo 'bundle updated apis'
 # audience
-cd ../audience
+cd ../audience-en
 git pull
 bundle install
 sudo bundle update
@@ -21,43 +21,43 @@ bundle install
 sudo bundle update
 echo 'bundle installed beacon'
 # beacon support
-cd ../beacon-support
+cd ../beacon-support-en
 git pull
 bundle install
 sudo bundle update
 echo 'bundle installed beacon support'
 # beacon private
-cd ../beacon-private
+cd ../beacon-private-en
 git pull
 bundle install
 sudo bundle update
 echo 'bundle installed beacon private'
 # campaign
 git pull
-cd ../campaign
+cd ../campaign-en
 bundle install
 sudo bundle update
 echo 'bundle updated campaign'
 # docs-integrations
-cd ../docs-integrations
+cd ../docs-integrations-en
 git pull
 bundle install
 sudo bundle update
 echo 'bundle updated docs-integrations'
 # docs-support-home
-cd ../docs-support-home
+cd ../docs-support-home-en
 git pull
 bundle install
 sudo bundle update
 echo 'bundle updated docs-support-home'
 # engage
-cd ../engage
+cd ../engage-en
 git pull
 bundle install
 sudo bundle update
 echo 'bundle updated engage'
 # gallery
-cd ../gallery
+cd ../gallery-en
 git pull
 bundle install
 sudo bundle update
@@ -69,43 +69,43 @@ bundle install
 sudo bundle update
 echo 'bundle updated jekyll-template'
 # live
-cd ../live
+cd ../live-en
 git pull
 bundle install
 sudo bundle update
 echo 'bundle updated live'
 # player-dev
-cd ../player-dev
+cd ../player-en
 git pull
 bundle install
 sudo bundle update
 echo 'bundle updated player-dev'
 # sdks
-cd ../sdks
+cd ../sdks-en
 git pull
 bundle install
 sudo bundle update
 echo 'bundle updated sdks'
 # social
-cd ../social
+cd ../social-en
 git pull
 bundle install
 sudo bundle update
 echo 'bundle updated social'
 # ssai
-cd ../ssai
+cd ../ssai-en
 git pull
 bundle install
 sudo bundle update
 echo 'bundle updated ssai'
 # studio
-cd ../studio
+cd ../studio-en
 git pull
 bundle install
 sudo bundle update
 echo 'bundle updated studio'
 # zencoder-support
-cd ../zencoder-support
+cd ../zencoder-en
 git pull
 bundle install
 sudo bundle update

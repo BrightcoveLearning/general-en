@@ -4,52 +4,52 @@ git pull
 
 echo 'pulled general content'
 # apis
-cd ../apis
+cd ../apis-en
 git pull
 
 echo 'pulled apis'
 # audience
-cd ../audience
+cd ../audience-en
 git pull
 
 echo 'pulled audience'
 # beacon
-cd ../beacon-support
+cd ../beacon-support-en
 git pull
 
-echo 'pulled beacon support'
-# beacon support
-cd ../beacon
+echo 'pulled beacon help'
+# beacon help
+cd ../beacon-en
 git pull
 
 echo 'pulled beacon'
 # beacon private
-cd ../beacon-private
+cd ../beacon-private-en
 git pull
 
 echo 'pulled beacon private'
 # campaign
 git pull
-cd ../campaign
+cd ../campaign-en
 
 echo 'pulled campaign'
 # docs-integrations
-cd ../docs-integrations
+cd ../docs-integrations-en
 git pull
 
 echo 'pulled docs-integrations'
 # docs-support-home
-cd ../docs-support-home
+cd ../docs-support-home-en
 git pull
 
 echo 'pulled docs-support-home'
 # engage
-cd ../engage
+cd ../engage-en
 git pull
 
 echo 'pulled engage'
 # gallery
-cd ../gallery
+cd ../gallery-en
 git pull
 
 echo 'pulled engage'
@@ -59,51 +59,46 @@ git pull
 
 echo 'pulled jekyll-template'
 # live
-cd ../live
+cd ../live-en
 git pull
 
 echo 'pulled live'
 # player-dev
-cd ../player-dev
+cd ../player-en
 git pull
 
 echo 'pulled player-dev'
 # sdks
-cd ../sdks
+cd ../sdks-en
 git pull
 
 echo 'pulled sdks'
 # social
-cd ../social
+cd ../social-en
 git pull
 
 echo 'pulled social'
 # ssai
-cd ../ssai
+cd ../ssai-en
 git pull
 
 echo 'pulled ssai'
 # studio
-cd ../studio
+cd ../studio-en
 git pull
 
 echo 'pulled studio'
 # zencoder-support
-cd ../zencoder-support
+cd ../zencoder-en
 git pull
 
+echo 'pulled zencoder-support'
 
 # BCL-developer-docs
 cd /Users/rcrooks/git-bcl/BCL-developer-docs
 git pull
-echo 'pulled zencoder-support'
 
 echo 'pulled BCL-developer-docs'
-# BCL-Doc-Assets
-cd /Users/rcrooks/git-bcl/BCL-Doc-Assets
-git pull
-
-echo 'pulled BCL-Doc-Assets'
 
 cd /Users/rcrooks/git-bcl/BCL-General
 git pull
