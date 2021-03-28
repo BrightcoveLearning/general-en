@@ -17,9 +17,9 @@ echo 'pulled audience'
 cd ../beacon-support-en
 git pull
 
-echo 'pulled beacon support'
-# beacon support
-cd ../beacon
+echo 'pulled beacon help'
+# beacon help
+cd ../beacon-en
 git pull
 
 echo 'pulled beacon'
@@ -92,18 +92,13 @@ echo 'pulled studio'
 cd ../zencoder-en
 git pull
 
+echo 'pulled zencoder-support'
 
 # BCL-developer-docs
 cd /Users/rcrooks/git-bcl/BCL-developer-docs
 git pull
-echo 'pulled zencoder-support'
 
 echo 'pulled BCL-developer-docs'
-# BCL-Doc-Assets
-cd /Users/rcrooks/git-bcl/BCL-Doc-Assets
-git pull
-
-echo 'pulled BCL-Doc-Assets'
 
 cd /Users/rcrooks/git-bcl/BCL-General
 git pull

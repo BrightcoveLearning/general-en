@@ -26,7 +26,7 @@ git commit --all -m general-update
 git push
 echo 'rebuilt audience'
 # beacon
-cd ../beacon
+cd ../beacon-en
 git pull
 sudo bundle update
 sudo bundle exec jekyll build --trace

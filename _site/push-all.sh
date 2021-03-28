@@ -12,7 +12,7 @@ git push
 
 echo 'pushed audience'
 # beacon
-cd ../beacon
+cd ../beacon-en
 git push
 
 echo 'pushed beacon'
