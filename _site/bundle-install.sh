@@ -32,7 +32,7 @@ cd ../campaign-en
 bundle install
 echo 'bundle installed campaign'
 # docs-integrations
-cd ../docs-integrations-en
+cd ../integrations-en
 git pull
 bundle install
 echo 'bundle installed docs-integrations'

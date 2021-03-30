@@ -34,7 +34,7 @@ cd ../campaign-en
 
 echo 'pulled campaign'
 # docs-integrations
-cd ../docs-integrations-en
+cd ../integrations-en
 git pull
 
 echo 'pulled docs-integrations'

@@ -39,7 +39,7 @@ bundle install
 sudo bundle update
 echo 'bundle updated campaign'
 # docs-integrations
-cd ../docs-integrations-en
+cd ../integrations-en
 git pull
 bundle install
 sudo bundle update

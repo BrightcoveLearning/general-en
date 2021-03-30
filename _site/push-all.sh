@@ -32,7 +32,7 @@ cd ../campaign-en
 
 echo 'pushed campaign'
 # docs-integrations
-cd ../docs-integrations-en
+cd ../integrations-en
 git push
 
 echo 'pushed docs-integrations'

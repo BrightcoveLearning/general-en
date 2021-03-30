@@ -62,7 +62,7 @@ git commit --all -m general-update
 git push
 echo 'rebuilt campaign'
 # docs-integrations
-cd ../docs-integrations-en
+cd ../integrations-en
 git pull
 sudo bundle update
 sudo bundle exec jekyll build --trace

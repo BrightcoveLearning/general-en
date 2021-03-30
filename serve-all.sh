@@ -37,7 +37,7 @@ jekyll serve
 #
 echo 'serving campaign'
 # docs-integrations
-cd ../docs-integrations-en
+cd ../integrations-en
 #
 bundle update
 jekyll serve
