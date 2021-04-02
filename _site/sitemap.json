@@ -130,7 +130,7 @@
   },
 
   {
-      "newURL": "https://general.support.brightcove.com/training/",
+      "newURL": "https://general.support.brightcove.com/",
       "oldURL": "/index"
   },
 
@@ -140,12 +140,7 @@
   },
 
   {
-      "newURL": "https://general.support.brightcove.com/developer/thumbnail-scrubbing/",
-      "oldURL": "/index"
-  },
-
-  {
-      "newURL": "https://general.support.brightcove.com/",
+      "newURL": "https://general.support.brightcove.com/training/",
       "oldURL": "/index"
   },
 
@@ -155,17 +150,7 @@
   },
 
   {
-      "newURL": "https://general.support.brightcove.com/ooyala/",
-      "oldURL": "/index"
-  },
-
-  {
       "newURL": "https://general.support.brightcove.com/developer/",
-      "oldURL": "/index"
-  },
-
-  {
-      "newURL": "https://general.support.brightcove.com/developer/kollective/",
       "oldURL": "/index"
   },
 
@@ -175,12 +160,27 @@
   },
 
   {
-      "newURL": "https://general.support.brightcove.com/general/known-issues-studio-brightcove-player-and-apis.html",
-      "oldURL": "/known-issues-studio-brightcove-player-and-apis"
+      "newURL": "https://general.support.brightcove.com/ooyala/",
+      "oldURL": "/index"
+  },
+
+  {
+      "newURL": "https://general.support.brightcove.com/developer/kollective/",
+      "oldURL": "/index"
+  },
+
+  {
+      "newURL": "https://general.support.brightcove.com/developer/thumbnail-scrubbing/",
+      "oldURL": "/index"
   },
 
   {
       "newURL": "https://general.support.brightcove.com/support/known-issues-studio-brightcove-player-and-apis.html",
+      "oldURL": "/known-issues-studio-brightcove-player-and-apis"
+  },
+
+  {
+      "newURL": "https://general.support.brightcove.com/general/known-issues-studio-brightcove-player-and-apis.html",
       "oldURL": "/known-issues-studio-brightcove-player-and-apis"
   },
 
@@ -210,12 +210,12 @@
   },
 
   {
-      "newURL": "https://general.support.brightcove.com/training/online-training-courses.html",
+      "newURL": "https://general.support.brightcove.com/support/online-training-courses.html",
       "oldURL": "/online-training-courses"
   },
 
   {
-      "newURL": "https://general.support.brightcove.com/support/online-training-courses.html",
+      "newURL": "https://general.support.brightcove.com/training/online-training-courses.html",
       "oldURL": "/online-training-courses"
   },
 
@@ -312,11 +312,6 @@
   {
       "newURL": "https://general.support.brightcove.com/general/roku-trick-play.html",
       "oldURL": "/roku-trick-play"
-  },
-
-  {
-      "newURL": "https://general.support.brightcove.com/search-test.html",
-      "oldURL": "/search-test"
   },
 
   {
