@@ -2,6 +2,7 @@
 title: Date Converter
 parent: Utilities
 ---
+<link rel="stylesheet" href="/assets/css/rome.min.css">
 <article class="bcls-article">
   <h1>Date Converter</h1>
   <summary>Utiility for getting dates in different formats.</summary>
@@ -10,10 +11,10 @@ parent: Utilities
     <p style="float: left; min-height: 150px;margin-right: 40px;">Date picker:
       <input type="text" class="input" size="17" id="dateInput" />
     </p>
-    <p>ISO 8601 date:</p>
-    <p>UTC date:</p>
-    <p><span translate="No">Epoch date</span> (milliseconds):</p>
-    <script src="//docs.brightcove.com/en/scripts/rome/rome.min.js"></script><script>
+    <p>ISO 8601 date: <span id="isoDate"></span></p>
+    <p>UTC date: <span id="utcDate"></span></p>
+    <p><span translate="No">Epoch date</span> (milliseconds): <span id="epochDate"></span></p>
+    <script src="/assets/js/rome.min.js"></script><script>
       var BCLS = ( function (rome, document) {
         var moment = rome.moment,
           now = new Date(),
