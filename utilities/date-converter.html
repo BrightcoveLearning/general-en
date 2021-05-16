@@ -27,9 +27,9 @@ parent: Utilities
           utcDate = document.getElementById("utcDate"),
           epochDate = document.getElementById("epochDate"),
           setDates = function () {
-            utcDate.innerHTML = selectedDate.toUTCString();
-            isoDate.innerHTML = selectedDate.toISOString();
-            epochDate.innerHTML = selectedDate.valueOf();
+            utcDate.textContent = selectedDate.toUTCString();
+            isoDate.textContent = selectedDate.toISOString();
+            epochDate.textContent = selectedDate.valueOf();
           };
 
       rome(dateInput, {initialValue: now.toISOString()});

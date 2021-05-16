@@ -449,9 +449,9 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
           utcDate = document.getElementById("utcDate"),
           epochDate = document.getElementById("epochDate"),
           setDates = function () {
-            utcDate.innerHTML = selectedDate.toUTCString();
-            isoDate.innerHTML = selectedDate.toISOString();
-            epochDate.innerHTML = selectedDate.valueOf();
+            utcDate.textContent = selectedDate.toUTCString();
+            isoDate.textContent = selectedDate.toISOString();
+            epochDate.textContent = selectedDate.valueOf();
           };
 
       rome(dateInput, {initialValue: now.toISOString()});
@@ -486,7 +486,7 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
 
 <hr>
 <div class="last-updated">
-  Page last updated on 28 Sep 2020
+  Page last updated on 16 May 2021
 </div>
 
 
