@@ -6,7 +6,7 @@ parent: Migrating from Ooyala
 <article class="bcls-article">
   <summary>
     <p>This topic describes how Ooyala web and SDK players will continue to work after your videos are migrated to Video Cloud, keeping your online videos working while you complete the migration to the Brightcove players.</p>
-    <aside class="bcls-aside bcls-aside--information language-editable">Note: this topic applies <strong>only</strong> to Ooyala customers migrated to Video Cloud.</aside>
+    <aside class="bcls-aside bcls-aside--information">Note: this topic applies <strong>only</strong> to Ooyala customers migrated to Video Cloud.</aside>
   </summary>
   
   <section class="bcls-section">
@@ -16,13 +16,13 @@ parent: Migrating from Ooyala
     <figure class="bcls-figure"><img class="bcls-image" alt="Ooyala Player to Video Cloud Connector" src="/assets/images/ooyala/OoyalaPlayerwithVideoCloud.png" />
       <figcaption class="bcls-caption--image">Ooyala Player to Video Cloud Connector</figcaption>
     </figure>
-    <aside class="bcls-aside bcls-aside--information language-editable">Note that for testing the playback adapter, you will need to work with your CXM to make adjustments to the DNS settings on your computers and devices. See <a href="/ooyala/ooyala-video-cloud-migration-adding-brightcove-dns-server-testing.html">Adding the Brightcove DNS Server</a> for details.</aside>
+    <aside class="bcls-aside bcls-aside--information">Note that for testing the playback adapter, you will need to work with your CXM to make adjustments to the DNS settings on your computers and devices. See <a href="/ooyala/ooyala-video-cloud-migration-adding-brightcove-dns-server-testing.html">Adding the Brightcove DNS Server</a> for details.</aside>
   </section>
   <section class="bcls-section">
     <h2 id="how_it_works">How it works</h2>
     <p>All the Brightcove players retrieve video and playlist data via the <a href="https://apis.support.brightcove.com/playback/">Playback API</a>. You don't have to set up the API requests, manually, though. The web player has a <a href="https://player.support.brightcove.com/references/player-catalog.html">Catalog</a> library that handles the requests, and the device SDKs have built-in methods for that.</p>
     <p>To keep your Ooyala players functioning, Brightcove has built an adapter that points player requests for video and playlist data to the Player API and the same videos in Video Cloud.</p>
-    <aside class="bcls-aside bcls-aside--information language-editable">Please note: you will not longer be able to modify the look and feel of your Ooyala web player. The current look and feel will be retained.</aside>
+    <aside class="bcls-aside bcls-aside--information">Please note: you will not longer be able to modify the look and feel of your Ooyala web player. The current look and feel will be retained.</aside>
   </section>
   <section class="bcls-section">
     <h2 id="analytics">Analytics</h2>
