@@ -435,6 +435,17 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
     <h2 id="Introduction">Introduction</h2>
     <p>MTR is a popular tool for diagnosing network-related issues. It combines the functionality of the <code translate="No">ping</code> and <code translate="No">traceroute</code> commands. Submitting MTR reports can help Brightcove Support resolve issues in some cases.</p>
     <p>See <a href="https://xneelo.co.za/help-centre/website/how-to-run-an-mtr/">How to Run an MTR</a> for information on installing MTR.</p>
+    <aside class="bcls-aside bcls-aside--information language-editable">
+      Note that Homebrew now installs MTR into a non-path directory (at least on Mac). To be able to run MTR, you will need to do the following in terminal:
+<pre class="line-numbers"><code class="language-bash" translate="No">cd /usr/local/Cellar/mtr/
+# to get the version number - in this case 0.94 - and cd into that directory's /sbin directory
+ls
+cd 0.94/sbin
+# now copy mtr to the path
+sudo cp mtr /usr/local/bin
+</code></pre>
+      <p>Now you will be able to run <code translate="No">sudo mtr</code> (using <code translate="No">sudo</code> is required)</p>
+    </aside>
     <p>The steps below will walk you through the basic installation and use of Wireshark.</p>
   </section>
   <section class="bcls-section">
@@ -469,6 +480,25 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
       </li>
       <li>You can press <samp translate="No">q</samp> at any time to stop MTR.</li>
     </ol>
+  </section>
+  <section class="bcls-section">
+    <h2 id="Using_mtr_with_Live">Using MTR with Live</h2>
+    <p>Using MTR with Live streams is similar to using it to analyze VOD, but a little different because MTR sends ICMP request packets and most internet devices deprioritize ICMP-based trace requests and intentionally throttle ICMP traffic which can create the illusion of packet loss.</p>
+    <p>To troubleshoot connectivity issues properly, a TCP-based trace must be run. Below is an example for Mac users.</p>
+
+    <pre><code class="language-bash" translate="No">sudo mtr -n -T -c 200 <span class="bc-highlight">bcovlive-a.akamaihd.net</span> --report</code></pre>
+
+    <p>The highlighted portion is the live playback domain extracted from the <strong>Playback URL</strong> displayed in the Live module:</p>
+    <figure class="bcls-figure">
+      <img class="bcls-image" src="/assets/images/developer/live-domain-for-mtr.png" alt="Playback URL">
+      <figcaption class="bcls-caption--image">Playback URL</figcaption>
+    </figure>
+
+    <h3>Sample output</h3>
+    <figure class="bcls-figure">
+      <img class="bcls-image" src="/assets/images/developer/mtr-sample-live-report.png" alt="Sample MTR Output for Live">
+      <figcaption class="bcls-caption--image">Sample MTR Output for Live</figcaption>
+    </figure>
   </section>
 </article>
 
