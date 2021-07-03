@@ -2,6 +2,7 @@
   <div class="row">
     <div class="region region-footer-top-center col-md-12">
       <nav role="navigation" aria-labelledby="block-brightcovesupport-menu" id="block-brightcovesupport" class="footer-menu">
+        <img src="https://support.brightcove.com/site-assets/images/site/SVG/COVE004_Brightcove_Logo_093020_RGB_KO.svg" alt="Brightcove" style="float: left;height: 32px;margin-left: -40em;">
 
         <h2>Brightcove Support</h2>
 
@@ -73,7 +74,7 @@
 </footer>
 
 <script>
-
+      
   var searchBox = sajari.init({
     mode: "search-box",
     project: "1588255093746585379", // Set this to your project.
@@ -83,10 +84,10 @@
     maxSuggestions: 5, // Maximum number of suggestions to show
     attachSearchBox: document.getElementById("nav-search-box") // DOM element to attach to
   });
-
+  
     searchBox("sub", "pipeline.search-sent", function (_, query) {
       window.location = "/search.html?q=" + encodeURIComponent(query.q);
     });
-
+  
 
 </script>
