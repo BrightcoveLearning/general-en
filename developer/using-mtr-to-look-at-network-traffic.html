@@ -60,7 +60,7 @@ sudo cp mtr /usr/local/bin
     <h2 id="Using_mtr_with_Live">Using MTR with Live</h2>
     <p>Using MTR with Live streams is similar to using it to analyze VOD, but a little different because MTR sends ICMP request packets and most internet devices deprioritize ICMP-based trace requests and intentionally throttle ICMP traffic which can create the illusion of packet loss.</p>
     <p>In addition, you need to run MTR both on the RTMP URL as well as the playback URL, as issues might arise both in the input and output.</p>
-    <p>To troubleshoot connectivity issues properly, a TCP-based trace must be run. Below is an example run on the playback URL for Mac users.</p>
+    <p>To troubleshoot connectivity issues properly, a TCP-based trace must be run. Below is an example run on the RMTP URL for Mac users.</p>
 
     <pre><code class="language-bash" translate="No">sudo mtr -n -T -c 200 <span class="bc-highlight">bcovlive-a.akamaihd.net</span> --report</code></pre>
 
@@ -72,8 +72,8 @@ sudo cp mtr /usr/local/bin
 
     <h3>Sample output</h3>
     <figure class="bcls-figure">
-      <img class="bcls-image" src="/assets/images/developer/mtr-sample-live-report.png" alt="Sample MTR Output for Live">
-      <figcaption class="bcls-caption--image">Sample MTR Output for Live</figcaption>
+      <img class="bcls-image" src="/assets/images/developer/mtr-sample-response.png" alt="Sample MTR Output for Live">
+      <figcaption class="bcls-caption--image">Sample MTR Command and Output for Live</figcaption>
     </figure>
   </section>
 </article>
