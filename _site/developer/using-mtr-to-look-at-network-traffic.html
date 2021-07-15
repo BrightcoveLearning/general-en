@@ -57,15 +57,17 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
   </div>
   <nav aria-label="breadcrumb">
     <ol class="breadcrumb arr-right">
+    
+    <li class="breadcrumb-item first-item"><a href="/">Home</a></li>
+    
       
-      <li class="breadcrumb-item first-item"><a href="/">Home</a></li>
+        <li class="breadcrumb-item"><a href="/developer/">Developer</a></li>
       
+    
       
+        <li class="breadcrumb-item active" aria-current="page">Using MTR (my traceroute)</li>
       
-      <li class="breadcrumb-item"><a href="/developer/">Developers</a></li>
-      
-      <li class="breadcrumb-item active" aria-current="page">Using MTR (my traceroute)</li>
-    </ol>
+    
   </nav>
 </header>
 <div class="container">
@@ -488,7 +490,7 @@ sudo cp mtr /usr/local/bin
     <p>To troubleshoot connectivity issues properly, a TCP-based trace must be run. Below is an example run on the RMTP URL for Mac users.</p>
     <pre><code class="language-bash" translate="No">sudo mtr -n -T -c 200 <span class="bc-highlight">1a244fa8f08a464e869695dd01c890d6.sep.bcovlive.io</span> --report</code></pre>
 
-    <p>The highlighted portion is the live playback domain extracted from the <strong>Playback URL</strong> displayed in the Live module:</p>
+    <p>The highlighted portion is the live playback domain extracted from the <strong>Endpoint URL</strong> displayed in the Live module:</p>
     <figure class="bcls-figure">
       <img class="bcls-image" src="/assets/images/developer/live-domain-for-mtr.png" alt="Playback URL">
       <figcaption class="bcls-caption--image">Playback URL</figcaption>
