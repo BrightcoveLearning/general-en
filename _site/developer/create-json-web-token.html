@@ -756,7 +756,7 @@ echo "Public key to saved in $PUBLIC_TXT"
         </thead>
         <tbody class="bcls-table__body">
           <tr>
-            <td rowspan="5" style="background-color:#dbdbdb;font-weight: bold;border-bottom:1px solid #707070;">General</td>
+            <td rowspan="3" style="background-color:#dbdbdb;font-weight: bold;border-bottom:1px solid #707070;">General</td>
             <td><code translate="No">accid</code></td>
             <td>String</td>
             <td>Yes</td>
@@ -776,30 +776,6 @@ echo "Public key to saved in $PUBLIC_TXT"
             <td>Yes</td>
             <td></td>
             <td>Time this token was issued, in seconds since the Epoch</td>
-          </tr>
-          <tr>
-            <td><code translate="No">ua</code></td>
-            <td>String</td>
-            <td></td>
-            <td></td>
-            <td>If present, this token will only be valid for requests from this User-Agent.
-              <br><br>
-              This field does not have to follow any particular format.
-              <br>
-              You must have <strong>License Keys Protection</strong> enabled.
-            </td>
-          </tr>
-          <tr>
-            <td><code translate="No">conid</code></td>
-            <td>String</td>
-            <td></td>
-            <td></td>
-            <td>If present, this token will only authorize license fetching for a specific Video Cloud video id.
-              <br><br>
-              Must be a valid video id
-              <br>
-              You must have <strong>License Keys Protection</strong> enabled.
-            </td>
           </tr>
           <tr>
             <td rowspan="5" style="background-color:#dbdbdb;font-weight: bold;border-bottom:1px solid #707070;">Playback Rights</td>
@@ -846,14 +822,72 @@ echo "Public key to saved in $PUBLIC_TXT"
             <td>If present, this token will only authorize license fetching for a set of video IDs.</td>
           </tr>
           <tr>
-            <td rowspan="6" style="background-color:#dbdbdb;font-weight: bold;border-bottom:1px solid #707070;">Concurrent streams</td>
+            <td rowspan="4" style="background-color:#dbdbdb;font-weight: bold;border-bottom:1px solid #707070;">License Keys Protection</td>
+            <td><code translate="No">ua</code></td>
+            <td>String</td>
+            <td></td>
+            <td></td>
+            <td>If present, this token will only be valid for requests from this User-Agent.
+              <br><br>
+              This field does not have to follow any particular format.
+              <br>
+              You must have <strong>License Keys Protection</strong> enabled.
+            </td>
+          </tr>
+          <tr>
+            <td><code translate="No">conid</code></td>
+            <td>String</td>
+            <td></td>
+            <td></td>
+            <td>If present, this token will only authorize license fetching for a specific Video Cloud video id.
+              <br><br>
+              Must be a valid video id
+              <br>
+              You must have <strong>License Keys Protection</strong> enabled.
+            </td>
+          </tr>
+          <tr>
+            <td><code translate="No">maxip</code></td>
+            <td>Integer</td>
+            <td>Yes</td>
+            <td></td>
+            <td>If present, this token will only be able to be used by this number different IP addresses. 
+              <br><br>
+              <strong>Required</strong> for session tracking; HLSe (AES-128) only
+              <br>
+              You must have <strong>License Keys Protection</strong> enabled.
+            </td>
+          </tr>
+          <tr>
+            <td><code translate="No">maxu</code></td>
+            <td>Integer</td>
+            <td>Yes</td>
+            <td></td>
+            <td>
+              If present, this token will only be valid for this number of license requests.
+              <br><br>
+              <ul>
+                <li>
+                  For HLSe, players will make multiple requests when playing a video, typically one per rendition. The <code translate="No">maxu</code> must be set high enough to account for these additional requests.
+                </li>
+                <!-- <li>
+                  For DRM, one license request is made per playback
+                </li> -->
+              </ul>
+              <strong>Required</strong> for session tracking; HLSe (AES-128) only
+              <br>
+              You must have <strong>License Keys Protection</strong> enabled.
+            </td>
+          </tr>
+          <tr>
+            <td rowspan="5" style="background-color:#dbdbdb;font-weight: bold;border-bottom:1px solid #707070;">Concurrent streams</td>
             <td><code translate="No">uid</code></td>
             <td>String</td>
             <td>Yes</td>
             <td>Yes</td>
             <td>The user id of the end viewer. This field is used to correlate multiple sessions to enforce Stream Concurrency.
               <br><br>
-              <strong>Required</strong> for device registration
+              <strong>Required</strong> for session concurrency
             </td>
             <!-- <td>DRM only</td> -->
           </tr>
@@ -904,28 +938,7 @@ echo "Public key to saved in $PUBLIC_TXT"
             <!-- <td>DRM only</td> -->
           </tr>
           <tr>
-            <td><code translate="No">maxu</code></td>
-            <td>Integer</td>
-            <td>Yes</td>
-            <td></td>
-            <td>
-              If present, this token will only be valid for this number of license requests.
-              <br><br>
-              <ul>
-                <li>
-                  For HLSe, players will make multiple requests when playing a video, typically one per rendition. The <code translate="No">maxu</code> must be set high enough to account for these additional requests.
-                </li>
-                <!-- <li>
-                  For DRM, one license request is made per playback
-                </li> -->
-              </ul>
-              <strong>Required</strong> for session tracking; HLSe (AES-128) only
-              <br>
-              You must have <strong>License Keys Protection</strong> enabled.
-            </td>
-          </tr>
-          <tr>
-            <td rowspan="3" style="background-color:#dbdbdb;font-weight: bold;border-bottom:1px solid #707070;">Device limits</td>
+            <td rowspan="2" style="background-color:#dbdbdb;font-weight: bold;border-bottom:1px solid #707070;">Device limits</td>
             <td><code translate="No">uid</code></td>
             <td>String</td>
             <td>Yes</td>
@@ -952,18 +965,6 @@ echo "Public key to saved in $PUBLIC_TXT"
               <strong>Required</strong> for device registration
             </td>
             <!-- <td>DRM only</td> -->
-          </tr>
-          <tr>
-            <td><code translate="No">maxip</code></td>
-            <td>Integer</td>
-            <td>Yes</td>
-            <td></td>
-            <td>If present, this token will only be able to be used by this number different IP addresses. 
-              <br><br>
-              <strong>Required</strong> for session tracking; HLSe (AES-128) only
-              <br>
-              You must have <strong>License Keys Protection</strong> enabled.
-            </td>
           </tr>
         </tbody>
       </table>
