@@ -550,6 +550,149 @@ echo "Public key to saved in $PUBLIC_TXT"
           </tr>
         </tbody>
       </table>
+
+      <h3>Claims by tier</h3>
+      <p>Several security packages are available for Playback Restrictions. For details, see the <a href="https://apis.support.brightcove.com/playback-restrictions/getting-started/overview-playback-restrictions.html">Overview: Brightcove Playback Restrictions</a> document.</p>
+      <p>Here are the claims available for each Playback Restriction package:</p>
+    <table class="bcls-table">
+      <thead class="bcls-table__head"> 
+        <tr>
+          <th>Feature</th>
+          <th>Claims</th>
+          <th>Security Tier 1</th>
+          <th>Security Tier 2</th>
+          <th>Security Tier 3</th>
+        </tr>
+      </thead>
+      <tbody class="bcls-table__body">
+        <tr>
+          <td rowspan="3">General</td>
+          <td>accid</td>
+          <td style="background-color: #D7F6E6;text-align: center;">Yes</td>
+          <td style="background-color: #D7F6E6;text-align: center;">Yes</td>
+          <td style="background-color: #D7F6E6;text-align: center;">Yes</td>
+        </tr>
+        <tr>
+          <td>exp</td>
+          <td style="background-color: #D7F6E6;text-align: center;">Yes</td>
+          <td style="background-color: #D7F6E6;text-align: center;">Yes</td>
+          <td style="background-color: #D7F6E6;text-align: center;">Yes</td>
+        </tr>
+        <tr>
+          <td>iat</td>
+          <td style="background-color: #D7F6E6;text-align: center;">Yes</td>
+          <td style="background-color: #D7F6E6;text-align: center;">Yes</td>
+          <td style="background-color: #D7F6E6;text-align: center;">Yes</td>
+        </tr>
+        <tr>
+          <td rowspan="5">Playback Rights <sup><a href="#n1"> [1]</a></sup></td>
+          <td>pkid</td>
+          <td style="background-color: #D7F6E6;text-align: center;">Yes</td>
+          <td style="background-color: #D7F6E6;text-align: center;">Yes</td>
+          <td style="background-color: #D7F6E6;text-align: center;">Yes</td>
+        </tr>
+        <tr>
+          <td>nbf</td>
+          <td style="background-color: #D7F6E6;text-align: center;">Yes</td>
+          <td style="background-color: #D7F6E6;text-align: center;">Yes</td>
+          <td style="background-color: #D7F6E6;text-align: center;">Yes</td>
+        </tr>
+        <tr>
+          <td>prid</td>
+          <td style="background-color: #D7F6E6;text-align: center;">Yes</td>
+          <td style="background-color: #D7F6E6;text-align: center;">Yes</td>
+          <td style="background-color: #D7F6E6;text-align: center;">Yes</td>
+        </tr>
+        <tr>
+          <td>tags</td>
+          <td style="background-color: #D7F6E6;text-align: center;">Yes</td>
+          <td style="background-color: #D7F6E6;text-align: center;">Yes</td>
+          <td style="background-color: #D7F6E6;text-align: center;">Yes</td>
+        </tr>
+        <tr>
+          <td>vids</td>
+          <td style="background-color: #D7F6E6;text-align: center;">Yes</td>
+          <td style="background-color: #D7F6E6;text-align: center;">Yes</td>
+          <td style="background-color: #D7F6E6;text-align: center;">Yes</td>
+        </tr>
+        <tr>
+          <td rowspan="4">License Keys Protection</td>
+          <td>ua</td>
+          <td style="text-align: center;">No</td>
+          <td style="background-color: #D7F6E6;text-align: center;">Yes</td>
+          <td style="background-color: #D7F6E6;text-align: center;">Yes</td>
+        </tr>
+        <tr>
+          <td>conid</td>
+          <td style="text-align: center;">No</td>
+          <td style="background-color: #D7F6E6;text-align: center;">Yes</td>
+          <td style="background-color: #D7F6E6;text-align: center;">Yes</td>
+        </tr>
+        <tr>
+          <td>maxip</td>
+          <td style="text-align: center;">No</td>
+          <td style="background-color: #D7F6E6;text-align: center;">Yes</td>
+          <td style="background-color: #D7F6E6;text-align: center;">Yes</td>
+        </tr>
+        <tr>
+          <td>maxu</td>
+          <td style="text-align: center;">No</td>
+          <td style="background-color: #D7F6E6;text-align: center;">Yes</td>
+          <td style="background-color: #D7F6E6;text-align: center;">Yes</td>
+        </tr>
+        <tr>
+          <td rowspan="5">Concurrent streams</td>
+          <td>uid</td>
+          <td style="text-align: center;">No</td>
+          <td style="text-align: center;">No</td>
+          <td style="background-color: #D7F6E6;text-align: center;">Yes</td>
+        </tr>
+        <tr>
+          <td>climit</td>
+          <td style="text-align: center;">No</td>
+          <td style="text-align: center;">No</td>
+          <td style="background-color: #D7F6E6;text-align: center;">Yes</td>
+        </tr>
+        <tr>
+          <td>cbeh</td>
+          <td style="text-align: center;">No</td>
+          <td style="text-align: center;">No</td>
+          <td style="background-color: #D7F6E6;text-align: center;">Yes</td>
+        </tr>
+        <tr>
+          <td>cexp</td>
+          <td style="text-align: center;">No</td>
+          <td style="text-align: center;">No</td>
+          <td style="background-color: #D7F6E6;text-align: center;">Yes</td>
+        </tr>
+        <tr>
+          <td>sid</td>
+          <td style="text-align: center;">No</td>
+          <td style="text-align: center;">No</td>
+          <td style="background-color: #D7F6E6;text-align: center;">Yes</td>
+        </tr>
+        <tr>
+          <td rowspan="2">Device registration</td>
+          <td>uid</td>
+          <td style="text-align: center;">No</td>
+          <td style="text-align: center;">No</td>
+          <td style="background-color: #D7F6E6;text-align: center;">Yes</td>
+        </tr>
+        <tr>
+          <td>dlimit</td>
+          <td style="text-align: center;">No</td>
+          <td style="text-align: center;">No</td>
+          <td style="background-color: #D7F6E6;text-align: center;">Yes</td>
+        </tr>
+      </tbody>
+    </table>
+    <br/>
+    <aside class="bcls-aside bcls-aside--information">
+      <p>The following note refers to the table above.</p>
+      
+      <p id="n1"><sup>[1]</sup> All claims associated with Playback Rights are optional. So, you do not need to create a JWT to use Playback Rights.</p>
+      <p>In Video Cloud Studio Admin, when creating new <strong>Playback Rights</strong>, you can select <strong>Allow Playback Right without token</strong>. </p>
+      </aside>
     </section>
 
     <section class="bcls-section">
