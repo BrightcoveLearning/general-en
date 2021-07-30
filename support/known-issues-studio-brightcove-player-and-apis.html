@@ -64,8 +64,27 @@ parent: General Information
   </section>
   <section class="bcls-section">
     <h2 id="live">Live Video</h2>
-    <dt>Brightcove Player counting video views for finished live events</dt>
-    <dd>The Brightcove player accounts for video_view every time a remote asset is loaded, even if it's a finished live event with an empty or no longer retrievable HLS playlist. <strong>Workaround:</strong> deactivate, unschedule, or delete the video.</dd>
+    <dl>
+      <dt>Recurring events still published when inactive show the last 3 segments of playback</dt>
+      <dd>
+        If an SEP recurring event is still published on a page and the client is not currently streaming and the result is that the last 3 segments (about 18 seconds) are cached and will play back.
+        <p style="font-weight: bold;">Workaround</p>
+        <p>One way of preventing this is to implement a <a href="https://player.support.brightcove.com/code-samples/brightcove-player-sample-live-custom-error-message.html">Live custom error message in the player</a> by adding plugin including code some like the following:</p>
+<pre class="line-numbers"><code class="language-javascript" translate="No">// Listen for a change on the durationmyPlayer.on("durationchange", ()=>{
+// Save the duration to a local variable
+var duration = myPlayer.duration();
+
+// Check if the duration is a finite number (VOD)
+// or if it's infinite (Live).
+// If it's a VOD it would mean that the recurrent stream is over
+// and the custom image would be displayed.
+var isLive = !Number.isFinite(myPlayer.duration())
+
+if(!isLive && duration !== 0){myPlayer.pause();myModal.open();</code></pre>
+      </dd>
+      <dt>Brightcove Player counting video views for finished live events</dt>
+      <dd>The Brightcove player accounts for video_view every time a remote asset is loaded, even if it's a finished live event with an empty or no longer retrievable HLS playlist. <strong>Workaround:</strong> deactivate, unschedule, or delete the video.</dd>
+    </dl>
   </section>
   <section class="bcls-section">&nbsp;</section>
   <section class="bcls-section">
