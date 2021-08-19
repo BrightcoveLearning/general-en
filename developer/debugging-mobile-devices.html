@@ -74,36 +74,44 @@ parent: Developers
           <li>Chrome 32+ running on Mac or Windows</li>
           <li>Android device with Chrome for Android 32+</li>
         </ul>
-        <p class="BCL-aside">Note: The steps in this section were written using a device running Android 4.3.</p>
+        <p class="BCL-aside">Note: The steps in this section were written using a device running Android 11.</p>
+        <!-- <p class="BCL-aside">Note: The steps in this section were written using a device running Android 4.3.</p> -->
       </div>
       <div class="BCL-subsection">
         <h3>Enabling debugging on your device</h3>
         <p>Before you can begin debugging content on your device, you need to enable USB debugging in your device settings.</p>
-        <ol>
+        <ol class="bcls-tasklist-restart">
           <li>If you are a running Android 4.2+, you will need to enable your device's <strong>Developer options</strong> before you can turn on USB debugging. On your device, open the <strong>Settings</strong> app and select the <strong>About phone</strong> menu. Locate your device's <strong>Build number</strong> and tap it seven times.
             <aside class="bcls-aside bcls-aside--tip">If you are running an older version of Android, you can enable USB debugging by going directly to Settings &gt; Developer options.</aside>
           </li>
-          <li>Hit your device's <strong>Back</strong> button and you will see the <strong>Developer options</strong> menu listed in the Settings.
-            <figure class="bcls-figure"><img width="400" class="bcls-image--no-border" alt="Get to Developer Options" src="//learning-services-media.brightcove.com/doc-assets/video-cloud-apis/general-information/mobile-debugging/01-android.png" />
-              <figcaption class="bcls-caption--image">Get to Developer Options</figcaption>
+          <li>Enter your device password. You should now see a message that states, <strong>You are now a developer!</strong>.</li>
+          <li>To access your <strong>Developer options</strong> in Android 11, return to <strong>Settings</strong> and select <strong>System</strong>.</li>
+          <li>Expand <strong>Advanced</strong>, and tap <strong>Developer options</strong>.
+            <figure class="bcls-figure"><img class="bcls-image" alt="Developer options" src="/assets/images/developer/debugging-on-mobile/android/system.png" />
+              <figcaption class="bcls-caption--image">Developer options</figcaption>
             </figure>
           </li>
-          <li>Open the <strong>Developer options</strong> menu and check the box to enable <strong>USB debugging</strong>.
-            <figure class="bcls-figure"><img width="400" class="bcls-image" alt="Enable USB Debugging" src="//learning-services-media.brightcove.com/doc-assets/video-cloud-apis/general-information/mobile-debugging/02-android.png" />
+          <li>Scroll down to <strong>USB debugging</strong> and turn on the toggle.
+            <figure class="bcls-figure"><img class="bcls-image" alt="Enable USB Debugging" src="/assets/images/developer/debugging-on-mobile/android/enable-usb.png" />
               <figcaption class="bcls-caption--image">Enable USB Debugging</figcaption>
             </figure>
+          </li>
+          <li>For more details, see Android's <a href="https://developer.android.com/studio/debug/dev-options">Configure on-device developer options</a> document.</li>
           </li>
         </ol>
       </div>
       <div class="BCL-subsection">
         <h3>Remote debugging using Chrome for Android</h3>
         <p>Now that USB debugging is enabled on your device, follow these steps to start remote debugging with Chrome:</p>
-        <ol>
+        <ol class="bcls-tasklist-restart">
           <li>On your computer, launch <strong>Chrome</strong> and browse to <code translate="No">about:inspect</code>. On the <strong>Devices</strong> page, enable the <strong>Discover USB devices</strong> option.
             <figure class="bcls-figure"><img class="bcls-image" alt="Discover USB Devices" src="//learning-services-media.brightcove.com/doc-assets/video-cloud-apis/general-information/mobile-debugging/03-android.png" />
               <figcaption class="bcls-caption--image">Discover USB Devices</figcaption>
             </figure>
           </li>
+
+
+
           <li>Connect your device to your machine via USB cable. On your device, you will be prompted with a dialog asking if you would like to allow USB debugging. Choose <strong>OK</strong> to allow your computer to connect to your device.
             <figure class="bcls-figure"><img width="400" class="bcls-image" alt="Allow Connection to Device" src="//learning-services-media.brightcove.com/doc-assets/video-cloud-apis/general-information/mobile-debugging/04-android.png" />
               <figcaption class="bcls-caption--image">Allow Connection to Device</figcaption>
