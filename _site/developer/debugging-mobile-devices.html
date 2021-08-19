@@ -524,28 +524,26 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
         <h3>Remote debugging using Chrome for Android</h3>
         <p>Now that USB debugging is enabled on your device, follow these steps to start remote debugging with Chrome:</p>
         <ol class="bcls-tasklist-restart">
-          <li>On your computer, launch <strong>Chrome</strong> and browse to <code translate="No">about:inspect</code>. On the <strong>Devices</strong> page, enable the <strong>Discover USB devices</strong> option.
-            <figure class="bcls-figure"><img class="bcls-image" alt="Discover USB Devices" src="//learning-services-media.brightcove.com/doc-assets/video-cloud-apis/general-information/mobile-debugging/03-android.png" />
+          <li>On your computer, launch <strong>Chrome</strong> and browse to <code translate="No">chrome://inspect#devices</code>.</li>
+          <li>Select the checkbox for <strong>Discover USB devices</strong>.
+            <figure class="bcls-figure"><img class="bcls-image" alt="Discover USB Devices" src="/assets/images/developer/debugging-on-mobile/android/discover-devices.png" />
               <figcaption class="bcls-caption--image">Discover USB Devices</figcaption>
             </figure>
           </li>
-
-
-
-          <li>Connect your device to your machine via USB cable. On your device, you will be prompted with a dialog asking if you would like to allow USB debugging. Choose <strong>OK</strong> to allow your computer to connect to your device.
-            <figure class="bcls-figure"><img width="400" class="bcls-image" alt="Allow Connection to Device" src="//learning-services-media.brightcove.com/doc-assets/video-cloud-apis/general-information/mobile-debugging/04-android.png" />
+          <li>Connect your device to your machine using a USB cable. On your device, you will be prompted with a dialog asking if you would like to allow USB debugging. Select <strong>Allow</strong> to let your computer to connect to your device.
+            <figure class="bcls-figure"><img width="400" class="bcls-image" alt="Allow Connection to Device" src="/assets/images/developer/debugging-on-mobile/android/device-connection.png" />
               <figcaption class="bcls-caption--image">Allow Connection to Device</figcaption>
             </figure>
             <aside class="bcls-aside bcls-aside--information">If you are on a Windows machine, you may need to install USB drivers. For more information, visit the <a href="//developer.android.com/tools/extras/oem-usb.html">Android Developer documentation</a>.</aside>
           </li>
           <li>On your device, open the <strong>Chrome</strong> app and browse to a web page.</li>
-          <li>Return to <strong>Chrome</strong> on your computer. On the <code translate="No">about:inspect</code> page, you should see your connected device. Below your device name, you will be able to see a list of all of the pages open in Chrome on your device.
-            <figure class="bcls-figure"><img class="bcls-image" alt="Connected Devices" src="//learning-services-media.brightcove.com/doc-assets/video-cloud-apis/general-information/mobile-debugging/05-android.png" />
+          <li>Return to <strong>Chrome</strong> on your computer. On the <code translate="No">chrome://inspect#devices</code> page, you should see your connected device. Below your device name, you will be able to see a list of all of the pages open in Chrome on your device.
+            <figure class="bcls-figure"><img class="bcls-image" alt="Connected Devices" src="/assets/images/developer/debugging-on-mobile/android/connected-devices.png" />
               <figcaption class="bcls-caption--image">Connected Devices</figcaption>
             </figure>
           </li>
           <li>To begin debugging a web page, select the <strong>inspect</strong> link below the page URL. This will open Chrome's <strong>Developer Tools</strong>.
-            <figure class="bcls-figure"><img class="bcls-image" alt="Inspect Web Page" src="//learning-services-media.brightcove.com/doc-assets/video-cloud-apis/general-information/mobile-debugging/06-android.png" />
+            <figure class="bcls-figure"><img class="bcls-image" alt="Inspect Web Page" src="/assets/images/developer/debugging-on-mobile/android/inspect-page.png" />
               <figcaption class="bcls-caption--image">Inspect Web Page</figcaption>
             </figure>
           </li>
@@ -702,7 +700,7 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
 
 <hr>
 <div class="last-updated">
-  Page last updated on 19 Jun 2021
+  Page last updated on 19 Aug 2021
 </div>
 
 
