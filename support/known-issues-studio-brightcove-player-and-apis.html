@@ -1,10 +1,11 @@
 ---
 title: 'Known Issues:  Studio, Brightcove Player and APIs'
+description: 'This topic lists the known issues with Studio, Brightcove Player and APIs.'
 parent: General Information
 ---
 <article class="bcls-article">
-  <h1>Known Issues:  Studio and Brightcove Player</h1>
-  <summary>This topic lists the known issues with Studio, Brightcove Player and APIs.</summary>
+  <h1>{{ page.title }}</h1>
+  <summary>{{ page.summary }}</summary>
   <section class="bcls-section">
     <p><strong>Identified known issues include:</strong></p>
     <ul>
@@ -153,7 +154,7 @@ if(!isLive && duration !== 0){myPlayer.pause();myModal.open();</code></pre>
       <dt>Controlbar of Player does not disappear on Windows 10 touch-enabled PC in fullscreen mode</dt>
       <dd>No known workarounds.</dd>
       <dt>Elements with <code translate="No">id</code> Set to <code translate="No">default</code></dt>
-      <dd>Brightcove Player is known to behave poorly if there is an element with <code translate="No">id="default"</code> on the page. The blog post <a href="https://2ality.com/2012/08/ids-are-global.html">DOM: element IDs are global variables</a> explains why this is an issue.</dd>
+      <dd>Brightcove Player is known to behave poorly if there is an element with <code translate="No">id="default"</code> on the page. The blog post <a href="https://2ality.com/2012/08/ids-are-global.html">DOM: element IDs are global variables</a> explains why this is an issue. One common symptom of this problem is the <code translate="No">MEDIA_ERR_UNKNOWN</code> error.</dd>
       <dt>Ads blocked on Safari and/or iOS</dt>
       <dd>
         Changes made by Apple to cross-origin policies for Safari and iOS may result in ads not playing.
