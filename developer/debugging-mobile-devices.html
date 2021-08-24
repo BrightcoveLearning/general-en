@@ -181,7 +181,7 @@ parent: Developers
               <figcaption class="bcls-caption--image">Install root certificate</figcaption>
             </figure>
           </li>
-          <li>You should see a message that identifies the local Server IP and Port number (8888) that you will use to set up the device. You should also see the URL to download and install the certificate. Copy these to your computer for later use.
+          <li id="proxy_hostname_value">You should see a message that identifies the local Server IP and Port number (8888) that you will use to set up the device. You should also see the URL to download and install the certificate. Copy these to your computer for later use.
             <figure class="bcls-figure"><img class="bcls-image" alt="Certificate message" src="/assets/images/developer/debugging-on-mobile/charles/02-certificate-msg.png" />
               <figcaption class="bcls-caption--image">Certificate message</figcaption>
             </figure>
@@ -236,31 +236,54 @@ parent: Developers
           </li>
         </ol>
         <h4>Setting up your Android device</h4>
-        <aside class="bcls-aside bcls-aside--information">These steps will only work on devices running Android 2.3 and up.</aside>
+        <aside class="bcls-aside bcls-aside--information">These steps were performed on a device running Android 11.</aside>
+        <!-- <aside class="bcls-aside bcls-aside--information">These steps will only work on devices running Android 2.3 and up.</aside> -->
+        
         <ol class="bcls-tasklist-restart">
-          <li>On your device, open a browser and navigate to <a href="//www.charlesproxy.com/getssl/">https://www.charlesproxy.com/getssl/</a>.</li>
-          <li>You will be prompted with a <strong>Certificate name</strong> dialog. Specify a name for the certificate and set the <strong>Used for</strong> field to <strong>Wi-Fi</strong>. Select <strong>OK</strong> to install the certificate.
-            <figure class="bcls-figure"><img width="400" class="bcls-image" alt="Install Charles Certificate" src="/assets/images/developer/debugging-on-mobile/charles/04-charles.png" />
-              <figcaption class="bcls-caption--image">Install Charles Certificate</figcaption>
+          <li>On your device, go to <strong>Settings</strong> &gt; <strong>Network & internet</strong>.</li>
+          <li>Tap <strong>Wi-Fi</strong>.You will see a list of networks that you have connected to on your device.</li>
+          <li>Select the wireless network that you are currently connected to. Remember, this network must match the network you are connected to on your computer..</li>
+          <li>Tap the pencil icon to edit your internet settings.</li>
+          <li>Set <strong>Proxy</strong> to <strong>Manual</strong>.</li>
+          <li>Paste the value for your Charles <strong>Proxy hostname</strong>, which you should have copied it to your clipboard in <a href="#proxy_hostname_value">the step above</a>. For the <strong>Proxy port</strong>, enter <code translate="No">8888</code>.
+            <figure class="bcls-figure"><img width="400" class="bcls-image" alt="Proxy host/port values" src="/assets/images/developer/debugging-on-mobile/android/host-port-values.png" />
+              <figcaption class="bcls-caption--image">Proxy host/port values</figcaption>
             </figure>
           </li>
-          <li>Next, open the <strong>Settings &gt; Wi-Fi</strong> menu. You will see a list of networks that you have connected to on your device. Select the wireless network that you are currently connected to. Remember, this network must match the network you are connected to on your computer.</li>
-          <li>This will open a small dialog with three options—Edit, View, or Forget. Select <strong>Edit</strong>.</li>
-          <li>In this dialog, scroll down to the bottom and enable the <strong>Show advanced options</strong> field. This will reveal Proxy and IP settings.
-            <figure class="bcls-figure"><img width="400" class="bcls-image" alt="Advanced Settings" src="/assets/images/developer/debugging-on-mobile/charles/05-charles.png" />
-              <figcaption class="bcls-caption--image">Advanced Settings</figcaption>
-            </figure>
-          </li>
-          <li>Change the <strong>Proxy settings</strong> field to <strong>Manual</strong>.</li>
-          <li>Fill out the <strong>Proxy host name</strong> field with your computer's IP address and the <strong>Proxy port</strong> field to match the port set in Charles (by default, the port is set to 8888). Select Save.
-            <figure class="bcls-figure"><img width="400" class="bcls-image" alt="Set IP Address" src="/assets/images/developer/debugging-on-mobile/charles/06-charles.png" />
-              <figcaption class="bcls-caption--image">Set IP Address</figcaption>
-            </figure>
+          <li>Tap <strong>Save</strong>.</li>
+          <li>On your device, open a browser, navigate to <a href="//www.charlesproxy.com/getssl/">https://www.charlesproxy.com/getssl/</a>. This should automatically download the Charles SSL certificate to your device.</li>
+          <li>To install the certificate with Android 11, follow these steps:
+            <ol>
+              <li>Open <strong>Settings</strong>.</li>
+              <li>Navigate to <strong>Security</strong> &gt; <strong>Encryption & credentials</strong> &gt; <strong>Install a certificate</strong>.</li>
+              <li>Select <strong>CA certificate</strong>.</li>
+              <li>You will see a warning. Select <strong>Install anyway</strong>.
+                <figure class="bcls-figure"><img width="400" class="bcls-image" alt="Install anyway" src="/assets/images/developer/debugging-on-mobile/android/install-anyway.png" />
+                  <figcaption class="bcls-caption--image">Install anyway</figcaption>
+                </figure>
+              </li>
+              <li>Select the Charles proxy SSL certificate.</li>
+              <li>Confirm the certificate installation.</li>
+            </ol>
           </li>
           <li>In your device's default browser, navigate to a website. You will be able to see any data sent and received in Charles. Note that it may help to filter the structure list (in this case filter for <strong>brightcove</strong>).
             <figure class="bcls-figure"><img class="bcls-image" alt="See Data Transfer" src="/assets/images/developer/debugging-on-mobile/charles/07-charles.png" />
               <figcaption class="bcls-caption--image">See Data Transfer</figcaption>
             </figure>
+          </li>
+          <li>To filter network traffic so that you only see traffic from your Android device and not your local machine:
+            <ol>
+              <li>In the Charles top menu, select <strong>Proxy</strong>.</li>
+              <li>Uncheck <strong>macOS Proxy</strong> (or <strong>Windows Proxy</strong>).</li>
+            </ol>
+          </li>
+          <li><strong>Optional</strong>: To clear certificates from your device (running Android 11):
+            <ol>
+              <li>On your device, open <strong>Settings</strong>.</li>
+              <li>Navigate to <strong>Security</strong> &gt; <strong>Encryption & credentials</strong>.</li>
+              <li>Tap <strong>Clear credentials</strong>.</li>
+              <li>Tap <strong>OK</strong> to confirm.</li>
+            </ol>
           </li>
         </ol>
       </div>
