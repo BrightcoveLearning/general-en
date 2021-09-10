@@ -648,15 +648,16 @@ echo "Public key to saved in $PUBLIC_TXT"
             <td><code translate="No">drules</code></td>
             <td>String[]</td>
             <td></td>
-            <td>List of delivery rule action IDs to apply. For details, see the <a href="https://apis.support.brightcove.com/delivery-rules/getting-started/implementing-delivery-rules.html">Implementing Delivery Rules</a> document.
-              <br><br>
+            <td>List of delivery rule action IDs to apply. For details, see the <a href="https://apis.support.brightcove.com/delivery-rules/getting-started/implementing-delivery-rules.html">Implementing Delivery Rules</a> document. <br/>
+              If the <code translate="No">config_id</code> query parameter is also set it will be ignored, as this claim overrides it.
+              <!-- <br><br>
               <aside class="bcls-aside bcls-aside--information">
                 Setting this claim in the JWT overrides:
                 <ul>
                   <li>The <code translate="No">config_id</code> query parameter</li>
                   <li>Any other rule ids set at the account level</li>
                 </ul>
-              </aside>
+              </aside> -->
             </td>
           </tr>
           <tr>
@@ -1417,7 +1418,7 @@ func processEC256(kbs, bs []byte) {
 
 <hr>
 <div class="last-updated">
-  Page last updated on 21 Jul 2021
+  Page last updated on 07 Sep 2021
 </div>
 
 
