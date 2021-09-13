@@ -226,6 +226,18 @@ echo "Public key to saved in $PUBLIC_TXT"
             <td>The account id that owns the content being played</td>
           </tr>
           <tr>
+            <td><code translate="No">exp</code></td>
+            <td>Integer</td>
+            <td></td>
+            <td>Time this token will no longer be valid, in seconds since the Epoch. Must be no more than 30 days from <code translate="No">iat</code></td>
+          </tr>
+          <tr>
+            <td><code translate="No">iat</code></td>
+            <td>Integer</td>
+            <td></td>
+            <td>Time this token was issued, in seconds since the Epoch</td>
+          </tr>
+          <tr>
             <td><code translate="No">drules</code></td>
             <td>String[]</td>
             <td></td>
@@ -240,18 +252,6 @@ echo "Public key to saved in $PUBLIC_TXT"
                 </ul>
               </aside> -->
             </td>
-          </tr>
-          <tr>
-            <td><code translate="No">exp</code></td>
-            <td>Integer</td>
-            <td></td>
-            <td>Time this token will no longer be valid, in seconds since the Epoch. Must be no more than 30 days from <code translate="No">iat</code></td>
-          </tr>
-          <tr>
-            <td><code translate="No">iat</code></td>
-            <td>Integer</td>
-            <td></td>
-            <td>Time this token was issued, in seconds since the Epoch</td>
           </tr>
           <tr>
             <td><code translate="No">conid</code></td>
@@ -309,12 +309,12 @@ echo "Public key to saved in $PUBLIC_TXT"
       <pre class="line-numbers"><code class="language-json" translate="No">{
 // account id: JWT is only valid for this accounts
 "accid":"4590388311111",
-// drules: list of delivery rule IDs to be applied
-"drules": ["0758da1f-e913-4f30-a587-181db8b1e4eb"]
 // expires: timestamp when JWT expires
 "exp":1577989732,
 // issued at: timestamp when the JWT was created
 "iat":1575484132,
+// drules: list of delivery rule IDs to be applied
+"drules": ["0758da1f-e913-4f30-a587-181db8b1e4eb"],
 // content id: JWT is only valid for video ID
 "conid":"5805807122222",
 // protection: specify a protection type in the case where multiple are available for a single video
@@ -557,6 +557,24 @@ echo "Public key to saved in $PUBLIC_TXT"
               <strong>Required</strong> for device registration
             </td>
             <!-- <td>DRM only</td> -->
+          </tr>
+          <tr>
+            <td rowspan="1" style="background-color:#dbdbdb;font-weight: bold;border-bottom:1px solid #707070;">Delivery Rules</td>
+            <td><code translate="No">drules</code></td>
+            <td>String[]</td>
+            <td></td>
+            <td></td>
+            <td>List of delivery rule action IDs to apply. For details, see the <a href="https://apis.support.brightcove.com/delivery-rules/getting-started/implementing-delivery-rules.html">Implementing Delivery Rules</a> document.
+              <!-- If the <code translate="No">config_id</code> query parameter is also set it will be ignored, as this claim overrides it. -->
+              <br><br/>
+              <aside class="bcls-aside bcls-aside--information">
+                Setting this claim in the JWT overrides:
+                <ul>
+                  <li>The <code translate="No">config_id</code> query parameter</li>
+                  <li>Any other rule ids set at the account level</li>
+                </ul>
+              </aside>
+            </td>
           </tr>
         </tbody>
       </table>
