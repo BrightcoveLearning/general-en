@@ -816,6 +816,12 @@ echo "Public key to saved in $PUBLIC_TXT"
             <td>A <code translate="No">playback_rights_id</code>. Used to override the id set in the catalog for this video
               <br><br>
               This field is not validated
+              <br><br/>
+              <aside class="bcls-aside bcls-aside--information">
+                The <code translate="No">prid</code> claim from the JWT will only be validated when the <code translate="No">prid_restriction</code> flag is enabled. Contact your account manager to set the flag.
+                <br><br/>
+                Playback Restrictions associated with the asset will still be validated. The <code translate="No">prid_restriction</code> flag will only affect the <code translate="No">prid</code> claim in the JWT.
+              </aside>
             </td>
           </tr>
            <tr>
@@ -1436,7 +1442,7 @@ func processEC256(kbs, bs []byte) {
 
 <hr>
 <div class="last-updated">
-  Page last updated on 10 Sep 2021
+  Page last updated on 13 Sep 2021
 </div>
 
 
