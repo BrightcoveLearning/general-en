@@ -820,7 +820,7 @@ echo "Public key to saved in $PUBLIC_TXT"
               <aside class="bcls-aside bcls-aside--information">
                 The <code translate="No">prid</code> claim from the JWT will only be validated when the <code translate="No">prid_restriction</code> flag is enabled. Contact your account manager to set the flag.
                 <br><br/>
-                Playback Restrictions associated with the asset will still be validated. The <code translate="No">prid_restriction</code> flag will only affect the <code translate="No">prid</code> claim in the JWT.
+                Playback Restrictions associated with the asset will still be validated. The <code translate="No">prid_restriction</code> flag only affects the <code translate="No">prid</code> claim in the JWT.
               </aside>
             </td>
           </tr>
@@ -836,7 +836,12 @@ echo "Public key to saved in $PUBLIC_TXT"
             <td>Array &lt;Strings&gt;</td>
             <td></td>
             <td></td>
-            <td>If present, this token will only authorize license fetching for a set of video IDs.</td>
+            <td>If present, this token will only authorize license fetching for a set of video IDs.
+              <br><br/>
+              <aside class="bcls-aside bcls-aside--information">
+                The <code translate="No">vids</code> claim from the JWT will only be validated when the <code translate="No">vids_restriction</code> flag is enabled. Contact your account manager to set the flag.
+              </aside>
+            </td>
           </tr>
           <tr>
             <td rowspan="4" style="background-color:#dbdbdb;font-weight: bold;border-bottom:1px solid #707070;">License Keys Protection</td>
@@ -1442,7 +1447,7 @@ func processEC256(kbs, bs []byte) {
 
 <hr>
 <div class="last-updated">
-  Page last updated on 13 Sep 2021
+  Page last updated on 22 Sep 2021
 </div>
 
 
