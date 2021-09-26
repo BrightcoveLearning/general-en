@@ -229,7 +229,10 @@ echo "Public key to saved in $PUBLIC_TXT"
             <td><code translate="No">exp</code></td>
             <td>Integer</td>
             <td></td>
-            <td>Time this token will no longer be valid, in seconds since the Epoch. Must be no more than 30 days from <code translate="No">iat</code></td>
+            <td>
+              Time this token will no longer be valid, in seconds since the Epoch. Must be no more than 30 days from <code translate="No">iat</code>
+              <aside class="bcls-aside bcls-aside--warning language-editable">Note that you can omit the <code translate="No">exp</code> to create a non-exiring token. Security experts strongly discourage creating non-expiring tokens, however.</aside>
+            </td>
           </tr>
           <tr>
             <td><code translate="No">iat</code></td>
@@ -360,7 +363,10 @@ echo "Public key to saved in $PUBLIC_TXT"
             <td>Integer</td>
             <td>Yes</td>
             <td></td>
-            <td>Time this token will no longer be valid, in seconds since the Epoch. Must be no more than 30 days from <code translate="No">iat</code></td>
+            <td>
+              Time this token will no longer be valid, in seconds since the Epoch. Must be no more than 30 days from <code translate="No">iat</code>
+              <aside class="bcls-aside bcls-aside--warning language-editable">Note that you can omit the <code translate="No">exp</code> to create a non-exiring token. Security experts strongly discourage creating non-expiring tokens, however.</aside>
+            </td>
           </tr>
           <tr>
             <td><code translate="No">iat</code></td>
