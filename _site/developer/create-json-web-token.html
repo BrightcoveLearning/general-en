@@ -645,6 +645,12 @@ echo "Public key to saved in $PUBLIC_TXT"
             <td>The account id that owns the content being played</td>
           </tr>
           <tr>
+            <td><code translate="No">iat</code></td>
+            <td>Integer</td>
+            <td></td>
+            <td>Time this token was issued, in seconds since the Epoch</td>
+          </tr>
+          <tr>
             <td><code translate="No">exp</code></td>
             <td>Integer</td>
             <td></td>
@@ -652,12 +658,6 @@ echo "Public key to saved in $PUBLIC_TXT"
               Time this token will no longer be valid, in seconds since the Epoch. Must be no more than 30 days from <code translate="No">iat</code>
               <aside class="bcls-aside bcls-aside--warning language-editable">Note that you can omit the <code translate="No">exp</code> to create a non-exiring token. Security experts strongly discourage creating non-expiring tokens, however.</aside>
             </td>
-          </tr>
-          <tr>
-            <td><code translate="No">iat</code></td>
-            <td>Integer</td>
-            <td></td>
-            <td>Time this token was issued, in seconds since the Epoch</td>
           </tr>
           <tr>
             <td><code translate="No">drules</code></td>
@@ -731,10 +731,10 @@ echo "Public key to saved in $PUBLIC_TXT"
       <pre class="line-numbers"><code class="language-json" translate="No">{
 // account id: JWT is only valid for this accounts
 "accid":"4590388311111",
-// expires: timestamp when JWT expires
-"exp":1577989732,
 // issued at: timestamp when the JWT was created
 "iat":1575484132,
+// expires: timestamp when JWT expires
+"exp":1577989732,
 // drules: list of delivery rule IDs to be applied
 "drules": ["0758da1f-e913-4f30-a587-181db8b1e4eb"],
 // content id: JWT is only valid for video ID
@@ -778,6 +778,13 @@ echo "Public key to saved in $PUBLIC_TXT"
             <td>The account id that owns the content being played</td>
           </tr>
           <tr>
+            <td><code translate="No">iat</code></td>
+            <td>Integer</td>
+            <td>Yes</td>
+            <td></td>
+            <td>Time this token was issued, in seconds since the Epoch</td>
+          </tr>
+          <tr>
             <td><code translate="No">exp</code></td>
             <td>Integer</td>
             <td>Yes</td>
@@ -786,13 +793,6 @@ echo "Public key to saved in $PUBLIC_TXT"
               Time this token will no longer be valid, in seconds since the Epoch. Must be no more than 30 days from <code translate="No">iat</code>
               <aside class="bcls-aside bcls-aside--warning language-editable">Note that you can omit the <code translate="No">exp</code> to create a non-exiring token. Security experts strongly discourage creating non-expiring tokens, however.</aside>
             </td>
-          </tr>
-          <tr>
-            <td><code translate="No">iat</code></td>
-            <td>Integer</td>
-            <td>Yes</td>
-            <td></td>
-            <td>Time this token was issued, in seconds since the Epoch</td>
           </tr>
           <tr>
             <td rowspan="5" style="background-color:#dbdbdb;font-weight: bold;border-bottom:1px solid #707070;">Playback Rights</td>
@@ -1026,13 +1026,13 @@ echo "Public key to saved in $PUBLIC_TXT"
           <td style="background-color: #D7F6E6;text-align: center;">Yes</td>
         </tr>
         <tr>
-          <td>exp</td>
+          <td>iat</td>
           <td style="background-color: #D7F6E6;text-align: center;">Yes</td>
           <td style="background-color: #D7F6E6;text-align: center;">Yes</td>
           <td style="background-color: #D7F6E6;text-align: center;">Yes</td>
         </tr>
         <tr>
-          <td>iat</td>
+          <td>exp</td>
           <td style="background-color: #D7F6E6;text-align: center;">Yes</td>
           <td style="background-color: #D7F6E6;text-align: center;">Yes</td>
           <td style="background-color: #D7F6E6;text-align: center;">Yes</td>
@@ -1166,7 +1166,7 @@ payload='{
 
 # Use jq to set the dynamic `iat` and `exp`
 # fields on the payload using the current time.
-# `iat` is set to now, and `exp` is now + 1 second.
+# `iat` is set to now, and `exp` is now + 1 hour. Note: 3600 seconds = 1 hour
 PAYLOAD=$(
 	echo "${payload}" | jq --arg time_str "$(date +%s)" \
 	'
