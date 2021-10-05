@@ -16,8 +16,6 @@
       url: '/general/brightcove-open-source-projects.html'
     - name: 'MPEG-DASH Video'
       url: '/general/mpeg-dash-video.html'
-    - name: 'Brightcove Forum Groups and Email Lists'
-      url: '/general/brightcove-forum-groups-and-email-lists.html'
 - section:
   name: 'Developers'
   url: '/developer/index.html'
