@@ -375,19 +375,6 @@ echo "Public key to saved in $PUBLIC_TXT"
               <aside class="bcls-aside bcls-aside--warning language-editable">Note that you can omit the <code translate="No">exp</code> to create a non-exiring token. Security experts strongly discourage creating non-expiring tokens, however.</aside>
             </td>
           </tr>
-          <tr>
-            <td rowspan="5" style="background-color:#dbdbdb;font-weight: bold;border-bottom:1px solid #707070;">Playback Rights</td>
-            <td><code translate="No">pkid</code></td>
-            <td>String</td>
-            <td></td>
-            <td></td>
-            <td>The public key id used to verify this token.
-              <br><br>
-              The public key registered with Brightcove's Playback Authorization Service must use the RSA key format. Previously created EC keys will not work.
-              <br><br>
-              This field is not required and not validated
-            </td>
-          </tr>
            <tr>
             <td><code translate="No">nbf</code></td>
             <td>Integer</td>
@@ -614,13 +601,6 @@ echo "Public key to saved in $PUBLIC_TXT"
         </tr>
         <tr>
           <td>exp</td>
-          <td style="background-color: #D7F6E6;text-align: center;">Yes</td>
-          <td style="background-color: #D7F6E6;text-align: center;">Yes</td>
-          <td style="background-color: #D7F6E6;text-align: center;">Yes</td>
-        </tr>
-        <tr>
-          <td rowspan="5">Playback Rights <sup><a href="#n1"> [1]</a></sup></td>
-          <td>pkid</td>
           <td style="background-color: #D7F6E6;text-align: center;">Yes</td>
           <td style="background-color: #D7F6E6;text-align: center;">Yes</td>
           <td style="background-color: #D7F6E6;text-align: center;">Yes</td>
