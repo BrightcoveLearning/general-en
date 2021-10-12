@@ -931,9 +931,12 @@ echo "Public key to saved in $PUBLIC_TXT"
             <td>String</td>
             <td></td>
             <td>Yes</td>
-            <td>Specifying the Session ID of the current stream allows you to control how a session is defined. By default, a session is defined as User-Agent (browser) + IP address + video id.
-              <br><br>
-                For example, you can loosen the definition of session to IP address + video ID
+            <td>
+              Specifying the Session ID of the current stream allows you to control how a session is defined. By default, a session is defined as User-Agent (browser) + IP address + video id.
+
+              <!-- <aside class="bcls-aside bcls-aside--warning language-editable">Note: you <strong>must</strong> override the default value of <code translate="No">sid</code> by using the claim to specify your <a href="https://apis.support.brightcove.com/playback-restrictions/guides/generic-stream-concurrency.html#correlator_identifier">correlator identifier</a> if you are creating a JWT for Generic Stream Concurrency.</aside> -->
+
+              <p>For example, you can loosen the definition of session to IP address + video ID</p>
             </td>
             <!-- <td>DRM only</td> -->
           </tr>
@@ -1432,7 +1435,7 @@ func processEC256(kbs, bs []byte) {
 
 <hr>
 <div class="last-updated">
-  Page last updated on 07 Oct 2021
+  Page last updated on 12 Oct 2021
 </div>
 
 
