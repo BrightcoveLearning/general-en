@@ -375,7 +375,7 @@ echo "Public key to saved in $PUBLIC_TXT"
               <aside class="bcls-aside bcls-aside--warning language-editable">Note that you can omit the <code translate="No">exp</code> to create a non-exiring token. Security experts strongly discourage creating non-expiring tokens, however.</aside>
             </td>
           </tr>
-           <tr>
+            <tr>
             <td><code translate="No">nbf</code></td>
             <td>Integer</td>
             <td></td>
@@ -398,7 +398,7 @@ echo "Public key to saved in $PUBLIC_TXT"
               </aside>
             </td>
           </tr>
-           <tr>
+            <tr>
             <td><code translate="No">tags</code></td>
             <td>Array &lt;Strings&gt;</td>
             <td></td>
@@ -679,6 +679,25 @@ echo "Public key to saved in $PUBLIC_TXT"
           <td style="text-align: center;">No</td>
           <td style="background-color: #D7F6E6;text-align: center;">Yes</td>
         </tr>
+        <!-- <tr>
+          <td rowspan="3">Generic Concurrent streams</td>
+          <td>uid</td>
+          <td style="text-align: center;">No</td>
+          <td style="text-align: center;">No</td>
+          <td style="background-color: #D7F6E6;text-align: center;">Yes</td>
+        </tr>
+        <tr>
+          <td>climit</td>
+          <td style="text-align: center;">No</td>
+          <td style="text-align: center;">No</td>
+          <td style="background-color: #D7F6E6;text-align: center;">Yes</td>
+        </tr>
+        <tr>
+          <td>sid</td>
+          <td style="text-align: center;">No</td>
+          <td style="text-align: center;">No</td>
+          <td style="background-color: #D7F6E6;text-align: center;">Yes</td>
+        </tr> -->
         <tr>
           <td rowspan="2">Device registration</td>
           <td>uid</td>
@@ -723,7 +742,7 @@ HEADER='{
 }'
 
 payload='{
-	"accid": "{your_account_id}"
+	"accid": "<span class="bcls-input">{your_account_id}</span>"
 }'
 
 # Use jq to set the dynamic `iat` and `exp`
