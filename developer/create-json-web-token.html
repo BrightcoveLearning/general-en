@@ -6,7 +6,7 @@ parent: Developers
 
 <h1>{{ page.title }}</h1>
 <article class="bcls-article">
-  <summary>{{ page.description }}</summary> 
+  <summary>{{ page.description }}</summary>
 
   <section class="bcls-section">
     <h2 id="Introduction">Introduction</h2>
@@ -202,51 +202,51 @@ echo "Public key to saved in $PUBLIC_TXT"
     </p>
   </section>
 
-    <section class="bcls-section">
-      <h2 id="Claims_for_Static_URL_Delivery">Claims for Static URL Delivery</h2>
-      <p>
-        The following claims can be used with Brightcove's Static URL Delivery.
-      </p>
-      <aside class="bcls-aside bcls-aside--tip">Notice that none of the claims are required for Static URL Delivery.</aside>
+  <section class="bcls-section">
+    <h2 id="Claims_for_Static_URL_Delivery">Claims for Static URL Delivery</h2>
+    <p>
+      The following claims can be used with Brightcove's Static URL Delivery.
+    </p>
+    <aside class="bcls-aside bcls-aside--tip">Notice that none of the claims are required for Static URL Delivery.</aside>
 
-      <table class="bcls-table">
-        <thead class="bcls-table__head">
-          <tr>
-            <th>Field</th>
-            <th>Type</th>
-            <th>Required</th>
-            <th>Description</th>
-          </tr>
-        </thead>
-        <tbody class="bcls-table__body">
-          <tr>
-            <td><code translate="No">accid</code></td>
-            <td>String</td>
-            <td></td>
-            <td>The account id that owns the content being played</td>
-          </tr>
-          <tr>
-            <td><code translate="No">iat</code></td>
-            <td>Integer</td>
-            <td></td>
-            <td>Time this token was issued, in seconds since the Epoch</td>
-          </tr>
-          <tr>
-            <td><code translate="No">exp</code></td>
-            <td>Integer</td>
-            <td></td>
-            <td>
-              Time this token will no longer be valid, in seconds since the Epoch. Must be no more than 30 days from <code translate="No">iat</code>
-              <aside class="bcls-aside bcls-aside--warning language-editable">Note that you can omit the <code translate="No">exp</code> to create a non-exiring token. Security experts strongly discourage creating non-expiring tokens, however.</aside>
-            </td>
-          </tr>
-          <tr>
-            <td><code translate="No">drules</code></td>
-            <td>String[]</td>
-            <td></td>
-            <td>List of delivery rule action IDs to apply. For details, see the <a href="https://apis.support.brightcove.com/delivery-rules/getting-started/implementing-delivery-rules.html">Implementing Delivery Rules</a> document. <br/>
-              If the <code translate="No">config_id</code> query parameter is also set it will be ignored, as this claim overrides it.
-              <!-- <br><br>
+    <table class="bcls-table">
+      <thead class="bcls-table__head">
+        <tr>
+          <th>Field</th>
+          <th>Type</th>
+          <th>Required</th>
+          <th>Description</th>
+        </tr>
+      </thead>
+      <tbody class="bcls-table__body">
+        <tr>
+          <td><code translate="No">accid</code></td>
+          <td>String</td>
+          <td></td>
+          <td>The account id that owns the content being played</td>
+        </tr>
+        <tr>
+          <td><code translate="No">iat</code></td>
+          <td>Integer</td>
+          <td></td>
+          <td>Time this token was issued, in seconds since the Epoch</td>
+        </tr>
+        <tr>
+          <td><code translate="No">exp</code></td>
+          <td>Integer</td>
+          <td></td>
+          <td>
+            Time this token will no longer be valid, in seconds since the Epoch. Must be no more than 30 days from <code translate="No">iat</code>
+            <aside class="bcls-aside bcls-aside--warning language-editable">Note that you can omit the <code translate="No">exp</code> to create a non-exiring token. Security experts strongly discourage creating non-expiring tokens, however.</aside>
+          </td>
+        </tr>
+        <tr>
+          <td><code translate="No">drules</code></td>
+          <td>String[]</td>
+          <td></td>
+          <td>List of delivery rule action IDs to apply. For details, see the <a href="https://apis.support.brightcove.com/delivery-rules/getting-started/implementing-delivery-rules.html">Implementing Delivery Rules</a> document. <br />
+            If the <code translate="No">config_id</code> query parameter is also set it will be ignored, as this claim overrides it.
+            <!-- <br><br>
               <aside class="bcls-aside bcls-aside--information">
                 Setting this claim in the JWT overrides:
                 <ul>
@@ -254,62 +254,62 @@ echo "Public key to saved in $PUBLIC_TXT"
                   <li>Any other rule ids set at the account level</li>
                 </ul>
               </aside> -->
-            </td>
-          </tr>
-          <tr>
-            <td><code translate="No">conid</code></td>
-            <td>String</td>
-            <td></td>
-            <td>If present, this token will only authorize license fetching for a specific Video Cloud video ID.
-              <br><br>
-              Must be a valid video ID. Note that reference ID is not supported.
-            </td>
-          </tr>
-          <tr>
-            <td><code translate="No">pro</code></td>
-            <td>String</td>
-            <td></td>
-            <td>Specifies a protection type in the case where multiple are available for a single video.
-              <br><br>
-              Values:
-              <ul>
-                <li>
-                  "" (default for clear content)
-                </li>
-                <li>
-                  "aes128"
-                </li>
-                <li>
-                  "widevine"
-                </li>
-                <li>
-                  "playready"
-                </li>
-                <li>
-                  "fairplay"
-                </li>
-              </ul>
-            </td>
-          </tr>
-          <tr>
-            <td><code translate="No">vod</code></td>
-            <td>Object</td>
-            <td></td>
-            <td>Contains specific configuration options for Video-On-Demand.</td>
-          </tr>
-          <tr>
-            <td><code translate="No">vod.ssai</code></td>
-            <td>String</td>
-            <td></td>
-            <td>Your Server-Side Ad Insertion (SSAI) configuration id. This claim is <strong>required</strong> to retrieve either an HLS or a DASH VMAP.</td>
-          </tr>
-        </tbody>
-      </table>
-      <br>
-      <p>
-        Here is an example of the <span translate="No">JSON Web Token</span> (JWT) claims that you might use:
-      </p>
-      <pre class="line-numbers"><code class="language-json" translate="No">{
+          </td>
+        </tr>
+        <tr>
+          <td><code translate="No">conid</code></td>
+          <td>String</td>
+          <td></td>
+          <td>If present, this token will only authorize license fetching for a specific Video Cloud video ID.
+            <br><br>
+            Must be a valid video ID. Note that reference ID is not supported.
+          </td>
+        </tr>
+        <tr>
+          <td><code translate="No">pro</code></td>
+          <td>String</td>
+          <td></td>
+          <td>Specifies a protection type in the case where multiple are available for a single video.
+            <br><br>
+            Values:
+            <ul>
+              <li>
+                "" (default for clear content)
+              </li>
+              <li>
+                "aes128"
+              </li>
+              <li>
+                "widevine"
+              </li>
+              <li>
+                "playready"
+              </li>
+              <li>
+                "fairplay"
+              </li>
+            </ul>
+          </td>
+        </tr>
+        <tr>
+          <td><code translate="No">vod</code></td>
+          <td>Object</td>
+          <td></td>
+          <td>Contains specific configuration options for Video-On-Demand.</td>
+        </tr>
+        <tr>
+          <td><code translate="No">vod.ssai</code></td>
+          <td>String</td>
+          <td></td>
+          <td>Your Server-Side Ad Insertion (SSAI) configuration id. This claim is <strong>required</strong> to retrieve either an HLS or a DASH VMAP.</td>
+        </tr>
+      </tbody>
+    </table>
+    <br>
+    <p>
+      Here is an example of the <span translate="No">JSON Web Token</span> (JWT) claims that you might use:
+    </p>
+    <pre class="line-numbers"><code class="language-json" translate="No">{
 // account id: JWT is only valid for this accounts
 "accid":"4590388311111",
 // issued at: timestamp when the JWT was created
@@ -328,258 +328,258 @@ echo "Public key to saved in $PUBLIC_TXT"
 "ssai":"efcc566-b44b-5a77-a0e2-d33333333333"
 }
 }</code></pre>
-    </section>
+  </section>
 
-    <section class="bcls-section">
-      <h2 id="Claims_for_Playback_Restrictions">Claims for Playback Restrictions</h2>
-      <p>
-        The following claims can be used with <a href="https://apis.support.brightcove.com/playback-restrictions/getting-started/overview-playback-restrictions.html">Brightcove Playback Restrictions</a>.
-      </p>
-      <aside class="bcls-aside bcls-aside--information">When using Playback Rights with DRM, you can not use AES-128.</aside>
-      <aside class="bcls-aside bcls-aside--information">The General required fields are required for all features.</aside> 
+  <section class="bcls-section">
+    <h2 id="Claims_for_Playback_Restrictions">Claims for Playback Restrictions</h2>
+    <p>
+      The following claims can be used with <a href="https://apis.support.brightcove.com/playback-restrictions/getting-started/overview-playback-restrictions.html">Brightcove Playback Restrictions</a>.
+    </p>
+    <aside class="bcls-aside bcls-aside--information">When using Playback Rights with DRM, you can not use AES-128.</aside>
+    <aside class="bcls-aside bcls-aside--information">The General required fields are required for all features.</aside>
 
-      <table class="bcls-table">
-        <thead class="bcls-table__head">
-          <tr>
-            <th style="border-bottom:1px solid #707070;">Feature</th>
-            <th style="border-bottom:1px solid #707070;">Field</th>
-            <th style="border-bottom:1px solid #707070;">Type</th>
-            <th style="border-bottom:1px solid #707070;">Required for feature</th>
-            <th style="border-bottom:1px solid #707070;">DRM only</th>
-            <th style="border-bottom:1px solid #707070;">Description</th>
-          </tr>
-        </thead>
-        <tbody class="bcls-table__body">
-          <tr>
-            <td rowspan="3" style="background-color:#dbdbdb;font-weight: bold;border-bottom:1px solid #707070;">General</td>
-            <td><code translate="No">accid</code></td>
-            <td>String</td>
-            <td>Yes</td>
-            <td></td>
-            <td>The account id that owns the content being played</td>
-          </tr>
-          <tr>
-            <td><code translate="No">iat</code></td>
-            <td>Integer</td>
-            <td>Yes</td>
-            <td></td>
-            <td>Time this token was issued, in seconds since the Epoch</td>
-          </tr>
-          <tr>
-            <td><code translate="No">exp</code></td>
-            <td>Integer</td>
-            <td>Yes</td>
-            <td></td>
-            <td>
-              Time this token will no longer be valid, in seconds since the Epoch. Must be no more than 30 days from <code translate="No">iat</code>
-              <aside class="bcls-aside bcls-aside--warning language-editable">Note that you can omit the <code translate="No">exp</code> to create a non-exiring token. Security experts strongly discourage creating non-expiring tokens, however.</aside>
-            </td>
-          </tr>
-            <tr>
-            <td><code translate="No">nbf</code></td>
-            <td>Integer</td>
-            <td></td>
-            <td></td>
-            <td>Time this token will begin being valid, in seconds since the Epoch</td>
-          </tr>
-          <tr>
-            <td><code translate="No">prid</code></td>
-            <td>String</td>
-            <td></td>
-            <td></td>
-            <td>A <code translate="No">playback_rights_id</code>. Used to override the id set in the catalog for this video
-              <br><br>
-              This field is not validated
-              <br><br/>
-              <aside class="bcls-aside bcls-aside--information">
-                The <code translate="No">prid</code> claim from the JWT will only be validated when the <code translate="No">prid_restriction</code> flag is enabled. Contact your account manager to set the flag.
-                <br><br/>
-                Playback Restrictions associated with the asset will still be validated. The <code translate="No">prid_restriction</code> flag only affects the <code translate="No">prid</code> claim in the JWT.
-              </aside>
-            </td>
-          </tr>
-            <tr>
-            <td><code translate="No">tags</code></td>
-            <td>Array &lt;Strings&gt;</td>
-            <td></td>
-            <td></td>
-            <td>if present, this token is only valid for videos that have the listed tags values. Only these videos are authorized for playback.</td>
-          </tr>
-          <tr>
-            <td><code translate="No">vids</code></td>
-            <td>Array &lt;Strings&gt;</td>
-            <td></td>
-            <td></td>
-            <td>If present, this token will only authorize license fetching for a set of video IDs.
-              <br><br/>
-              <aside class="bcls-aside bcls-aside--information">
-                The <code translate="No">vids</code> claim from the JWT will only be validated when the <code translate="No">vids_restriction</code> flag is enabled. Contact your account manager to set the flag.
-              </aside>
-            </td>
-          </tr>
-          <tr>
-            <td rowspan="4" style="background-color:#dbdbdb;font-weight: bold;border-bottom:1px solid #707070;">License Keys Protection</td>
-            <td><code translate="No">ua</code></td>
-            <td>String</td>
-            <td></td>
-            <td></td>
-            <td>If present, this token will only be valid for requests from this User-Agent.
-              <br><br>
-              This field does not have to follow any particular format.
-              <br>
-              You must have <strong>License Keys Protection</strong> enabled.
-            </td>
-          </tr>
-          <tr>
-            <td><code translate="No">conid</code></td>
-            <td>String</td>
-            <td></td>
-            <td></td>
-            <td>If present, this token will only authorize license fetching for a specific Video Cloud video id.
-              <br><br>
-              Must be a valid video id
-              <br>
-              You must have <strong>License Keys Protection</strong> enabled.
-            </td>
-          </tr>
-          <tr>
-            <td><code translate="No">maxip</code></td>
-            <td>Integer</td>
-            <td>Yes</td>
-            <td></td>
-            <td>If present, this token will only be able to be used by this number different IP addresses. 
-              <br><br>
-              <strong>Required</strong> for session tracking; HLSe (AES-128) only
-              <br>
-              You must have <strong>License Keys Protection</strong> enabled.
-            </td>
-          </tr>
-          <tr>
-            <td><code translate="No">maxu</code></td>
-            <td>Integer</td>
-            <td>Yes</td>
-            <td></td>
-            <td>
-              If present, this token will only be valid for this number of license requests.
-              <br><br>
-              <ul>
-                <li>
-                  For HLSe, players will make multiple requests when playing a video, typically one per rendition. The <code translate="No">maxu</code> must be set high enough to account for these additional requests.
-                </li>
-                <!-- <li>
+    <table class="bcls-table">
+      <thead class="bcls-table__head">
+        <tr>
+          <th style="border-bottom:1px solid #707070;">Feature</th>
+          <th style="border-bottom:1px solid #707070;">Field</th>
+          <th style="border-bottom:1px solid #707070;">Type</th>
+          <th style="border-bottom:1px solid #707070;">Required for feature</th>
+          <th style="border-bottom:1px solid #707070;">DRM only</th>
+          <th style="border-bottom:1px solid #707070;">Description</th>
+        </tr>
+      </thead>
+      <tbody class="bcls-table__body">
+        <tr>
+          <td rowspan="3" style="background-color:#dbdbdb;font-weight: bold;border-bottom:1px solid #707070;">General</td>
+          <td><code translate="No">accid</code></td>
+          <td>String</td>
+          <td>Yes</td>
+          <td></td>
+          <td>The account id that owns the content being played</td>
+        </tr>
+        <tr>
+          <td><code translate="No">iat</code></td>
+          <td>Integer</td>
+          <td>Yes</td>
+          <td></td>
+          <td>Time this token was issued, in seconds since the Epoch</td>
+        </tr>
+        <tr>
+          <td><code translate="No">exp</code></td>
+          <td>Integer</td>
+          <td>Yes</td>
+          <td></td>
+          <td>
+            Time this token will no longer be valid, in seconds since the Epoch. Must be no more than 30 days from <code translate="No">iat</code>
+            <aside class="bcls-aside bcls-aside--warning language-editable">Note that you can omit the <code translate="No">exp</code> to create a non-exiring token. Security experts strongly discourage creating non-expiring tokens, however.</aside>
+          </td>
+        </tr>
+        <tr>
+          <td><code translate="No">nbf</code></td>
+          <td>Integer</td>
+          <td></td>
+          <td></td>
+          <td>Time this token will begin being valid, in seconds since the Epoch</td>
+        </tr>
+        <tr>
+          <td><code translate="No">prid</code></td>
+          <td>String</td>
+          <td></td>
+          <td></td>
+          <td>A <code translate="No">playback_rights_id</code>. Used to override the id set in the catalog for this video
+            <br><br>
+            This field is not validated
+            <br><br />
+            <aside class="bcls-aside bcls-aside--information">
+              The <code translate="No">prid</code> claim from the JWT will only be validated when the <code translate="No">prid_restriction</code> flag is enabled. Contact your account manager to set the flag.
+              <br><br />
+              Playback Restrictions associated with the asset will still be validated. The <code translate="No">prid_restriction</code> flag only affects the <code translate="No">prid</code> claim in the JWT.
+            </aside>
+          </td>
+        </tr>
+        <tr>
+          <td><code translate="No">tags</code></td>
+          <td>Array &lt;Strings&gt;</td>
+          <td></td>
+          <td></td>
+          <td>if present, this token is only valid for videos that have the listed tags values. Only these videos are authorized for playback.</td>
+        </tr>
+        <tr>
+          <td><code translate="No">vids</code></td>
+          <td>Array &lt;Strings&gt;</td>
+          <td></td>
+          <td></td>
+          <td>If present, this token will only authorize license fetching for a set of video IDs.
+            <br><br />
+            <aside class="bcls-aside bcls-aside--information">
+              The <code translate="No">vids</code> claim from the JWT will only be validated when the <code translate="No">vids_restriction</code> flag is enabled. Contact your account manager to set the flag.
+            </aside>
+          </td>
+        </tr>
+        <tr>
+          <td rowspan="4" style="background-color:#dbdbdb;font-weight: bold;border-bottom:1px solid #707070;">License Keys Protection</td>
+          <td><code translate="No">ua</code></td>
+          <td>String</td>
+          <td></td>
+          <td></td>
+          <td>If present, this token will only be valid for requests from this User-Agent.
+            <br><br>
+            This field does not have to follow any particular format.
+            <br>
+            You must have <strong>License Keys Protection</strong> enabled.
+          </td>
+        </tr>
+        <tr>
+          <td><code translate="No">conid</code></td>
+          <td>String</td>
+          <td></td>
+          <td></td>
+          <td>If present, this token will only authorize license fetching for a specific Video Cloud video id.
+            <br><br>
+            Must be a valid video id
+            <br>
+            You must have <strong>License Keys Protection</strong> enabled.
+          </td>
+        </tr>
+        <tr>
+          <td><code translate="No">maxip</code></td>
+          <td>Integer</td>
+          <td>Yes</td>
+          <td></td>
+          <td>If present, this token will only be able to be used by this number different IP addresses.
+            <br><br>
+            <strong>Required</strong> for session tracking; HLSe (AES-128) only
+            <br>
+            You must have <strong>License Keys Protection</strong> enabled.
+          </td>
+        </tr>
+        <tr>
+          <td><code translate="No">maxu</code></td>
+          <td>Integer</td>
+          <td>Yes</td>
+          <td></td>
+          <td>
+            If present, this token will only be valid for this number of license requests.
+            <br><br>
+            <ul>
+              <li>
+                For HLSe, players will make multiple requests when playing a video, typically one per rendition. The <code translate="No">maxu</code> must be set high enough to account for these additional requests.
+              </li>
+              <!-- <li>
                   For DRM, one license request is made per playback
                 </li> -->
+            </ul>
+            <strong>Required</strong> for session tracking; HLSe (AES-128) only
+            <br>
+            You must have <strong>License Keys Protection</strong> enabled.
+          </td>
+        </tr>
+        <tr>
+          <td rowspan="4" style="background-color:#dbdbdb;font-weight: bold;border-bottom:1px solid #707070;">Concurrent streams</td>
+          <td><code translate="No">uid</code></td>
+          <td>String</td>
+          <td>Yes</td>
+          <td>Yes</td>
+          <td>The user id of the end viewer. This field is used to correlate multiple sessions to enforce Stream Concurrency.
+            <br><br>
+            <strong>Required</strong> for session concurrency
+          </td>
+          <!-- <td>DRM only</td> -->
+        </tr>
+        <tr>
+          <td><code translate="No">climit</code></td>
+          <td>Integer</td>
+          <td>Yes</td>
+          <td>Yes</td>
+          <td>When this field is included, it enables Stream Concurrency checking along with license renewal requests. This value indicates the number of concurrent watchers allowed.
+            <br><br>
+            <strong>Required</strong> for session concurrency
+          </td>
+          <!-- <td>DRM only</td> -->
+        </tr>
+        <tr>
+          <td><code translate="No">cbeh</code></td>
+          <td>String</td>
+          <td></td>
+          <td>Yes</td>
+          <td>Set the value to <code translate="No">BLOCK_NEW</code> to enable concurrent stream limits to block any new request, even from the same user, when the maximum number of streams is reached.
+            <br><br>
+            Set the value to <code translate="No">BLOCK_NEW_USER</code> to block any new request only from a new user when the maximum number of streams is reached.
+            <br><br>
+            The default blocks the oldest stream when the maximum number of streams is reached.
+          </td>
+          <!-- <td>DRM only</td> -->
+        </tr>
+        <tr>
+          <td><code translate="No">sid</code></td>
+          <td>String</td>
+          <td></td>
+          <td>Yes</td>
+          <td>
+            Specifying the Session ID of the current stream allows you to control how a session is defined. By default, a session is defined as User-Agent (browser) + IP address + video id.
+
+            <!-- <aside class="bcls-aside bcls-aside--warning language-editable">Note: you <strong>must</strong> override the default value of <code translate="No">sid</code> by using the claim to specify your <a href="https://apis.support.brightcove.com/playback-restrictions/guides/generic-stream-concurrency.html#correlator_identifier">correlator identifier</a> if you are creating a JWT for Generic Stream Concurrency.</aside> -->
+
+            <p>For example, you can loosen the definition of session to IP address + video ID</p>
+          </td>
+          <!-- <td>DRM only</td> -->
+        </tr>
+        <tr>
+          <td rowspan="2" style="background-color:#dbdbdb;font-weight: bold;border-bottom:1px solid #707070;">Device limits</td>
+          <td><code translate="No">uid</code></td>
+          <td>String</td>
+          <td>Yes</td>
+          <td>Yes</td>
+          <td>The user id of the end viewer. This field is used to correlate multiple sessions to enforce Stream Concurrency.
+            <br><br>
+            <strong>Required</strong> for device registration
+          </td>
+          <!-- <td>DRM only</td> -->
+        </tr>
+        <tr>
+          <td><code translate="No">dlimit</code></td>
+          <td>Integer</td>
+          <td>Yes</td>
+          <td>Yes</td>
+          <td>When this field is included, it controls how many devices can be associated with the specified user (<code translate="No">uid</code>). Value must be &gt; <code translate="No">0</code>.
+            <br><br>
+            Previously allowed devices will continue to operate if the <code translate="No">dlimit</code> value is dropped in later requests.
+            <br><br>
+            Example: if value is set to <code translate="No">3</code>, the user can play on devices A, B, & C (all would be allowed). Trying to play on device D would be denied.
+            <br><br>
+            If value is changed to <code translate="No">1</code>, the user can still play on all 3 devices A, B, & C, unless the devices are manually revoked by managing devices with the <a href="https://apis.support.brightcove.com/playback-restrictions/references/playback-rights/reference.html">Playback Rights API</a>.
+            <br><br>
+            <strong>Required</strong> for device registration
+          </td>
+          <!-- <td>DRM only</td> -->
+        </tr>
+        <tr>
+          <td rowspan="1" style="background-color:#dbdbdb;font-weight: bold;border-bottom:1px solid #707070;">Delivery Rules</td>
+          <td><code translate="No">drules</code></td>
+          <td>String[]</td>
+          <td></td>
+          <td></td>
+          <td>List of delivery rule action IDs to apply. For details, see the <a href="https://apis.support.brightcove.com/delivery-rules/getting-started/implementing-delivery-rules.html">Implementing Delivery Rules</a> document.
+            <!-- If the <code translate="No">config_id</code> query parameter is also set it will be ignored, as this claim overrides it. -->
+            <br><br />
+            <aside class="bcls-aside bcls-aside--information">
+              Setting this claim in the JWT overrides:
+              <ul>
+                <li>The <code translate="No">config_id</code> query parameter</li>
+                <li>Any other rule ids set at the account level</li>
               </ul>
-              <strong>Required</strong> for session tracking; HLSe (AES-128) only
-              <br>
-              You must have <strong>License Keys Protection</strong> enabled.
-            </td>
-          </tr>
-          <tr>
-            <td rowspan="4" style="background-color:#dbdbdb;font-weight: bold;border-bottom:1px solid #707070;">Concurrent streams</td>
-            <td><code translate="No">uid</code></td>
-            <td>String</td>
-            <td>Yes</td>
-            <td>Yes</td>
-            <td>The user id of the end viewer. This field is used to correlate multiple sessions to enforce Stream Concurrency.
-              <br><br>
-              <strong>Required</strong> for session concurrency
-            </td>
-            <!-- <td>DRM only</td> -->
-          </tr>
-          <tr>
-            <td><code translate="No">climit</code></td>
-            <td>Integer</td>
-            <td>Yes</td>
-            <td>Yes</td>
-            <td>When this field is included, it enables Stream Concurrency checking along with license renewal requests. This value indicates the number of concurrent watchers allowed.
-              <br><br>
-              <strong>Required</strong> for session concurrency
-            </td>
-            <!-- <td>DRM only</td> -->
-          </tr>
-          <tr>
-            <td><code translate="No">cbeh</code></td>
-            <td>String</td>
-            <td></td>
-            <td>Yes</td>
-            <td>Set the value to <code translate="No">BLOCK_NEW</code> to enable concurrent stream limits to block any new request, even from the same user, when the maximum number of streams is reached.
-              <br><br>
-              Set the value to <code translate="No">BLOCK_NEW_USER</code> to block any new request only from a new user when the maximum number of streams is reached.
-              <br><br>
-              The default blocks the oldest stream when the maximum number of streams is reached.
-            </td>
-            <!-- <td>DRM only</td> -->
-          </tr>   
-          <tr>
-            <td><code translate="No">sid</code></td>
-            <td>String</td>
-            <td></td>
-            <td>Yes</td>
-            <td>
-              Specifying the Session ID of the current stream allows you to control how a session is defined. By default, a session is defined as User-Agent (browser) + IP address + video id.
+            </aside>
+          </td>
+        </tr>
+      </tbody>
+    </table>
 
-              <!-- <aside class="bcls-aside bcls-aside--warning language-editable">Note: you <strong>must</strong> override the default value of <code translate="No">sid</code> by using the claim to specify your <a href="https://apis.support.brightcove.com/playback-restrictions/guides/generic-stream-concurrency.html#correlator_identifier">correlator identifier</a> if you are creating a JWT for Generic Stream Concurrency.</aside> -->
-
-              <p>For example, you can loosen the definition of session to IP address + video ID</p>
-            </td>
-            <!-- <td>DRM only</td> -->
-          </tr>
-          <tr>
-            <td rowspan="2" style="background-color:#dbdbdb;font-weight: bold;border-bottom:1px solid #707070;">Device limits</td>
-            <td><code translate="No">uid</code></td>
-            <td>String</td>
-            <td>Yes</td>
-            <td>Yes</td>
-            <td>The user id of the end viewer. This field is used to correlate multiple sessions to enforce Stream Concurrency.
-              <br><br>
-              <strong>Required</strong> for device registration
-            </td>
-            <!-- <td>DRM only</td> -->
-          </tr>
-          <tr>
-            <td><code translate="No">dlimit</code></td>
-            <td>Integer</td>
-            <td>Yes</td>
-            <td>Yes</td>
-            <td>When this field is included, it controls how many devices can be associated with the specified user (<code translate="No">uid</code>). Value must be &gt; <code translate="No">0</code>.
-              <br><br>
-              Previously allowed devices will continue to operate if the <code translate="No">dlimit</code> value is dropped in later requests.
-              <br><br>
-              Example: if value is set to <code translate="No">3</code>, the user can play on devices A, B, & C (all would be allowed). Trying to play on device D would be denied.
-              <br><br>
-              If value is changed to <code translate="No">1</code>, the user can still play on all 3 devices A, B, & C, unless the devices are manually revoked by managing devices with the <a href="https://apis.support.brightcove.com/playback-rights/references/devices-api/reference.htmlc/#operation/GetDevices">Playback Rights API</a>.
-              <br><br>
-              <strong>Required</strong> for device registration
-            </td>
-            <!-- <td>DRM only</td> -->
-          </tr>
-          <tr>
-            <td rowspan="1" style="background-color:#dbdbdb;font-weight: bold;border-bottom:1px solid #707070;">Delivery Rules</td>
-            <td><code translate="No">drules</code></td>
-            <td>String[]</td>
-            <td></td>
-            <td></td>
-            <td>List of delivery rule action IDs to apply. For details, see the <a href="https://apis.support.brightcove.com/delivery-rules/getting-started/implementing-delivery-rules.html">Implementing Delivery Rules</a> document.
-              <!-- If the <code translate="No">config_id</code> query parameter is also set it will be ignored, as this claim overrides it. -->
-              <br><br/>
-              <aside class="bcls-aside bcls-aside--information">
-                Setting this claim in the JWT overrides:
-                <ul>
-                  <li>The <code translate="No">config_id</code> query parameter</li>
-                  <li>Any other rule ids set at the account level</li>
-                </ul>
-              </aside>
-            </td>
-          </tr>
-        </tbody>
-      </table>
-
-      <h3>Claims by tier</h3>
-      <p>Several security packages are available for Playback Restrictions. For details, see the <a href="https://apis.support.brightcove.com/playback-restrictions/getting-started/overview-playback-restrictions.html">Overview: Brightcove Playback Restrictions</a> document.</p>
-      <p>Here are the claims available for each Playback Restriction package:</p>
+    <h3>Claims by tier</h3>
+    <p>Several security packages are available for Playback Restrictions. For details, see the <a href="https://apis.support.brightcove.com/playback-restrictions/getting-started/overview-playback-restrictions.html">Overview: Brightcove Playback Restrictions</a> document.</p>
+    <p>Here are the claims available for each Playback Restriction package:</p>
     <table class="bcls-table">
-      <thead class="bcls-table__head"> 
+      <thead class="bcls-table__head">
         <tr>
           <th>Feature</th>
           <th>Claims</th>
@@ -716,28 +716,28 @@ echo "Public key to saved in $PUBLIC_TXT"
         </tr>
       </tbody>
     </table>
-    <br/>
+    <br />
     <aside class="bcls-aside bcls-aside--information">
       <p>The following note refers to the table above.</p>
-      
+
       <p id="n1"><sup>[1]</sup> All claims associated with Playback Rights are optional. So, you do not need to create a JWT to use Playback Rights.</p>
       <p>In Video Cloud Studio Admin, when creating new <strong>Playback Rights</strong>, you can select <strong>Allow Playback Right without token</strong>. </p>
-      </aside>
-    </section>
+    </aside>
+  </section>
 
-    <section class="bcls-section">
-      <h2 id="Generate_a_token">Generate a token</h2>
-      <p>
-        Libraries are commonly available to generate JWT tokens. For details, see the <a href="https://jwt.io/" translate="No">JSON Web Tokens</a> site.
-      </p>
-      <p>An <a href="https://www.epochconvert.com/">Epoch & Unix timestamp conversion tool</a> may be helpful when working with time fields.</p>
-      <h4>
-        Example bash script:
-      </h4>
-      <p>
-        Example script to generate the JWT token:
-      </p>
-      <pre class="line-numbers"><code class="language-bash" translate="No">#! /usr/bin/env bash
+  <section class="bcls-section">
+    <h2 id="Generate_a_token">Generate a token</h2>
+    <p>
+      Libraries are commonly available to generate JWT tokens. For details, see the <a href="https://jwt.io/" translate="No">JSON Web Tokens</a> site.
+    </p>
+    <p>An <a href="https://www.epochconvert.com/">Epoch & Unix timestamp conversion tool</a> may be helpful when working with time fields.</p>
+    <h4>
+      Example bash script:
+    </h4>
+    <p>
+      Example script to generate the JWT token:
+    </p>
+    <pre class="line-numbers"><code class="language-bash" translate="No">#! /usr/bin/env bash
 # Static header fields.
 HEADER='{
 	"type": "JWT",
@@ -771,19 +771,19 @@ SIGNATURE=$(echo -n "$UNSIGNED_JWT" | rs_sign | b64enc)
 
 echo "$UNSIGNED_JWT.$SIGNATURE"
 </code></pre>
-      <p>
-        Run the script:
-      </p>
-      <pre><code class="language-bash" translate="No">$ bash jwtgen.sh
+    <p>
+      Run the script:
+    </p>
+    <pre><code class="language-bash" translate="No">$ bash jwtgen.sh
 </code></pre>
-      <br>
+    <br>
 
-      <details>
-        <summary>
-          Example using <span translate="No">Go</span>
-        </summary>
-        <p>Here is an example of a reference <span translate="No">Go</span> implementation (as a cli tool) for generating tokens without the use of any 3rd party library:</p>
-        <pre class="line-numbers"><code class="language-bash" translate="No">package main
+    <details>
+      <summary>
+        Example using <span translate="No">Go</span>
+      </summary>
+      <p>Here is an example of a reference <span translate="No">Go</span> implementation (as a cli tool) for generating tokens without the use of any 3rd party library:</p>
+      <pre class="line-numbers"><code class="language-bash" translate="No">package main
 
 import (
 	"crypto"
@@ -962,25 +962,25 @@ func processEC256(kbs, bs []byte) {
 	fmt.Println(message + "." + sig)
 }
 </code></pre>
-</details>
+    </details>
 
-      <h4>Results</h4>
-      <p>
-        Here is an example of a decoded token using <a href="https://jwt.io/">https://JWT.io</a> specifying the full set of claims:
-      </p>
-      <p>
-        HEADER:
-      </p>
-<pre class="line-numbers"><code class="language-json" translate="No">{
+    <h4>Results</h4>
+    <p>
+      Here is an example of a decoded token using <a href="https://jwt.io/">https://JWT.io</a> specifying the full set of claims:
+    </p>
+    <p>
+      HEADER:
+    </p>
+    <pre class="line-numbers"><code class="language-json" translate="No">{
   "alg": "RS256",
   "type": "JWT"
 }
 </code></pre>
 
-      <p>
-        PAYLOAD:
-      </p>
-<pre class="line-numbers"><code class="language-json" translate="No">{
+    <p>
+      PAYLOAD:
+    </p>
+    <pre class="line-numbers"><code class="language-json" translate="No">{
   "accid": "1100863500123",
   "conid": "51141412620123",
   "exp": 1554200832,
@@ -990,18 +990,18 @@ func processEC256(kbs, bs []byte) {
   "ua": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_14_3) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/73.0.3683.86 Safari/537.36"
 }
 </code></pre>
-    </section>
+  </section>
 
-    <section class="bcls-section">
-      <h2 id="Test_playback">Test playback</h2>
+  <section class="bcls-section">
+    <h2 id="Test_playback">Test playback</h2>
 
-      <p>Although not required, you may want to test video playback before configuring a player.</p>
-      <p>
-        Request playback:
-      </p>
-      <pre class="line-numbers"><code class="language-http" translate="No">curl -X GET \
+    <p>Although not required, you may want to test video playback before configuring a player.</p>
+    <p>
+      Request playback:
+    </p>
+    <pre class="line-numbers"><code class="language-http" translate="No">curl -X GET \
  -H 'Authorization: Bearer {JWT}' \
  https://edge-auth.api.brightcove.com/playback/v1/accounts/{your_account_id}/videos/{your_video_id}
 </code></pre>
-</section>
+  </section>
 </article>
