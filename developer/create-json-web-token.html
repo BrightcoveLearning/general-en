@@ -209,10 +209,11 @@ echo "Public key to saved in $PUBLIC_TXT"
     </p>
     <aside class="bcls-aside bcls-aside--tip">Notice that none of the claims are required for Static URL Delivery.</aside>
 
+    <div style="overflow-x:auto;">
     <table class="bcls-table">
       <thead class="bcls-table__head">
         <tr>
-          <th>Field</th>
+          <th>Claim</th>
           <th>Type</th>
           <th>Required</th>
           <th>Description</th>
@@ -305,6 +306,7 @@ echo "Public key to saved in $PUBLIC_TXT"
         </tr>
       </tbody>
     </table>
+    </div>
     <br>
     <p>
       Here is an example of the <span translate="No">JSON Web Token</span> (JWT) claims that you might use:
@@ -336,13 +338,14 @@ echo "Public key to saved in $PUBLIC_TXT"
       The following claims can be used with <a href="https://apis.support.brightcove.com/playback-restrictions/getting-started/overview-playback-restrictions.html">Brightcove Playback Restrictions</a>.
     </p>
     <aside class="bcls-aside bcls-aside--information">When using Playback Rights with DRM, you can not use AES-128.</aside>
-    <aside class="bcls-aside bcls-aside--information">The General required fields are required for all features.</aside>
+    <aside class="bcls-aside bcls-aside--information">The required claims specified in the <strong>General</strong> section are required for all features.</aside>
 
+    <div style="overflow-x:auto;">
     <table class="bcls-table">
       <thead class="bcls-table__head">
         <tr>
           <th style="border-bottom:1px solid #707070;">Feature</th>
-          <th style="border-bottom:1px solid #707070;">Field</th>
+          <th style="border-bottom:1px solid #707070;">Claim</th>
           <th style="border-bottom:1px solid #707070;">Type</th>
           <th style="border-bottom:1px solid #707070;">Required for feature</th>
           <th style="border-bottom:1px solid #707070;">DRM only</th>
@@ -351,7 +354,7 @@ echo "Public key to saved in $PUBLIC_TXT"
       </thead>
       <tbody class="bcls-table__body">
         <tr>
-          <td rowspan="3" style="background-color:#dbdbdb;font-weight: bold;border-bottom:1px solid #707070;">General</td>
+          <td rowspan="4" style="background-color:#dbdbdb;font-weight: bold;border-bottom:1px solid #707070;">General</td>
           <td><code translate="No">accid</code></td>
           <td>String</td>
           <td>Yes</td>
@@ -383,11 +386,12 @@ echo "Public key to saved in $PUBLIC_TXT"
           <td>Time this token will begin being valid, in seconds since the Epoch</td>
         </tr>
         <tr>
+          <td rowspan="3" style="background-color:#dbdbdb;font-weight: bold;border-bottom:1px solid #707070;">Playback Rights</td>
           <td><code translate="No">prid</code></td>
           <td>String</td>
           <td></td>
           <td></td>
-          <td>A <code translate="No">playback_rights_id</code>. Used to override the id set in the catalog for this video
+          <td>A <code translate="No">playback_rights_id</code> used to override the id set in the catalog for this video
             <br><br>
             This field is not validated
             <br><br />
@@ -574,10 +578,12 @@ echo "Public key to saved in $PUBLIC_TXT"
         </tr>
       </tbody>
     </table>
+    </div>
 
     <h3>Claims by tier</h3>
     <p>Several security packages are available for Playback Restrictions. For details, see the <a href="https://apis.support.brightcove.com/playback-restrictions/getting-started/overview-playback-restrictions.html">Overview: Brightcove Playback Restrictions</a> document.</p>
     <p>Here are the claims available for each Playback Restriction package:</p>
+    <div style="overflow-x:auto;">
     <table class="bcls-table">
       <thead class="bcls-table__head">
         <tr>
@@ -716,6 +722,7 @@ echo "Public key to saved in $PUBLIC_TXT"
         </tr>
       </tbody>
     </table>
+    </div>
     <br />
     <aside class="bcls-aside bcls-aside--information">
       <p>The following note refers to the table above.</p>
