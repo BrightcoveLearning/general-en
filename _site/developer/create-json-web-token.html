@@ -786,9 +786,10 @@ echo "Public key to saved in $PUBLIC_TXT"
         <tr>
           <td><code translate="No">exp</code></td>
           <td>Integer</td>
-          <td>Yes</td>
+          <td>For most cases</td>
           <td></td>
           <td>
+            Not required, but strongly recommended.<br/><br/>
             Time this token will no longer be valid, in seconds since the Epoch. Must be no more than 30 days from <code translate="No">iat</code>
             <aside class="bcls-aside bcls-aside--warning language-editable">Note that you can omit the <code translate="No">exp</code> to create a non-exiring token. Security experts strongly discourage creating non-expiring tokens, however.</aside>
           </td>
@@ -798,7 +799,8 @@ echo "Public key to saved in $PUBLIC_TXT"
           <td>Integer</td>
           <td></td>
           <td></td>
-          <td>Time this token will begin being valid, in seconds since the Epoch</td>
+          <td>Time this token will begin being valid, in seconds since the Epoch.<br/>
+             If not specified, the token is available immediately.</td>
         </tr>
         <tr>
           <td rowspan="3" style="background-color:#dbdbdb;font-weight: bold;border-bottom:1px solid #707070;">Playback Rights</td>
