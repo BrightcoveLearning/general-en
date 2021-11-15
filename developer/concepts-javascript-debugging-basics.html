@@ -1,24 +1,28 @@
 ---
-title: 'JavaScript Debugging Basics'
+title: 'Concepts: JavaScript Debugging Basics'
+description: '<p>In this topic, you will learn some basic concepts to help you debug your custom JavaScript code when
+  you add it to Brightcove Player, and covers the following solutions:</p>
+<ul>
+  <li>Get started with the basic video player code</li>
+  <li>Display messages in the browser console</li>
+</ul>'
 parent: Developers
 ---
+<h1>{{ page.title }}</h1>
 <article class="bcls-article">
-  <h1>Concepts: JavaScript Debugging Basics</h1>
-  <summary>
-    <p>In this topic, you will learn some basic concepts to help you debug your custom JavaScript code when you add it to Brightcove Player, and covers the following solutions:</p>
-    <ul>
-      <li>Get started with the basic video player code</li>
-      <li>Display messages in the browser console</li>
-    </ul>
-  </summary>
+  <summary>{{ page.description }}</summary>
   <section class="bcls-section">
-    <h2 id="playercode">Player code</h2>
-    <p>When testing and debugging your code it is most helpful to use the in-page embed player implementation (called the <strong>Advanced</strong> code in Studio). This provides the clearest way to interact with the player.</p>
-    <p>Using JavaScript is almost assuredly part of your testing and debugging, so you will want to setup your code to use JavaScript. This is done in a standard way using the <code translate="No">ready</code> event. Both the in-page embed implementation code and the <code translate="No">ready</code> event are shown here.</p>
+    <h2 id="Player_code">Player code</h2>
+    <p>When testing and debugging your code it is most helpful to use the in-page embed player implementation (called
+      the <strong>Advanced</strong> code in Studio). This provides the clearest way to interact with the player.</p>
+    <p>Using JavaScript is almost assuredly part of your testing and debugging, so you will want to setup your code to
+      use JavaScript. This is done in a standard way using the <code translate="No">ready</code> event. Both the in-page
+      embed implementation code and the <code translate="No">ready</code> event are shown here.</p>
     <ul>
       <li>Lines 11-18: Standard in-page embed player code</li>
       <li>Lines 20-24: Standard script block in which to use JavaScript</li>
-      <li>Lines 11, 21: Player <code translate="No">id</code> added and used. This is an addition to the standard in-page embed implementation code.</li>
+      <li>Lines 11, 21: Player <code translate="No">id</code> added and used. This is an addition to the standard
+        in-page embed implementation code.</li>
     </ul>
     <pre class="line-numbers">
 <code class="language-html" translate="No">&lt;!DOCTYPE html&gt;
@@ -51,13 +55,19 @@ parent: Developers
 
 &lt;/html&gt;</code></pre>
     <!-- <p><code data-gist-id="7046263" data-gist-hide-footer="true" data-gist-line="1-28" data-gist-highlight-line="11,21"></code>
-        </p> --></section>
+        </p> -->
+  </section>
   <section class="bcls-section">
-    <h2 id="displayingMessages">Displaying Messages</h2>
-    <p>When testing and debugging your code, it is helpful to print out text strings and object values. You can do this using the <code translate="No">console</code> object. Although this object is not part of the JavaScript language, it is part of the runtime environment and is available in most current browsers. In Firefox, it comes with the Firebug extension. In WebKit browsers (Safari and Chrome), it is part of the Web Inspector/DevTools. In Internet Explorer, starting with IE 11, it is part of the Developer Tools.</p>
+    <h2 id="Displaying_messages">Displaying messages</h2>
+    <p>When testing and debugging your code, it is helpful to print out text strings and object values. You can do this
+      using the <code translate="No">console</code> object. Although this object is not part of the JavaScript language,
+      it is part of the runtime environment and is available in most current browsers. In Firefox, it comes with the
+      Firebug extension. In WebKit browsers (Safari and Chrome), it is part of the Web Inspector/DevTools. In Internet
+      Explorer, starting with IE 11, it is part of the Developer Tools.</p>
     <p>The <code translate="No">console</code> object has several methods, including:</p>
     <ul>
-      <li>The <code translate="No">log()</code> method for general output of logging information. This allows string substitution and additional arguments.
+      <li>The <code translate="No">log()</code> method for general output of logging information. This allows string
+        substitution and additional arguments.
         <pre class="line-numbers">
 <code class="language-javascript" translate="No">console.log("test",1,{},[1,2,3]);</code></pre>
       </li>
@@ -66,7 +76,8 @@ parent: Developers
 <code class="language-javascript" translate="No">console.dir({one:1, two: {three:3}});</code></pre>
       </li>
     </ul>
-    <p>Here is example code and a screenshot of the console displaying the <code translate="No">console.log()</code> of messages.</p>
+    <p>Here is example code and a screenshot of the console displaying the <code translate="No">console.log()</code> of
+      messages.</p>
     <pre class="line-numbers">
 <code class="language-javascript" translate="No">&lt;video-js id="myPlayerID"
 style="width: 640px; height: 360px;"
@@ -85,25 +96,29 @@ class="video-js" controls&gt;&lt;/video-js&gt;
     });
 &lt;/script&gt;</code></pre>
     <!-- <p><code data-gist-id="7046263" data-gist-hide-footer="true" data-gist-line="33-45" data-gist-highlight-line="43"></code></p> -->
-    
-    <figure class="bcls-figure"><img class="bcls-image" alt="console.log" src="//learning-services-media.brightcove.com/doc-assets/video-cloud-apis/general-information/debugging-basics/console-log-demo.png" />
+
+    <figure class="bcls-figure"><img class="bcls-image" alt="console.log"
+        src="/assets/images/developer/debugging-javascript/console-log-demo.png" />
       <figcaption class="bcls-caption--image">console.log</figcaption>
     </figure>
     <p>Below are details on using the console object in each browser.</p>
   </section>
   <section class="bcls-section">
-    <h2 id="chrome">Chrome</h2>
+    <h2 id="Chrome">Chrome</h2>
     <h3>Viewing your messages in the Chrome browser</h3>
     <p>Run the sample code in the Chrome browser. To view your messages, open the DevTools panel:</p>
     <ol class="bcls-tasklist">
       <li>In the Chrome browser, select the <b>Customize and control Google Chrome</b> icon.</li>
       <li>Select <strong>Tools</strong> &gt;<strong> JavaScript Console</strong>.
-        <figure class="bcls-figure"><img class="bcls-image" alt="Chrome Developer tools" src="//learning-services-media.brightcove.com/doc-assets/video-cloud-apis/general-information/debugging-basics/Chrome1.png" />
+        <figure class="bcls-figure"><img class="bcls-image" alt="Chrome Developer tools"
+            src="/assets/images/developer/debugging-javascript/Chrome1.png" />
           <figcaption class="bcls-caption--image">Chrome Developer tools</figcaption>
         </figure>
       </li>
-      <li>In the DevTools panel, with the <strong>Console</strong> menu item selected, you should see your console messages displayed here.
-        <figure class="bcls-figure"><img class="bcls-image" alt="Chrome Console" src="//learning-services-media.brightcove.com/doc-assets/video-cloud-apis/general-information/debugging-basics/Chrome2.png" />
+      <li>In the DevTools panel, with the <strong>Console</strong> menu item selected, you should see your console
+        messages displayed here.
+        <figure class="bcls-figure"><img class="bcls-image" alt="Chrome Console"
+            src="/assets/images/developer/debugging-javascript/Chrome2.png" />
           <figcaption class="bcls-caption--image">Chrome Console</figcaption>
         </figure>
       </li>
@@ -111,7 +126,7 @@ class="video-js" controls&gt;&lt;/video-js&gt;
     <p>View details about using <a href="https://developers.google.com/chrome-developer-tools/">Chrome DevTools</a>.</p>
   </section>
   <section class="bcls-section">
-    <h2 id="safari">Safari</h2>
+    <h2 id="Safari">Safari</h2>
     <h3>Viewing your messages in the Safari browser</h3>
     <p>Run the sample code in the Safari browser. To view your messages, open the Developer Tools panel:</p>
     <ol class="bcls-tasklist__restart">
@@ -120,35 +135,42 @@ class="video-js" controls&gt;&lt;/video-js&gt;
           <li>Select <strong>Safari</strong> &gt; <strong>Preferences</strong> &gt; <strong>Advanced</strong>.</li>
           <li>Select the <strong>Show Develop menu in menu bar</strong> option.</li>
         </ol>
-        <figure class="bcls-figure"><img class="bcls-image" alt="Safari Develop Menu" src="//learning-services-media.brightcove.com/doc-assets/video-cloud-apis/general-information/debugging-basics/Safari1.png" />
+        <figure class="bcls-figure"><img class="bcls-image" alt="Safari Develop Menu"
+            src="/assets/images/developer/debugging-javascript/Safari1.png" />
           <figcaption class="bcls-caption--image">Safari Develop Menu</figcaption>
         </figure>
       </li>
-      <li>In the Safari menu bar, select <b>Develop</b> &gt; <b>Show Error Console</b>.
-        <figure class="bcls-figure"><img class="bcls-image" alt="Safari Error Console" src="//learning-services-media.brightcove.com/doc-assets/video-cloud-apis/general-information/debugging-basics/Safari2.png" />
+      <li>In the Safari menu bar, select <b>Develop</b> &gt; <b>Show JavaScript Console</b>.
+        <figure class="bcls-figure"><img class="bcls-image" alt="Safari Error Console"
+            src="/assets/images/developer/debugging-javascript/Safari2.png" />
           <figcaption class="bcls-caption--image">Safari Error Console</figcaption>
         </figure>
       </li>
       <li>In the Error Console panel, you should see your console messages displayed.
-        <figure class="bcls-figure"><img class="bcls-image" alt="Safari Console Messages" src="//learning-services-media.brightcove.com/doc-assets/video-cloud-apis/general-information/debugging-basics/Safari3.png" />
+        <figure class="bcls-figure"><img class="bcls-image" alt="Safari Console Messages"
+            src="/assets/images/developer/debugging-javascript/Safari3.png" />
           <figcaption class="bcls-caption--image">Safari Console Messages</figcaption>
         </figure>
       </li>
     </ol>
-    <p>View details about using the <a href="https://support.apple.com/en-nz/guide/safari-developer/dev1a8227029/mac">Safari Web Inspector</a>.</p>
+    <p>View details about using the <a
+        href="https://support.apple.com/en-nz/guide/safari-developer/dev1a8227029/mac">Safari Web Inspector</a>.</p>
   </section>
   <section class="bcls-section">
-    <h2 id="firefox">Firefox</h2>
+    <h2 id="Firefox">Firefox</h2>
     <h3>Viewing your messages in the Firefox browser</h3>
     <p>Run the sample code in the Firefox browser. To view your messages, open the Web Console panel:</p>
     <ol class="bcls-tasklist__restart">
-      <li>In the Firefox menu bar, select <strong>Tools</strong> &gt; <strong>Web Developer</strong> &gt; <strong>Web Console</strong>.
-        <figure class="bcls-figure"><img class="bcls-image" alt="Firefox Web Console" src="//learning-services-media.brightcove.com/doc-assets/video-cloud-apis/general-information/debugging-basics/firefox1.png" />
+      <li>In the Firefox menu bar, select <strong>Tools</strong> &gt; <strong>Web Developer</strong> &gt; <strong>Web
+          Console</strong>.
+        <figure class="bcls-figure"><img class="bcls-image" alt="Firefox Web Console"
+            src="/assets/images/developer/debugging-javascript/firefox1.png" />
           <figcaption class="bcls-caption--image">Firefox Web Console</figcaption>
         </figure>
       </li>
       <li>In the Web Console panel, you should see your console messages displayed.
-        <figure class="bcls-figure"><img class="bcls-image" alt="Firefox Console Messages" src="//learning-services-media.brightcove.com/doc-assets/video-cloud-apis/general-information/debugging-basics/firefox2.png" />
+        <figure class="bcls-figure"><img class="bcls-image" alt="Firefox Console Messages"
+            src="/assets/images/developer/debugging-javascript/firefox2.png" />
           <figcaption class="bcls-caption--image">Firefox Console Messages</figcaption>
         </figure>
       </li>
