@@ -163,8 +163,7 @@ if(!isLive && duration !== 0){myPlayer.pause();myModal.open();</code></pre>
         <pre><code translate="No">access-control-allow-headers: Server,Range,Content-Length,Content-Range
           access-control-allow-headers: X-Requested-With,Origin,Range,Accept-Encoding,Referer
           access-control-allow-methods: GET,HEAD,OPTIONS
-          access-control-allow-origin: *
-          </code></pre>
+          access-control-allow-origin: *</code></pre>
       </dd>
       <dt>Console warnings</dt>
       <p>Brightcove Player may generate <strong>warnings</strong> that appear in browser's console. The warnings, as opposed to error messages, are harmless and do not effect play back. An example of a warning is displayed here:</p>
@@ -178,14 +177,13 @@ if(!isLive && duration !== 0){myPlayer.pause();myModal.open();</code></pre>
       <pre>
   <code class="language-css" translate="No">.vjs-has-started .vjs-poster {
   display: block;
-  }
-  </code>
+  }</code>
   </pre>
       </dd>
       <dt>Auto-Advance Playlist on Safari</dt>
       <dd>For Safari, if the playlist is visible, and the player has the pre-load setting set to <code translate="no">none</code>, automatic playback of the next video will fail silently.</dd>
-      <dt>Turning on  captions automatically does not work in Safari</dt>
-      <dd>Viewers can still turn on captions manually.</dd>
+      <dt>Apple user settings prevent the Brightcove player from auto-display the captions</dt>
+      <dd>Auto captions for iOS can be made by making changes in <strong>System Preferences > accessibility > captions ></strong> then select the <strong>Prefer closed captions and SDH</strong> checkbox.</dd>
       <dt>Context Menu</dt>
       <dd>When right-clicking a video close to the right or bottom edges of a player, the player context menu displays off-screen.</dd>
       <dt>Using different sized multiple players with the same player_id on a page</dt>
