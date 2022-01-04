@@ -567,6 +567,8 @@ if(!isLive && duration !== 0){myPlayer.pause();myModal.open();</code></pre>
     <h2 id="player">Brightcove Player</h2>
     <p>Check the <a href="https://player.support.brightcove.com/release-notes/brightcove-player-release-notes.html">Brightcove Player Release Notes</a> to see if a past known issue has been corrected by a recent release.</p>
     <dl>
+      <dt>Using element ids that start with a number causes problems with CSS and JavaScript (<code translate="No">document.querySelector</code>)</dt>
+      <dd>CSS rules based on an element ID or JavaScript trying to get a reference to an element using the document <code translate="No">querySelector()</code> or <code translate="No">querySelectorAll()</code> methods will fail if the element ID starts with a number. There is a painful <a href="https://mathiasbynens.be/notes/css-escapes">workaround</a> but the better solution is to avoid doing this.</dd>
       <dt>Controlbar of Player does not disappear on Windows 10 touch-enabled PC in fullscreen mode</dt>
       <dd>No known workarounds.</dd>
       <dt>Elements with <code translate="No">id</code> Set to <code translate="No">default</code></dt>
