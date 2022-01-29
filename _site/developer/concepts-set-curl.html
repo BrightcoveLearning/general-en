@@ -449,7 +449,14 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
     --header 'authorization: Bearer <span class="bcls-input">YOUR_ACCESS_TOKEN_HERE</span>'
     --header 'content-type: application/json'
     <span class="bcls-highlight">--data <strong>&lt;</strong>player_data/player_config.json</span> </code></span></pre>
-    <aside class="bcls-aside bcls-aside--information">Note the "&lt;" symbol, which sends the file contents. Use this rather than the "@" symbol, which attaches the file as an upload.</aside>
+    <aside class="bcls-aside bcls-aside--information">
+      Notes:
+      <ul>
+        <li>Note the "&lt;" symbol, which sends the file contents. Use this rather than the "@" symbol, which attaches the file as an upload.</li>
+        <li>If the data needs to be URL-encoded (because it contains a URL, for example), use <code translate="No">--data-urlencode</code> instead of <code translate="No">--data</code></li>
+      </ul>
+      
+    </aside>
   </section>
 </article>
 
