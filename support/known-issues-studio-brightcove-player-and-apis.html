@@ -1,5 +1,5 @@
 ---
-title: 'Known Issues:  Studio, Brightcove Player and APIs'
+title: 'Known Issues: Studio, Brightcove Player and APIs'
 description: 'This topic lists the known issues with Studio, Brightcove Player and APIs.'
 parent: General Information
 ---
@@ -71,7 +71,7 @@ parent: General Information
         If an SEP recurring event is still published on a page and the client is not currently streaming and the result is that the last 3 segments (about 18 seconds) are cached and will play back.
         <p style="font-weight: bold;">Workaround</p>
         <p>One way of preventing this is to implement a <a href="https://player.support.brightcove.com/code-samples/brightcove-player-sample-live-custom-error-message.html">Live custom error message in the player</a> by adding plugin including code some like the following:</p>
-<pre class="line-numbers"><code class="language-javascript" translate="No">// Listen for a change on the durationmyPlayer.on("durationchange", ()=>{
+        <pre class="line-numbers"><code class="language-javascript" translate="No">// Listen for a change on the durationmyPlayer.on("durationchange", ()=>{
 // Save the duration to a local variable
 var duration = myPlayer.duration();
 
@@ -151,6 +151,8 @@ if(!isLive && duration !== 0){myPlayer.pause();myModal.open();</code></pre>
     <h2 id="player">Brightcove Player</h2>
     <p>Check the <a href="https://player.support.brightcove.com/release-notes/brightcove-player-release-notes.html">Brightcove Player Release Notes</a> to see if a past known issue has been corrected by a recent release.</p>
     <dl>
+      <dt>The playback speed button was added to Safari 15</dt>
+      <dd>Brightcove does not override user preferences, and beyond that Apple states <strong>This property can not be set for HTML5 audio/video elements on iOS</strong>.</dd>
       <dt>Using element ids that start with a number causes problems with CSS and JavaScript (<code translate="No">document.querySelector</code>)</dt>
       <dd>CSS rules based on an element ID or JavaScript trying to get a reference to an element using the document <code translate="No">querySelector()</code> or <code translate="No">querySelectorAll()</code> methods will fail if the element ID starts with a number. There is a painful <a href="https://mathiasbynens.be/notes/css-escapes">workaround</a> but the better solution is to avoid doing this.</dd>
       <dt>Controlbar of Player does not disappear on Windows 10 touch-enabled PC in fullscreen mode</dt>
@@ -176,7 +178,7 @@ if(!isLive && duration !== 0){myPlayer.pause();myModal.open();</code></pre>
       <dd>This will no longer be an issue in Safari 14 (Big Sur version).</dd>
       <dt>IE11 images for audio only content not displaying</dt>
       <dd>When playing only audio content in IE11, the video still image will not be displayed, only a black screen is seen. The image can be retained with the following code:
-      <pre>
+        <pre>
   <code class="language-css" translate="No">.vjs-has-started .vjs-poster {
   display: block;
   }</code>
@@ -224,8 +226,8 @@ if(!isLive && duration !== 0){myPlayer.pause();myModal.open();</code></pre>
         <p>
           In environments where Flash is disabled or Flash-based HLS is disabled for the player, and the player is explicitly sized using a <code translate="No">style </code> attribute on the <code translate="No">video </code> tag, fullscreen viewing may not function in some browsers.
         </p>
-      <p>Workaround: remove the <code translate="No">style </code> attribute from the <code translate="No">video </code> tag, and instead create a rule in page stylesheet like this:</p>
-      <pre>
+        <p>Workaround: remove the <code translate="No">style </code> attribute from the <code translate="No">video </code> tag, and instead create a rule in page stylesheet like this:</p>
+        <pre>
   <code class="language-css" translate="No">.video-js{
   width:640px;
   height:360px;
@@ -299,7 +301,7 @@ if(!isLive && duration !== 0){myPlayer.pause();myModal.open();</code></pre>
     <ul>
       <li>
         The Brightcove Player progress control and volume slider cannot be adjusted by the native gestures of TalkBack on Android. This is due to platform limitations. Instead, a user must interact with the element directly.
-On Android, a double tap with two fingers will allow the user to adjust the progress or volume to the position of the two finger double tap.
+        On Android, a double tap with two fingers will allow the user to adjust the progress or volume to the position of the two finger double tap.
       </li>
       <li>On devices, the progress bar may not be in sync for HLS videos, since HLS does not work very well on Android. The total duration of the video may also incorrectly show up as 0:01.</li>
       <li>There are multiple accessibility issues with the <em>native</em> browser on both phones and tablets for all versions of Android. Talkback does not provide audio and vibration feedback for any of the player controls. (This issue does <em>not</em> apply to the add-on Chrome browser on Android devices, only to the native browser.</li>
@@ -313,7 +315,7 @@ On Android, a double tap with two fingers will allow the user to adjust the prog
     <ul>
       <li>
         The Brightcove Player progress control and volume slider cannot be adjusted by the native gestures of VoiceOver on iOS. This is due to platform limitations. Instead, a user must interact with the element directly.
-On iOS, the user must double tap to select the progress bar or the volume slider and then a double tap and hold will allow the user to adjust the time or volume.
+        On iOS, the user must double tap to select the progress bar or the volume slider and then a double tap and hold will allow the user to adjust the time or volume.
       </li>
       <li>Safari on iOS never preloads. For details, see the <a href="https://developer.apple.com/library/content/documentation/AudioVideo/Conceptual/Using_HTML5_Audio_Video/AudioandVideoTagBasics/AudioandVideoTagBasics.html">Safari HTML5 Audio and Video Guide</a>.</li>
       <li>Player error occurs in iOS when switching to another app. When a video in Brightcove Player is played on an iOS device in Safari/Chrome, the player will error out after switching to another app, then switching back to Safari/Chrome after a minute or more.</li>
