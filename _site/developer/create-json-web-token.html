@@ -923,6 +923,8 @@ echo "Public key to saved in $PUBLIC_TXT"
           <td>Yes</td>
           <td>The user id of the end viewer. This field is used to correlate multiple sessions to enforce Stream Concurrency.
             <br><br>
+            You can use an arbitrary id (max. 64 characters, limited to A-Z, a-z, 0-9, and =/,@_.+-). But, depending on your use case, Brightcove recommends either a user identifier to track sessions per user or an account identifier to track sessions per paying account.
+            <br><br>
             <strong>Required</strong> for session concurrency
           </td>
           <!-- <td>DRM only</td> -->
@@ -972,6 +974,8 @@ echo "Public key to saved in $PUBLIC_TXT"
           <td>Yes</td>
           <td>Yes</td>
           <td>The user id of the end viewer. This field is used to correlate multiple sessions to enforce Stream Concurrency.
+            <br><br>
+            You can use an arbitrary id (max. 64 characters, limited to A-Z, a-z, 0-9, and =/,@_.+-). But, depending on your use case, Brightcove recommends either a user identifier to track sessions per user or an account identifier to track sessions per paying account.
             <br><br>
             <strong>Required</strong> for device registration
           </td>
