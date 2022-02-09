@@ -447,9 +447,9 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
       <li>
         <a href="#Create_a_JSON_Web_Token">Create a <span translate="No">JSON Web Token</span></a>
       </li>
-      <li>
+      <!-- <li>
         <a href="#Test_playback">Test playback</a>
-      </li>
+      </li> -->
     </ol>
   </section>
 
@@ -796,7 +796,7 @@ echo "Public key to saved in $PUBLIC_TXT"
           <td>The account id that owns the content being played</td>
         </tr>
         <tr>
-          <td><code translate="No">iat</code></td>
+          <td><code translate="No">iat</code></td> 
           <td>Integer</td>
           <td>Yes</td>
           <td></td>
@@ -1024,9 +1024,8 @@ echo "Public key to saved in $PUBLIC_TXT"
       </tbody>
     </table>
     </div>
-  </section>
-    <section class="bcls-section">
-    <h2 id="Claims_by_tier">Claims by tier</h2>
+
+    <h3 id="Claims_by_tier">Claims by tier</h3>
     <p>Several security packages are available for Playback Restrictions. For details, see the <a href="https://apis.support.brightcove.com/playback-restrictions/getting-started/overview-playback-restrictions.html">Overview: Brightcove Playback Restrictions</a> document.</p>
     <p>Here are the claims available for each Playback Restriction package:</p>
     <div style="overflow-x:auto;">
@@ -1446,7 +1445,7 @@ func processEC256(kbs, bs []byte) {
 </code></pre>
   </section>
 
-  <section class="bcls-section">
+  <!-- <section class="bcls-section">
     <h2 id="Test_playback">Test playback</h2>
 
     <p>Although not required, you may want to test video playback before configuring a player.</p>
@@ -1457,7 +1456,7 @@ func processEC256(kbs, bs []byte) {
  -H 'Authorization: Bearer {JWT}' \
  https://edge-auth.api.brightcove.com/playback/v1/accounts/{your_account_id}/videos/{your_video_id}
 </code></pre>
-  </section>
+  </section> -->
 </article>
 <!-- complete bootstrap layout -->
     </div>
@@ -1474,7 +1473,7 @@ func processEC256(kbs, bs []byte) {
 
 <hr>
 <div class="last-updated">
-  Page last updated on 13 Dec 2021
+  Page last updated on 08 Feb 2022
 </div>
 
 
