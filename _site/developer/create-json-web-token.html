@@ -1454,9 +1454,9 @@ func processEC256(kbs, bs []byte) {
       Request playback:
     </p>
     <pre class="line-numbers"><code class="language-http" translate="No">curl -X GET \
- -H 'Authorization: Bearer {JWT}' \
-https://edge.api.brightcove.com/playback/v1/accounts/{your_account_id}/videos/{your_video_id}
+https://edge.api.brightcove.com/playback/v1/accounts/{account_id}/videos/{video_id}/master.m3u8?bcov_auth={jwt}
 </code></pre>
+<p>For a list of Static URL endpoints, see the <a href="https://apis.support.brightcove.com/playback/guides/static-url-delivery.html#Implementing_Static_URLs">Static URL Delivery</a> document.</p>
 <h3>Playback Restrictions</h3>
 <p>
   Request playback:
@@ -1482,7 +1482,7 @@ https://edge-auth.api.brightcove.com/playback/v1/accounts/{your_account_id}/vide
 
 <hr>
 <div class="last-updated">
-  Page last updated on 09 Feb 2022
+  Page last updated on 10 Feb 2022
 </div>
 
 
