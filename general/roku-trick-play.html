@@ -9,11 +9,15 @@ parent: General Information
   <summary>{{ page.description }}</summary>
   <section class="bcls-section">
     <h2 id="What_you_need_to_do">What you need to do</h2>
-    <p>For Trick Play support on Roku devices, Brightcove can generate DASH-standard thumbnail tiles, as specified by the <a href="https://developer.roku.com/en-gb/docs/developer-program/media-playback/trick-mode/hls-and-dash.md">Roku documentation</a>. Please contact your account manager to have this enabled for your account.</p>
+    <p>For Trick Play support on Roku devices, Brightcove can generate HLS or DASH-standard thumbnail tiles, as specified by the <a href="https://developer.roku.com/en-gb/docs/developer-program/media-playback/trick-mode/hls-and-dash.md">Roku documentation</a>. Please contact your account manager to have this enabled for your account.</p>
   </section>
   <section class="bcls-section">
     <h2 id="How_it_works">How it works</h2>
-    <p>Once enabled, Brightcove's Dynamic Delivery system will include these images automatically in DASH manifests, with no additional configuration needed on the Brightcove side. The trick play images will be loaded and displayed by Roku's default controls when seeking. Additional development work is needed for <a href="https://github.com/rokudev/trickplay-samples/tree/master/standard-HLS-DASH">custom controls</a>.</p>
+    <p>Once enabled, Brightcove's Dynamic Delivery system will include these images automatically in the HLS file or the DASH manifest, with no additional configuration needed on the Brightcove side. The trick play images will be loaded and displayed by Roku's default controls when seeking. Additional development work is needed for <a href="https://github.com/rokudev/trickplay-samples/tree/master/standard-HLS-DASH">custom controls</a>.</p>
     <p>For additional information on channel <a href="https://developer.roku.com/en-gb/docs/developer-program/certification/certification.md">certification requirements</a> and implementation details, consult Roku's developer documentation.</p>
+  </section>
+  <section class="bcls-section">
+    <h2 id="What_is_supported">What is supported?</h2>
+    <p>Server-Side Ad Insertion (SSAI) with mid-roll ads is supported for both HLS and DASH files.</p>
   </section>
 </article>
