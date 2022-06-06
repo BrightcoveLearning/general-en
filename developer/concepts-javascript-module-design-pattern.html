@@ -21,12 +21,12 @@ parent: Developers
     <p>Using <code>var</code> is the oldest method of variable declaration in JavaScript. When defined within a
       function, any <code>var</code> is restricted to that function, but a <code>var</code> is global when defined
       outside of a function.</p>
-    <pre class="line-numbers"><code class="language-javascript" translate="No">// global declaration
-var myvar = value;
+    <pre class="line-numbers"><code class="language-javascript" translate="No">// Global Declaration
+var variable = value;
 
-function () {
-  // local declaration
-  var myvar2 = value;
+const varExampleFunction = () => {
+    // Local Declaration
+    var variable = value;
 }</code></pre>
     <aside class="bcls-aside bcls-aside--information">Please note that <code>var</code> is not block-scoped, so when you
       declare a variable within a code block, using curly braces <code>{ }</code>, its scope flows outside the block.
@@ -35,17 +35,15 @@ function () {
     <p>The <code>let</code> declaration was introduced with ES6, this type of declaration is block-scoped, which means
       that the variables declared with <code>let</code> can be only accessed in the block or function in which it is
       defined. </p>
-    <pre class="line-numbers"><code class="language-javascript" translate="No">function () {
-  // let declaration
-  let myvar = value;
+    <pre class="line-numbers"><code class="language-javascript" translate="No">const letExampleFunction = () => {
+    let variable = value;
 }</code></pre>
     <h3>Using const</h3>
     <p>As <code>let</code>, <code>const</code> was also introduced with ES6. This is why both declarations are very
       similar. The main difference is that <code>const</code> points to data in memory that holds constant values, and
       <code>const</code> reference variables cannot be reassigned to a different object in memory.</p>
-    <pre class="line-numbers"><code class="language-javascript" translate="No">function () {
-  // constant declaration
-  const myvar = value;
+    <pre class="line-numbers"><code class="language-javascript" translate="No"> const constExampleFunction = () => {
+    const variable = value;
 }</code></pre>
     <aside class="bcls-aside bcls-aside--information">Please note that <code>const</code> is also block-scoped. It is
       limited to the block defined by curly braces, which could be a function or a block. The main distinction is that
