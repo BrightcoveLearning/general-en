@@ -18,7 +18,7 @@ parent: Developers
     <aside class="bcls-aside bcls-aside--information">This document serves as a jumping off point for developers to debug on mobile devices. It does not cover all methods for mobile debugging. For more information on debugging in general, visit the <a href="/developer/concepts-javascript-debugging-basics.html">JavaScript Debugging Basics</a> documentation.</aside>
   </section>
   <section class="bcls-section">
-    <h2 id="Debugging_on_iOS_devices">Debugging on iOS devices</h2>
+    <h2 id="Debugging_with_iOS">Debugging with iOS</h2>
     <div class="BCL-concept">
       <div class="BCL-subsection">
         <h3>Minimum requirements for iOS debugging</h3>
@@ -68,7 +68,7 @@ parent: Developers
   <!-- div id="ios" -->
   
   <section class="bcls-section">
-    <h2 id="Debugging_on_Android_devices">Debugging on Android devices</h2>
+    <h2 id="Debugging_with_Android">Debugging with Android</h2>
     <div class="BCL-concept">
       <div class="BCL-subsection">
         <h3>Minimum requirements for Android debugging</h3>
@@ -235,10 +235,9 @@ parent: Developers
       </section>
 
       <section class="bcls-section">
-        <h2 id="Using_Charles_with_Android_devices">Using Charles with Android devices</h2>
+        <h2 id="Using_Charles_with_Android_11">Using Charles with Android 11</h2>
         <p>In this section, you will learn how to set up your Android device to work with Charles on your computer.</p>
         <aside class="bcls-aside bcls-aside--information">These steps were performed on a device running Android 11.</aside>
-        <!-- <aside class="bcls-aside bcls-aside--information">These steps will only work on devices running Android 2.3 and up.</aside> -->
         
         <ol class="bcls-tasklist-restart">
           <li>On your device, go to <strong>Settings</strong> &gt; <strong>Network & internet</strong>.</li>
@@ -288,4 +287,49 @@ parent: Developers
           </li>
         </ol>
     </section>
+
+    <section class="bcls-section">
+      <h2 id="Using_Charles_with_Android_7">Using Charles with Android 7</h2>
+      <p>Beginning with Android 7 (SDK v24), the SSL network is no longer directly viewable as this SDK version introduced a new security feature. To see network traffic through Charles, you need to explicitly tell your Android application to allow SSL intercepts.</p>
+      
+      <ol class="bcls-tasklist-restart">
+        <li>
+          <p>In your application, open the <strong>AndroidManifest.xml</strong> file.</p>
+          <figure class="bcls-figure">
+            <img
+              class="bcls-image--no-border"
+              alt="Android manifest file"
+              src="/assets/images/developer/debugging-on-mobile/android/android-manifest.png"
+            />
+          </figure>
+        </li>
+        <li>
+          <p>In the <code translate="No">application</code> section, add a <code translate="No">networkSecurityConfig</code> option.</p>
+          <figure class="bcls-figure">
+            <img
+              class="bcls-image--no-border"
+              alt="Network security option"
+              src="/assets/images/developer/debugging-on-mobile/android/network-security.png"
+            />
+          </figure>
+        </li>
+        <li>
+          <p>In an xml resource folder, add a <code translate="No">network_security_config.xml</code> file as follows:</p>
+          <figure class="bcls-figure">
+            <img
+              class="bcls-image--no-border"
+              alt="Network security xml file"
+              src="/assets/images/developer/debugging-on-mobile/android/network-security-config.png"
+            />
+          </figure>
+        </li>
+        <li>That's it. You should now see all network traffic coming through Charles.</li>
+      </ol>
+      <h3>Resources</h3>
+      <p>For details, see the following:</p>
+      <ul>
+        <li><a href="https://medium.com/mobile-app-development-publication/android-nougat-charlesing-ssl-network-efa0951e66de">Enable Android Nougat for Charles SSL network</a></li>
+        <li><a href="https://sdks.support.brightcove.com/android/framework/android-pie-support-native-sdk-android.html">Android Pie Support with the Native SDK for Android</a></li>
+      </ul>
+  </section>
   </article>
