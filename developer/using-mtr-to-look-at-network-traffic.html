@@ -23,6 +23,7 @@ sudo cp mtr /usr/local/bin
     </aside>
     <p>The steps below will walk you through the basic installation and use of Wireshark.</p>
   </section>
+
   <section class="bcls-section">
     <h2 id="using_wireshark">Using MTR</h2>
     <p>The instructions below assume you are running MTR as a command line application on Mac OS. If you are running WinMTR instead, the only difference is that you will simply enter the domain or IP address that you want to analyze instead running <code translate="No">mtr {domain or IP address}</code>.</p>
@@ -60,7 +61,7 @@ sudo cp mtr /usr/local/bin
     <h2 id="Using_mtr_with_Live">Using MTR with Live</h2>
     <p>Using MTR with Live streams is similar to using it to analyze VOD, but a little different because MTR sends ICMP request packets and most internet devices deprioritize ICMP-based trace requests and intentionally throttle ICMP traffic which can create the illusion of packet loss.</p>
     <p>In addition, you need to run MTR both on the RTMP URL as well as the playback URL, as issues might arise both in the input and output.</p>
-    <p>To troubleshoot connectivity issues properly, a TCP-based trace must be run. Below is an example run on the RMTP URL for Mac users.</p>
+    <p>To troubleshoot connectivity issues properly, a TCP-based trace must be run. Below is an example run on the RTPM URL for Mac users.</p>
     <pre><code class="language-bash" translate="No">sudo mtr -n -T -c 200 <span class="bc-highlight">1a244fa8f08a464e869695dd01c890d6.sep.bcovlive.io</span> --report</code></pre>
 
     <p>The highlighted portion is the live playback domain extracted from the <strong>Endpoint URL</strong> displayed in the Live module:</p>
