@@ -58,19 +58,19 @@ const varExampleFunction = () => {
       page.</p>
     <pre class="line-numbers">
 <code class="language-javascript" translate="No">// script 1
-var incrementCount = function() {
+const incrementCount = () => {
     count++;
 }
 
-var myButton = document.getElementById('buttonId');
-var count = 0;
+const myButton = document.getElementById('buttonId');
+let count = 0;
 
 myButton.onclick = incrementCount;</code></pre>
     <p>Now, let's say there is a function outside of your script that also modifies the global <code
         translate="No">count</code> variable. This collision of scripts can cause unexpected results.</p>
     <pre class="line-numbers">
 <code class="language-javascript" translate="No">// script 2
-var countVideos = function(videoList) {
+const countVideos = videoList => {
     count = videoList.length;
 }</code></pre>
     <p>Results:</p>
