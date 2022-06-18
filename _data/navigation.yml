@@ -8,8 +8,6 @@
   docs:
     - name: 'Brightcove Product Overview'
       url: '/general/brightcove-product-overview.html'
-    - name: 'Brightcove Continuum Overview'
-      url: '/general/brightcove-continuum-overview.html'
     - name: 'Brightcove Videos on Roku Trick Play'
       url: '/general/roku-trick-play.html'
     - name: 'Open Source Projects'
