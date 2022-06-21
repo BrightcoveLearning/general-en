@@ -447,9 +447,11 @@ const countVideos = videoList => {
         after it has been parsed, instead of waiting for some other code to call the function.</li>
     </ul>
     <pre class="line-numbers">
-<code class="language-javascript" translate="No">(function () {
+<code class="language-javascript" translate="No">( () => {
     // your code
 }<span class="bcls-highlight">()</span>);</code></pre>
+<p>Another syntax example:</p>
+<pre class="line-numbers"><code class="language-javascript" translate="No">var res = function( [arguments] ) { ... }</code></pre>
     <p>Closures can be powerful, as they provide privacy and state throughout the lifetime of the application. For the
       code inside the closure, all variables and functions are in the closure scope only. But, your code inside the
       closure can still access any global variables or functions.</p>
@@ -472,7 +474,7 @@ const countVideos = videoList => {
       <li>Line 3: passes the <code translate="No">window</code> object into the function.</li>
     </ul>
     <pre class="line-numbers">
-<code class="language-javascript" translate="No">(function( window1, undefined ) {
+<code class="language-javascript" translate="No">( ( window1, undefined ) => {
     ...
 })(window);</code></pre>
     <p>Since there is only 1 object being passed in, but there are two parameters, the value of <code
@@ -491,7 +493,7 @@ const countVideos = videoList => {
         choose. In this example, we are using BCLS (Brightcove Learning Services).</li>
     </ul>
     <pre class="line-numbers">
-<code class="language-javascript" translate="No">var BCLS = (function( window1, undefined ) {
+<code class="language-javascript" translate="No">const BCLS = ( ( window1, undefined ) => {
     var object1 = {};
     object1.count = 1;
     object1.method = function () {
@@ -519,19 +521,19 @@ const countVideos = videoList => {
       <li>Public function: <code translate="No">fname3</code></li>
     </ul>
     <pre class="line-numbers">
-<code class="language-javascript" translate="No">var BCLS = ( function() {
+<code class="language-javascript" translate="No">const BCLS = ( () => {
    var myvar = value,
        myvar2 = value;
 
-   fname = function() {
+   fname = () =>  {
         ...
    };
-   fname2 = function() {
+   fname2 = () =>  {
         ...
    };
 
    return {
-        fname3 : function() {
+        fname3 : () =>  {
              ...
         },
         myvar3 = value;
@@ -540,20 +542,20 @@ const countVideos = videoList => {
     <h3>Example 2</h3>
     <p>This example passes in global objects and exposes a public function.</p>
     <pre class="line-numbers">
-<code class="language-javascript" translate="No">var BCLS = (function( window, document, videojs ) {
-    var myvar = value;
+<code class="language-javascript" translate="No">const BCLS = ( ( window, document, videojs ) => {
+  var myvar = value;
 
-    // use a global object passed into the anonymous function
-    videojs.registerPlugin('overlay');
+  // use a global object passed into the anonymous function
+  videojs.registerPlugin('overlay');
 
-    fname = function() {
-        ...
-    }
-    return {
-      fname2 : function() {
-            ...
-        }
-    }
+  fname = () => {
+      ...
+  }
+  return {
+    fname2 : () => {
+          ...
+      }
+  }
 })(window, document, videojs);
 
 // call the public function fname2
