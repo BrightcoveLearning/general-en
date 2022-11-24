@@ -120,7 +120,7 @@
   },
 
   {
-      "newURL": "https://general.support.brightcove.com/training/",
+      "newURL": "https://general.support.brightcove.com/",
       "oldURL": "/index"
   },
 
@@ -130,7 +130,7 @@
   },
 
   {
-      "newURL": "https://general.support.brightcove.com/",
+      "newURL": "https://general.support.brightcove.com/training/",
       "oldURL": "/index"
   },
 
@@ -140,12 +140,12 @@
   },
 
   {
-      "newURL": "https://general.support.brightcove.com/ooyala/",
+      "newURL": "https://general.support.brightcove.com/developer/",
       "oldURL": "/index"
   },
 
   {
-      "newURL": "https://general.support.brightcove.com/developer/",
+      "newURL": "https://general.support.brightcove.com/ooyala/",
       "oldURL": "/index"
   },
 
@@ -285,12 +285,12 @@
   },
 
   {
-      "newURL": "https://general.support.brightcove.com/support/register-training.html",
+      "newURL": "https://general.support.brightcove.com/training/register-training.html",
       "oldURL": "/register-training"
   },
 
   {
-      "newURL": "https://general.support.brightcove.com/training/register-training.html",
+      "newURL": "https://general.support.brightcove.com/support/register-training.html",
       "oldURL": "/register-training"
   },
 
@@ -307,6 +307,16 @@
   {
       "newURL": "https://general.support.brightcove.com/search.html",
       "oldURL": "/search"
+  },
+
+  {
+      "newURL": "https://general.support.brightcove.com/s-doc-updates/site-doc-updates-help.html",
+      "oldURL": "/site-doc-updates-help"
+  },
+
+  {
+      "newURL": "https://general.support.brightcove.com/s-doc-updates/site-doc-updates.html",
+      "oldURL": "/site-doc-updates"
   },
 
   {
