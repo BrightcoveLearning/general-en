@@ -15,7 +15,7 @@ description: This section provides concepts and tools generally useful to develo
           {% for item in site.data.navigation %}
             {% if item.name == page.title %}
               {% for doc in item.docs %}
-                  <li><a href="{{ doc.url }}">{{ doc.name }}</a></li>
+                <li><a href="{{ doc.url }}">{{ doc.name }}</a></li>
               {% endfor %}
             {% endif %}
           {% endfor %}
