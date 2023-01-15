@@ -4,7 +4,8 @@
 - section:
   name: 'General Information'
   url: '/general/index.html'
-  icon: '<i data-feather="info"></i>'
+  icon: fa-regular fa-circle-info
+  description: This section contains topics that apply generally to Video Cloud.
   docs:
     - name: 'Brightcove Product Overview'
       url: '/general/brightcove-product-overview.html'
@@ -17,7 +18,8 @@
 - section:
   name: 'Developers'
   url: '/developer/index.html'
-  icon: '<i data-feather="code"></i>'
+  icon: fa-regular fa-rectangle-code
+  description: This section provides concepts and tools generally useful to developers working with Brightcove products.
   docs:
     - name: 'Understanding CORS'
       url: '/developer/concepts-cors.html'
@@ -87,7 +89,8 @@
 - section:
   name: 'Utilities'
   url: '/utilities/index.html'
-  icon: '<i data-feather="tool"></i>'
+  icon: fa-light fa-screwdriver-wrench
+  description: This section provides some online utilities that may be useful for Developers working with Brightcove products.
   docs:
     - name: 'Base 64 Encoding Tool'
       url: '/utilities/base-64-encoding-tool.html'
@@ -98,7 +101,8 @@
 - section:
   name: Training
   url: /training/index.html
-  icon: '<i data-feather="award"></i>'
+  icon: fa-regular fa-chalkboard-user
+  description: On-demand training courses and videos.
   docs:
     - name: All Online Training Courses
       url: /training/online-training-courses.html
@@ -117,7 +121,8 @@
 - section:
   name: 'Support'
   url: '/support/index.html'
-  icon: '<i data-feather="help-circle"></i>'
+  icon: fa-regular fa-comments-question-check
+  description: Learn how to get help from Brightcove Support
   docs:
     - name: 'Known Issues'
       url: '/support/known-issues-studio-brightcove-player-and-apis.html'
