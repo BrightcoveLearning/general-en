@@ -3,37 +3,28 @@ title: Training
 parent: Home
 description: On-demand training courses and videos.
 ---
-<style translate="no">
-  .card-wrapper {
-  justify-content: start;
-  min-width: 100%;
-  }
+<!-- Template for section that has just pages -->
+{% for item in site.data.navigation %}
+  {% if item.name == page.title %}
+  <h1><i class="{{ item.icon }}"></i> {{ page.title }}</h1>
+  <article class="bcls-article">
+    <summary>{{ page.description }}</summary>
 
-  .bcls-card {
-    min-width: 100%;
-  }
-</style>
-<h1><i class="fa-regular fa-chalkboard-user"></i> {{ page.title }}</h1>
-<article class="bcls-article">
-  <summary>{{ page.description }}</summary>
-
-  <div class="col-12 col-lg-4 py-3">
-    <div class="card shadow-sm" style="background: white">
-      <div class="card-body">
-    {% for item in site.data.navigation %}
-    {% if item.name == page.title %}
-    <section class="flex-container">
-      <div>
-        <ul class="list-group list-group-flush">
-          {% for entry in item.docs %}
-          <li class="list-group-item"><a href="{{ entry.url }}" style="text-decoration: none;">{{ entry.name }}</a></li>
-          {% endfor %}
-        </ul>
+    <div class="col-12 col-lg-4 py-3">
+      <div class="card shadow-sm" style="background: white" onclick="window.location.href = '{{ item.url }}'">
+        <div class="card-body">
+          <section class="flex-container">
+            <div>
+              <ul class="list-group list-group-flush">
+                {% for entry in item.docs %}
+                <li class="list-group-item"><a href="{{ entry.url }}" style="text-decoration: none;">{{ entry.name }}</a></li>
+                {% endfor %}
+              </ul>
+            </div>
+          </section>
+        </div>
       </div>
     </div>
-  </div>
-  </div>
-    {% endif %}
-    {% endfor %}
-  </section>
+  {% endif %}
+{% endfor %}
 </article>
