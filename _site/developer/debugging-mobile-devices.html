@@ -66,11 +66,12 @@
 
       <div class="docs-top-utilities d-flex justify-content-end
         align-items-center">
+        
         <!-- Search bar -->
         <div id="nav-search-box" class="top-search-box d-none d-lg-flex" style="margin-right: 10px ;"></div>
 
-        <select id="site_select" class="form-select select-focus" style="width:
-          20%; margin-right: 10px;">
+<select id="site_select" class="form-select select-focus" style="width:
+          20%; margin-right: 10px;" translate="no">
           <option value="">Other Brightcove Docs</option>
           
           
@@ -161,14 +162,10 @@
           <option value="https://campaign.support.brightcove.com" translate="no">&nbsp;&nbsp;&nbsp;&nbsp;Brightcove Campaign</option>
           
           
-          
-          <option value="https://engage.support.brightcove.com" translate="no">&nbsp;&nbsp;&nbsp;&nbsp;Brightcove Engage</option>
-          
-          
         </select>
 
         <select id="language_select" class="form-select select-focus" style="width: 10%;"
-          onchange="doGTranslate(this);">
+          onchange="doGTranslate(this);" translate="no">
           <!-- <option value="">Select Language</option> -->
           <option value="en|en" translate="No">English</option>
           <option value="en|zh-TW" translate="No">繁體中文</option>
@@ -481,7 +478,7 @@
     </ul>
     <aside class="bcls-aside bcls-aside--information">This document serves as a jumping off point for developers to debug on mobile devices. It does not cover all methods for mobile debugging. For more information on debugging in general, visit the 
       
-          <a href="/developer/concepts-javascript-debugging-basics.html">JavaScript Debugging Basics</a>
+          <a href="general/developer-tools/concepts-javascript-debugging-basics.html">JavaScript Debugging Basics</a>
       
        documentation.</aside>
   </section>
@@ -825,7 +822,7 @@
           <ul class="list-unstyled text-small">
             <li><a class="a-text" href="https://studio.support.brightcove.com/get-started/training/online-training-courses.html">Online courses</a></li>
             <li><a class="a-text" href="https://studio.support.brightcove.com/get-started/training/register-training.html">Register for a course</a></li>
-            <li><a class="a-text" href="https://university.brightcove.com/">Brightcove Academy</a></li>
+            <li><a class="a-text" href="https://academy.brightcove.com/">Brightcove Academy</a></li>
           </ul>
         </div>
       
@@ -866,8 +863,8 @@
   </div>
 </div>
 
+
 <script translate="no">
-      
   var searchBox = sajari.init({
     mode: "search-box",
     project: "1588255093746585379", // Set this to your project.
