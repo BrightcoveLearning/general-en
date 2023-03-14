@@ -6,7 +6,7 @@
     
       <url>
         <loc>https://general.support.brightcove.com/index.html</loc>
-        <lastmod>2023-03-13</lastmod>
+        <lastmod>2023-03-14</lastmod>
         <changefreq>daily</changefreq>
         <priority>0.5</priority>
       </url>
@@ -14,7 +14,7 @@
     
       <url>
         <loc>https://general.support.brightcove.com/general/index.html</loc>
-        <lastmod>2023-03-13</lastmod>
+        <lastmod>2023-03-14</lastmod>
         <changefreq>daily</changefreq>
         <priority>0.5</priority>
       </url>
@@ -23,7 +23,7 @@
           
             <loc>https://general.support.brightcove.com/general/brightcove-product-overview.html</loc>
           
-            <lastmod>2023-03-13</lastmod>
+            <lastmod>2023-03-14</lastmod>
             <changefreq>daily</changefreq>
             <priority>0.5</priority>
         </url>
@@ -33,7 +33,7 @@
           
             <loc>https://general.support.brightcove.com/general/roku-trick-play.html</loc>
           
-            <lastmod>2023-03-13</lastmod>
+            <lastmod>2023-03-14</lastmod>
             <changefreq>daily</changefreq>
             <priority>0.5</priority>
         </url>
@@ -43,7 +43,7 @@
           
             <loc>https://general.support.brightcove.com/general/brightcove-open-source-projects.html</loc>
           
-            <lastmod>2023-03-13</lastmod>
+            <lastmod>2023-03-14</lastmod>
             <changefreq>daily</changefreq>
             <priority>0.5</priority>
         </url>
@@ -53,7 +53,7 @@
           
             <loc>https://general.support.brightcove.com/general/mpeg-dash-video.html</loc>
           
-            <lastmod>2023-03-13</lastmod>
+            <lastmod>2023-03-14</lastmod>
             <changefreq>daily</changefreq>
             <priority>0.5</priority>
         </url>
@@ -62,7 +62,7 @@
     
       <url>
         <loc>https://general.support.brightcove.com/developer/index.html</loc>
-        <lastmod>2023-03-13</lastmod>
+        <lastmod>2023-03-14</lastmod>
         <changefreq>daily</changefreq>
         <priority>0.5</priority>
       </url>
@@ -71,7 +71,7 @@
           
             <loc>https://general.support.brightcove.com/developer/concepts-cors.html</loc>
           
-            <lastmod>2023-03-13</lastmod>
+            <lastmod>2023-03-14</lastmod>
             <changefreq>daily</changefreq>
             <priority>0.5</priority>
         </url>
@@ -81,7 +81,7 @@
           
             <loc>https://general.support.brightcove.com/developer/concepts-introducing-json.html</loc>
           
-            <lastmod>2023-03-13</lastmod>
+            <lastmod>2023-03-14</lastmod>
             <changefreq>daily</changefreq>
             <priority>0.5</priority>
         </url>
@@ -91,7 +91,7 @@
           
             <loc>https://general.support.brightcove.com/developer/concepts-javascript-debugging-basics.html</loc>
           
-            <lastmod>2023-03-13</lastmod>
+            <lastmod>2023-03-14</lastmod>
             <changefreq>daily</changefreq>
             <priority>0.5</priority>
         </url>
@@ -101,7 +101,7 @@
           
             <loc>https://general.support.brightcove.com/developer/concepts-javascript-module-design-pattern.html</loc>
           
-            <lastmod>2023-03-13</lastmod>
+            <lastmod>2023-03-14</lastmod>
             <changefreq>daily</changefreq>
             <priority>0.5</priority>
         </url>
@@ -111,7 +111,7 @@
           
             <loc>https://general.support.brightcove.com/developer/concepts-set-curl.html</loc>
           
-            <lastmod>2023-03-13</lastmod>
+            <lastmod>2023-03-14</lastmod>
             <changefreq>daily</changefreq>
             <priority>0.5</priority>
         </url>
@@ -121,7 +121,7 @@
           
             <loc>https://general.support.brightcove.com/developer/concepts-using-javascript-promises.html</loc>
           
-            <lastmod>2023-03-13</lastmod>
+            <lastmod>2023-03-14</lastmod>
             <changefreq>daily</changefreq>
             <priority>0.5</priority>
         </url>
@@ -131,7 +131,7 @@
           
             <loc>https://general.support.brightcove.com/developer/create-json-web-token.html</loc>
           
-            <lastmod>2023-03-13</lastmod>
+            <lastmod>2023-03-14</lastmod>
             <changefreq>daily</changefreq>
             <priority>0.5</priority>
         </url>
@@ -141,7 +141,7 @@
           
             <loc>https://general.support.brightcove.com/developer/debugging-mobile-devices.html</loc>
           
-            <lastmod>2023-03-13</lastmod>
+            <lastmod>2023-03-14</lastmod>
             <changefreq>daily</changefreq>
             <priority>0.5</priority>
         </url>
@@ -151,7 +151,7 @@
           
             <loc>https://general.support.brightcove.com/developer/using-mtr-to-look-at-network-traffic.html</loc>
           
-            <lastmod>2023-03-13</lastmod>
+            <lastmod>2023-03-14</lastmod>
             <changefreq>daily</changefreq>
             <priority>0.5</priority>
         </url>
@@ -161,7 +161,7 @@
           
             <loc>https://general.support.brightcove.com/developer/using-wireshark-track-network-traffic-debugging.html</loc>
           
-            <lastmod>2023-03-13</lastmod>
+            <lastmod>2023-03-14</lastmod>
             <changefreq>daily</changefreq>
             <priority>0.5</priority>
         </url>
@@ -170,7 +170,7 @@
     
       <url>
         <loc>https://general.support.brightcove.com/utilities/index.html</loc>
-        <lastmod>2023-03-13</lastmod>
+        <lastmod>2023-03-14</lastmod>
         <changefreq>daily</changefreq>
         <priority>0.5</priority>
       </url>
@@ -179,7 +179,7 @@
           
             <loc>https://general.support.brightcove.com/utilities/base-64-encoding-tool.html</loc>
           
-            <lastmod>2023-03-13</lastmod>
+            <lastmod>2023-03-14</lastmod>
             <changefreq>daily</changefreq>
             <priority>0.5</priority>
         </url>
@@ -189,7 +189,7 @@
           
             <loc>https://general.support.brightcove.com/utilities/date-converter.html</loc>
           
-            <lastmod>2023-03-13</lastmod>
+            <lastmod>2023-03-14</lastmod>
             <changefreq>daily</changefreq>
             <priority>0.5</priority>
         </url>
@@ -199,7 +199,7 @@
           
             <loc>https://general.support.brightcove.com/utilities/string-encoder.html</loc>
           
-            <lastmod>2023-03-13</lastmod>
+            <lastmod>2023-03-14</lastmod>
             <changefreq>daily</changefreq>
             <priority>0.5</priority>
         </url>
@@ -208,7 +208,7 @@
     
       <url>
         <loc>https://general.support.brightcove.com/training/index.html</loc>
-        <lastmod>2023-03-13</lastmod>
+        <lastmod>2023-03-14</lastmod>
         <changefreq>daily</changefreq>
         <priority>0.5</priority>
       </url>
@@ -217,7 +217,7 @@
           
             <loc>https://general.support.brightcove.com/training/online-training-courses.html</loc>
           
-            <lastmod>2023-03-13</lastmod>
+            <lastmod>2023-03-14</lastmod>
             <changefreq>daily</changefreq>
             <priority>0.5</priority>
         </url>
@@ -227,7 +227,7 @@
           
             <loc>https://general.support.brightcove.com/training/register-training.html</loc>
           
-            <lastmod>2023-03-13</lastmod>
+            <lastmod>2023-03-14</lastmod>
             <changefreq>daily</changefreq>
             <priority>0.5</priority>
         </url>
@@ -237,7 +237,7 @@
           
             <loc>https://general.support.brightcove.com/training/training-demand-introduction-video-cloud.html</loc>
           
-            <lastmod>2023-03-13</lastmod>
+            <lastmod>2023-03-14</lastmod>
             <changefreq>daily</changefreq>
             <priority>0.5</priority>
         </url>
@@ -247,7 +247,7 @@
           
             <loc>https://general.support.brightcove.com/training/training-demand-introduction-video-cloud-analytics.html</loc>
           
-            <lastmod>2023-03-13</lastmod>
+            <lastmod>2023-03-14</lastmod>
             <changefreq>daily</changefreq>
             <priority>0.5</priority>
         </url>
@@ -257,7 +257,7 @@
           
             <loc>https://general.support.brightcove.com/training/training-demand-video-cloud-basics.html</loc>
           
-            <lastmod>2023-03-13</lastmod>
+            <lastmod>2023-03-14</lastmod>
             <changefreq>daily</changefreq>
             <priority>0.5</priority>
         </url>
@@ -267,7 +267,7 @@
           
             <loc>https://general.support.brightcove.com/training/video-cloud-studio-training-videos.html</loc>
           
-            <lastmod>2023-03-13</lastmod>
+            <lastmod>2023-03-14</lastmod>
             <changefreq>daily</changefreq>
             <priority>0.5</priority>
         </url>
@@ -277,7 +277,7 @@
           
             <loc>https://general.support.brightcove.com/training/brightcove-university.html</loc>
           
-            <lastmod>2023-03-13</lastmod>
+            <lastmod>2023-03-14</lastmod>
             <changefreq>daily</changefreq>
             <priority>0.5</priority>
         </url>
@@ -286,7 +286,7 @@
     
       <url>
         <loc>https://general.support.brightcove.com/support/index.html</loc>
-        <lastmod>2023-03-13</lastmod>
+        <lastmod>2023-03-14</lastmod>
         <changefreq>daily</changefreq>
         <priority>0.5</priority>
       </url>
@@ -295,7 +295,7 @@
           
             <loc>https://general.support.brightcove.com/support/known-issues-studio-brightcove-player-and-apis.html</loc>
           
-            <lastmod>2023-03-13</lastmod>
+            <lastmod>2023-03-14</lastmod>
             <changefreq>daily</changefreq>
             <priority>0.5</priority>
         </url>
@@ -305,7 +305,7 @@
           
             <loc>https://general.support.brightcove.com/support/viewing-brightcove-system-status-page.html</loc>
           
-            <lastmod>2023-03-13</lastmod>
+            <lastmod>2023-03-14</lastmod>
             <changefreq>daily</changefreq>
             <priority>0.5</priority>
         </url>
@@ -315,7 +315,7 @@
           
             <loc>https://general.support.brightcove.com/support/contact-sales.html</loc>
           
-            <lastmod>2023-03-13</lastmod>
+            <lastmod>2023-03-14</lastmod>
             <changefreq>daily</changefreq>
             <priority>0.5</priority>
         </url>
@@ -325,7 +325,7 @@
           
             <loc>https://general.support.brightcove.com/support/opening-case-with-brightcove-support.html</loc>
           
-            <lastmod>2023-03-13</lastmod>
+            <lastmod>2023-03-14</lastmod>
             <changefreq>daily</changefreq>
             <priority>0.5</priority>
         </url>
@@ -335,7 +335,7 @@
           
             <loc>https://general.support.brightcove.com/support/reset-support-portal-password.html</loc>
           
-            <lastmod>2023-03-13</lastmod>
+            <lastmod>2023-03-14</lastmod>
             <changefreq>daily</changefreq>
             <priority>0.5</priority>
         </url>
