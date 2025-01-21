@@ -19,11 +19,62 @@ parent: General Information
   <li>No additional setup or configuration is required on the Brightcove platform to enable Trick Play image generation.</li>
   <li>Roku devices will utilize these thumbnail images for smooth Trick Play functionality, such as previewing frames while seeking.</li>
 </ul>
- <aside class="bcls-aside bcls-aside--information language-editable">Note:   The Roku player will load and display these thumbnails using its default controls. However, if you implement custom controls, additional development work may be necessary to integrate Trick Play images properly.</aside>
+ <aside class="bcls-aside bcls-aside--information language-editable">Note: The Roku player will load and display these thumbnails using its default controls. However, additional development work may be necessary to integrate Trick Play images properly if you implement custom controls.</aside>
+  </section>
+  <section class="bcls-section">
+<h2>Example Manifest Files</h2>
+<p>Below are examples of how HLS and DASH manifest reference Trick Play sprite sheet tiles:</p>
+<h3>HLS Media Playlist</h3>
+<p>
+  <pre><code class="language-http" translate="No">
+#EXTM3U
+#EXT-X-VERSION:7
+#EXT-X-TARGETDURATION:10
+#EXT-X-MEDIA-SEQUENCE:0
+#EXT-X-IMAGES-ONLY
+#EXT-X-TILES:RESOLUTION=360x150,LAYOUT=5x2,DURATION=1.000
+#EXTINF:10.000,
+sprite_0.jpg
+#EXTINF:10.000,
+sprite_1.jpg
+#EXTINF:10.000,
+sprite_2.jpg
+#EXT-X-ENDLIST
+</code></pre>
+</p>
+<p>The <code>#EXT-X-IMAGES-ONLY</code> tag indicates that the playlist is dedicated to Trick Play thumbnails. The <code>#EXT-X-TILES</code> tag specifies the resolution, layout (number of rows and columns), and duration of each sprite tile. These values are fixed and cannot be dynamically altered. Each <code>#EXTINF</code> tag specifies the duration covered by the corresponding sprite sheet tile.</p>
+<h3>DASH Manifest</h3>
+<pre><code class="language-http" translate="No">
+  &#60;AdaptationSet mimeType="image/jpeg" contentType="image"&#62;
+  &#60;SegmentTemplate duration="10" media="https://example.com/image/sprite/$RepresentationID$/5x2/tile_$Number$.jpg" startNumber="1" timescale="1" /&#62;
+  &#60;Representation bandwidth="249000" height="266" id="1600x266" width="1600"&#62;
+  &#60;EssentialProperty schemeIdUri="http://dashif.org/guidelines/thumbnail_tile" value="5x2" /&#62;
+  &#60;/Representation&#62;
+  &#60;/AdaptationSet&#62;
+  </code></pre>
+  <p>In this DASH example, the <code>AdaptationSet</code> references a generic sprite sheet tile setup. The <code>SegmentTemplate</code> defines the duration and location of the tiles, while the <code>EssentialProperty</code> specifies the fixed layout of the sprite sheet (e.g., 5x2 rows and columns). These values are predefined and cannot be changed dynamically. </p>
   </section>
   <section class="bcls-section">
     <h2 id="What_is_supported">What is supported?</h2>
-    <p>Server-Side Ad Insertion (SSAI) with mid-roll ads is supported for both HLS and DASH files.</p>
-    <aside class="bcls-aside bcls-aside--information language-editable">Note: Brightcove strongly recommends using <strong>DASH </strong>for your Roku app to Trickplay images work. Using HLS on the account may cause issues.</aside>
+    <ul>
+      <li>Server-Side Ad Insertion (SSAI):
+        <ul>
+          <li>Mid-roll ads are supported for both HLS and DASH files</li>
+          <li>Thumbnails will also align with SSAI timelines to ensure accurate preview during Trick Play</li>
+        </ul>
+      </li>
+    </ul>
+    <ul>
+      <li>Best Practices:</li>
+      <ul>
+        <li>Brightcove strongly recommends using DASH for Roku apps to ensure Trick Play images function as intended</li>
+        <li>Using HLS may result in limited or inconsistent Trick Play support on Roku devices
+        </li>
+      </ul>
+    </ul>
+  </section>
+  <section class="bcls-section">
+    <h2>Additional Resources</h2>
+    <p>For more information about Roku’s requirements for channel certification and Trick Play implementation, see  <a href="https://developer.roku.com/es-mx/overview">Roku Developer Documentation</a>. By following these guidelines, you can ensure smooth Trick Play functionality and an improved user experience for your Roku viewers. </p>
   </section>
 </article>
