@@ -520,7 +520,6 @@ PUBLIC_TXT="./$NAME/public_key.txt"
 openssl genpkey -outform pem -algorithm rsa -out "$PRIVATE_PEM" -outpubkey "$PUBLIC_PEM"
 openssl rsa -in "$PRIVATE_PEM" -pubout --outform DER | base64 > "$PUBLIC_TXT"
 
-rm "$PRIVATE_PEM".pub
 
 echo "Public key to saved in $PUBLIC_TXT"
 </code></pre>
